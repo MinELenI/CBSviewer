@@ -1,0 +1,24 @@
+-classpath
+'C:/workspace/CBSviewer/target/classes;C:/maven-repository/log4j/log4j/1.2.17/log4j-1.2.17.jar;C:/maven-repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/workspace/CBSviewer/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2012 Ministerie EL&amp;I. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'C:/workspace/CBSviewer/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'CBSviewer Webapp 0.1-SNAPSHOT API'
+-linkoffline
+'http://download.oracle.com/javase/7/docs/api' 'C:/workspace/CBSviewer/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'CBSviewer Webapp 0.1-SNAPSHOT API'
