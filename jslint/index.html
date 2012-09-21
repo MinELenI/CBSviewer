@@ -210,7 +210,19 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Overview<a name="Overview"></a></h2><p>This report was build with <a href="http://www.jslint.com/">JSLint</a>, the JavaScript Verifier. JSLint is a JavaScript program that looks for problems in other JavaScript programs.</p><p>Here is the list of files in this report:</p><ul><li><a href="#_KeyboardClick.js">KeyboardClick.js</a></li><li><a href="#_Viewer.js">Viewer.js</a></li><li><a href="#_KeyboardPoint.js">KeyboardPoint.js</a></li><li><a href="#_WMSGetFeatureInfo.js">WMSGetFeatureInfo.js</a></li></ul></div><a id="_KeyboardClick.js"> </a><h2>KeyboardClick.js<a name="KeyboardClick.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_Viewer.js"> </a><h2>Viewer.js<a name="Viewer.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_KeyboardPoint.js"> </a><h2>KeyboardPoint.js<a name="KeyboardPoint.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_WMSGetFeatureInfo.js"> </a><h2>WMSGetFeatureInfo.js<a name="WMSGetFeatureInfo.js"></a></h2><div class="source"><pre>No problems found</pre></div>
+        <div class="section"><h2>Overview<a name="Overview"></a></h2><p>This report was build with <a href="http://www.jslint.com/">JSLint</a>, the JavaScript Verifier. JSLint is a JavaScript program that looks for problems in other JavaScript programs.</p><p>Here is the list of files in this report:</p><ul><li><a href="#_KeyboardClick.js">KeyboardClick.js</a></li><li><a href="#_Viewer.js">Viewer.js</a></li><li><a href="#_KeyboardPoint.js">KeyboardPoint.js</a></li><li><a href="#_UpdateLegendControl.js">UpdateLegendControl.js</a></li><li><a href="#_WMSGetFeatureInfo.js">WMSGetFeatureInfo.js</a></li></ul></div><a id="_KeyboardClick.js"> </a><h2>KeyboardClick.js<a name="KeyboardClick.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_Viewer.js"> </a><h2>Viewer.js<a name="Viewer.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_KeyboardPoint.js"> </a><h2>KeyboardPoint.js<a name="KeyboardPoint.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_UpdateLegendControl.js"> </a><h2>UpdateLegendControl.js<a name="UpdateLegendControl.js"></a></h2><div class="source"><pre>Lint at line 86 character 11: Use '===' to compare with 'null'.
+if (evt == null) {
+
+Lint at line 93 character 73: Line breaking error '&FORMAT=image%2Fpng'.
+var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
+
+Lint at line 94 character 89: Line breaking error 'STYLES'.
++ '&WIDTH=20&HEIGHT=20' + '&LAYER=' + lyr.params.LAYERS + '&STYLES=' + lyr.params.STYLES
+
+Lint at line 112 character 24: Use '!==' to compare with 'null'.
+if (this.emptyString != null) {
+
+</pre></div><a id="_WMSGetFeatureInfo.js"> </a><h2>WMSGetFeatureInfo.js<a name="WMSGetFeatureInfo.js"></a></h2><div class="source"><pre>No problems found</pre></div>
       </div>
     </div>
     <div class="clear">

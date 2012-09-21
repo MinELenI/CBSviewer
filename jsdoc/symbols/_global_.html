@@ -198,9 +198,9 @@ ul.inheritsList
 	
 	<li><a href="../symbols/OpenLayers.Handler.KeyboardPoint.html">OpenLayers.Handler.KeyboardPoint</a></li>
 	
-	<li><a href="../symbols/Viewer.html">Viewer</a></li>
+	<li><a href="../symbols/UpdateLegendControl.html">UpdateLegendControl</a></li>
 	
-	<li><a href="../symbols/Viewer.init.html">Viewer.init</a></li>
+	<li><a href="../symbols/Viewer.html">Viewer</a></li>
 	
 	<li><a href="../symbols/WMSGetFeatureInfo.html">WMSGetFeatureInfo</a></li>
 	
@@ -249,6 +249,16 @@ ul.inheritsList
 								<b><a href="../symbols/_global_.html#autoActivate">autoActivate</a></b>
 								</div>
 								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="../symbols/_global_.html#element">element</a></b>
+								</div>
+								<div class="description">Dom element waar de legenda in wordt gevoegd.</div>
 							</td>
 						</tr>
 					
@@ -308,8 +318,7 @@ ul.inheritsList
 							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#activate">activate</a></b>()
 								</div>
-								<div class="description">Activeert deze control en zet de default keybord handler uit (mits
-aanwezig).</div>
+								<div class="description">activate this control.</div>
 							</td>
 						</tr>
 					
@@ -318,8 +327,25 @@ aanwezig).</div>
 							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#deactivate">deactivate</a></b>()
 								</div>
-								<div class="description">Deactiveert deze control en zet de default keybord handler aan (mits
-aanwezig).</div>
+								<div class="description">deactivate this control.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#destroy">destroy</a></b>()
+								</div>
+								<div class="description">destroy this control.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#draw">draw</a></b>()
+								</div>
+								<div class="description">draw this control.</div>
 							</td>
 						</tr>
 					
@@ -329,6 +355,24 @@ aanwezig).</div>
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#onClick">onClick</a></b>(geometry)
 								</div>
 								<div class="description">Event handler voor click event.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#redraw">redraw</a></b>(evt)
+								</div>
+								<div class="description">redraw this control.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#reset">reset</a></b>(evt)
+								</div>
+								<div class="description">reset this control.</div>
 							</td>
 						</tr>
 					
@@ -360,6 +404,32 @@ aanwezig).</div>
 						
 							<br />
 							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_WMSGetFeatureInfo.js.html">WMSGetFeatureInfo.js</a>.
+						
+						
+					</div>
+					
+					
+				
+					
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="element"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>element</b>
+					
+					</div>
+					<div class="description">
+						Dom element waar de legenda in wordt gevoegd. Moet een container elementzijn zoals P, DIV, SPAN,...
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
 						
 						
 					</div>
@@ -463,16 +533,15 @@ aanwezig).</div>
 					<a name="activate"> </a>
 					<div class="fixedFont">
 					
-					<span class="light">{Boolean}</span>
+					
 					<b>activate</b>()
 					
 					</div>
 					<div class="description">
-						Activeert deze control en zet de default keybord handler uit (mits
-aanwezig).
+						activate this control.
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_KeyboardClick.js.html">KeyboardClick.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
 						
 						
 					</div>
@@ -484,13 +553,6 @@ aanwezig).
 						
 						
 						
-						
-							<dl class="detailList">
-							<dt class="heading">Returns:</dt>
-							
-								<dd><span class="light fixedFont">{Boolean}</span> </dd>
-							
-							</dl>
 						
 						
 						
@@ -500,16 +562,73 @@ aanwezig).
 					<a name="deactivate"> </a>
 					<div class="fixedFont">
 					
-					<span class="light">{Boolean}</span>
+					
 					<b>deactivate</b>()
 					
 					</div>
 					<div class="description">
-						Deactiveert deze control en zet de default keybord handler aan (mits
-aanwezig).
+						deactivate this control.
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_KeyboardClick.js.html">KeyboardClick.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="destroy"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>destroy</b>()
+					
+					</div>
+					<div class="description">
+						destroy this control.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="draw"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{DOMElement}</span>
+					<b>draw</b>()
+					
+					</div>
+					<div class="description">
+						draw this control.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
 						
 						
 					</div>
@@ -525,7 +644,7 @@ aanwezig).
 							<dl class="detailList">
 							<dt class="heading">Returns:</dt>
 							
-								<dd><span class="light fixedFont">{Boolean}</span> </dd>
+								<dd><span class="light fixedFont">{DOMElement}</span> </dd>
 							
 							</dl>
 						
@@ -572,6 +691,86 @@ aanwezig).
 						
 						
 
+					<hr />
+				
+					<a name="redraw"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>redraw</b>(evt)
+					
+					</div>
+					<div class="description">
+						redraw this control.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{OpenLayers.Event}</span> <b>evt</b>
+									
+								</dt>
+								<dd>De addlayer event</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="reset"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>reset</b>(evt)
+					
+					</div>
+					<div class="description">
+						reset this control.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/C__workspace_CBSviewer_src_main_js_UpdateLegendControl.js.html">UpdateLegendControl.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{OpenLayers.Event}</span> <b>evt</b>
+									
+								</dt>
+								<dd>De addlayer event</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
 					
 				
 			
@@ -582,7 +781,7 @@ aanwezig).
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.0.0 on Fri Sep 21 2012 15:34:00 GMT+0200 (CEST)
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.0.0 on Fri Sep 21 2012 22:46:35 GMT+0200 (CEST)
 		</div>
 	</body>
 </html>
