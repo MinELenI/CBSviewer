@@ -8,10 +8,10 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 17,
+      <title>File: 16,
              Errors: 0,
-             Warnings: 84,
-             Infos: 20
+             Warnings: 96,
+             Infos: 18
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
                 <td>
                   0
@@ -91,7 +91,7 @@
                   1
                 </td>
                 <td>
-                  1
+                  2
                 </td>
                 <td>
                   0
@@ -119,7 +119,7 @@
                   4
                 </td>
                 <td>
-                  8
+                  9
                 </td>
                 <td>
                   0
@@ -133,7 +133,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  2
                 </td>
                 <td>
                   0
@@ -144,10 +144,10 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet.java">nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.java</a>
                 </td>
                 <td>
-                  4
+                  3
                 </td>
                 <td>
-                  25
+                  29
                 </td>
                 <td>
                   0
@@ -161,7 +161,7 @@
                   0
                 </td>
                 <td>
-                  8
+                  9
                 </td>
                 <td>
                   0
@@ -203,7 +203,7 @@
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
                 <td>
                   0
@@ -217,7 +217,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  4
                 </td>
                 <td>
                   0
@@ -231,21 +231,7 @@
                   1
                 </td>
                 <td>
-                  8
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.print.PrintServlet.java">nl/mineleni/cbsviewer/servlet/print/PrintServlet.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  3
+                  9
                 </td>
                 <td>
                   0
@@ -259,7 +245,7 @@
                   0
                 </td>
                 <td>
-                  4
+                  5
                 </td>
                 <td>
                   0

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-09-28T17:35:32.565">
-<file name="E:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java">
-<violation beginline="332" endline="351" begincolumn="17" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
-Avoid unused method parameters such as 'request'.
+<pmd version="4.3" timestamp="2012-10-04T12:19:21.812">
+<file name="C:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractWxSServlet.java">
+<violation beginline="4" endline="92" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
 </violation>
 </file>
 </pmd>
