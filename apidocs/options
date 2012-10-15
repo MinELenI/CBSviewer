@@ -1,0 +1,24 @@
+-classpath
+'E:/workspace/CBSviewer/target/classes;C:/maven-repository/log4j/log4j/1.2.17/log4j-1.2.17.jar;C:/maven-repository/it/geosolutions/imageio-ext/imageio-ext-tiff/1.1.5/imageio-ext-tiff-1.1.5.jar;C:/maven-repository/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.jar;C:/maven-repository/com/vividsolutions/jts/1.12/jts-1.12.jar;C:/maven-repository/jgridshift/jgridshift/1.0/jgridshift-1.0.jar;C:/maven-repository/java3d/vecmath/1.3.2/vecmath-1.3.2.jar;C:/maven-repository/org/apache/httpcomponents/httpcore/4.2.1/httpcore-4.2.1.jar;C:/maven-repository/org/geotools/gt-epsg-wkt/9-SNAPSHOT/gt-epsg-wkt-9-SNAPSHOT.jar;C:/maven-repository/javax/media/jai_codec/1.1.3/jai_codec-1.1.3.jar;C:/maven-repository/javax/servlet/jstl/1.2/jstl-1.2.jar;C:/maven-repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar;C:/maven-repository/org/jaitools/jt-zonalstats/1.3.0/jt-zonalstats-1.3.0.jar;C:/maven-repository/org/geotools/gt-coverage/9-SNAPSHOT/gt-coverage-9-SNAPSHOT.jar;C:/maven-repository/org/geotools/gt-render/9-SNAPSHOT/gt-render-9-SNAPSHOT.jar;C:/maven-repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar;C:/maven-repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar;C:/maven-repository/org/geotools/gt-referencing/9-SNAPSHOT/gt-referencing-9-SNAPSHOT.jar;C:/maven-repository/org/geotools/gt-api/9-SNAPSHOT/gt-api-9-SNAPSHOT.jar;C:/maven-repository/it/geosolutions/imageio-ext/imageio-ext-utilities/1.1.5/imageio-ext-utilities-1.1.5.jar;C:/maven-repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar;C:/maven-repository/org/geotools/gt-opengis/9-SNAPSHOT/gt-opengis-9-SNAPSHOT.jar;C:/maven-repository/org/jaitools/jt-utils/1.3.0/jt-utils-1.3.0.jar;C:/maven-repository/net/sf/flexjson/flexjson/2.1/flexjson-2.1.jar;C:/maven-repository/org/geotools/gt-xml/9-SNAPSHOT/gt-xml-9-SNAPSHOT.jar;C:/maven-repository/org/geotools/gt-cql/9-SNAPSHOT/gt-cql-9-SNAPSHOT.jar;C:/maven-repository/org/apache/httpcomponents/httpclient/4.2.1/httpclient-4.2.1.jar;C:/maven-repository/javax/media/jai_imageio/1.1/jai_imageio-1.1.jar;C:/maven-repository/org/geotools/gt-wms/9-SNAPSHOT/gt-wms-9-SNAPSHOT.jar;C:/maven-repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar;C:/maven-repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar;C:/maven-repository/org/geotools/gt-main/9-SNAPSHOT/gt-main-9-SNAPSHOT.jar;C:/maven-repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar;C:/maven-repository/net/java/dev/jsr-275/jsr-275/1.0-beta-2/jsr-275-1.0-beta-2.jar;C:/maven-repository/org/geotools/gt-metadata/9-SNAPSHOT/gt-metadata-9-SNAPSHOT.jar;C:/maven-repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar;C:/maven-repository/jdom/jdom/1.0/jdom-1.0.jar;C:/maven-repository/javax/media/jai_core/1.1.3/jai_core-1.1.3.jar;C:/maven-repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'E:/workspace/CBSviewer/src/main/java;E:/workspace/CBSviewer/target/generated-sources/jaxb'
+-author
+-bottom
+'Copyright &#169; 2012 <a href="https://github.com/organizations/MinELenI">Ministerie EL&amp;I</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'E:/workspace/CBSviewer/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'CBSviewer Webapp 0.1-SNAPSHOT API'
+-linkoffline
+'http://download.oracle.com/javase/7/docs/api' 'E:/workspace/CBSviewer/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'CBSviewer Webapp 0.1-SNAPSHOT API'

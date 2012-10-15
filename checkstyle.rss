@@ -8,9 +8,9 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 17,
+      <title>File: 18,
              Errors: 0,
-             Warnings: 41,
+             Warnings: 56,
              Infos: 0
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
@@ -99,6 +99,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.AvailableLayersBean.java">nl/mineleni/cbsviewer/util/AvailableLayersBean.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.SpatialUtil.java">nl/mineleni/cbsviewer/util/SpatialUtil.java</a>
                 </td>
                 <td>
@@ -161,7 +175,7 @@
                   0
                 </td>
                 <td>
-                  16
+                  21
                 </td>
                 <td>
                   0

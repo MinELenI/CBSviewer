@@ -1,4 +1,4 @@
-SF:C:/workspace/CBSviewer/src/main/js/KeyboardPoint.js
+SF:E:/workspace/CBSviewer/src/main/js/KeyboardPoint.js
 DA:17,1
 DA:28,8
 DA:31,8
@@ -50,7 +50,7 @@ DA:139,0
 DA:140,0
 DA:147,0
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/js/KeyboardClick.js
+SF:E:/workspace/CBSviewer/src/main/js/KeyboardClick.js
 DA:21,1
 DA:24,8
 DA:25,8
@@ -84,7 +84,7 @@ DA:99,0
 DA:100,0
 DA:102,0
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/js/ClickDrawControl.js
+SF:E:/workspace/CBSviewer/src/main/js/ClickDrawControl.js
 DA:8,1
 DA:23,8
 DA:24,8
@@ -116,7 +116,7 @@ DA:111,0
 DA:112,0
 DA:114,0
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/js/UpdateLegendControl.js
+SF:E:/workspace/CBSviewer/src/main/js/UpdateLegendControl.js
 DA:11,1
 DA:31,8
 DA:32,8
@@ -148,7 +148,7 @@ DA:99,6
 DA:112,8
 DA:113,8
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/js/Viewer.js
+SF:E:/workspace/CBSviewer/src/main/js/Viewer.js
 DA:8,1
 DA:15,1
 DA:22,1
@@ -205,13 +205,13 @@ DA:210,8
 DA:211,104
 DA:213,8
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/js/WMSGetFeatureInfo.js
+SF:E:/workspace/CBSviewer/src/main/js/WMSGetFeatureInfo.js
 DA:8,1
 DA:21,8
 DA:22,8
 DA:23,8
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/webapp/js/config.js
+SF:E:/workspace/CBSviewer/src/main/webapp/js/config.js
 DA:9,1
 DA:11,1
 DA:14,1
@@ -221,6 +221,6 @@ DA:23,1
 DA:40,1
 DA:45,1
 end_of_record
-SF:C:/workspace/CBSviewer/src/main/webapp/lib/jquery-1.8.2.min.js
+SF:E:/workspace/CBSviewer/src/main/webapp/lib/jquery-1.8.2.min.js
 DA:2,3450
 end_of_record
