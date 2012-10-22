@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-10-15T17:49:08.405">
+<pmd version="4.3" timestamp="2012-10-22T16:35:32.448">
 <file name="E:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractWxSServlet.java">
-<violation beginline="4" endline="90" begincolumn="1" endcolumn="3" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+<violation beginline="4" endline="92" begincolumn="1" endcolumn="3" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="E:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java">
+<violation beginline="4" endline="521" begincolumn="1" endcolumn="3" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
 </violation>
 </file>

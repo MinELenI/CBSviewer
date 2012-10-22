@@ -16,8 +16,6 @@
 'UTF-8'
 -doctitle
 'CBSviewer Webapp 0.1-SNAPSHOT Test API'
--link
-'../apidocs'
 -linkoffline
 'http://download.oracle.com/javase/7/docs/api' 'E:/workspace/CBSviewer/target/javadoc-bundle-options'
 -use
