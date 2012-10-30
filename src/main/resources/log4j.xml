@@ -34,14 +34,14 @@
 	</logger>
 	<logger name="org.apache.commons.httpclient.Wire">
 		<!-- debug toont al het verkeer -->
-		<level value="warn" />
+		<level value="debug" />
+	</logger>
+	<logger name="org.apache.http.impl.conn.Wire">
+		<!-- debug toont al het verkeer -->
+		<level value="debug" />
 	</logger>
 	<logger name="org.apache.commons">
 		<level value="error" />
-	</logger>
-	<logger name="httpclient.wire">
-		<!-- debug toont al het verkeer -->
-		<level value="warn" />
 	</logger>
 	<root>
 		<!-- kies: consoleAppender voor in de ide of rollingFileAppender voor op 
@@ -51,5 +51,6 @@
 			<appender-ref ref="rollingFileAppender" /> 
 			-->
 		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="ganymedeAppender" />
 	</root>
 </log4j:configuration>

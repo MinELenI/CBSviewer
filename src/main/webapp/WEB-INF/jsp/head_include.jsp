@@ -8,7 +8,6 @@
 	let op dat dit bestand vanuit de root van de webapplicatie wordt ingevoegd  
 	 -->
 
-
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />

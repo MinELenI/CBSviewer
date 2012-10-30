@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 /* opmaak van de elementen */
-.todo {
+.error,.todo {
+	background: url("img/error.png") no-repeat scroll -12px 1px transparent;
+	padding-left: 16px;
 	text-align: center;
 	color: #f00;
 	border: 1px solid;
@@ -22,6 +24,10 @@ html.js #kaartContainer.nothidden {
 
 /* verbergen als er javascript is, hier zit de core kaart + formulier in.*/
 html.js #coreContainer,html.js #coreMapImage {
+	display: none;
+}
+
+html.js  #coreContainer p {
 	display: none;
 }
 
@@ -49,6 +55,42 @@ a.accesskey:focus {
 /* (adres) zoeken elementen */
 .zoekenTitel {
 	
+}
+
+#zoekFormulier {
+	background-color: #eaecef;
+	padding: 8px 12px 12px 8px;
+	margin: 0 0 20px 0;
+}
+
+#zoekFormulier p.button {
+	margin-bottom: 0;
+}
+
+#zoekFormulier button {
+	background: url('../img/button.png') top right no-repeat;
+	height: 21px;
+	line-height: 21px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+#zoekFormulier button:hover,#zoekFormulier button:focus {
+	background-position: right bottom;
+}
+
+#zoekFormulier p input,#zoekFormulier p button {
+	border: 1px solid #aaa;
+	width: 100%;
+}
+
+#zoekFormulier .adreslijst {
+	
+}
+
+#zoekFormulier ul {
+	list-style-image: none;
+	margin: 0;
 }
 
 /* feature informatie */

@@ -33,7 +33,7 @@
 	<div id="kaartnavi" class="kaartnavi">
 		<jsp:expression>RESOURCES.getString("KEY_NAVIGATIE_TITEL")</jsp:expression>
 
-		<form id="zoomFormulier" action="#" method="get"
+		<form id="zoomFormulier" action="index.jsp" method="get"
 			title="in- en uitzoomen van de kaart en verschuiven van de zoeklocatie">
 
 			<!-- knoppen -->

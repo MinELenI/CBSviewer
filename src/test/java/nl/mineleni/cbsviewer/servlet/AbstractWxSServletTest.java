@@ -52,6 +52,10 @@ public class AbstractWxSServletTest {
 		this.mockery.checking(new Expectations() {
 			{
 				this.allowing(AbstractWxSServletTest.this.request)
+						.getAttributeNames();
+				this.allowing(AbstractWxSServletTest.this.request)
+						.getParameterMap();
+				this.allowing(AbstractWxSServletTest.this.request)
 						.setAttribute(REQ_PARAM_XCOORD.code, 100);
 				this.allowing(AbstractWxSServletTest.this.request)
 						.setAttribute(REQ_PARAM_YCOORD.code, 100);

@@ -83,7 +83,23 @@ Viewer = function() {
 			(window.console && console.warn('Deprecated function called: Viewer::getMap().'));
 			return _map;
 		},
-
+		
+		/**
+		 * verplaats en zoom de kaart naar de gevraagde locatie.
+		 * 
+		 * @param {number}
+		 *            x x coordinaat
+		 * @param {number}
+		 *            y y coordinaat
+		 * @param {number}
+		 *            radius straal van het gebied
+		 */
+		zoomTo : function(x, y, radius) {
+			_map.panTo(new OpenLayers.LonLat(x, y));
+			var zm = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
+			_map.zoomTo(zm);
+		},
+		
 		/**
 		 * Controls aan de kaart hangen.
 		 * 

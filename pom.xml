@@ -49,6 +49,12 @@
 			<comments>For any parts of jQuery</comments>
 			<distribution>repo</distribution>
 		</license>
+		<license>
+			<name>MIT license</name>
+			<url>http://malsup.github.com/mit-license.txt</url>
+			<comments>For jQuery Form Plugin</comments>
+			<distribution>manual</distribution>
+		</license>
 	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
@@ -577,7 +583,8 @@
 							<failOnWarning>false</failOnWarning>
 							<nocompress>${debug}</nocompress>
 							<excludes>
-								<exclude>**/lib/*.js</exclude>
+								<exclude>**/lib/*.min.js</exclude>
+								<exclude>**/lib/OpenLayers.js</exclude>
 							</excludes>
 							<outputDirectory>${project.build.directory}/${project.build.finalName}/js</outputDirectory>
 							<aggregations>
@@ -589,6 +596,7 @@
 										<include>**/UpdateLegendControl.js</include>
 										<include>**/ClickDrawControl.js</include>
 										<include>**/Viewer.js</include>
+										<include>**/ZoekFormulier.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
 									<removeIncluded>true</removeIncluded>
@@ -759,6 +767,7 @@
 							<artifactId>maven-surefire-report-plugin</artifactId>
 							<version>2.12.4</version>
 							<configuration>
+								<outputName>surefire-report</outputName>
 								<linkXRef>true</linkXRef>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
@@ -775,6 +784,18 @@
 								<linkXRef>true</linkXRef>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/jasmine-reports</reportsDirectory>
+								</reportsDirectories>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.12.4</version>
+							<configuration>
+								<outputName>failsafe-report</outputName>
+								<linkXRef>true</linkXRef>
+								<reportsDirectories>
+									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
 								</reportsDirectories>
 							</configuration>
 						</plugin>
@@ -966,7 +987,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.2.1</version>
+			<version>4.2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.geotools</groupId>

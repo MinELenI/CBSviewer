@@ -16,6 +16,7 @@
 	<jsp:text>
 		<![CDATA[<script type="text/javascript" src="lib/OpenLayers.js"></script>
 <script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery.form.js"></script>
 <script type="text/javascript" src="js/cbsviewer.js"></script>
 <script type="text/javascript" id="language" charset="utf-8">]]>
 	</jsp:text>

@@ -39,11 +39,37 @@
 		<div id="article" class="article">
 
 			<div id="coreContainer" class="kaartContainer">
+				<!-- 1 adres -->
+				<c:if test="${not empty xcoord}">
+					<c:set value="${xcoord}" var="xcoord" />
+				</c:if>
+
+				<c:if test="${not empty ycoord}">
+					<c:set value="${ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="!${not empty straal}">
+					<c:set value="${straal-1}" var="straal" />
+				</c:if>
+				<!-- meer adressen -->
+				<c:if test="${not empty param.xcoord  }">
+					<c:set value="${param.xcoord}" var="xcoord" />
+				</c:if>
+				<c:if test="${not empty param.ycoord  }">
+					<c:set value="${param.ycoord}" var="ycoord" />
+				</c:if>
+				<c:if test="${not empty param.straal  }">
+					<c:set value="${param.straal+1}" var="straal" />
+				</c:if>
+
 				<!-- hier komt de statische kaart -->
 				<jsp:include page="kaart">
 					<!-- TODO: mapname waarde moet uit de request komen bijv. ?mapname=cbs_inwoners_2000_per_hectare -->
 					<!-- StringConstants.REQ_PARAM_MAPNAME -->
 					<jsp:param name="mapname" value="cbs_inwoners_2000_per_hectare" />
+
+					<jsp:param value="${xcoord}" name="xcoord" />
+					<jsp:param value="${ycoord}" name="ycoord" />
+					<jsp:param value="${straal}" name="straal" />
 				</jsp:include>
 
 				<c:if test="${not empty kaart}">
@@ -65,16 +91,15 @@
 			<div id="copyright" class="copy">
 				<jsp:expression>RESOURCES.getString("KEY_COPYRIGHT")</jsp:expression>
 			</div>
+
 		</div>
 
 
 		<div id="aside" class="aside">
 
 			<div id="zoekenContainer" class="zoeken">
-				<jsp:expression>RESOURCES.getString("KEY_ADRESZOEKEN_TITEL")</jsp:expression>
-				<!-- adres zoeken -->
 
-				<p class="todo">TODO: implementatie</p>
+				<jsp:include page="WEB-INF/jsp/zoekformulier.jsp" />
 			</div>
 
 			<div id="legendaContainer" class="legenda">
