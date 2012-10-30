@@ -1,1 +1,0 @@
-"C:\Program Files\Java\jdk1.7.0_09\jre\..\bin\javadoc.exe" -J-Dhttp.proxySet=true -J-Dhttp.proxyHost=cacheflow.nic.agro.nl -J-Dhttp.proxyPort=8080 "-J-Dhttp.nonProxyHosts=\"*.agro.nl|*.dbr.agro.nl|*.dlg.agro.nl\"" @options @packages

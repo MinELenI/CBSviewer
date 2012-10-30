@@ -1,0 +1,34 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/**
+<span class='line'>  2</span>  * Custom WMSGetFeatureInfo control.
+<span class='line'>  3</span>  * 
+<span class='line'>  4</span>  * @author mprins
+<span class='line'>  5</span>  * @class {WMSGetFeatureInfo}
+<span class='line'>  6</span>  * @extends {OpenLayers.Control.WMSGetFeatureInfo}
+<span class='line'>  7</span>  */</span><span class="WHIT">
+<span class='line'>  8</span> </span><span class="NAME">WMSGetFeatureInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">OpenLayers.Class</span><span class="PUNC">(</span><span class="NAME">OpenLayers.Control.WMSGetFeatureInfo</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>  9</span> 
+<span class='line'> 10</span> 	</span><span class="COMM">/** @override */</span><span class="WHIT">
+<span class='line'> 11</span> 	</span><span class="NAME">queryVisible</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 12</span> 	</span><span class="COMM">/** @override */</span><span class="WHIT">
+<span class='line'> 13</span> 	</span><span class="NAME">maxFeatures</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NUMB">20</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 14</span> 	</span><span class="COMM">/** @override */</span><span class="WHIT">
+<span class='line'> 15</span> 	</span><span class="NAME">infoFormat</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">'text/html'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 16</span> 	</span><span class="COMM">/** @override */</span><span class="WHIT">
+<span class='line'> 17</span> 	</span><span class="NAME">autoActivate</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 18</span> 
+<span class='line'> 19</span> 	</span><span class="COMM">/** @constructor */</span><span class="WHIT">
+<span class='line'> 20</span> 	</span><span class="NAME">initialize</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">options</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 21</span> 		</span><span class="NAME">options</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">options</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 22</span> 		</span><span class="NAME">options.handlerOptions</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">options.handlerOptions</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 23</span> 		</span><span class="NAME">OpenLayers.Control.WMSGetFeatureInfo.prototype.initialize.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">options</span><span class="WHIT"> </span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 25</span> 
+<span class='line'> 26</span> 	</span><span class="NAME">CLASS_NAME</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"WMSGetFeatureInfo"</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span></pre></body></html>
