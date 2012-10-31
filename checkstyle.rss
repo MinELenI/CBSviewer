@@ -10,7 +10,7 @@
     <item>
       <title>File: 43,
              Errors: 0,
-             Warnings: 262,
+             Warnings: 264,
              Infos: 6
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
@@ -175,7 +175,7 @@
                   0
                 </td>
                 <td>
-                  8
+                  7
                 </td>
                 <td>
                   0
@@ -399,7 +399,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  5
                 </td>
                 <td>
                   0
