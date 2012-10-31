@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-10-30T12:06:51.125">
+<pmd version="4.3" timestamp="2012-10-31T10:55:23.594">
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractWxSServlet.java">
-<violation beginline="4" endline="95" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+<violation beginline="4" endline="138" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\gazetteer\AdresZoekServlet.java">
+<violation beginline="1" endline="198" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet.gazetteer" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java">
-<violation beginline="4" endline="548" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+<violation beginline="4" endline="540" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java">
+<violation beginline="133" endline="136" begincolumn="13" endcolumn="13" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="nl.mineleni.openls.parser" class="OpenLSRequestParser" method="getGeocodeRequest" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java">
+<violation beginline="165" endline="169" begincolumn="13" endcolumn="13" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="nl.mineleni.openls.parser" class="OpenLSResponseParser" method="getGeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
 </violation>
 </file>
 </pmd>

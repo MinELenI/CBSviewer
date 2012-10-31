@@ -1,3 +1,6 @@
 nl.mineleni.cbsviewer.servlet
+nl.mineleni.cbsviewer.servlet.gazetteer.lusclient
 nl.mineleni.cbsviewer.servlet.wms.cache
 nl.mineleni.cbsviewer.util
+nl.mineleni.openls
+nl.mineleni.openls.parser

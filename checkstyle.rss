@@ -8,10 +8,10 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 18,
+      <title>File: 43,
              Errors: 0,
-             Warnings: 37,
-             Infos: 0
+             Warnings: 262,
+             Infos: 6
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -29,7 +29,35 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.package-info.java">nl/mineleni/cbsviewer/servlet/wms/package-info.java</a>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.Address.java">nl/mineleni/openls/databinding/openls/Address.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.StreetAddress.java">nl/mineleni/openls/databinding/openls/StreetAddress.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.package-info.java">nl/mineleni/openls/databinding/openls/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -57,6 +85,300 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.parser.OpenLSRequestParser.java">nl/mineleni/openls/parser/OpenLSRequestParser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.Street.java">nl/mineleni/openls/databinding/openls/Street.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  28
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.AvailableLayersBean.java">nl/mineleni/cbsviewer/util/AvailableLayersBean.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching.java">nl/mineleni/cbsviewer/servlet/wms/cache/ImageCaching.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.SpatialUtil.java">nl/mineleni/cbsviewer/util/SpatialUtil.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage.java">nl/mineleni/cbsviewer/servlet/wms/cache/CacheImage.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.java">nl/mineleni/cbsviewer/servlet/AbstractBaseServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.package-info.java">nl/mineleni/cbsviewer/servlet/gazetteer/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClientAddress.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.Place.java">nl/mineleni/openls/databinding/openls/Place.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.package-info.java">nl/mineleni/cbsviewer/util/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.XmlNamespaceConstants.java">nl/mineleni/openls/XmlNamespaceConstants.java</a>
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.ReverseProxyServlet.java">nl/mineleni/cbsviewer/servlet/ReverseProxyServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.gml.package-info.java">nl/mineleni/openls/databinding/gml/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.package-info.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet.java">nl/mineleni/cbsviewer/servlet/gazetteer/AdresZoekServlet.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractWxSServlet.java">nl/mineleni/cbsviewer/servlet/AbstractWxSServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeRequest.java">nl/mineleni/openls/databinding/openls/GeocodeRequest.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeResponse.java">nl/mineleni/openls/databinding/openls/GeocodeResponse.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.package-info.java">nl/mineleni/cbsviewer/servlet/wms/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.gml.Pos.java">nl/mineleni/openls/databinding/gml/Pos.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage.java">nl/mineleni/cbsviewer/servlet/wms/cache/CachableImage.java</a>
                 </td>
                 <td>
@@ -64,6 +386,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
                 </td>
                 <td>
                   0
@@ -99,63 +435,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.AvailableLayersBean.java">nl/mineleni/cbsviewer/util/AvailableLayersBean.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.SpatialUtil.java">nl/mineleni/cbsviewer/util/SpatialUtil.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching.java">nl/mineleni/cbsviewer/servlet/wms/cache/ImageCaching.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.java">nl/mineleni/cbsviewer/servlet/AbstractBaseServlet.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  8
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage.java">nl/mineleni/cbsviewer/servlet/wms/cache/CacheImage.java</a>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.package-info.java">nl/mineleni/openls/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -175,7 +455,77 @@
                   0
                 </td>
                 <td>
+                  6
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.PostalCode.java">nl/mineleni/openls/databinding/openls/PostalCode.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
                   12
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.Building.java">nl/mineleni/openls/databinding/openls/Building.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodedAddress.java">nl/mineleni/openls/databinding/openls/GeocodedAddress.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.gml.Point.java">nl/mineleni/openls/databinding/gml/Point.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.parser.package-info.java">nl/mineleni/openls/parser/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
                 <td>
                   0
@@ -197,27 +547,13 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.package-info.java">nl/mineleni/cbsviewer/util/package-info.java</a>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtil.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClientUtil.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.ReverseProxyServlet.java">nl/mineleni/cbsviewer/servlet/ReverseProxyServlet.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
+                  1
                 </td>
                 <td>
                   0
@@ -253,13 +589,27 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractWxSServlet.java">nl/mineleni/cbsviewer/servlet/AbstractWxSServlet.java</a>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.parser.OpenLSResponseParser.java">nl/mineleni/openls/parser/OpenLSResponseParser.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  6
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeResponseList.java">nl/mineleni/openls/databinding/openls/GeocodeResponseList.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  18
                 </td>
                 <td>
                   0
