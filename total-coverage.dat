@@ -222,8 +222,10 @@ DA:14,1
 DA:17,1
 DA:20,1
 DA:23,1
-DA:40,1
-DA:45,1
+DA:38,1
+DA:39,1
+DA:46,1
+DA:51,1
 end_of_record
 SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-1.8.2.min.js
 DA:2,3636
