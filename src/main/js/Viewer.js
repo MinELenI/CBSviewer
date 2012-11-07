@@ -31,7 +31,7 @@ Viewer = function() {
 	 */
 	function _showInfo(evt) {
 		if (evt.text != undefined) {
-			jQuery('#' + config.featureInfoDiv).html('<p class="todo">TODO: html parsen/opschonen</p>' + evt.text);
+			jQuery('#' + config.featureInfoDiv).html(evt.text);
 		}
 	}
 
@@ -83,7 +83,7 @@ Viewer = function() {
 			(window.console && console.warn('Deprecated function called: Viewer::getMap().'));
 			return _map;
 		},
-		
+
 		/**
 		 * verplaats en zoom de kaart naar de gevraagde locatie.
 		 * 
@@ -99,7 +99,7 @@ Viewer = function() {
 			var zm = _map.getZoomForExtent(new OpenLayers.Bounds(x - radius, y - radius, x + radius, y + radius));
 			_map.zoomTo(zm);
 		},
-		
+
 		/**
 		 * Controls aan de kaart hangen.
 		 * 

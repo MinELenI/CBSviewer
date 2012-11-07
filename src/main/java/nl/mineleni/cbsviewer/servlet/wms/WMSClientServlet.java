@@ -12,14 +12,8 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPNAME;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
@@ -109,36 +103,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
      * onderhandeling.
      */
     private transient Map<String, WebMapServer> wmsServersCache = null;
-
-    /**
-     * converteert een stream naar een string.
-     * 
-     * @param is
-     *            de InputStream met data
-     * @return de data als string
-     * @throws IOException
-     *             Signals that an I/O exception has occurred.
-     */
-    private String convertStreamToString(final InputStream is)
-            throws IOException {
-        if (is != null) {
-            final Writer writer = new StringWriter();
-            final char[] buffer = new char[1024];
-            try {
-                final Reader reader = new BufferedReader(new InputStreamReader(
-                        is, "UTF-8"));
-                int n;
-                while ((n = reader.read(buffer)) != -1) {
-                    writer.write(buffer, 0, n);
-                }
-            } finally {
-                is.close();
-            }
-            return writer.toString();
-        } else {
-            return "";
-        }
-    }
 
     /*
      * (non-Javadoc)
@@ -239,7 +203,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             LOGGER.debug("WMS gevonden in cache.");
             return this.wmsServersCache.get(lyrDesc.getUrl());
         } else {
-            LOGGER.debug("Aanmaken van nieuwe WMS.");
+            LOGGER.debug("Aanmaken van nieuwe WMS (inclusief versie onderhandeling).");
             final WebMapServer fgWMS = new WebMapServer(new URL(
                     lyrDesc.getUrl()));
             this.wmsServersCache.put(lyrDesc.getUrl(), fgWMS);
@@ -280,10 +244,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
             }
         }
         getFeatureInfoRequest.setQueryLayers(queryLayers);
-        // TODO html parsen
-        getFeatureInfoRequest.setInfoFormat("text/html");
-        // getFeatureInfoRequest.setInfoFormat("text/plain");
-
+        getFeatureInfoRequest.setInfoFormat("application/vnd.ogc.gml");
         getFeatureInfoRequest.setFeatureCount(10);
         getFeatureInfoRequest.setQueryPoint(MAP_DIMENSION_MIDDLE,
                 MAP_DIMENSION_MIDDLE);
@@ -292,7 +253,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
         final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
                 .issueRequest(getFeatureInfoRequest);
 
-        return this.convertStreamToString(response.getInputStream());
+        return FeatureInfoResponseConverter.convertToHTMLTable(response
+                .getInputStream(), FeatureInfoResponseConverter.type.GMLTYPE,
+                lyrDesc.getAttributes().split(",\\s*"));
     }
 
     /**

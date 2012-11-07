@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 package nl.mineleni.cbsviewer.util;
 
 import java.io.File;
@@ -41,7 +47,6 @@ public class AvailableLayersBean {
 		try {
 			final JAXBContext jc = JAXBContext
 					.newInstance("nl.mineleni.cbsviewer.util.xml");
-
 			final Unmarshaller u = jc.createUnmarshaller();
 			final File f = new File(this.getClass().getClassLoader()
 					.getResource("AvailableLayers.xml").getFile());
@@ -94,6 +99,7 @@ public class AvailableLayersBean {
 	 * @param name
 	 *            de ID van de laag
 	 * @return the layer by id
+	 * @see LayerDescriptor#getId()
 	 */
 	public LayerDescriptor getLayerByID(final String name) {
 		for (final LayerDescriptor desc : layers) {
@@ -108,8 +114,27 @@ public class AvailableLayersBean {
 	 * geeft de eerste layerdescriptor met de gevraagde naam.
 	 * 
 	 * @param name
+	 *            de naam van de wms laag
+	 * @return the layer by name
+	 * @see LayerDescriptor#getLayers()
+	 */
+	public LayerDescriptor getLayerByLayers(final String lyrName) {
+		for (final LayerDescriptor desc : layers) {
+			if ((desc.getLayers().replaceAll("\\s", ""))
+					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
+				return desc;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde naam.
+	 * 
+	 * @param name
 	 *            de naam van de laag
 	 * @return the layer by name
+	 * @see LayerDescriptor#getName()
 	 */
 	public LayerDescriptor getLayerByName(final String name) {
 		for (final LayerDescriptor desc : layers) {
@@ -119,4 +144,5 @@ public class AvailableLayersBean {
 		}
 		return null;
 	}
+
 }

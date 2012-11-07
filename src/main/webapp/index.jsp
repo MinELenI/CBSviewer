@@ -121,10 +121,6 @@
 					<!-- plaats voor de feature info, dynamisch en statisch-->
 					<c:if test="${param.coreonly==true}">
 						<c:if test="${not empty featureinfo}">
-							<p class="todo">TODO: html parsen/opschonen</p>
-							<!-- hiermee worden de html tags als entities edncoded, niet wat we willen
-							 <c:out value="${featureinfo}" /> -->
-							<!--<jsp:expression>request.getAttribute("featureinfo")</jsp:expression>-->
 							<c:out value="${featureinfo}" escapeXml="false" />
 						</c:if>
 					</c:if>

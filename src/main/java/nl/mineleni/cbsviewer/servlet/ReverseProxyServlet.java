@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
 package nl.mineleni.cbsviewer.servlet;
 
 import static javax.servlet.http.HttpServletResponse.SC_FORBIDDEN;
@@ -14,6 +20,10 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter;
+import nl.mineleni.cbsviewer.util.AvailableLayersBean;
+import nl.mineleni.cbsviewer.util.EncodingUtil;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -74,7 +84,8 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	/** log4j logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ReverseProxyServlet.class);
-
+	/** layers bean. */
+	private final transient AvailableLayersBean layers = new AvailableLayersBean();
 	/**
 	 * Set van toegestane hosts voor proxy-ing.
 	 * 
@@ -90,37 +101,36 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	private boolean forceXmlResponse = false;
 
+	/** http client. */
+	private final HttpClient client = new DefaultHttpClient();
+
 	/**
-	 * Initialize variables called when context is initialized. Leest de waarden
-	 * van {@link #ALLOWED_HOSTS} (verplichte optie) en {@link #FORCE_XML_MIME}
-	 * uit de configuratie.
+	 * Parse out the server name and check if the specified server name is in
+	 * the list of allowed servernames.
 	 * 
-	 * @param config
-	 *            the <code>ServletConfig</code> object that contains
-	 *            configutation information for this servlet
-	 * @throws ServletException
-	 *             if an exception occurs that interrupts the servlet's normal
-	 *             operation
+	 * @param serverUrl
+	 *            the url to check
+	 * @return <code>true</code> if the name of the server is found in the list
+	 */
+	private boolean checkUrlAllowed(String serverUrl) {
+		serverUrl = serverUrl.toLowerCase();
+		serverUrl = serverUrl.substring(serverUrl.indexOf("//") + 2);
+		if (serverUrl.contains("/")) {
+			serverUrl = serverUrl.substring(0, serverUrl.indexOf("/"));
+		}
+		LOGGER.debug("test server = " + serverUrl);
+		return (this.allowedHosts.contains(serverUrl));
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see javax.servlet.GenericServlet#destroy()
 	 */
 	@Override
-	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		final String forceXML = config.getInitParameter(FORCE_XML_MIME);
-		this.forceXmlResponse = (null != forceXML ? Boolean
-				.parseBoolean(forceXML) : false);
-
-		String csvHostnames = config.getInitParameter(ALLOWED_HOSTS);
-		if (csvHostnames == null) {
-			LOGGER.error(ERR_MSG_MISSING_CONFIG);
-			throw new ServletException(ERR_MSG_MISSING_CONFIG);
-		}
-		// clean-up whitespace and case the names
-		csvHostnames = csvHostnames.replaceAll("\\s", "").toLowerCase();
-		final String[] names = csvHostnames.split(";");
-		for (final String name : names) {
-			this.allowedHosts.add(name);
-			LOGGER.debug("toevoegen aan allowed host namen: " + name);
-		}
+	public void destroy() {
+		this.client.getConnectionManager().shutdown();
+		super.destroy();
 	}
 
 	/**
@@ -137,8 +147,8 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 *             the servlet exception
 	 */
 	@Override
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException {
+	protected void doGet(final HttpServletRequest request,
+			final HttpServletResponse response) throws ServletException {
 		try {
 			String serverUrl = request.getQueryString();
 			serverUrl = URLDecoder.decode(serverUrl, "UTF-8");
@@ -151,29 +161,48 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							+ ERR_MSG_FORBIDDEN);
 					response.flushBuffer();
 				} else {
-					LOGGER.debug("GET param:" + serverUrl);
-					final HttpClient client = new DefaultHttpClient();
-					if ((null != this.proxyHost) && (this.proxyPort > 0)) {
-						client.getParams().setParameter(
-								ConnRoutePNames.DEFAULT_PROXY,
-								new HttpHost(this.proxyHost, this.proxyPort,
-										"http"));
+					LOGGER.debug("proxy GET param:" + serverUrl);
+					// intercept and modify request
+					if (serverUrl.contains("GetFeatureInfo")) {
+						serverUrl = serverUrl.replace("text%2Fhtml",
+								"application%2Fvnd.ogc.gml");
+						LOGGER.debug("proxy GetFeatureInfo GET param:"
+								+ serverUrl);
 					}
-					// override referer
-					client.getParams().setParameter("Referer", "/");
 
-					final HttpResponse getResp = client.execute(new HttpGet(
+					final HttpResponse get = this.client.execute(new HttpGet(
 							serverUrl));
-
-					// dump response to out
-					if (getResp.getStatusLine().getStatusCode() == SC_OK) {
-						// force the response to have XML content type (WMS
-						// servers generally don't)
-						if (this.forceXmlResponse) {
-							response.setContentType("text/xml");
+					if (get.getStatusLine().getStatusCode() == SC_OK) {
+						String responseBody;
+						if (serverUrl.contains("GetFeatureInfo")) {
+							String lName = "";
+							// uitzoeken querylayers
+							final String[] params = serverUrl.split("&");
+							for (final String s : params) {
+								if (s.contains("QUERY_LAYERS=")) {
+									lName = EncodingUtil.decodeURIComponent(s
+											.substring(
+													"QUERY_LAYERS=".length(),
+													s.length()));
+									LOGGER.debug("Query layers = " + lName);
+								}
+							}
+							responseBody = FeatureInfoResponseConverter
+									.convertToHTMLTable(
+											get.getEntity().getContent(),
+											FeatureInfoResponseConverter.type.GMLTYPE,
+											layers.getLayerByLayers(lName)
+													.getAttributes()
+													.split(",\\s*"));
+						} else {
+							// force the response to have XML content type (WMS
+							// servers generally don't)
+							if (this.forceXmlResponse) {
+								response.setContentType("text/xml");
+							}
+							responseBody = EntityUtils
+									.toString(get.getEntity()).trim();
 						}
-						final String responseBody = EntityUtils.toString(
-								getResp.getEntity()).trim();
 						response.setContentLength(responseBody.length());
 
 						LOGGER.debug("responseBody:" + responseBody);
@@ -182,15 +211,13 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 						response.flushBuffer();
 					} else {
 						LOGGER.warn("Onverwachte fout(server url=" + serverUrl
-								+ "): " + getResp.getStatusLine().toString());
-						response.sendError(getResp.getStatusLine()
-								.getStatusCode(), getResp.getStatusLine()
-								.toString());
+								+ "): " + get.getStatusLine().toString());
+						response.sendError(get.getStatusLine().getStatusCode(),
+								get.getStatusLine().toString());
 					}
-					client.getConnectionManager().shutdown();
 				}
 			} else {
-				throw new ServletException("Only HTTP(S) protocol supported");
+				throw new ServletException("Only HTTP(S) protocol is supported");
 			}
 		} catch (final UnsupportedEncodingException e) {
 			LOGGER.error("Proxy fout.", e);
@@ -271,20 +298,42 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	// }
 
 	/**
-	 * Parse out the server name and check if the specified server name is in
-	 * the list of allowed servernames.
+	 * Initialize variables called when context is initialized. Leest de waarden
+	 * van {@link #ALLOWED_HOSTS} (verplichte optie) en {@link #FORCE_XML_MIME}
+	 * uit de configuratie.
 	 * 
-	 * @param serverUrl
-	 *            the url to check
-	 * @return <code>true</code> if the name of the server is found in the list
+	 * @param config
+	 *            the <code>ServletConfig</code> object that contains
+	 *            configutation information for this servlet
+	 * @throws ServletException
+	 *             if an exception occurs that interrupts the servlet's normal
+	 *             operation
 	 */
-	private boolean checkUrlAllowed(String serverUrl) {
-		serverUrl = serverUrl.toLowerCase();
-		serverUrl = serverUrl.substring(serverUrl.indexOf("//") + 2);
-		if (serverUrl.contains("/")) {
-			serverUrl = serverUrl.substring(0, serverUrl.indexOf("/"));
+	@Override
+	public void init(final ServletConfig config) throws ServletException {
+		super.init(config);
+		final String forceXML = config.getInitParameter(FORCE_XML_MIME);
+		this.forceXmlResponse = (null != forceXML ? Boolean
+				.parseBoolean(forceXML) : false);
+
+		String csvHostnames = config.getInitParameter(ALLOWED_HOSTS);
+		if (csvHostnames == null) {
+			LOGGER.error(ERR_MSG_MISSING_CONFIG);
+			throw new ServletException(ERR_MSG_MISSING_CONFIG);
 		}
-		LOGGER.debug("test server = " + serverUrl);
-		return (this.allowedHosts.contains(serverUrl));
+		// clean-up whitespace and case
+		csvHostnames = csvHostnames.replaceAll("\\s", "").toLowerCase();
+		final String[] names = csvHostnames.split(";");
+		for (final String name : names) {
+			this.allowedHosts.add(name);
+			LOGGER.debug("toevoegen aan allowed host namen: " + name);
+		}
+
+		if ((null != this.proxyHost) && (this.proxyPort > 0)) {
+			this.client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,
+					new HttpHost(this.proxyHost, this.proxyPort, "http"));
+		}
+		// override referer
+		this.client.getParams().setParameter("Referer", "/");
 	}
 }

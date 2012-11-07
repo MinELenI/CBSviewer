@@ -2,7 +2,8 @@
 
 /* opmaak van de elementen */
 .error,.todo {
-	background: url("../img/error.png") no-repeat scroll -12px 1px transparent;
+	background: url("../img/error.png") no-repeat scroll -12px 1px
+		transparent;
 	padding-left: 16px;
 	text-align: center;
 	color: #f00;
@@ -96,6 +97,18 @@ a.accesskey:focus {
 /* feature informatie */
 .featureinfo {
 	
+}
+
+#featureinfo {
+	
+}
+
+.attribuutTabel {
+	
+}
+
+.attribuutTabel .even {
+	background-color: #eff0f2;
 }
 
 .copy {

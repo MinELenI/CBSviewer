@@ -25,6 +25,8 @@
 				minOccurs="1" maxOccurs="1" />
 			<xs:element type="xs:string" name="styles" nillable="false"
 				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="attributes" nillable="false"
+				minOccurs="1" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 
