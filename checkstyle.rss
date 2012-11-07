@@ -8,10 +8,10 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 43,
+      <title>File: 44,
              Errors: 0,
-             Warnings: 264,
-             Infos: 6
+             Warnings: 270,
+             Infos: 8
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -119,7 +119,7 @@
                   0
                 </td>
                 <td>
-                  0
+                  3
                 </td>
                 <td>
                   0
@@ -259,7 +259,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  3
                 </td>
                 <td>
                   0
@@ -393,20 +393,6 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.StringConstants.java">nl/mineleni/cbsviewer/util/StringConstants.java</a>
                 </td>
                 <td>
@@ -414,6 +400,20 @@
                 </td>
                 <td>
                   1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
                 </td>
                 <td>
                   0
@@ -455,7 +455,7 @@
                   0
                 </td>
                 <td>
-                  6
+                  5
                 </td>
                 <td>
                   0
@@ -498,6 +498,20 @@
                 </td>
                 <td>
                   14
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.java">nl/mineleni/cbsviewer/servlet/wms/FeatureInfoResponseConverter.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  3
                 </td>
                 <td>
                   0
