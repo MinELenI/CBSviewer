@@ -18,7 +18,7 @@
 <a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FEATUREINFO;
 <a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
 <a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPNAME;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPID;
 <a class="jxr_linenumber" name="12" href="#12">12</a>  
 <a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> java.awt.Graphics;
 <a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> java.awt.image.BufferedImage;
@@ -363,154 +363,155 @@
 <a class="jxr_linenumber" name="353" href="#353">353</a>             legends[l] = File.createTempFile(<span class="jxr_string">"legenda"</span>, <span class="jxr_string">".png"</span>, <strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>
 <a class="jxr_linenumber" name="354" href="#354">354</a>                     .getServletContext().getRealPath(MAP_CACHE_DIR.code)));
 <a class="jxr_linenumber" name="355" href="#355">355</a>             legends[l].deleteOnExit();
-<a class="jxr_linenumber" name="356" href="#356">356</a>             ImageIO.write(image, <span class="jxr_string">"png"</span>, legends[l]);
-<a class="jxr_linenumber" name="357" href="#357">357</a>         }
-<a class="jxr_linenumber" name="358" href="#358">358</a>         <strong class="jxr_keyword">return</strong> legends;
-<a class="jxr_linenumber" name="359" href="#359">359</a>     }
-<a class="jxr_linenumber" name="360" href="#360">360</a> 
-<a class="jxr_linenumber" name="361" href="#361">361</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="362" href="#362">362</a> <em class="jxr_javadoccomment">     * kaart maken op basis van de opgehaalde afbeeldingen.</em>
-<a class="jxr_linenumber" name="363" href="#363">363</a> <em class="jxr_javadoccomment">     * </em>
-<a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_javadoccomment">     * @param imageVoorgrond</em>
-<a class="jxr_linenumber" name="365" href="#365">365</a> <em class="jxr_javadoccomment">     *            de voorgrondkaart</em>
-<a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_javadoccomment">     * @param imageAchtergrond</em>
-<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_javadoccomment">     *            de achtergrondgrondkaart</em>
-<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">     * @return de file met de afbeelding</em>
-<a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_javadoccomment">     * @throws IOException</em>
-<a class="jxr_linenumber" name="370" href="#370">370</a> <em class="jxr_javadoccomment">     *             Signals that an I/O exception has occurred.</em>
-<a class="jxr_linenumber" name="371" href="#371">371</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="372" href="#372">372</a>     <strong class="jxr_keyword">private</strong> File getMap(<strong class="jxr_keyword">final</strong> BufferedImage imageVoorgrond,
-<a class="jxr_linenumber" name="373" href="#373">373</a>             <strong class="jxr_keyword">final</strong> BufferedImage imageAchtergrond) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="374" href="#374">374</a> 
-<a class="jxr_linenumber" name="375" href="#375">375</a>         <strong class="jxr_keyword">final</strong> BufferedImage composite = <strong class="jxr_keyword">new</strong> BufferedImage(MAP_DIMENSION,
-<a class="jxr_linenumber" name="376" href="#376">376</a>                 MAP_DIMENSION, BufferedImage.TYPE_INT_ARGB);
-<a class="jxr_linenumber" name="377" href="#377">377</a>         <strong class="jxr_keyword">final</strong> Graphics g = composite.getGraphics();
-<a class="jxr_linenumber" name="378" href="#378">378</a>         g.drawImage(imageAchtergrond, 0, 0, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="379" href="#379">379</a>         <strong class="jxr_keyword">if</strong> (imageVoorgrond != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="380" href="#380">380</a>             g.drawImage(imageVoorgrond, 0, 0, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="381" href="#381">381</a>             <em class="jxr_comment">// zoeklocatie intekenen met plaatje</em>
-<a class="jxr_linenumber" name="382" href="#382">382</a>             <strong class="jxr_keyword">final</strong> BufferedImage infoImage = ImageIO.read(<strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>
-<a class="jxr_linenumber" name="383" href="#383">383</a>                     .getClass().getClassLoader().getResource(<span class="jxr_string">"info.png"</span>)
-<a class="jxr_linenumber" name="384" href="#384">384</a>                     .getFile()));
-<a class="jxr_linenumber" name="385" href="#385">385</a>             <em class="jxr_comment">// CHECKSTYLE.OFF: MagicNumber - dit zijn midden en hoogte van het</em>
-<a class="jxr_linenumber" name="386" href="#386">386</a>             <em class="jxr_comment">// plaatje</em>
-<a class="jxr_linenumber" name="387" href="#387">387</a>             g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
-<a class="jxr_linenumber" name="388" href="#388">388</a>                     MAP_DIMENSION_MIDDLE - 37, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="389" href="#389">389</a>             <em class="jxr_comment">// CHECKSTYLE.ON: MagicNumber</em>
-<a class="jxr_linenumber" name="390" href="#390">390</a>         }
-<a class="jxr_linenumber" name="391" href="#391">391</a>         <em class="jxr_comment">// opslaan van plaatje zodat de browser het op kan halen</em>
-<a class="jxr_linenumber" name="392" href="#392">392</a>         <strong class="jxr_keyword">final</strong> File kaartAfbeelding = File.createTempFile(
-<a class="jxr_linenumber" name="393" href="#393">393</a>                 <span class="jxr_string">"wmscombined"</span>,
-<a class="jxr_linenumber" name="394" href="#394">394</a>                 <span class="jxr_string">".png"</span>,
-<a class="jxr_linenumber" name="395" href="#395">395</a>                 <strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>.getServletContext().getRealPath(
-<a class="jxr_linenumber" name="396" href="#396">396</a>                         MAP_CACHE_DIR.code)));
-<a class="jxr_linenumber" name="397" href="#397">397</a>         kaartAfbeelding.deleteOnExit();
-<a class="jxr_linenumber" name="398" href="#398">398</a>         ImageIO.write(composite, <span class="jxr_string">"png"</span>, kaartAfbeelding);
-<a class="jxr_linenumber" name="399" href="#399">399</a>         <strong class="jxr_keyword">return</strong> kaartAfbeelding;
-<a class="jxr_linenumber" name="400" href="#400">400</a>     }
-<a class="jxr_linenumber" name="401" href="#401">401</a> 
-<a class="jxr_linenumber" name="402" href="#402">402</a>     <em class="jxr_comment">/*</em>
-<a class="jxr_linenumber" name="403" href="#403">403</a> <em class="jxr_comment">     * (non-Javadoc)</em>
-<a class="jxr_linenumber" name="404" href="#404">404</a> <em class="jxr_comment">     * </em>
-<a class="jxr_linenumber" name="405" href="#405">405</a> <em class="jxr_comment">     * @see</em>
-<a class="jxr_linenumber" name="406" href="#406">406</a> <em class="jxr_comment">     * nl.mineleni.cbsviewer.servlet.AbstractBaseServlet#init(javax.servlet.</em>
-<a class="jxr_linenumber" name="407" href="#407">407</a> <em class="jxr_comment">     * ServletConfig)</em>
-<a class="jxr_linenumber" name="408" href="#408">408</a> <em class="jxr_comment">     */</em>
-<a class="jxr_linenumber" name="409" href="#409">409</a>     @Override
-<a class="jxr_linenumber" name="410" href="#410">410</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> init(<strong class="jxr_keyword">final</strong> ServletConfig config) <strong class="jxr_keyword">throws</strong> ServletException {
-<a class="jxr_linenumber" name="411" href="#411">411</a>         <strong class="jxr_keyword">super</strong>.init(config);
-<a class="jxr_linenumber" name="412" href="#412">412</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="413" href="#413">413</a>             <strong class="jxr_keyword">this</strong>.bgWMSCache = <strong class="jxr_keyword">new</strong> <a href="../../../../../nl/mineleni/cbsviewer/servlet/wms/cache/WMSCache.html">WMSCache</a>(<strong class="jxr_keyword">this</strong>.getServletContext()
-<a class="jxr_linenumber" name="414" href="#414">414</a>                     .getRealPath(MAP_CACHE_DIR.code));
-<a class="jxr_linenumber" name="415" href="#415">415</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException e) {
-<a class="jxr_linenumber" name="416" href="#416">416</a>             LOGGER.error(
-<a class="jxr_linenumber" name="417" href="#417">417</a>                     <span class="jxr_string">"Inititalisatie fout voor de achtergrond bitmap cache."</span>, e);
-<a class="jxr_linenumber" name="418" href="#418">418</a>         }
-<a class="jxr_linenumber" name="419" href="#419">419</a> 
-<a class="jxr_linenumber" name="420" href="#420">420</a>         <em class="jxr_comment">// achtergrond kaart</em>
-<a class="jxr_linenumber" name="421" href="#421">421</a>         <strong class="jxr_keyword">final</strong> String bgCapabilitiesURL = config
-<a class="jxr_linenumber" name="422" href="#422">422</a>                 .getInitParameter(<span class="jxr_string">"bgCapabilitiesURL"</span>);
-<a class="jxr_linenumber" name="423" href="#423">423</a>         LOGGER.debug(<span class="jxr_string">"WMS capabilities url van achtergrond kaart: "</span>
-<a class="jxr_linenumber" name="424" href="#424">424</a>                 + bgCapabilitiesURL);
-<a class="jxr_linenumber" name="425" href="#425">425</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="426" href="#426">426</a>             <strong class="jxr_keyword">this</strong>.bgWMS = <strong class="jxr_keyword">new</strong> WebMapServer(<strong class="jxr_keyword">new</strong> URL(bgCapabilitiesURL));
-<a class="jxr_linenumber" name="427" href="#427">427</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> MalformedURLException e) {
-<a class="jxr_linenumber" name="428" href="#428">428</a>             LOGGER.error(
-<a class="jxr_linenumber" name="429" href="#429">429</a>                     <span class="jxr_string">"Een url die gebruikt wordt voor de WMS capabilities is misvormd"</span>,
-<a class="jxr_linenumber" name="430" href="#430">430</a>                     e);
-<a class="jxr_linenumber" name="431" href="#431">431</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
-<a class="jxr_linenumber" name="432" href="#432">432</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> ServiceException e) {
-<a class="jxr_linenumber" name="433" href="#433">433</a>             LOGGER.error(
-<a class="jxr_linenumber" name="434" href="#434">434</a>                     <span class="jxr_string">"Er is een service exception (WMS server fout) opgetreden bij het ophalen van de achtergrond WMS capabilities"</span>,
-<a class="jxr_linenumber" name="435" href="#435">435</a>                     e);
-<a class="jxr_linenumber" name="436" href="#436">436</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
-<a class="jxr_linenumber" name="437" href="#437">437</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException e) {
-<a class="jxr_linenumber" name="438" href="#438">438</a>             LOGGER.error(
-<a class="jxr_linenumber" name="439" href="#439">439</a>                     <span class="jxr_string">"Er is een I/O fout opgetreden bij benaderen van de WMS services"</span>,
-<a class="jxr_linenumber" name="440" href="#440">440</a>                     e);
-<a class="jxr_linenumber" name="441" href="#441">441</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
-<a class="jxr_linenumber" name="442" href="#442">442</a>         }
-<a class="jxr_linenumber" name="443" href="#443">443</a>         <strong class="jxr_keyword">final</strong> String bgWMSlyrs = config.getInitParameter(<span class="jxr_string">"bgWMSlayers"</span>);
-<a class="jxr_linenumber" name="444" href="#444">444</a>         LOGGER.debug(<span class="jxr_string">"Achtergrond kaartlagen: "</span> + bgWMSlyrs);
-<a class="jxr_linenumber" name="445" href="#445">445</a>         <strong class="jxr_keyword">if</strong> ((bgWMSlyrs != <strong class="jxr_keyword">null</strong>) &amp;&amp; (bgWMSlyrs.length() &gt; 0)) {
-<a class="jxr_linenumber" name="446" href="#446">446</a>             <strong class="jxr_keyword">this</strong>.bgWMSlayers = bgWMSlyrs.split(<span class="jxr_string">"[,]&#92;&#92;s*"</span>);
-<a class="jxr_linenumber" name="447" href="#447">447</a>         }
-<a class="jxr_linenumber" name="448" href="#448">448</a>         <strong class="jxr_keyword">this</strong>.wmsServersCache = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;String, WebMapServer&gt;();
-<a class="jxr_linenumber" name="449" href="#449">449</a>     }
-<a class="jxr_linenumber" name="450" href="#450">450</a> 
-<a class="jxr_linenumber" name="451" href="#451">451</a>     <em class="jxr_comment">/*</em>
-<a class="jxr_linenumber" name="452" href="#452">452</a> <em class="jxr_comment">     * (non-Javadoc)</em>
-<a class="jxr_linenumber" name="453" href="#453">453</a> <em class="jxr_comment">     * </em>
-<a class="jxr_linenumber" name="454" href="#454">454</a> <em class="jxr_comment">     * @see javax.servlet.http.HttpServlet#service(javax.servlet.ServletRequest,</em>
-<a class="jxr_linenumber" name="455" href="#455">455</a> <em class="jxr_comment">     * javax.servlet.ServletResponse)</em>
-<a class="jxr_linenumber" name="456" href="#456">456</a> <em class="jxr_comment">     */</em>
-<a class="jxr_linenumber" name="457" href="#457">457</a>     @Override
-<a class="jxr_linenumber" name="458" href="#458">458</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> service(<strong class="jxr_keyword">final</strong> HttpServletRequest request,
-<a class="jxr_linenumber" name="459" href="#459">459</a>             <strong class="jxr_keyword">final</strong> HttpServletResponse response) <strong class="jxr_keyword">throws</strong> ServletException,
-<a class="jxr_linenumber" name="460" href="#460">460</a>             IOException {
-<a class="jxr_linenumber" name="461" href="#461">461</a> 
-<a class="jxr_linenumber" name="462" href="#462">462</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong>[] dXcoordYCoordStraal = <strong class="jxr_keyword">this</strong>.parseLocation(request);
-<a class="jxr_linenumber" name="463" href="#463">463</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> xcoord = dXcoordYCoordStraal[0];
-<a class="jxr_linenumber" name="464" href="#464">464</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> ycoord = dXcoordYCoordStraal[1];
-<a class="jxr_linenumber" name="465" href="#465">465</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> straal = dXcoordYCoordStraal[2];
-<a class="jxr_linenumber" name="466" href="#466">466</a>         <strong class="jxr_keyword">final</strong> BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
-<a class="jxr_linenumber" name="467" href="#467">467</a> 
-<a class="jxr_linenumber" name="468" href="#468">468</a>         BufferedImage fg = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="469" href="#469">469</a>         <strong class="jxr_keyword">final</strong> String mapName = request.getParameter(REQ_PARAM_MAPNAME.code);
-<a class="jxr_linenumber" name="470" href="#470">470</a>         LOGGER.debug(<span class="jxr_string">"WMS layer id: "</span> + mapName);
+<a class="jxr_linenumber" name="356" href="#356">356</a>             LOGGER.debug(<span class="jxr_string">"Legenda bestand: "</span> + legends[l].getAbsolutePath());
+<a class="jxr_linenumber" name="357" href="#357">357</a>             ImageIO.write(image, <span class="jxr_string">"png"</span>, legends[l]);
+<a class="jxr_linenumber" name="358" href="#358">358</a>         }
+<a class="jxr_linenumber" name="359" href="#359">359</a>         <strong class="jxr_keyword">return</strong> legends;
+<a class="jxr_linenumber" name="360" href="#360">360</a>     }
+<a class="jxr_linenumber" name="361" href="#361">361</a> 
+<a class="jxr_linenumber" name="362" href="#362">362</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="363" href="#363">363</a> <em class="jxr_javadoccomment">     * kaart maken op basis van de opgehaalde afbeeldingen.</em>
+<a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_javadoccomment">     * </em>
+<a class="jxr_linenumber" name="365" href="#365">365</a> <em class="jxr_javadoccomment">     * @param imageVoorgrond</em>
+<a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_javadoccomment">     *            de voorgrondkaart</em>
+<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_javadoccomment">     * @param imageAchtergrond</em>
+<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">     *            de achtergrondgrondkaart</em>
+<a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_javadoccomment">     * @return de file met de afbeelding</em>
+<a class="jxr_linenumber" name="370" href="#370">370</a> <em class="jxr_javadoccomment">     * @throws IOException</em>
+<a class="jxr_linenumber" name="371" href="#371">371</a> <em class="jxr_javadoccomment">     *             Signals that an I/O exception has occurred.</em>
+<a class="jxr_linenumber" name="372" href="#372">372</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="373" href="#373">373</a>     <strong class="jxr_keyword">private</strong> File getMap(<strong class="jxr_keyword">final</strong> BufferedImage imageVoorgrond,
+<a class="jxr_linenumber" name="374" href="#374">374</a>             <strong class="jxr_keyword">final</strong> BufferedImage imageAchtergrond) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="375" href="#375">375</a> 
+<a class="jxr_linenumber" name="376" href="#376">376</a>         <strong class="jxr_keyword">final</strong> BufferedImage composite = <strong class="jxr_keyword">new</strong> BufferedImage(MAP_DIMENSION,
+<a class="jxr_linenumber" name="377" href="#377">377</a>                 MAP_DIMENSION, BufferedImage.TYPE_INT_ARGB);
+<a class="jxr_linenumber" name="378" href="#378">378</a>         <strong class="jxr_keyword">final</strong> Graphics g = composite.getGraphics();
+<a class="jxr_linenumber" name="379" href="#379">379</a>         g.drawImage(imageAchtergrond, 0, 0, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="380" href="#380">380</a>         <strong class="jxr_keyword">if</strong> (imageVoorgrond != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="381" href="#381">381</a>             g.drawImage(imageVoorgrond, 0, 0, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="382" href="#382">382</a>             <em class="jxr_comment">// zoeklocatie intekenen met plaatje</em>
+<a class="jxr_linenumber" name="383" href="#383">383</a>             <strong class="jxr_keyword">final</strong> BufferedImage infoImage = ImageIO.read(<strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>
+<a class="jxr_linenumber" name="384" href="#384">384</a>                     .getClass().getClassLoader().getResource(<span class="jxr_string">"info.png"</span>)
+<a class="jxr_linenumber" name="385" href="#385">385</a>                     .getFile()));
+<a class="jxr_linenumber" name="386" href="#386">386</a>             <em class="jxr_comment">// CHECKSTYLE.OFF: MagicNumber - dit zijn midden en hoogte van het</em>
+<a class="jxr_linenumber" name="387" href="#387">387</a>             <em class="jxr_comment">// plaatje</em>
+<a class="jxr_linenumber" name="388" href="#388">388</a>             g.drawImage(infoImage, MAP_DIMENSION_MIDDLE - 16,
+<a class="jxr_linenumber" name="389" href="#389">389</a>                     MAP_DIMENSION_MIDDLE - 37, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="390" href="#390">390</a>             <em class="jxr_comment">// CHECKSTYLE.ON: MagicNumber</em>
+<a class="jxr_linenumber" name="391" href="#391">391</a>         }
+<a class="jxr_linenumber" name="392" href="#392">392</a>         <em class="jxr_comment">// opslaan van plaatje zodat de browser het op kan halen</em>
+<a class="jxr_linenumber" name="393" href="#393">393</a>         <strong class="jxr_keyword">final</strong> File kaartAfbeelding = File.createTempFile(
+<a class="jxr_linenumber" name="394" href="#394">394</a>                 <span class="jxr_string">"wmscombined"</span>,
+<a class="jxr_linenumber" name="395" href="#395">395</a>                 <span class="jxr_string">".png"</span>,
+<a class="jxr_linenumber" name="396" href="#396">396</a>                 <strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>.getServletContext().getRealPath(
+<a class="jxr_linenumber" name="397" href="#397">397</a>                         MAP_CACHE_DIR.code)));
+<a class="jxr_linenumber" name="398" href="#398">398</a>         kaartAfbeelding.deleteOnExit();
+<a class="jxr_linenumber" name="399" href="#399">399</a>         ImageIO.write(composite, <span class="jxr_string">"png"</span>, kaartAfbeelding);
+<a class="jxr_linenumber" name="400" href="#400">400</a>         <strong class="jxr_keyword">return</strong> kaartAfbeelding;
+<a class="jxr_linenumber" name="401" href="#401">401</a>     }
+<a class="jxr_linenumber" name="402" href="#402">402</a> 
+<a class="jxr_linenumber" name="403" href="#403">403</a>     <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="404" href="#404">404</a> <em class="jxr_comment">     * (non-Javadoc)</em>
+<a class="jxr_linenumber" name="405" href="#405">405</a> <em class="jxr_comment">     * </em>
+<a class="jxr_linenumber" name="406" href="#406">406</a> <em class="jxr_comment">     * @see</em>
+<a class="jxr_linenumber" name="407" href="#407">407</a> <em class="jxr_comment">     * nl.mineleni.cbsviewer.servlet.AbstractBaseServlet#init(javax.servlet.</em>
+<a class="jxr_linenumber" name="408" href="#408">408</a> <em class="jxr_comment">     * ServletConfig)</em>
+<a class="jxr_linenumber" name="409" href="#409">409</a> <em class="jxr_comment">     */</em>
+<a class="jxr_linenumber" name="410" href="#410">410</a>     @Override
+<a class="jxr_linenumber" name="411" href="#411">411</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> init(<strong class="jxr_keyword">final</strong> ServletConfig config) <strong class="jxr_keyword">throws</strong> ServletException {
+<a class="jxr_linenumber" name="412" href="#412">412</a>         <strong class="jxr_keyword">super</strong>.init(config);
+<a class="jxr_linenumber" name="413" href="#413">413</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="414" href="#414">414</a>             <strong class="jxr_keyword">this</strong>.bgWMSCache = <strong class="jxr_keyword">new</strong> <a href="../../../../../nl/mineleni/cbsviewer/servlet/wms/cache/WMSCache.html">WMSCache</a>(<strong class="jxr_keyword">this</strong>.getServletContext()
+<a class="jxr_linenumber" name="415" href="#415">415</a>                     .getRealPath(MAP_CACHE_DIR.code));
+<a class="jxr_linenumber" name="416" href="#416">416</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException e) {
+<a class="jxr_linenumber" name="417" href="#417">417</a>             LOGGER.error(
+<a class="jxr_linenumber" name="418" href="#418">418</a>                     <span class="jxr_string">"Inititalisatie fout voor de achtergrond bitmap cache."</span>, e);
+<a class="jxr_linenumber" name="419" href="#419">419</a>         }
+<a class="jxr_linenumber" name="420" href="#420">420</a> 
+<a class="jxr_linenumber" name="421" href="#421">421</a>         <em class="jxr_comment">// achtergrond kaart</em>
+<a class="jxr_linenumber" name="422" href="#422">422</a>         <strong class="jxr_keyword">final</strong> String bgCapabilitiesURL = config
+<a class="jxr_linenumber" name="423" href="#423">423</a>                 .getInitParameter(<span class="jxr_string">"bgCapabilitiesURL"</span>);
+<a class="jxr_linenumber" name="424" href="#424">424</a>         LOGGER.debug(<span class="jxr_string">"WMS capabilities url van achtergrond kaart: "</span>
+<a class="jxr_linenumber" name="425" href="#425">425</a>                 + bgCapabilitiesURL);
+<a class="jxr_linenumber" name="426" href="#426">426</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="427" href="#427">427</a>             <strong class="jxr_keyword">this</strong>.bgWMS = <strong class="jxr_keyword">new</strong> WebMapServer(<strong class="jxr_keyword">new</strong> URL(bgCapabilitiesURL));
+<a class="jxr_linenumber" name="428" href="#428">428</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> MalformedURLException e) {
+<a class="jxr_linenumber" name="429" href="#429">429</a>             LOGGER.error(
+<a class="jxr_linenumber" name="430" href="#430">430</a>                     <span class="jxr_string">"Een url die gebruikt wordt voor de WMS capabilities is misvormd"</span>,
+<a class="jxr_linenumber" name="431" href="#431">431</a>                     e);
+<a class="jxr_linenumber" name="432" href="#432">432</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
+<a class="jxr_linenumber" name="433" href="#433">433</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> ServiceException e) {
+<a class="jxr_linenumber" name="434" href="#434">434</a>             LOGGER.error(
+<a class="jxr_linenumber" name="435" href="#435">435</a>                     <span class="jxr_string">"Er is een service exception (WMS server fout) opgetreden bij het ophalen van de achtergrond WMS capabilities"</span>,
+<a class="jxr_linenumber" name="436" href="#436">436</a>                     e);
+<a class="jxr_linenumber" name="437" href="#437">437</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
+<a class="jxr_linenumber" name="438" href="#438">438</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException e) {
+<a class="jxr_linenumber" name="439" href="#439">439</a>             LOGGER.error(
+<a class="jxr_linenumber" name="440" href="#440">440</a>                     <span class="jxr_string">"Er is een I/O fout opgetreden bij benaderen van de WMS services"</span>,
+<a class="jxr_linenumber" name="441" href="#441">441</a>                     e);
+<a class="jxr_linenumber" name="442" href="#442">442</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
+<a class="jxr_linenumber" name="443" href="#443">443</a>         }
+<a class="jxr_linenumber" name="444" href="#444">444</a>         <strong class="jxr_keyword">final</strong> String bgWMSlyrs = config.getInitParameter(<span class="jxr_string">"bgWMSlayers"</span>);
+<a class="jxr_linenumber" name="445" href="#445">445</a>         LOGGER.debug(<span class="jxr_string">"Achtergrond kaartlagen: "</span> + bgWMSlyrs);
+<a class="jxr_linenumber" name="446" href="#446">446</a>         <strong class="jxr_keyword">if</strong> ((bgWMSlyrs != <strong class="jxr_keyword">null</strong>) &amp;&amp; (bgWMSlyrs.length() &gt; 0)) {
+<a class="jxr_linenumber" name="447" href="#447">447</a>             <strong class="jxr_keyword">this</strong>.bgWMSlayers = bgWMSlyrs.split(<span class="jxr_string">"[,]&#92;&#92;s*"</span>);
+<a class="jxr_linenumber" name="448" href="#448">448</a>         }
+<a class="jxr_linenumber" name="449" href="#449">449</a>         <strong class="jxr_keyword">this</strong>.wmsServersCache = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;String, WebMapServer&gt;();
+<a class="jxr_linenumber" name="450" href="#450">450</a>     }
+<a class="jxr_linenumber" name="451" href="#451">451</a> 
+<a class="jxr_linenumber" name="452" href="#452">452</a>     <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="453" href="#453">453</a> <em class="jxr_comment">     * (non-Javadoc)</em>
+<a class="jxr_linenumber" name="454" href="#454">454</a> <em class="jxr_comment">     * </em>
+<a class="jxr_linenumber" name="455" href="#455">455</a> <em class="jxr_comment">     * @see javax.servlet.http.HttpServlet#service(javax.servlet.ServletRequest,</em>
+<a class="jxr_linenumber" name="456" href="#456">456</a> <em class="jxr_comment">     * javax.servlet.ServletResponse)</em>
+<a class="jxr_linenumber" name="457" href="#457">457</a> <em class="jxr_comment">     */</em>
+<a class="jxr_linenumber" name="458" href="#458">458</a>     @Override
+<a class="jxr_linenumber" name="459" href="#459">459</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> service(<strong class="jxr_keyword">final</strong> HttpServletRequest request,
+<a class="jxr_linenumber" name="460" href="#460">460</a>             <strong class="jxr_keyword">final</strong> HttpServletResponse response) <strong class="jxr_keyword">throws</strong> ServletException,
+<a class="jxr_linenumber" name="461" href="#461">461</a>             IOException {
+<a class="jxr_linenumber" name="462" href="#462">462</a> 
+<a class="jxr_linenumber" name="463" href="#463">463</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong>[] dXcoordYCoordStraal = <strong class="jxr_keyword">this</strong>.parseLocation(request);
+<a class="jxr_linenumber" name="464" href="#464">464</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> xcoord = dXcoordYCoordStraal[0];
+<a class="jxr_linenumber" name="465" href="#465">465</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> ycoord = dXcoordYCoordStraal[1];
+<a class="jxr_linenumber" name="466" href="#466">466</a>         <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> straal = dXcoordYCoordStraal[2];
+<a class="jxr_linenumber" name="467" href="#467">467</a>         <strong class="jxr_keyword">final</strong> BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
+<a class="jxr_linenumber" name="468" href="#468">468</a> 
+<a class="jxr_linenumber" name="469" href="#469">469</a>         BufferedImage fg = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="470" href="#470">470</a>         <strong class="jxr_keyword">final</strong> String mapId = request.getParameter(REQ_PARAM_MAPID.code);
 <a class="jxr_linenumber" name="471" href="#471">471</a> 
-<a class="jxr_linenumber" name="472" href="#472">472</a>         <strong class="jxr_keyword">if</strong> (mapName != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="473" href="#473">473</a>             <strong class="jxr_keyword">final</strong> LayerDescriptor layer = <strong class="jxr_keyword">this</strong>.layers.getLayerByID(mapName);
-<a class="jxr_linenumber" name="474" href="#474">474</a>             LOGGER.debug(<span class="jxr_string">"LayerDescriptor: "</span> + layer);
-<a class="jxr_linenumber" name="475" href="#475">475</a> 
-<a class="jxr_linenumber" name="476" href="#476">476</a>             <strong class="jxr_keyword">final</strong> String fgCapabilitiesURL = layer.getUrl();
-<a class="jxr_linenumber" name="477" href="#477">477</a>             LOGGER.debug(<span class="jxr_string">"WMS capabilities url van voorgrond kaart: "</span>
-<a class="jxr_linenumber" name="478" href="#478">478</a>                     + fgCapabilitiesURL);
-<a class="jxr_linenumber" name="479" href="#479">479</a>             <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="480" href="#480">480</a>                 fg = <strong class="jxr_keyword">this</strong>.getForeGroundMap(bbox, layer);
-<a class="jxr_linenumber" name="481" href="#481">481</a>                 <strong class="jxr_keyword">final</strong> File[] legendas = <strong class="jxr_keyword">this</strong>.getLegends(layer);
-<a class="jxr_linenumber" name="482" href="#482">482</a>                 <strong class="jxr_keyword">final</strong> String fInfo = <strong class="jxr_keyword">this</strong>.getFeatureInfo(layer);
-<a class="jxr_linenumber" name="483" href="#483">483</a>                 request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
-<a class="jxr_linenumber" name="484" href="#484">484</a>                 request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
-<a class="jxr_linenumber" name="485" href="#485">485</a>             } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> ServiceException e) {
-<a class="jxr_linenumber" name="486" href="#486">486</a>                 LOGGER.error(
-<a class="jxr_linenumber" name="487" href="#487">487</a>                         <span class="jxr_string">"Er is een service exception opgetreden bij benaderen van de voorgrond WMS"</span>,
-<a class="jxr_linenumber" name="488" href="#488">488</a>                         e);
-<a class="jxr_linenumber" name="489" href="#489">489</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
-<a class="jxr_linenumber" name="490" href="#490">490</a>             } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> MalformedURLException e) {
-<a class="jxr_linenumber" name="491" href="#491">491</a>                 LOGGER.error(
-<a class="jxr_linenumber" name="492" href="#492">492</a>                         <span class="jxr_string">"De url die gebruikt wordt voor de WMS capabilities is misvormd."</span>,
-<a class="jxr_linenumber" name="493" href="#493">493</a>                         e);
-<a class="jxr_linenumber" name="494" href="#494">494</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
-<a class="jxr_linenumber" name="495" href="#495">495</a>             }
-<a class="jxr_linenumber" name="496" href="#496">496</a>         }
-<a class="jxr_linenumber" name="497" href="#497">497</a>         <strong class="jxr_keyword">final</strong> BufferedImage bg = <strong class="jxr_keyword">this</strong>.getBackGroundMap(bbox);
-<a class="jxr_linenumber" name="498" href="#498">498</a>         <strong class="jxr_keyword">final</strong> File kaart = <strong class="jxr_keyword">this</strong>.getMap(fg, bg);
-<a class="jxr_linenumber" name="499" href="#499">499</a> 
-<a class="jxr_linenumber" name="500" href="#500">500</a>         request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
-<a class="jxr_linenumber" name="501" href="#501">501</a>         request.setAttribute(REQ_PARAM_KAART.code, kaart);
-<a class="jxr_linenumber" name="502" href="#502">502</a>     }
-<a class="jxr_linenumber" name="503" href="#503">503</a> }
+<a class="jxr_linenumber" name="472" href="#472">472</a>         <strong class="jxr_keyword">if</strong> (mapId != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="473" href="#473">473</a>             <strong class="jxr_keyword">final</strong> LayerDescriptor layer = <strong class="jxr_keyword">this</strong>.layers.getLayerByID(mapId);
+<a class="jxr_linenumber" name="474" href="#474">474</a>             request.setAttribute(<span class="jxr_string">"mapname"</span>, layer.getName());
+<a class="jxr_linenumber" name="475" href="#475">475</a>             LOGGER.debug(<span class="jxr_string">"LayerDescriptor::Name is: "</span> + layer.getName());
+<a class="jxr_linenumber" name="476" href="#476">476</a> 
+<a class="jxr_linenumber" name="477" href="#477">477</a>             <strong class="jxr_keyword">final</strong> String fgCapabilitiesURL = layer.getUrl();
+<a class="jxr_linenumber" name="478" href="#478">478</a>             LOGGER.debug(<span class="jxr_string">"WMS capabilities url van voorgrond kaart: "</span>
+<a class="jxr_linenumber" name="479" href="#479">479</a>                     + fgCapabilitiesURL);
+<a class="jxr_linenumber" name="480" href="#480">480</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="481" href="#481">481</a>                 fg = <strong class="jxr_keyword">this</strong>.getForeGroundMap(bbox, layer);
+<a class="jxr_linenumber" name="482" href="#482">482</a>                 <strong class="jxr_keyword">final</strong> File[] legendas = <strong class="jxr_keyword">this</strong>.getLegends(layer);
+<a class="jxr_linenumber" name="483" href="#483">483</a>                 <strong class="jxr_keyword">final</strong> String fInfo = <strong class="jxr_keyword">this</strong>.getFeatureInfo(layer);
+<a class="jxr_linenumber" name="484" href="#484">484</a>                 request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
+<a class="jxr_linenumber" name="485" href="#485">485</a>                 request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
+<a class="jxr_linenumber" name="486" href="#486">486</a>             } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> ServiceException e) {
+<a class="jxr_linenumber" name="487" href="#487">487</a>                 LOGGER.error(
+<a class="jxr_linenumber" name="488" href="#488">488</a>                         <span class="jxr_string">"Er is een service exception opgetreden bij benaderen van de voorgrond WMS"</span>,
+<a class="jxr_linenumber" name="489" href="#489">489</a>                         e);
+<a class="jxr_linenumber" name="490" href="#490">490</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
+<a class="jxr_linenumber" name="491" href="#491">491</a>             } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> MalformedURLException e) {
+<a class="jxr_linenumber" name="492" href="#492">492</a>                 LOGGER.error(
+<a class="jxr_linenumber" name="493" href="#493">493</a>                         <span class="jxr_string">"De url die gebruikt wordt voor de WMS capabilities is misvormd."</span>,
+<a class="jxr_linenumber" name="494" href="#494">494</a>                         e);
+<a class="jxr_linenumber" name="495" href="#495">495</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ServletException(e);
+<a class="jxr_linenumber" name="496" href="#496">496</a>             }
+<a class="jxr_linenumber" name="497" href="#497">497</a>         }
+<a class="jxr_linenumber" name="498" href="#498">498</a>         <strong class="jxr_keyword">final</strong> BufferedImage bg = <strong class="jxr_keyword">this</strong>.getBackGroundMap(bbox);
+<a class="jxr_linenumber" name="499" href="#499">499</a>         <strong class="jxr_keyword">final</strong> File kaart = <strong class="jxr_keyword">this</strong>.getMap(fg, bg);
+<a class="jxr_linenumber" name="500" href="#500">500</a> 
+<a class="jxr_linenumber" name="501" href="#501">501</a>         request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
+<a class="jxr_linenumber" name="502" href="#502">502</a>         request.setAttribute(REQ_PARAM_KAART.code, kaart);
+<a class="jxr_linenumber" name="503" href="#503">503</a>     }
+<a class="jxr_linenumber" name="504" href="#504">504</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
