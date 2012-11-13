@@ -9,7 +9,7 @@
 		isErrorPage="false" />
 
 	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
-
+	
 	<!-- menu dat alleen css gebruikt, de onderdelen die via javascript werken nog een coreonly voor plaatsen, tevels Excel module afronden en localiseren -->
 	<div class="dropDownMenu clearfix">
 	<!--a id="skipNavigation"></a-->
@@ -24,15 +24,14 @@
 								<div class="megaMenu megaThreeColumns">
 									<ul class="navleft">
 										<!--ul class="navleft"-->
-											<li class="menuTitle">Bevolking</li>	
-											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Inwoners totaal</a>
-												<ul>
-													<li><p class="editable_textarea" id="paragraph_1">911 ? ?  Google: Israel Did 9-11</p></li>
-													<li>Wijk<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>Buurt<br/><a href="#">2011</a> | <a href="#">2010</a> | <a href="#">2009</a></li>
-													<li>100m vierkant<br/><a href="#">2012</a> | <a href="#">2011</a> | <a href="#">2010</a><br/><a href="#">2009</a> | <a href="#">2008</a> | <a href="#">2007</a><br/><a href="#">2006</a> | <a href="#">2005</a> | <a href="#">2004</a><br/><a href="#">2003</a> | <a href="#">2002</a> | <a href="#">2001</a><br/><a href="#">2000</a></li>
-													<li>500m vierkant<br/><a href="#">2012</a> | <a href="#">2011</a> | <a href="#">2010</a><br/><a href="#">2009</a> | <a href="#">2008</a> | <a href="#">2007</a><br/><a href="#">2006</a> | <a href="#">2005</a> | <a href="#">2004</a><br/><a href="#">2003</a> | <a href="#">2002</a> | <a href="#">2001</a><br/><a href="#">2000</a></li>
-													<li>Bevolkingskern<br/><a href="#">2008</a> | <a href="#">2006</a></li>
+											<li class="menuTitle editable_textarea">Bevolking</li>	
+											<li><a class="editable_textarea" href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('De bevolking van Nederland op 1 januari.')">Inwoners totaal</a>
+												<ul>													
+													<li>Wijk<br/><a class="editable_textarea" href="#">2011</a> | <a class="editable_textarea" href="#">2010</a> | <a class="editable_textarea" href="#">2009</a></li>
+													<li>Buurt<br/><a class="editable_textarea" href="#">2011</a> | <a class="editable_textarea" href="#">2010</a> | <a class="editable_textarea" href="#">2009</a></li>
+													<li>100m vierkant<br/><a class="editable_textarea" href="#">2012</a> | <a class="editable_textarea" href="#">2011</a> | <a class="editable_textarea" href="#">2010</a><br/><a class="editable_textarea" href="#">2009</a> | <a class="editable_textarea" href="#">2008</a> | <a class="editable_textarea" href="#">2007</a><br/><a class="editable_textarea" href="#">2006</a> | <a class="editable_textarea" href="#">2005</a> | <a class="editable_textarea" href="#">2004</a><br/><a class="editable_textarea" href="#">2003</a> | <a class="editable_textarea" href="#">2002</a> | <a class="editable_textarea" href="#">2001</a><br/><a class="editable_textarea" href="#">2000</a></li>
+													<li>500m vierkant<br/><a class="editable_textarea" href="#">2012</a> | <a class="editable_textarea" href="#">2011</a> | <a class="editable_textarea" href="#">2010</a><br/><a class="editable_textarea" href="#">2009</a> | <a class="editable_textarea" href="#">2008</a> | <a class="editable_textarea" href="#">2007</a><br/><a class="editable_textarea" href="#">2006</a> | <a class="editable_textarea" href="#">2005</a> | <a class="editable_textarea" href="#">2004</a><br/><a class="editable_textarea" href="#">2003</a> | <a class="editable_textarea" href="#">2002</a> | <a class="editable_textarea" href="#">2001</a><br/><a class="editable_textarea" href="#">2000</a></li>
+													<li>Bevolkingskern<br/><a class="editable_textarea" href="#">2008</a> | <a class="editable_textarea" href="#">2006</a></li>
 												</ul>
 											</li>
 											<li><a href="#" onmouseout="wijzigTerug()" onmouseover="wijzig('Het percentage personen van 0 tot 15 jaar.')">Inwoners 0 tot 15 jaar</a>

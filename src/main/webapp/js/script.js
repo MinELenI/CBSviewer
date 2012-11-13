@@ -22,7 +22,18 @@ jQuery(document).ready(function() {
 		north__spacing_open: 0,
 		south__spacing_open: 0,
 		west__minSize: 300
-		});							
+		});		
+
+  $(".editable_textarea").editable("updatemainmenu.jsp", { 
+      indicator : "<img src='img/test.gif'>",
+      type   : 'textarea',
+      submitdata: { _method: "put" },
+      select : true,
+      submit : 'Opslaan',
+      cancel : 'Annuleren',
+      cssclass : "editable"
+  });
+		
 });
 
 /**

@@ -15,23 +15,6 @@
 
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
-<script type="text/javascript" charset="utf-8">
-
-$(function() {
-
-  $(".editable_textarea").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-      indicator : "<img src='img/indicator.gif'>",
-      type   : 'textarea',
-      submitdata: { _method: "put" },
-      select : true,
-      submit : 'OK',
-      cancel : 'cancel',
-      cssclass : "editable"
-  });
-
-
-});
-</script>
 
 <jsp:include page="WEB-INF/jsp/head_include.jsp" />
 
@@ -49,7 +32,7 @@ $(function() {
 		<div class="ui-layout-north">
 				<div class="pageheader">
 					<div class="logo">
-						<a href="#">
+						<a href="#">							
 							<!--jsp:expression>RESOURCES.getString("KEY_KAART_TITEL")</jsp:expression-->
 							<img src="./img/template/hdr_logo.gif" usemap="#cbsmap" alt="CBS in uw buurt: Centraal Bureau voor de Statistiek"/>
 						</a>

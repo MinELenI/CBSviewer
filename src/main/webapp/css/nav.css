@@ -826,7 +826,7 @@ width: 180px;
 
 .navleft a
 {
-width:390px;
+width:230px;
 }
 
 .navleft a:hover, .navright a:hover {
@@ -867,16 +867,17 @@ display: inline;
 	display: inline;
 }
 
+
 /* level 2 list */
 .navleft ul {
 	min-height: 0px;
 	display: none;
 	margin: 0;
 	padding: 3px 3px 3px 3px;
-	width: 185px;
+	width: 310px;
 	position: absolute;
 	top: 0px;
-	left: 190px;
+	left: 180px;
 	background-color: #ffffff;
 	z-index:1000;
 	border: solid 1px #b4b4b4;
@@ -891,7 +892,7 @@ display: inline;
 	width: 200px;
 	position: absolute;
 	top: 0px;
-	left: -200px;
+	left: -90px;
 	background-color: #ffffff;
 	border: solid 1px #b4b4b4;
 }
