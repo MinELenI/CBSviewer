@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 		south__spacing_open: 0,
 		west__minSize: 300
 		});		
-
+		
   $(".editable_textarea").editable("updatemainmenu.jsp", { 
       indicator : "<img src='img/test.gif'>",
       type   : 'textarea',
@@ -33,7 +33,14 @@ jQuery(document).ready(function() {
       cancel : 'Annuleren',
       cssclass : "editable"
   });
-		
+
+	$(".editable_select").editable("saveitems.jsp", { 
+		indicator : '<img src="img/indicator.gif">',
+		loadurl : "menu-items-json.jsp",
+		type   : "select",
+		submit : "Opslaan",
+		style  : "inherit"
+	  });		
 });
 
 /**
