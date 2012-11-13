@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:c="http://java.sun.com/jsp/jstl/core"
-	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
-	<jsp:directive.page contentType="text/html; charset=UTF-8"
-		pageEncoding="UTF-8" session="false"
-		import="nl.mineleni.cbsviewer.util.LabelsBundle, nl.mineleni.cbsviewer.util.StringConstants"
-		trimDirectiveWhitespaces="true" language="java" isThreadSafe="false"
-		isErrorPage="false" />
-
-	<jsp:scriptlet>LabelsBundle RESOURCES = new LabelsBundle();</jsp:scriptlet>
+<html>
+<head>
+<script src="jquery.jeditable.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
 
 	<!-- menu dat alleen css gebruikt, de onderdelen die via javascript werken nog een coreonly voor plaatsen, tevels Excel module afronden en localiseren -->
 	<div class="dropDownMenu clearfix">
@@ -461,5 +455,5 @@
 		</li>
 	</ul>
 </div>		
-
-</jsp:root>
+</body>
+</html>
