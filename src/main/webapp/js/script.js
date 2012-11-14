@@ -25,19 +25,21 @@ jQuery(document).ready(function() {
 		});		
 		
   $(".editable_textarea").editable("updatemainmenu.jsp", { 
-      indicator : "<img src='img/test.gif'>",
+	  indicator : '<img src="img/template/ajax-loader.gif">',
       type   : 'textarea',
       submitdata: { _method: "put" },
       select : true,
       submit : 'Opslaan',
       cancel : 'Annuleren',
-      cssclass : "editable"
+      cssclass : "editableMenuItem"
   });
 
-	$(".editable_select").editable("saveitems.jsp", { 
-		indicator : '<img src="img/indicator.gif">',
+	$(".editable_select").editable("updatemainmenu.jsp", { 
+		indicator : '<img src="img/template/ajax-loader.gif">',
+		submitdata : {name: "", url: "", layers: "", styles: "" },
 		loadurl : "menu-items-json.jsp",
 		type   : "select",
+		cssclass : "editableMenuItem",
 		submit : "Opslaan",
 		style  : "inherit"
 	  });		
