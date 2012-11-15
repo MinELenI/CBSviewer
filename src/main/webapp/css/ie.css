@@ -1,14 +1,25 @@
 @charset "UTF-8";
 
-.olHandlerBoxZoomBox{
+.olHandlerBoxZoomBox {
 	filter: alpha(opacity = 50);
 }
-div.olControlZoom a{
+
+div.olControlZoom a {
 	background: #130085;
 	filter: alpha(opacity = 80);
 }
 
-div.olControlZoom a:hover{
+div.olControlZoom a:hover {
+	background: #130085;
+	filter: alpha(opacity = 100);
+}
+
+#toggleBaseMap {
+	background: #130085;
+	filter: alpha(opacity = 80);
+}
+
+#toggleBaseMap {
 	background: #130085;
 	filter: alpha(opacity = 100);
 }

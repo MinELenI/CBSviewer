@@ -13,3 +13,13 @@ div.olControlZoom a:hover {
 	background: #130085;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity = 100)";
 }
+
+#toggleBaseMap {
+	background: #130085;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity = 80)";
+}
+
+#toggleBaseMap:hover {
+	background: #130085;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity = 100)";
+}

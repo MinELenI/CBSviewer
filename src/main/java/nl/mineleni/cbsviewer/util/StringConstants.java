@@ -13,93 +13,96 @@ import java.util.List;
  */
 public enum StringConstants {
 
-    /** request param naam voor straal. */
-    REQ_PARAM_STRAAL("straal"),
-    /** request param naam voor xcoord. */
-    REQ_PARAM_XCOORD("xcoord"),
-    /** request param naam voor ycoord. */
-    REQ_PARAM_YCOORD("ycoord"),
-    /** request param naam voor adres. */
-    REQ_PARAM_ADRES("adres"),
-    /** request param naam voor gevonden adres. */
-    REQ_PARAM_GEVONDEN("gevonden"),
-    /** request param naam voor pagina offset. */
-    REQ_PARAM_FID("fid"),
-    /** request param naam voor forward of html output. */
-    REQ_PARAM_FORWARD("forward"),
-    /** request param naam voor de beschrijvende naam van de kaart. */
-    REQ_PARAM_MAPNAME("mapname"),
-    /** request param naam voor de id van de kaart. */
-    REQ_PARAM_MAPID("mapid"),
-    /**
-     * request param naam voor coreonly optie. De enige waarde waar naar wordt
-     * gekeken is "true".
-     */
-    REQ_PARAM_COREONLY("coreonly"),
-    /** request param naam voor bounding box. */
-    REQ_PARAM_BBOX("bbox"),
-    /** request param naam voor font size. */
-    REQ_PARAM_FONTSIZE("fsize"),
-    /** request param naam voor kleurenschema. */
-    REQ_PARAM_COLORSCHEME("cscheme"),
-    /** request param naam voor response format. */
-    REQ_PARAM_RESPONSE_FORMAT("format"),
+	/** request param naam voor straal. */
+	REQ_PARAM_STRAAL("straal"),
+	/** request param naam voor xcoord. */
+	REQ_PARAM_XCOORD("xcoord"),
+	/** request param naam voor ycoord. */
+	REQ_PARAM_YCOORD("ycoord"),
+	/** request param naam voor adres. */
+	REQ_PARAM_ADRES("adres"),
+	/** request param naam voor gevonden adres. */
+	REQ_PARAM_GEVONDEN("gevonden"),
+	/** request param naam voor pagina offset. */
+	REQ_PARAM_FID("fid"),
+	/** request param naam voor forward of html output. */
+	REQ_PARAM_FORWARD("forward"),
+	/** request param naam voor de beschrijvende naam van de kaart. */
+	REQ_PARAM_MAPNAME("mapname"),
+	/** request param naam voor de id van de kaart. */
+	REQ_PARAM_MAPID("mapid"),
+	/** request param naam voor het id van de achtergrondkaart. */
+	REQ_PARAM_BGMAP("achtergrond"),
 
-    /** parameter featureinfo. */
-    REQ_PARAM_FEATUREINFO("featureinfo"),
-    /** parameter legendas. */
-    REQ_PARAM_LEGENDAS("legendas"),
-    /** parameter kaart. */
-    REQ_PARAM_KAART("kaart"),
-    /** parameter cache dir. */
-    REQ_PARAM_CACHEDIR("dir"),
+	/**
+	 * request param naam voor coreonly optie. De enige waarde waar naar wordt
+	 * gekeken is "true".
+	 */
+	REQ_PARAM_COREONLY("coreonly"),
+	/** request param naam voor bounding box. */
+	REQ_PARAM_BBOX("bbox"),
+	/** request param naam voor font size. */
+	REQ_PARAM_FONTSIZE("fsize"),
+	/** request param naam voor kleurenschema. */
+	REQ_PARAM_COLORSCHEME("cscheme"),
+	/** request param naam voor response format. */
+	REQ_PARAM_RESPONSE_FORMAT("format"),
 
-    /** openls request param naam voor request. */
-    OPENLS_REQ_PARAM_REQUEST("Request"),
-    /** openls request param naam voor request value. */
-    OPENLS_REQ_VALUE_GEOCODE("geocode"),
-    /** openls request param naam voor search. */
-    OPENLS_REQ_PARAM_SEARCH("zoekterm"),
+	/** parameter featureinfo. */
+	REQ_PARAM_FEATUREINFO("featureinfo"),
+	/** parameter legendas. */
+	REQ_PARAM_LEGENDAS("legendas"),
+	/** parameter kaart. */
+	REQ_PARAM_KAART("kaart"),
+	/** parameter cache dir. */
+	REQ_PARAM_CACHEDIR("dir"),
 
-    /** directory in de webapp waar de wms resultaten worden gecached. */
-    MAP_CACHE_DIR("maps");
+	/** openls request param naam voor request. */
+	OPENLS_REQ_PARAM_REQUEST("Request"),
+	/** openls request param naam voor request value. */
+	OPENLS_REQ_VALUE_GEOCODE("geocode"),
+	/** openls request param naam voor search. */
+	OPENLS_REQ_PARAM_SEARCH("zoekterm"),
 
-    /** De code (waarde) van dit object. */
-    public final String code;
+	/** directory in de webapp waar de wms resultaten worden gecached. */
+	MAP_CACHE_DIR("maps");
 
-    /**
-     * Maakt een nieuw object aan met de gegeven code waarde.
-     * 
-     * @param code
-     *            de code voor dit object
-     * @see #code
-     */
-    StringConstants(final String code) {
-        this.code = code;
-    }
+	/** De code (waarde) van dit object. */
+	public final String code;
 
-    /**
-     * Lijst met alle code namen (immutable).
-     * 
-     * @return De lijst met alle code namen.
-     */
-    public static List<String> codeNamen() {
-        final List<String> codeNames = new ArrayList<String>();
-        for (final StringConstants strConst : StringConstants.values()) {
-            codeNames.add(strConst.code);
-        }
-        return Collections.unmodifiableList(codeNames);
-    }
+	/**
+	 * Maakt een nieuw object aan met de gegeven code waarde.
+	 * 
+	 * @param code
+	 *            de code voor dit object
+	 * @see #code
+	 */
+	StringConstants(final String code) {
+		this.code = code;
+	}
 
-    /**
-     * Geeft de code van dit object terug. Analoog van {@link #code}
-     * 
-     * @return de code
-     * @see #code
-     * @see java.lang.Enum#toString()
-     */
-    @Override
-    public String toString() {
-        return this.code;
-    }
+	/**
+	 * Lijst met alle code namen (immutable).
+	 * 
+	 * @return De lijst met alle code namen.
+	 */
+	public static List<String> codeNamen() {
+		final List<String> codeNames = new ArrayList<String>();
+		for (final StringConstants strConst : StringConstants.values()) {
+			codeNames.add(strConst.code);
+		}
+		return Collections.unmodifiableList(codeNames);
+	}
+
+	/**
+	 * Geeft de code van dit object terug. Analoog van {@link #code}
+	 * 
+	 * @return de code
+	 * @see #code
+	 * @see java.lang.Enum#toString()
+	 */
+	@Override
+	public String toString() {
+		return this.code;
+	}
 }

@@ -70,6 +70,13 @@ Viewer = function() {
 			this.addBaseMap();
 			this.addControls();
 			_map.zoomTo(this.config.map.initialZoom);
+
+			// toggle knop voor omschakelen basemap
+			var aToggle = '<a class="lufo" href="#" id="toggleBaseMap" title="'
+					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TITLE') + '" onclick="Viewer.toggleBaseMap();">'
+					+ OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO') + '</a>';
+			jQuery('#' + config.mapDiv).prepend(aToggle);
+
 		},
 
 		/**
@@ -80,7 +87,7 @@ Viewer = function() {
 		 * @deprecated probeer deze niet te gebruiken
 		 */
 		getMap : function() {
-			(window.console && console.warn('Deprecated function called: Viewer::getMap().'));
+			(window.console && console.warn('Deprecated method called: Viewer::getMap().'));
 			return _map;
 		},
 
@@ -166,13 +173,14 @@ Viewer = function() {
 			}, {
 				isBaseLayer : false,
 				visibility : true,
-				singleTile : true
+				singleTile : true,
+				opacity : 0.8
 			});
 			_map.addLayer(layer);
 		},
 
 		/**
-		 * verwijder de WMS uit de kaart.
+		 * verwijder de WMS uit de kaart (behalve als het een base layer is).
 		 * 
 		 * @param {string}
 		 *            wmsLyrName naam van de WMS service
@@ -180,8 +188,10 @@ Viewer = function() {
 		removeWMS : function(wmsLyrName) {
 			var lyrs = _map.getLayersByName(wmsLyrName);
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
-				_map.removeLayer(lyrs[lyr]);
-				lyrs[lyr].destroy();
+				if (!lyrs[lyr].isBaseLayer) {
+					_map.removeLayer(lyrs[lyr]);
+					lyrs[lyr].destroy();
+				}
 			}
 		},
 
@@ -191,8 +201,10 @@ Viewer = function() {
 		removeOverlays : function() {
 			var lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
 			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
-				_map.removeLayer(lyrs[lyr]);
-				lyrs[lyr].destroy();
+				if (!lyrs[lyr].isBaseLayer) {
+					_map.removeLayer(lyrs[lyr]);
+					lyrs[lyr].destroy();
+				}
 			}
 		},
 
@@ -220,17 +232,34 @@ Viewer = function() {
 		},
 
 		/**
+		 * Toggle basemap.
+		 */
+		toggleBaseMap : function() {
+			var topo = _map.getLayersByName('topo')[0];
+			var lufo = _map.getLayersByName('lufo')[0];
+			if (topo.getVisibility()) {
+				_map.setBaseLayer(lufo);
+				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_TOPO'));
+			} else {
+				_map.setBaseLayer(topo);
+				jQuery('#toggleBaseMap').text(OpenLayers.i18n('KEY_TOGGLE_BASEMAP_LUFO'));
+			}
+			jQuery('#toggleBaseMap').toggleClass('lufo topo');
+		},
+
+		/**
 		 * set up basemap.
 		 * 
 		 * @private
 		 */
 		addBaseMap : function() {
+			// brtachtergrond
 			var matrixIds = [ 13 ];
 			for ( var i = 0; i < 13; ++i) {
 				matrixIds[i] = "EPSG:28992:" + i;
 			}
 			_map.addLayer(new OpenLayers.Layer.WMTS({
-				name : "achtergrond",
+				name : "topo",
 				url : "http://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/",
 				layer : "brtachtergrondkaart",
 				matrixSet : 'EPSG:28992',
@@ -238,6 +267,19 @@ Viewer = function() {
 				format : 'image/png8',
 				style : '_null'
 			}));
+			// luchtfoto
+			_map.addLayer(new OpenLayers.Layer.WMS(
+					'lufo', 'http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?service=WMS', {
+						layers : 0,
+						version : '1.3.0',
+						format : 'image/jpeg',
+						transparent : false
+					}, {
+						isBaseLayer : true,
+						visibility : true,
+						singleTile : false
+					}));
+
 		}
 	};
 }();

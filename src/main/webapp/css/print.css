@@ -1,5 +1,5 @@
 @charset "UTF-8";
 
-#toggleSize,div.olControlZoom,#zoekenContainer,#coreexitlink,#kaartnavi	{
+#toggleSize,#toggleBaseMap,div.olControlZoom,#zoekenContainer,#coreexitlink,#kaartnavi	{
 	display: none;
 }

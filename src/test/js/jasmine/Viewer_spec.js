@@ -52,21 +52,21 @@ describe(
 							expect(Viewer.getMap().projection).toEqual(config.map.projection);
 						});
 
-						it('De kaart moet 2 lagen hebben na toevoegen van 1 WMS', function() {
+						it('De kaart moet 3 lagen hebben na toevoegen van 1 WMS', function() {
 							Viewer.loadWMS(_wms);
-							expect(Viewer.getMap().layers.length).toBe(2);
+							expect(Viewer.getMap().layers.length).toBe(3);
 						});
 
-						it('De kaart moet 2 lagen hebben na toevoegen van 2 WMS', function() {
+						it('De kaart moet 3 lagen hebben na toevoegen van 2 WMS', function() {
 							Viewer.loadWMS(_wms);
 							Viewer.loadWMS(_wms2);
-							expect(Viewer.getMap().layers.length).toBe(2);
+							expect(Viewer.getMap().layers.length).toBe(3);
 						});
 
-						it('De kaart moet 1 laag hebben na toevoegen en verwijderen van 1 WMS', function() {
+						it('De kaart moet 2 lagen hebben na toevoegen en verwijderen van 1 WMS', function() {
 							Viewer.loadWMS(_wms);
 							Viewer.removeWMS(_wms.name);
-							expect(Viewer.getMap().layers.length).toBe(1);
+							expect(Viewer.getMap().layers.length).toBe(2);
 						});
 
 						it(
@@ -76,7 +76,7 @@ describe(
 									Viewer.loadWMS(_wms2);
 									Viewer.removeOverlays();
 									var lyrs = Viewer.getMap().layers;
-									expect(lyrs.length).toBe(1);
+									expect(lyrs.length).toBe(2);
 									expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
 								});
 
@@ -115,6 +115,10 @@ describe(
 									// expect(latlon.lat).toEqual(y);
 									expect(Viewer.getMap().getZoom()).not.toEqual(config.map.initialZoom);
 								});
+						it('na schakelen basemap is de actieve basemap lufo',function(){
+							Viewer.toggleBaseMap();
+							expect(Viewer.getMap().baseLayer.name).toEqual('lufo');
+						});
 					});
 
 		});

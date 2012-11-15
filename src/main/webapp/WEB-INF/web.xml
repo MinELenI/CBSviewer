@@ -78,6 +78,19 @@
 			Radweg,Fussgaengerweg,Strand,Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,Naherholungsgebiet, 
 			Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen -->
 
+		<init-param>
+			<description>WMS capabilities url van achtergrond luchtfoto's</description>
+			<param-name>lufoCapabilitiesURL</param-name>
+			<param-value>http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?REQUEST=GetCapabilities&amp;SERVICE=WMS</param-value>
+		</init-param>
+		<init-param>
+			<description>lagen voor de achtergrond WMS (CSV), 
+				in volgorde &quot;bovenste&quot; laag eerste, &quot;onderste&quot; laag als laatste in de lijst. 
+				Indien leeg dan worden alle lagen uit het capabilities document gebruikt.</description>
+			<param-name>lufoWMSlayers</param-name>
+			<param-value/>
+		</init-param>
+
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>

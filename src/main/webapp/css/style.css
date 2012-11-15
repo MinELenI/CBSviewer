@@ -139,6 +139,7 @@ a.accesskey:focus {
 	height: 21px;
 	z-index: 900;
 	display: block;
+	border: 1px solid #aaa;
 }
 
 #toggleSize.max { /*max icon*/
@@ -147,6 +148,36 @@ a.accesskey:focus {
 
 #toggleSize.restore { /*min icon*/
 	background: url('../img/maxmin.png') no-repeat 0 0;
+}
+
+#toggleBaseMap {
+	position: absolute;
+	z-index: 900;
+	top: -1px;
+	/* afstand vanaf de rand van de kaart */
+	right: 50px;
+	/* -right iets (2px) meer dan de breedte van de achtergrond sprite>40px */
+	padding: 0 42px 0 2px;
+	line-height: 21px;
+	color: #fff;
+	text-align: right;
+	display: block;
+	border: 1px solid #aaa;
+	background-color: rgba(0, 60, 136, 0.8);
+	background-repeat: no-repeat;
+	background-image: url('../img/lufotopo.png');
+}
+
+#toggleBaseMap:hover {
+	background-color: rgba(0, 60, 136, 1.0);
+}
+
+#toggleBaseMap.lufo { /*lufo icon*/
+	background-position: top right;
+}
+
+#toggleBaseMap.topo { /*kaart icon*/
+	background-position: right bottom;
 }
 
 .kaartnavi {
