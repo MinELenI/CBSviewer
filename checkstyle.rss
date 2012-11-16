@@ -8,9 +8,9 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 44,
+      <title>File: 45,
              Errors: 0,
-             Warnings: 270,
+             Warnings: 297,
              Infos: 8
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
@@ -127,20 +127,6 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching.java">nl/mineleni/cbsviewer/servlet/wms/cache/ImageCaching.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.util.SpatialUtil.java">nl/mineleni/cbsviewer/util/SpatialUtil.java</a>
                 </td>
                 <td>
@@ -155,7 +141,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage.java">nl/mineleni/cbsviewer/servlet/wms/cache/CacheImage.java</a>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching.java">nl/mineleni/cbsviewer/servlet/wms/cache/ImageCaching.java</a>
                 </td>
                 <td>
                   0
@@ -183,6 +169,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage.java">nl/mineleni/cbsviewer/servlet/wms/cache/CacheImage.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.package-info.java">nl/mineleni/cbsviewer/servlet/gazetteer/package-info.java</a>
                 </td>
                 <td>
@@ -190,6 +190,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.BasemapType.java">nl/mineleni/cbsviewer/servlet/wms/BasemapType.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
                 </td>
                 <td>
                   0
@@ -315,7 +329,7 @@
                   0
                 </td>
                 <td>
-                  5
+                  12
                 </td>
                 <td>
                   0
@@ -455,7 +469,7 @@
                   0
                 </td>
                 <td>
-                  5
+                  19
                 </td>
                 <td>
                   0
@@ -553,7 +567,7 @@
                   0
                 </td>
                 <td>
-                  3
+                  4
                 </td>
                 <td>
                   0
