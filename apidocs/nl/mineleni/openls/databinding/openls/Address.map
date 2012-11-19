@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./StreetAddress.html" title="nl.mineleni.openls.databinding.openls.StreetAddress" alt="" coords="91,843,298,1029"/>
+<area shape="rect" id="node1" href="./StreetAddress.html" title="&lt;TABLE&gt;" alt="" coords="80,838,308,1034"/>
+<area shape="rect" id="node2_1" href="./PostalCode.html" title="nl.mineleni.openls.databinding.openls.PostalCode" alt="" coords="369,867,606,1005"/>
+<area shape="rect" id="node2" href="./PostalCode.html" title="&lt;TABLE&gt;" alt="" coords="358,862,617,1010"/>
+<area shape="rect" id="node3_2" href="./GeocodedAddress.html" title="nl.mineleni.openls.databinding.openls.GeocodedAddress" alt="" coords="312,209,525,394"/>
+<area shape="rect" id="node3" href="./GeocodedAddress.html" title="&lt;TABLE&gt;" alt="" coords="301,203,536,399"/>
+<area shape="rect" id="node4_3" href="./Address.html" title="nl.mineleni.openls.databinding.openls.Address" alt="" coords="69,454,613,783"/>
+<area shape="rect" id="node4" href="./Address.html" title="&lt;TABLE&gt;" alt="" coords="58,449,624,789"/>
+<area shape="rect" id="node5_4" href="../../XmlNamespaceConstants.html" title="nl.mineleni.openls.XmlNamespaceConstants" alt="" coords="198,11,484,149"/>
+<area shape="rect" id="node5" href="../../XmlNamespaceConstants.html" title="&lt;TABLE&gt;" alt="" coords="188,6,494,154"/>
+</map>

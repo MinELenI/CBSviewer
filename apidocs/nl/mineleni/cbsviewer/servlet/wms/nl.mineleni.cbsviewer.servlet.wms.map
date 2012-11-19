@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="16,11,456,133"/>
+<area shape="rect" id="node1" href="./WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,6,467,138"/>
+<area shape="rect" id="node2_1" href="./FeatureInfoResponseConverter.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" alt="" coords="501,35,1184,109"/>
+<area shape="rect" id="node2" href="./FeatureInfoResponseConverter.html" title="&lt;TABLE&gt;" alt="" coords="491,30,1195,114"/>
+<area shape="rect" id="node3_2" href="./FeatureInfoResponseConverter.type.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.type" alt="" coords="1230,19,1335,125"/>
+<area shape="rect" id="node3" href="./FeatureInfoResponseConverter.type.html" title="&lt;TABLE&gt;" alt="" coords="1219,14,1346,130"/>
+<area shape="rect" id="node4_3" href="./BasemapType.html" title="nl.mineleni.cbsviewer.servlet.wms.BasemapType" alt="" coords="1381,19,1486,125"/>
+<area shape="rect" id="node4" href="./BasemapType.html" title="&lt;TABLE&gt;" alt="" coords="1370,14,1497,130"/>
+</map>

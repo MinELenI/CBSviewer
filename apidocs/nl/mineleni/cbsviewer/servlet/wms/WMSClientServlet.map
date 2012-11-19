@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="33,107,439,229"/>
+<area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="22,102,450,234"/>
+<area shape="rect" id="node4_1" href="./WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="16,289,456,410"/>
+<area shape="rect" id="node4" href="./WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,283,467,415"/>
+<area shape="rect" id="node2_2" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="121,18,351,41"/>
+<area shape="rect" id="node5_3" href="./cache/ImageCaching.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching" alt="" coords="116,470,356,655"/>
+<area shape="rect" id="node5" href="./cache/ImageCaching.html" title="&lt;TABLE&gt;" alt="" coords="105,465,367,661"/>
+<area shape="rect" id="node6_4" href="../../util/AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="402,486,745,639"/>
+<area shape="rect" id="node6" href="../../util/AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="391,481,755,645"/>
+</map>

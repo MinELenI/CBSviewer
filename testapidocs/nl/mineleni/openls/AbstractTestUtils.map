@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" alt="" coords="15,177,273,314"/>
+<area shape="rect" id="node1" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="5,171,283,319"/>
+<area shape="rect" id="node2_1" href="./AbstractTestUtils.html" title="nl.mineleni.openls.AbstractTestUtils" alt="" coords="265,11,593,117"/>
+<area shape="rect" id="node2" href="./AbstractTestUtils.html" title="&lt;TABLE&gt;" alt="" coords="255,6,604,122"/>
+<area shape="rect" id="node3_2" href="./parser/OpenLSResponseParserTest.html" title="nl.mineleni.openls.parser.OpenLSResponseParserTest" alt="" coords="318,193,541,298"/>
+<area shape="rect" id="node3" href="./parser/OpenLSResponseParserTest.html" title="&lt;TABLE&gt;" alt="" coords="307,187,551,303"/>
+<area shape="rect" id="node4_3" href="./parser/OpenLSRequestParserTest.html" title="nl.mineleni.openls.parser.OpenLSRequestParserTest" alt="" coords="587,193,800,298"/>
+<area shape="rect" id="node4" href="./parser/OpenLSRequestParserTest.html" title="&lt;TABLE&gt;" alt="" coords="576,187,811,303"/>
+</map>

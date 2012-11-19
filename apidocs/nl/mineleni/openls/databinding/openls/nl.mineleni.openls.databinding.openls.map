@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./StreetAddress.html" title="nl.mineleni.openls.databinding.openls.StreetAddress" alt="" coords="131,646,338,831"/>
+<area shape="rect" id="node1" href="./StreetAddress.html" title="&lt;TABLE&gt;" alt="" coords="121,641,349,837"/>
+<area shape="rect" id="node2_1" href="./Street.html" title="nl.mineleni.openls.databinding.openls.Street" alt="" coords="16,939,189,1077"/>
+<area shape="rect" id="node2" href="./Street.html" title="&lt;TABLE&gt;" alt="" coords="5,934,200,1082"/>
+<area shape="rect" id="node9_2" href="./Building.html" title="nl.mineleni.openls.databinding.openls.Building" alt="" coords="235,891,498,1125"/>
+<area shape="rect" id="node9" href="./Building.html" title="&lt;TABLE&gt;" alt="" coords="225,886,509,1130"/>
+<area shape="rect" id="node3_3" href="./PostalCode.html" title="nl.mineleni.openls.databinding.openls.PostalCode" alt="" coords="384,670,621,807"/>
+<area shape="rect" id="node3" href="./PostalCode.html" title="&lt;TABLE&gt;" alt="" coords="373,665,632,813"/>
+<area shape="rect" id="node4_4" href="./Place.html" title="nl.mineleni.openls.databinding.openls.Place" alt="" coords="521,11,690,197"/>
+<area shape="rect" id="node4" href="./Place.html" title="&lt;TABLE&gt;" alt="" coords="510,6,701,202"/>
+<area shape="rect" id="node5_5" href="./GeocodeResponseList.html" title="nl.mineleni.openls.databinding.openls.GeocodeResponseList" alt="" coords="735,19,1062,189"/>
+<area shape="rect" id="node5" href="./GeocodeResponseList.html" title="&lt;TABLE&gt;" alt="" coords="725,14,1073,194"/>
+<area shape="rect" id="node6_6" href="./GeocodeResponse.html" title="nl.mineleni.openls.databinding.openls.GeocodeResponse" alt="" coords="1107,35,1482,173"/>
+<area shape="rect" id="node6" href="./GeocodeResponse.html" title="&lt;TABLE&gt;" alt="" coords="1097,30,1493,178"/>
+<area shape="rect" id="node7_7" href="./GeocodeRequest.html" title="nl.mineleni.openls.databinding.openls.GeocodeRequest" alt="" coords="1527,35,1737,173"/>
+<area shape="rect" id="node7" href="./GeocodeRequest.html" title="&lt;TABLE&gt;" alt="" coords="1517,30,1747,178"/>
+<area shape="rect" id="node8_8" href="./GeocodedAddress.html" title="nl.mineleni.openls.databinding.openls.GeocodedAddress" alt="" coords="261,11,475,197"/>
+<area shape="rect" id="node8" href="./GeocodedAddress.html" title="&lt;TABLE&gt;" alt="" coords="251,6,485,202"/>
+<area shape="rect" id="node10_9" href="./Address.html" title="nl.mineleni.openls.databinding.openls.Address" alt="" coords="96,257,640,586"/>
+<area shape="rect" id="node10" href="./Address.html" title="&lt;TABLE&gt;" alt="" coords="85,251,651,591"/>
+</map>
