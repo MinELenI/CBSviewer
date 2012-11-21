@@ -81,18 +81,5 @@ public class Point implements XmlNamespaceConstants {
         sb.append("</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
                 + ":Point>");
         return sb.toString();
-
-        // String xml = "<" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
-        // + ":Point";
-        // if (hasSrsName()) {
-        // xml += " srsName=\"" + getSrsName() + "\"";
-        // }
-        // xml += ">";
-        // for (Pos p : pos) {
-        // xml += p.toXML();
-        // }
-        // xml += "</" + XmlNamespaceConstants.OGC_GML_NAMESPACE_PREFIX
-        // + ":Point>";
-        // return xml;
     }
 }

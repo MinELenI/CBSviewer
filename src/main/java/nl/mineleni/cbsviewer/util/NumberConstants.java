@@ -20,12 +20,12 @@ public enum NumberConstants {
 	/** straal voor een provincie zoekresultaat, waarde in meter. */
 	OPENLS_ZOOMSCALE_PROVINCIE(50000),
 	/** straal voor een default zoekresultaat, waarde in meter. */
-	OPENLS_ZOOMSCALE_STANDAARD(150000),
+	OPENLS_ZOOMSCALE_STANDAARD(18750)/* 150000 ~ heel NL */,
 
 	/** default x coordinaat. */
-	DEFAULT_XCOORD(150000),
+	DEFAULT_XCOORD(140000),
 	/** default y coordinaat. */
-	DEFAULT_YCOORD(450000),
+	DEFAULT_YCOORD(462500),
 
 	/** default font size, 12. */
 	DEFAULT_FONT_SIZE(12);

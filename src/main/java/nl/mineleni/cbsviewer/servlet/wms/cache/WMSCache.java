@@ -1,13 +1,16 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 import javax.imageio.ImageIO;
 
@@ -16,22 +19,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Cache voor wms requests.
+ * Cache voor wms getmap image responses.
  * 
  * @author prinsmc
- * @todo implementatie, thans is het een naïve wrapper om een
- *       {@link java.util.concurrent.ConcurrentHashMap} zonder expiry/cleanup
- *       zie bijvoorbeeld {@link https://code.google.com/p/kitty-cache/}
- * 
- * @see java.util.concurrent.ConcurrentHashMap
  */
-public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
+public class WMSCache extends Cache<BoundingBox, CacheImage, BufferedImage> {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(WMSCache.class);
-
-	/** de cache. */
-	private final ConcurrentHashMap<BoundingBox, CachableImage<BufferedImage>> cache = new ConcurrentHashMap<BoundingBox, CachableImage<BufferedImage>>();
 
 	/** cache locatie/pad. */
 	private String cacheDir;
@@ -43,15 +38,20 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 *            cache data
 	 * @param cacheDir
 	 *            pad voor de cache
+	 * @param maxSize
+	 *            the max size
+	 * @param secondsToLive
+	 *            the seconds to live
 	 * @throws IOException
 	 *             als de gevraagde directory niet schrijfbaar is.
 	 * @see WMSCache#WMSCache(String)
 	 */
 	public WMSCache(final Map<BoundingBox, BufferedImage> cacheData,
-			final String cacheDir) throws IOException {
-		this(cacheDir);
+			final String cacheDir, final int maxSize, final int secondsToLive)
+			throws IOException {
+		this(cacheDir, maxSize);
 		for (final Entry<BoundingBox, BufferedImage> e : cacheData.entrySet()) {
-			this.put(e.getKey(), e.getValue());
+			this.put(e.getKey(), new CacheImage(e.getValue(), secondsToLive));
 		}
 	}
 
@@ -60,12 +60,17 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 * 
 	 * @param cacheDir
 	 *            pad voor de cache
+	 * @param maxSize
+	 *            the max size
 	 * @throws IOException
 	 *             als de gevraagde directory niet schrijfbaar is.
 	 */
-	public WMSCache(final String cacheDir) throws IOException {
+	public WMSCache(final String cacheDir, final int maxSize)
+			throws IOException {
+		super(maxSize);
+
 		final File f = new File(cacheDir);
-		boolean createdDirs = f.mkdirs();
+		final boolean createdDirs = f.mkdirs();
 		if (createdDirs && LOGGER.isDebugEnabled()) {
 			LOGGER.debug("Directory tree aangemaakt voor "
 					+ f.getCanonicalPath());
@@ -78,62 +83,6 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 					+ " is niet geldig.");
 			throw new IOException("De gevraagde cache directory (" + cacheDir
 					+ ") is niet schrijfbaar.");
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#clear()
-	 */
-	@Override
-	public void clear() {
-		this.cache.clear();
-	}
-
-	/**
-	 * Kijkt of de gevraagde sleutel in de cache voorkomt.
-	 * 
-	 * @param bbox
-	 *            de sleutel
-	 * @return true, if successful
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#containsKey(org.opengis.geometry.BoundingBox)
-	 */
-	@Override
-	public boolean containsKey(final BoundingBox bbox) {
-		return this.cache.containsKey(bbox);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#entrySet()
-	 */
-	@Override
-	public Set<Entry<BoundingBox, BufferedImage>> entrySet() {
-		final HashMap<BoundingBox, BufferedImage> s = new HashMap<BoundingBox, BufferedImage>();
-		for (final Entry<BoundingBox, CachableImage<BufferedImage>> e : this.cache
-				.entrySet()) {
-			s.put(e.getKey(), e.getValue().getImage());
-		}
-		return s.entrySet();
-	}
-
-	/**
-	 * haalt de gevraagde afbeelding op uit de cache, mits aanwezig.
-	 * 
-	 * @param bbox
-	 *            de sleutel
-	 * @return het object dat wordt opgehaalt uit de cache (mogelijk
-	 *         {@code null})
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCache#get(org.opengis.geometry.BoundingBox)
-	 */
-	@Override
-	public BufferedImage get(final BoundingBox bbox) {
-		try {
-			return this.cache.get(bbox).getImage();
-		} catch (final NullPointerException e) {
-			return null;
 		}
 	}
 
@@ -153,26 +102,28 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 *            de sleutel
 	 * @param cacheValue
 	 *            het object dat wordt opgeslagen in de cache
-	 * 
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#put(org.opengis.geometry.BoundingBox
+	 * @param secondsToLive
+	 *            the seconds to live
+	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.Caching#put(org.opengis.geometry.BoundingBox
 	 *      , java.lang.String)
-	 * 
 	 */
-	@Override
-	public void put(final BoundingBox bbox, final BufferedImage cacheValue) {
-		final CacheImage c = new CacheImage(cacheValue, this.cacheDir);
-		this.cache.put(bbox, c);
-		// bestand opslaan
+	public void put(final BoundingBox bbox, final BufferedImage cacheValue,
+			final long secondsToLive) {
+
+		final CacheImage c = new CacheImage(cacheValue, secondsToLive);
+		// bestand opslaan/maken
 		try {
 			final File temp = File.createTempFile("wmscache", ".png", new File(
 					this.cacheDir));
 			temp.deleteOnExit();
+			c.setFileName(temp.getCanonicalPath());
 			ImageIO.write(cacheValue, "png", temp);
 			LOGGER.debug("Opslaan in cache: " + bbox + ", pad:"
 					+ temp.getCanonicalPath());
 		} catch (final IOException e) {
-			LOGGER.error("cache image opslaan is niet gelukt.", e);
+			LOGGER.error("Cache image opslaan is niet gelukt.", e);
 		}
+		super.put(bbox, c);
 	}
 
 	/**
@@ -183,17 +134,26 @@ public class WMSCache implements ImageCaching<BoundingBox, BufferedImage> {
 	 */
 	@Override
 	public void remove(final BoundingBox bbox) {
-		this.cache.remove(bbox);
+		super.remove(bbox);
+		final CachableImage<BufferedImage> entry = get(bbox);
+		if (entry != null) {
+			if (!(new File(entry.getName())).delete()) {
+				LOGGER.warn("Het cachebestand kon niet worden verwijderd.");
+			}
+		}
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Haalt een opgeslagen afbeelding op.
 	 * 
-	 * @see nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching#size()
+	 * @param bbox
+	 *            de sleutel
+	 * @return de opgelagen afbeelding of null
 	 */
-	@Override
-	public int size() {
-		LOGGER.debug("cache bevat " + this.cache.size() + " elementen.");
-		return this.cache.size();
+	public BufferedImage getImage(final BoundingBox bbox) {
+		if (get(bbox) == null) {
+			return null;
+		}
+		return get(bbox).getImage();
 	}
 }

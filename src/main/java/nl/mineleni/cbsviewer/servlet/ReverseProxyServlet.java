@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -101,8 +101,8 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	private boolean forceXmlResponse = false;
 
-	/** http client. */
-	private final HttpClient client = new DefaultHttpClient();
+	/** onze http client. */
+	private final transient HttpClient client = new DefaultHttpClient();
 
 	/**
 	 * Parse out the server name and check if the specified server name is in
@@ -190,7 +190,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 							responseBody = FeatureInfoResponseConverter
 									.convertToHTMLTable(
 											get.getEntity().getContent(),
-											FeatureInfoResponseConverter.type.GMLTYPE,
+											FeatureInfoResponseConverter.Type.GMLTYPE,
 											layers.getLayerByLayers(lName)
 													.getAttributes()
 													.split(",\\s*"));

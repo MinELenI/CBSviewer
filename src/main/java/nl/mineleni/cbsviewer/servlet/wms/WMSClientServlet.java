@@ -1,5 +1,8 @@
-/**
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
@@ -30,7 +33,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import nl.mineleni.cbsviewer.servlet.AbstractWxSServlet;
-import nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching;
+import nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey;
+import nl.mineleni.cbsviewer.servlet.wms.cache.CachableString;
+import nl.mineleni.cbsviewer.servlet.wms.cache.Cache;
+import nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage;
 import nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache;
 import nl.mineleni.cbsviewer.util.AvailableLayersBean;
 import nl.mineleni.cbsviewer.util.SpatialUtil;
@@ -60,12 +66,13 @@ import org.slf4j.LoggerFactory;
  */
 public class WMSClientServlet extends AbstractWxSServlet {
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = 4958212343847516071L;
+	/** maximum aantal elementen per cache. {@value} */
+	private static final int NUMBER_CACHE_ELEMENTS = 1000;
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(WMSClientServlet.class);
+
 	/**
 	 * vaste afmeting van de kaart (hoogte en breedte). {@value}
 	 * 
@@ -80,6 +87,30 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
 
+	/** time-to-live voor cache elementen. {@value} */
+	private static final long SECONDS_TO_CACHE_ELEMENTS = 60 * 60/* 1 uur */;
+
+	/** time-to-live voor cache elementen. {@value} */
+	private static final long MILLISECONDS_TO_CACHE_ELEMENTS = SECONDS_TO_CACHE_ELEMENTS * 1000;
+
+	/** serialVersionUID. */
+	private static final long serialVersionUID = 4958212343847516071L;
+
+	/** De achtergrond kaart WMS. */
+	private transient WebMapServer bgWMS = null;
+
+	/** cache voor legenda afbeeldingen. */
+	private static transient Cache<String, CacheImage, BufferedImage> legendCache = null;
+
+	/** cache voor voorgrond WMS afbeeldingen. */
+	private static transient Cache<BboxLayerCacheKey, CacheImage, BufferedImage> fgWMSCache = null;
+
+	/** cache voor feature info. */
+	private static transient Cache<BboxLayerCacheKey, CachableString, String> featInfoCache = null;
+
+	/** verzameling lagen voor de achtergrondkaart. */
+	private String[] bgWMSlayers = null;
+
 	/**
 	 * voorgrond wms request.
 	 * 
@@ -87,26 +118,18 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private transient GetMapRequest getMapRequest = null;
 
-	/** De achtergrond kaart WMS. */
-	private transient WebMapServer bgWMS = null;
-
-	/** De achtergrond luchtfoto WMS. */
-	private transient WebMapServer lufoWMS = null;
-
-	/** verzameling lagen voor de achtergrondkaart. */
-	private String[] bgWMSlayers = null;
-
-	/** verzameling lagen voor de achtergrondkaart. */
-	private final String[] lufoWMSlayers = null;
-
 	/** layers bean. */
 	private final transient AvailableLayersBean layers = new AvailableLayersBean();
 
 	/** cache voor achtergrond kaartjes. */
-	private transient ImageCaching<BoundingBox, BufferedImage> bgWMSCache = null;
+	private transient WMSCache bgWMSCache = null;
+	/** De achtergrond luchtfoto WMS. */
+	private transient WebMapServer lufoWMS = null;
 
 	/** cache voor achtergrond kaartjes. */
-	private transient ImageCaching<BoundingBox, BufferedImage> bgWMSLuFoCache = null;
+	private transient WMSCache bgWMSLuFoCache = null;
+	/** verzameling lagen voor de achtergrondkaart. */
+	private String[] lufoWMSlayers = null;
 
 	/**
 	 * de verzameling met (voorgrond) WMSsen die we benaderen. Het opstarten van
@@ -136,6 +159,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * 
 	 * @param bbox
 	 *            the bbox
+	 * @param type
+	 *            the type
 	 * @return background/basemap image
 	 * @throws ServletException
 	 *             Geeft aan dat er een fout is opgetreden bij het benaderen van
@@ -148,8 +173,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		switch (type) {
 		case luchtfoto:
 			if (this.bgWMSLuFoCache.containsKey(bbox)) {
-				// check cache
-				return this.bgWMSLuFoCache.get(bbox);
+				// ophalen uit cache
+				LOGGER.debug("Achtergrond " + type
+						+ " afbeelding uit de cache serveren.");
+				return this.bgWMSLuFoCache.getImage(bbox);
 			}
 			map = this.lufoWMS.createGetMapRequest();
 			if (this.lufoWMSlayers != null) {
@@ -169,8 +196,10 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			// implicit fall thru naar default
 		default:
 			if (this.bgWMSCache.containsKey(bbox)) {
-				// check cache
-				return this.bgWMSCache.get(bbox);
+				// ophalen uit cache
+				LOGGER.debug("Achtergrond " + type
+						+ " afbeelding uit de cache serveren.");
+				return this.bgWMSCache.getImage(bbox);
 			}
 			map = this.bgWMS.createGetMapRequest();
 			if (this.bgWMSlayers != null) {
@@ -202,11 +231,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final BufferedImage image = ImageIO.read(response.getInputStream());
 			switch (type) {
 			case luchtfoto:
-				this.bgWMSLuFoCache.put(bbox, image);
+				this.bgWMSLuFoCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
+
 				break;
 			case topografie:
 			default:
-				this.bgWMSCache.put(bbox, image);
+				this.bgWMSCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
 				break;
 			}
 
@@ -239,8 +269,6 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @return the cached wms
 	 * @throws ServiceException
 	 *             the service exception
-	 * @throws MalformedURLException
-	 *             the malformed url exception
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -261,6 +289,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	/**
 	 * Haalt de feature info op.
 	 * 
+	 * @param bbox
+	 *            the bbox
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return Een string met feature info
@@ -270,8 +300,15 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private String getFeatureInfo(final LayerDescriptor lyrDesc)
-			throws ServiceException, IOException {
+	private String getFeatureInfo(final BoundingBox bbox,
+			final LayerDescriptor lyrDesc) throws ServiceException, IOException {
+		final BboxLayerCacheKey key = new BboxLayerCacheKey(bbox, lyrDesc);
+		if (featInfoCache.containsKey(key)) {
+			LOGGER.debug("FeatureInfo uit de cache serveren.");
+			// ophalen uit cache
+			return featInfoCache.get(key).getItem();
+		}
+
 		try {
 			final GetFeatureInfoRequest getFeatureInfoRequest = this
 					.getCachedWMS(lyrDesc).createGetFeatureInfoRequest(
@@ -302,13 +339,19 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			final GetFeatureInfoResponse response = this.getCachedWMS(lyrDesc)
 					.issueRequest(getFeatureInfoRequest);
 
-			return FeatureInfoResponseConverter.convertToHTMLTable(response
-					.getInputStream(),
-					FeatureInfoResponseConverter.type.GMLTYPE, lyrDesc
-							.getAttributes().split(",\\s*"));
-		} catch (UnsupportedOperationException u) {
-			LOGGER.error(
-					"De WMS server ondersteund geen GetFeatureInfoRequest.", u);
+			final String html = FeatureInfoResponseConverter
+					.convertToHTMLTable(response.getInputStream(),
+							FeatureInfoResponseConverter.Type.GMLTYPE, lyrDesc
+									.getAttributes().split(",\\s*"));
+			featInfoCache.put(key,
+					new CachableString(html, System.currentTimeMillis()
+							+ MILLISECONDS_TO_CACHE_ELEMENTS));
+			return html;
+
+		} catch (final UnsupportedOperationException u) {
+			LOGGER.warn("De WMS server ("
+					+ this.getCachedWMS(lyrDesc).getInfo().getTitle()
+					+ ") ondersteund geen GetFeatureInfoRequest.", u);
 			return "";
 		}
 	}
@@ -327,6 +370,13 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 */
 	private BufferedImage getForeGroundMap(final BoundingBox bbox,
 			final LayerDescriptor lyrDesc) throws ServletException {
+
+		final BboxLayerCacheKey key = new BboxLayerCacheKey(bbox, lyrDesc);
+		if (fgWMSCache.containsKey(key)) {
+			// ophalen uit cache
+			LOGGER.debug("Voorgrond afbeelding uit de cache serveren.");
+			return fgWMSCache.get(key).getImage();
+		}
 
 		// wms request doen
 		try {
@@ -353,6 +403,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					.issueRequest(this.getMapRequest);
 			final BufferedImage image = ImageIO.read(response.getInputStream());
 
+			fgWMSCache.put(key,
+					new CacheImage(image, SECONDS_TO_CACHE_ELEMENTS));
+
 			if (LOGGER.isDebugEnabled()) {
 				// voorgrond plaatje bewaren in debug modus
 				final File temp = File.createTempFile(
@@ -373,7 +426,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	}
 
 	/**
-	 * haalt de legenda op voor de thema laag.
+	 * Haalt de legenda op voor de thema laag.
 	 * 
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
@@ -396,27 +449,50 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					.createGetLegendGraphicRequest();
 			BufferedImage image;
 			for (int l = 0; l < layerNames.length; l++) {
-				legend.setLayer(layerNames[l]);
-				legend.setStyle(styleNames[l]);
-				legend.setFormat("image/png");
-				legend.setExceptions("application/vnd.ogc.se_inimage");
+				final String key = layerNames[l] + "::" + styleNames[l];
+				if (legendCache.containsKey(key)) {
+					// in de cache kijken of we deze legenda afbeelding al
+					// hebben
+					legends[l] = new File(legendCache.get(key).getName());
+					if (!legends[l].exists()) {
+						// (mogelijk) is het bestand gewist..
+						ImageIO.write(legendCache.get(key).getImage(), "png",
+								legends[l]);
+					}
+					LOGGER.debug("Legenda bestand uit cache: "
+							+ legends[l].getAbsolutePath());
+				} else {
+					// legenda opvragen
+					legend.setLayer(layerNames[l]);
+					legend.setStyle(styleNames[l]);
+					legend.setFormat("image/png");
+					legend.setExceptions("application/vnd.ogc.se_inimage");
 
-				LOGGER.debug("Voorgrond WMS legenda url is: "
-						+ legend.getFinalURL());
-				final GetLegendGraphicResponse response = this.getCachedWMS(
-						lyrDesc).issueRequest(legend);
-				image = ImageIO.read(response.getInputStream());
-				legends[l] = File.createTempFile("legenda", ".png", new File(
-						this.getServletContext()
-								.getRealPath(MAP_CACHE_DIR.code)));
-				legends[l].deleteOnExit();
-				LOGGER.debug("Legenda bestand: " + legends[l].getAbsolutePath());
-				ImageIO.write(image, "png", legends[l]);
+					LOGGER.debug("Voorgrond WMS legenda url is: "
+							+ legend.getFinalURL());
+					final GetLegendGraphicResponse response = this
+							.getCachedWMS(lyrDesc).issueRequest(legend);
+					image = ImageIO.read(response.getInputStream());
+					legends[l] = File.createTempFile(
+							"legenda",
+							".png",
+							new File(this.getServletContext().getRealPath(
+									MAP_CACHE_DIR.code)));
+					legends[l].deleteOnExit();
+					legendCache.put(key,
+							new CacheImage(image, legends[l].getAbsolutePath(),
+									System.currentTimeMillis()
+											+ MILLISECONDS_TO_CACHE_ELEMENTS
+											* 24));
+					LOGGER.debug("Legenda bestand: "
+							+ legends[l].getAbsolutePath());
+					ImageIO.write(image, "png", legends[l]);
+				}
 			}
-		} catch (UnsupportedOperationException u) {
-			LOGGER.error(
-					"De WMS server ondersteund geen GetLegendGraphicRequest.",
-					u);
+		} catch (final UnsupportedOperationException u) {
+			LOGGER.warn("De WMS server ("
+					+ this.getCachedWMS(lyrDesc).getInfo().getTitle()
+					+ ") ondersteund geen GetLegendGraphicRequest.", u);
 			return null;
 		}
 		return legends;
@@ -479,7 +555,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		super.init(config);
 		try {
 			this.bgWMSCache = new WMSCache(this.getServletContext()
-					.getRealPath(MAP_CACHE_DIR.code));
+					.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
 		} catch (final IOException e) {
 			LOGGER.error(
 					"Inititalisatie fout voor de achtergrond topografie cache.",
@@ -488,12 +564,21 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		try {
 			this.bgWMSLuFoCache = new WMSCache(this.getServletContext()
-					.getRealPath(MAP_CACHE_DIR.code));
+					.getRealPath(MAP_CACHE_DIR.code), NUMBER_CACHE_ELEMENTS);
 		} catch (final IOException e) {
 			LOGGER.error(
 					"Inititalisatie fout voor de achtergrond luchtfoto cache.",
 					e);
 		}
+
+		legendCache = new Cache<String, CacheImage, BufferedImage>(
+				NUMBER_CACHE_ELEMENTS);
+
+		featInfoCache = new Cache<BboxLayerCacheKey, CachableString, String>(
+				NUMBER_CACHE_ELEMENTS);
+
+		fgWMSCache = new Cache<BboxLayerCacheKey, CacheImage, BufferedImage>(
+				NUMBER_CACHE_ELEMENTS);
 
 		// achtergrond kaart
 		final String bgCapabilitiesURL = config
@@ -550,7 +635,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final String lufoWMSlyrs = config.getInitParameter("lufoWMSlayers");
 		LOGGER.debug("Achtergrond kaartlagen luchtfoto: " + lufoWMSlayers);
 		if ((lufoWMSlyrs != null) && (lufoWMSlyrs.length() > 0)) {
-			this.bgWMSlayers = lufoWMSlyrs.split("[,]\\s*");
+			this.lufoWMSlayers = lufoWMSlyrs.split("[,]\\s*");
 		}
 
 		// init servers cache
@@ -576,7 +661,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		BasemapType basemaptype = BasemapType.topografie;
 		final String mType = request.getParameter(REQ_PARAM_BGMAP.code);
-		if (isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
+		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
 			try {
 				basemaptype = BasemapType.valueOf(mType);
 			} catch (final IllegalArgumentException e) {
@@ -587,7 +672,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		BufferedImage fg = null;
 		final String mapId = request.getParameter(REQ_PARAM_MAPID.code);
-		if (isNotNullNotEmptyNotWhiteSpaceOnly(mapId)) {
+		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mapId)) {
 			final LayerDescriptor layer = this.layers.getLayerByID(mapId);
 			request.setAttribute("mapname", layer.getName());
 			LOGGER.debug("LayerDescriptor::Name is: " + layer.getName());
@@ -598,7 +683,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			try {
 				fg = this.getForeGroundMap(bbox, layer);
 				final File[] legendas = this.getLegends(layer);
-				final String fInfo = this.getFeatureInfo(layer);
+				final String fInfo = this.getFeatureInfo(bbox, layer);
 				request.setAttribute(REQ_PARAM_MAPID.code, mapId);
 				request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
 				request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);

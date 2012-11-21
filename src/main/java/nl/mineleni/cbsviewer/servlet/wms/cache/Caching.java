@@ -1,18 +1,27 @@
+/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
+ */
 package nl.mineleni.cbsviewer.servlet.wms.cache;
 
-import java.awt.image.BufferedImage;
+import java.util.Collection;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * Interface ImageCaching.
+ * Interface Caching.
  * 
  * @param <K>
  *            generic type voor de sleutel, bijvoorbeeld een bounding box.
  * @param <V>
  *            generic type voor de waarde, bijvoorlbeeld een Image
+ * @param <T>
+ *            the generic type
  */
-public interface ImageCaching<K, V> {
+interface Caching<K, V extends Cachable<T>, T> {
 
 	/** Wist de complete cache. */
 	void clear();
@@ -42,7 +51,17 @@ public interface ImageCaching<K, V> {
 	 *            de sleutel
 	 * @return de waarde, of {@code null}
 	 */
-	BufferedImage get(K bbox);
+	V get(K bbox);
+
+	/**
+	 * haalt alle elementen op uit de cache met een verzameling sleutels.
+	 * 
+	 * @param collection
+	 *            Verzameling sleutels waarvoor de waarden uit de cache moeten
+	 *            worden gehaald.
+	 * @return de verzamelingen elementen uit de cache
+	 */
+	Map<K, V> getAll(Collection<K> collection);
 
 	/**
 	 * Slaat de waarde op in de cache met de gegeven sleutel.
