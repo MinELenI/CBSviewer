@@ -9,7 +9,7 @@
 <div id="overview"><a href="../../../../../apidocs/nl/mineleni/cbsviewer/servlet/ReverseProxyServlet.html">View Javadoc</a></div><pre>
 
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
-<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken, Landbouw en Innovatie</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken</em>
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * </em>
 <a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> * Gepubliceerd onder de BSD 2-clause licentie, </em>
 <a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. </em>
@@ -111,8 +111,8 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="102" href="#102">102</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> forceXmlResponse = false;
 <a class="jxr_linenumber" name="103" href="#103">103</a> 
-<a class="jxr_linenumber" name="104" href="#104">104</a> 	<em class="jxr_javadoccomment">/**</em><em class="jxr_javadoccomment"> http client. */</em>
-<a class="jxr_linenumber" name="105" href="#105">105</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> HttpClient client = <strong class="jxr_keyword">new</strong> DefaultHttpClient();
+<a class="jxr_linenumber" name="104" href="#104">104</a> 	<em class="jxr_javadoccomment">/**</em><em class="jxr_javadoccomment"> onze http client. */</em>
+<a class="jxr_linenumber" name="105" href="#105">105</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">transient</strong> HttpClient client = <strong class="jxr_keyword">new</strong> DefaultHttpClient();
 <a class="jxr_linenumber" name="106" href="#106">106</a> 
 <a class="jxr_linenumber" name="107" href="#107">107</a> 	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="108" href="#108">108</a> <em class="jxr_javadoccomment">	 * Parse out the server name and check if the specified server name is in</em>
@@ -200,7 +200,7 @@
 <a class="jxr_linenumber" name="190" href="#190">190</a> 							responseBody = <a href="../../../../nl/mineleni/cbsviewer/servlet/wms/FeatureInfoResponseConverter.html">FeatureInfoResponseConverter</a>
 <a class="jxr_linenumber" name="191" href="#191">191</a> 									.convertToHTMLTable(
 <a class="jxr_linenumber" name="192" href="#192">192</a> 											get.getEntity().getContent(),
-<a class="jxr_linenumber" name="193" href="#193">193</a> 											FeatureInfoResponseConverter.type.GMLTYPE,
+<a class="jxr_linenumber" name="193" href="#193">193</a> 											FeatureInfoResponseConverter.Type.GMLTYPE,
 <a class="jxr_linenumber" name="194" href="#194">194</a> 											layers.getLayerByLayers(lName)
 <a class="jxr_linenumber" name="195" href="#195">195</a> 													.getAttributes()
 <a class="jxr_linenumber" name="196" href="#196">196</a> 													.split(<span class="jxr_string">",&#92;&#92;s*"</span>));

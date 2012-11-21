@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest
-	c256 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSCacheTest.html">
+	c332 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSCacheTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCacheTest </td></tr>
 		</table></td></tr>
@@ -26,17 +26,18 @@ digraph G {
 <tr><td align="left" balign="left"> + testGet() </td></tr>
 <tr><td align="left" balign="left"> + testGetCacheDir() </td></tr>
 <tr><td align="left" balign="left"> + testInvalidCachePath() </td></tr>
+<tr><td align="left" balign="left"> + testOverage() </td></tr>
 <tr><td align="left" balign="left"> + testPut() </td></tr>
-<tr><td align="left" balign="left"> + testSize() </td></tr>
 <tr><td align="left" balign="left"> + testRemove() </td></tr>
+<tr><td align="left" balign="left"> + testSize() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WMSCacheTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c256:p -> c265:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c332:p -> c341:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c256:p -> c265:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c332:p -> c341:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c265 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c341 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>
@@ -44,16 +45,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + WMSCache(arg0 : Map&lt;BoundingBox, BufferedImage&gt;, arg1 : String) </td></tr>
-<tr><td align="left" balign="left"> + WMSCache(arg0 : String) </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + containsKey(arg0 : BoundingBox) : boolean </td></tr>
-<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;BoundingBox, BufferedImage&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + get(arg0 : BoundingBox) : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(arg0 : Map&lt;BoundingBox, BufferedImage&gt;, arg1 : String, arg2 : int, arg3 : int) </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(arg0 : String, arg1 : int) </td></tr>
 <tr><td align="left" balign="left"> + getCacheDir() : String </td></tr>
-<tr><td align="left" balign="left"> + put(arg0 : BoundingBox, arg1 : BufferedImage) </td></tr>
+<tr><td align="left" balign="left"> + put(arg0 : BoundingBox, arg1 : BufferedImage, arg2 : long) </td></tr>
 <tr><td align="left" balign="left"> + remove(arg0 : BoundingBox) </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + getImage(arg0 : BoundingBox) : BufferedImage </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 }

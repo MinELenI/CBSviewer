@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest
-	c190 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSClientIntegrationTest.html">
+	c256 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSClientIntegrationTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientIntegrationTest </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpenLSClientIntegrationTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.AbstractTestUtils
-	c196 [label=<<table title="nl.mineleni.openls.AbstractTestUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../openls/AbstractTestUtils.html">
+	c264 [label=<<table title="nl.mineleni.openls.AbstractTestUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../openls/AbstractTestUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AbstractTestUtils </td></tr>
 		</table></td></tr>
@@ -40,11 +40,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../openls/AbstractTestUtils.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest extends nl.mineleni.openls.AbstractTestUtils
-	c196:p -> c190:p [dir=back,arrowtail=empty];
+	c264:p -> c256:p [dir=back,arrowtail=empty];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c190:p -> c199:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c256:p -> c267:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c199 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c267 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClient </td></tr>
 		</table></td></tr>

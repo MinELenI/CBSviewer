@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest
-	c34 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCacheTest.html">
+	c38 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCacheTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCacheTest </td></tr>
 		</table></td></tr>
@@ -26,13 +26,35 @@ digraph G {
 <tr><td align="left" balign="left"> + testGet() </td></tr>
 <tr><td align="left" balign="left"> + testGetCacheDir() </td></tr>
 <tr><td align="left" balign="left"> + testInvalidCachePath() </td></tr>
+<tr><td align="left" balign="left"> + testOverage() </td></tr>
 <tr><td align="left" balign="left"> + testPut() </td></tr>
-<tr><td align="left" balign="left"> + testSize() </td></tr>
 <tr><td align="left" balign="left"> + testRemove() </td></tr>
+<tr><td align="left" balign="left"> + testSize() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WMSCacheTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest
+	c39 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheTest.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CacheTest </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CacheTest() </td></tr>
+<tr><td align="left" balign="left"> + setUp() </td></tr>
+<tr><td align="left" balign="left"> + testClear() </td></tr>
+<tr><td align="left" balign="left"> + testContainsKey() </td></tr>
+<tr><td align="left" balign="left"> + testEntrySet() </td></tr>
+<tr><td align="left" balign="left"> + testGet() </td></tr>
+<tr><td align="left" balign="left"> + testOverSize() </td></tr>
+<tr><td align="left" balign="left"> + testPut() </td></tr>
+<tr><td align="left" balign="left"> + testRemove() </td></tr>
+<tr><td align="left" balign="left"> + testSize() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CacheTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest
-	c35 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImageTest.html">
+	c40 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImageTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImageTest </td></tr>
 		</table></td></tr>
@@ -47,14 +69,39 @@ digraph G {
 <tr><td align="left" balign="left"> + testIsValid() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CacheImageTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest
+	c41 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BboxLayerCacheKeyTest.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BboxLayerCacheKeyTest </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BboxLayerCacheKeyTest() </td></tr>
+<tr><td align="left" balign="left"> + setUp() </td></tr>
+<tr><td align="left" balign="left"> + testEqualsObject() </td></tr>
+<tr><td align="left" balign="left"> + testGetBbox() </td></tr>
+<tr><td align="left" balign="left"> + testGetLd() </td></tr>
+<tr><td align="left" balign="left"> + testHashCode() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./BboxLayerCacheKeyTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c34:p -> c41:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c38:p -> c47:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c34:p -> c41:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c38:p -> c47:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c39:p -> c48:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c39:p -> c48:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c35:p -> c42:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c40:p -> c49:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
+	c41:p -> c50:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
+	c41:p -> c50:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c42 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c49 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImage </td></tr>
 		</table></td></tr>
@@ -62,14 +109,34 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : String) </td></tr>
-<tr><td align="left" balign="left"> + getImage() : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : String, arg2 : long) </td></tr>
+<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : long) </td></tr>
+<tr><td align="left" balign="left"> + getExpireBy() : long </td></tr>
+<tr><td align="left" balign="left"> + getItem() : BufferedImage </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 <tr><td align="left" balign="left"> + isValid() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getImage() : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + setFileName(arg0 : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
+	c50 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BboxLayerCacheKey </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BboxLayerCacheKey(arg0 : BoundingBox, arg1 : LayerDescriptor) </td></tr>
+<tr><td align="left" balign="left"> + equals(arg0 : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBbox() : BoundingBox </td></tr>
+<tr><td align="left" balign="left"> + getLd() : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c41 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c47 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>
@@ -77,15 +144,33 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + WMSCache(arg0 : Map&lt;BoundingBox, BufferedImage&gt;, arg1 : String) </td></tr>
-<tr><td align="left" balign="left"> + WMSCache(arg0 : String) </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + containsKey(arg0 : BoundingBox) : boolean </td></tr>
-<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;BoundingBox, BufferedImage&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + get(arg0 : BoundingBox) : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(arg0 : Map&lt;BoundingBox, BufferedImage&gt;, arg1 : String, arg2 : int, arg3 : int) </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(arg0 : String, arg1 : int) </td></tr>
 <tr><td align="left" balign="left"> + getCacheDir() : String </td></tr>
-<tr><td align="left" balign="left"> + put(arg0 : BoundingBox, arg1 : BufferedImage) </td></tr>
+<tr><td align="left" balign="left"> + put(arg0 : BoundingBox, arg1 : BufferedImage, arg2 : long) </td></tr>
 <tr><td align="left" balign="left"> + remove(arg0 : BoundingBox) </td></tr>
+<tr><td align="left" balign="left"> + getImage(arg0 : BoundingBox) : BufferedImage </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c48 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Cache(arg0 : int) </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + containsKey(arg0 : K) : boolean </td></tr>
+<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;K, V&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + get(arg0 : K) : V </td></tr>
+<tr><td align="left" balign="left"> + getAll(arg0 : Collection&lt;K&gt;) : Map&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + mapSize() : int </td></tr>
+<tr><td align="left" balign="left"> + put(arg0 : K, arg1 : V) </td></tr>
+<tr><td align="left" balign="left"> + queueSize() : int </td></tr>
+<tr><td align="left" balign="left"> + remove(arg0 : K) </td></tr>
 <tr><td align="left" balign="left"> + size() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];

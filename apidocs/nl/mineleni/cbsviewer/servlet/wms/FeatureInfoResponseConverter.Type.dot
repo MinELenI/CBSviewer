@@ -9,11 +9,11 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.type
-	c864 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverter.type.html">
+	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type
+	c1040 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverter.Type.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> type </td></tr>
+<tr><td align="center" balign="center"> Type </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
@@ -22,6 +22,6 @@ digraph G {
 <tr><td align="left" balign="left"> GMLTYPE </td></tr>
 <tr><td align="left" balign="left"> HTMLTYPE </td></tr>
 		</table></td></tr>
-		</table>>, URL="./FeatureInfoResponseConverter.type.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./FeatureInfoResponseConverter.Type.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest
-	c154 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CacheImageTest.html">
+	c196 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CacheImageTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImageTest </td></tr>
 		</table></td></tr>
@@ -26,9 +26,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CacheImageTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c154:p -> c161:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c196:p -> c204:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c161 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c204 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImage </td></tr>
 		</table></td></tr>
@@ -36,10 +36,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : String) </td></tr>
-<tr><td align="left" balign="left"> + getImage() : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : String, arg2 : long) </td></tr>
+<tr><td align="left" balign="left"> + CacheImage(arg0 : BufferedImage, arg1 : long) </td></tr>
+<tr><td align="left" balign="left"> + getExpireBy() : long </td></tr>
+<tr><td align="left" balign="left"> + getItem() : BufferedImage </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 <tr><td align="left" balign="left"> + isValid() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getImage() : BufferedImage </td></tr>
+<tr><td align="left" balign="left"> + setFileName(arg0 : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 }

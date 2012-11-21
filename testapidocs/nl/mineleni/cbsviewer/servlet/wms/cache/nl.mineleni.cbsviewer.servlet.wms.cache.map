@@ -1,8 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./WMSCacheTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" alt="" coords="153,11,314,245"/>
-<area shape="rect" id="node1" href="./WMSCacheTest.html" title="&lt;TABLE&gt;" alt="" coords="142,6,325,250"/>
-<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="5,299,461,527"/>
-<area shape="rect" id="node2_1" href="./CacheImageTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" alt="" coords="583,59,721,197"/>
-<area shape="rect" id="node2" href="./CacheImageTest.html" title="&lt;TABLE&gt;" alt="" coords="573,54,731,202"/>
-<area shape="rect" id="node7" href="null" title="&lt;TABLE&gt;" alt="" coords="486,347,818,479"/>
+<area shape="rect" id="node1_0" href="./WMSCacheTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" alt="" coords="211,11,373,261"/>
+<area shape="rect" id="node1" href="./WMSCacheTest.html" title="&lt;TABLE&gt;" alt="" coords="201,6,383,266"/>
+<area shape="rect" id="node6" href="null" title="&lt;TABLE&gt;" alt="" coords="5,355,579,519"/>
+<area shape="rect" id="node2_1" href="./CacheTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest" alt="" coords="682,27,819,245"/>
+<area shape="rect" id="node2" href="./CacheTest.html" title="&lt;TABLE&gt;" alt="" coords="671,22,830,250"/>
+<area shape="rect" id="node9" href="null" title="&lt;TABLE&gt;" alt="" coords="604,315,897,559"/>
+<area shape="rect" id="node3_2" href="./CacheImageTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" alt="" coords="1054,67,1191,205"/>
+<area shape="rect" id="node3" href="./CacheImageTest.html" title="&lt;TABLE&gt;" alt="" coords="1043,62,1202,210"/>
+<area shape="rect" id="node12" href="null" title="&lt;TABLE&gt;" alt="" coords="922,339,1323,535"/>
+<area shape="rect" id="node4_3" href="./BboxLayerCacheKeyTest.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" alt="" coords="1471,59,1659,213"/>
+<area shape="rect" id="node4" href="./BboxLayerCacheKeyTest.html" title="&lt;TABLE&gt;" alt="" coords="1461,54,1670,218"/>
+<area shape="rect" id="node14" href="null" title="&lt;TABLE&gt;" alt="" coords="1348,363,1783,511"/>
 </map>

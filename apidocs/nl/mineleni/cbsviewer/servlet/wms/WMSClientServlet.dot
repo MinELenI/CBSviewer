@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c1844 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	c2032 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
@@ -25,14 +25,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc1844 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	n0cc2032 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc1844 -> c1844:p[arrowhead=none];
+	n0cc2032 -> c2032:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c1850 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServlet.html">
+	c2038 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
@@ -46,27 +46,25 @@ digraph G {
 <tr><td align="left" balign="left"> # service(request : HttpServletRequest, response : HttpServletResponse) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WMSClientServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching<K, V>
-	c1855 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/ImageCaching.html">
+	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
+	c2042 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/WMSCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ImageCaching&lt;K, V&gt; </td></tr>
+<tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + containsKey(bbox : K) : boolean </td></tr>
-<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;K, V&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + get(bbox : K) : BufferedImage </td></tr>
-<tr><td align="left" balign="left"> + put(bbox : K, cacheValue : V) </td></tr>
-<tr><td align="left" balign="left"> + remove(bbox : K) </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(cacheData : Map&lt;BoundingBox, BufferedImage&gt;, cacheDir : String, maxSize : int, secondsToLive : int) </td></tr>
+<tr><td align="left" balign="left"> + WMSCache(cacheDir : String, maxSize : int) </td></tr>
+<tr><td align="left" balign="left"> + getCacheDir() : String </td></tr>
+<tr><td align="left" balign="left"> + put(bbox : BoundingBox, cacheValue : BufferedImage, secondsToLive : long) </td></tr>
+<tr><td align="left" balign="left"> + remove(bbox : BoundingBox) </td></tr>
+<tr><td align="left" balign="left"> + getImage(bbox : BoundingBox) : BufferedImage </td></tr>
 		</table></td></tr>
-		</table>>, URL="./cache/ImageCaching.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./cache/WMSCache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c1862 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/AvailableLayersBean.html">
+	c2052 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>
@@ -83,12 +81,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../util/AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c1844:p -> c1850:p [dir=back,arrowtail=empty];
+	c2032:p -> c2038:p [dir=back,arrowtail=empty];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c1850:p -> c1862:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching<K, V>
-	c1850:p -> c1855:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
-	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching<K, V>
-	c1850:p -> c1855:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2038:p -> c2052:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
+	c2038:p -> c2042:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
+	c2038:p -> c2042:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

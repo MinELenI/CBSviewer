@@ -9,8 +9,24 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
+	c1286 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../servlet/wms/cache/BboxLayerCacheKey.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BboxLayerCacheKey </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BboxLayerCacheKey(bbox : BoundingBox, ld : LayerDescriptor) </td></tr>
+<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBbox() : BoundingBox </td></tr>
+<tr><td align="left" balign="left"> + getLd() : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../servlet/wms/cache/BboxLayerCacheKey.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c1158 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LayerDescriptor.html">
+	c1310 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LayerDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LayerDescriptor </td></tr>
 		</table></td></tr>
@@ -41,5 +57,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setLink(value : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LayerDescriptor.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
+	c1286:p -> c1310:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

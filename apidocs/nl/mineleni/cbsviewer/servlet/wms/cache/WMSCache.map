@@ -1,6 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="15,257,513,474"/>
-<area shape="rect" id="node1" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,251,523,479"/>
-<area shape="rect" id="node2_1" href="./ImageCaching.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.ImageCaching" alt="" coords="144,11,384,197"/>
-<area shape="rect" id="node2" href="./ImageCaching.html" title="&lt;TABLE&gt;" alt="" coords="133,6,395,202"/>
+<area shape="rect" id="node1_0" href="../WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="147,67,587,189"/>
+<area shape="rect" id="node1" href="../WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="136,62,597,194"/>
+<area shape="rect" id="node2_1" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,305,717,458"/>
+<area shape="rect" id="node2" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,299,728,463"/>
+<area shape="rect" id="node3_2" href="./Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="632,11,933,245"/>
+<area shape="rect" id="node3" href="./Cache.html" title="&lt;TABLE&gt;" alt="" coords="621,6,944,250"/>
 </map>
