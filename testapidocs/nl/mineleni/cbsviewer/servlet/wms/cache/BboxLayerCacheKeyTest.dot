@@ -30,6 +30,10 @@ digraph G {
 	c181:p -> c187:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
 	c181:p -> c187:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
+	c181:p -> c187:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
+	c181:p -> c188:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
 	c181:p -> c188:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
