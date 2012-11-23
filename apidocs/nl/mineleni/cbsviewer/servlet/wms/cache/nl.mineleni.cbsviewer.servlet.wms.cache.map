@@ -1,15 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,566,717,719"/>
-<area shape="rect" id="node1" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,561,728,725"/>
-<area shape="rect" id="node2_1" href="./CacheImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" alt="" coords="563,297,1002,482"/>
-<area shape="rect" id="node2" href="./CacheImage.html" title="&lt;TABLE&gt;" alt="" coords="553,291,1013,487"/>
-<area shape="rect" id="node3_2" href="./Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="216,273,517,506"/>
-<area shape="rect" id="node3" href="./Cache.html" title="&lt;TABLE&gt;" alt="" coords="205,267,528,511"/>
-<area shape="rect" id="node4_3" href="./CachableString.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" alt="" coords="1048,329,1365,450"/>
-<area shape="rect" id="node4" href="./CachableString.html" title="&lt;TABLE&gt;" alt="" coords="1037,323,1376,455"/>
-<area shape="rect" id="node5_4" href="./BboxLayerCacheKey.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" alt="" coords="1326,43,1727,181"/>
-<area shape="rect" id="node5" href="./BboxLayerCacheKey.html" title="&lt;TABLE&gt;" alt="" coords="1315,38,1738,186"/>
-<area shape="rect" id="node7" href="null" title="&lt;TABLE&gt;" alt="" coords="661,62,904,162"/>
-<area shape="rect" id="node9" href="null" title="&lt;TABLE&gt;" alt="" coords="205,6,528,218"/>
-<area shape="rect" id="node11" href="null" title="&lt;TABLE&gt;" alt="" coords="1122,46,1291,178"/>
+<area shape="rect" id="node1_0" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,582,717,735"/>
+<area shape="rect" id="node1" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,577,728,741"/>
+<area shape="rect" id="node2_1" href="./Caching.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" alt="" coords="216,11,517,213"/>
+<area shape="rect" id="node2" href="./Caching.html" title="&lt;TABLE&gt;" alt="" coords="205,6,528,218"/>
+<area shape="rect" id="node4_2" href="./Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="216,273,517,506"/>
+<area shape="rect" id="node4" href="./Cache.html" title="&lt;TABLE&gt;" alt="" coords="205,267,528,511"/>
+<area shape="rect" id="node3_3" href="./CacheImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" alt="" coords="817,566,1255,751"/>
+<area shape="rect" id="node3" href="./CacheImage.html" title="&lt;TABLE&gt;" alt="" coords="806,561,1266,757"/>
+<area shape="rect" id="node5_4" href="./CachableString.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" alt="" coords="563,329,880,450"/>
+<area shape="rect" id="node5" href="./CachableString.html" title="&lt;TABLE&gt;" alt="" coords="552,323,891,455"/>
+<area shape="rect" id="node6_5" href="./CachableImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" alt="" coords="925,345,1147,434"/>
+<area shape="rect" id="node6" href="./CachableImage.html" title="&lt;TABLE&gt;" alt="" coords="915,339,1157,439"/>
+<area shape="rect" id="node7_6" href="./Cachable.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" alt="" coords="805,51,953,173"/>
+<area shape="rect" id="node7" href="./Cachable.html" title="&lt;TABLE&gt;" alt="" coords="794,46,963,178"/>
+<area shape="rect" id="node8_7" href="./BboxLayerCacheKey.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" alt="" coords="998,43,1399,181"/>
+<area shape="rect" id="node8" href="./BboxLayerCacheKey.html" title="&lt;TABLE&gt;" alt="" coords="987,38,1410,186"/>
 </map>

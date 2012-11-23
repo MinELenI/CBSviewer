@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CachableString
-	c842 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CachableString.html">
+	c983 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CachableString.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CachableString </td></tr>
 		</table></td></tr>
@@ -24,10 +24,8 @@ digraph G {
 <tr><td align="left" balign="left"> + isValid() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CachableString.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//nl.mineleni.cbsviewer.servlet.wms.cache.CachableString implements nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c868:p -> c842:p [dir=back,arrowtail=empty,style=dashed];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c868 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c985 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cachable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cachable&lt;T&gt; </td></tr>
@@ -40,6 +38,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getItem() : T </td></tr>
 <tr><td align="left" balign="left"> + isValid() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Cachable.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	//nl.mineleni.cbsviewer.servlet.wms.cache.CachableString implements nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
+	c985:p -> c983:p [dir=back,arrowtail=empty,style=dashed];
 }
 

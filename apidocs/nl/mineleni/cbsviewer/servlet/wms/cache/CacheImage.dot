@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c922 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CacheImage.html">
+	c1067 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CacheImage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImage </td></tr>
 		</table></td></tr>
@@ -28,10 +28,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setFileName(name : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CacheImage.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage implements nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image>
-	c950:p -> c922:p [dir=back,arrowtail=empty,style=dashed];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image>
-	c950 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c1070 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CachableImage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CachableImage&lt;T extends Image&gt; </td></tr>
@@ -42,6 +40,8 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./CachableImage.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	//nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage implements nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image>
+	c1070:p -> c1067:p [dir=back,arrowtail=empty,style=dashed];
 }
 
