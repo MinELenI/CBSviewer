@@ -65,6 +65,12 @@ digraph G {
 		</table>>, URL="./Cache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache extends nl.mineleni.cbsviewer.servlet.wms.cache.Cache<org.opengis.geometry.BoundingBox, nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage, java.awt.image.BufferedImage>
 	c2272:p -> c2269:p [dir=back,arrowtail=empty];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2265:p -> c2272:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2265:p -> c2272:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2265:p -> c2272:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
 	c2265:p -> c2269:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache

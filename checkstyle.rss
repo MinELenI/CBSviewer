@@ -10,8 +10,8 @@
     <item>
       <title>File: 49,
              Errors: 0,
-             Warnings: 209,
-             Infos: 6
+             Warnings: 194,
+             Infos: 3
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -494,10 +494,10 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet.java">nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.java</a>
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  29
+                  13
                 </td>
                 <td>
                   0
@@ -553,7 +553,7 @@
                   1
                 </td>
                 <td>
-                  4
+                  5
                 </td>
                 <td>
                   0

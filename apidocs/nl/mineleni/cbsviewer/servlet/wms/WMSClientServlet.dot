@@ -63,6 +63,28 @@ digraph G {
 <tr><td align="left" balign="left"> + getImage(bbox : BoundingBox) : BufferedImage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./cache/WMSCache.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2315 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/Cache.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Cache(maxSize : int) </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + containsKey(key : K) : boolean </td></tr>
+<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;K, V&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + get(key : K) : V </td></tr>
+<tr><td align="left" balign="left"> + getAll(collection : Collection&lt;K&gt;) : Map&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + mapSize() : int </td></tr>
+<tr><td align="left" balign="left"> + put(key : K, cacheValue : V) </td></tr>
+<tr><td align="left" balign="left"> + queueSize() : int </td></tr>
+<tr><td align="left" balign="left"> + remove(key : K) </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cache/Cache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
 	c2325 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -82,6 +104,14 @@ digraph G {
 		</table>>, URL="../../util/AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
 	c2302:p -> c2308:p [dir=back,arrowtail=empty];
+	//nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache extends nl.mineleni.cbsviewer.servlet.wms.cache.Cache<org.opengis.geometry.BoundingBox, nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage, java.awt.image.BufferedImage>
+	c2315:p -> c2312:p [dir=back,arrowtail=empty];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2308:p -> c2315:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2308:p -> c2315:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
+	c2308:p -> c2315:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
 	c2308:p -> c2325:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
