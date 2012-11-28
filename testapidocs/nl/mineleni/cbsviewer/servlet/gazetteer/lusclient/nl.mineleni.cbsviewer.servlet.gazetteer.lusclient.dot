@@ -9,8 +9,23 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest
+	c21 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpenLSClientUtilTest.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OpenLSClientUtilTest </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OpenLSClientUtilTest() </td></tr>
+<tr><td align="left" balign="left"> + setUp() </td></tr>
+<tr><td align="left" balign="left"> + testGetGeocodedAddressList() </td></tr>
+<tr><td align="left" balign="left"> + testGetOpenLSClientAddressList() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OpenLSClientUtilTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest
-	c20 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpenLSClientIntegrationTest.html">
+	c22 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpenLSClientIntegrationTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientIntegrationTest </td></tr>
 		</table></td></tr>
@@ -26,7 +41,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpenLSClientIntegrationTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest
-	c21 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpenLSClientAddressTest.html">
+	c23 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpenLSClientAddressTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientAddressTest </td></tr>
 		</table></td></tr>
@@ -44,17 +59,17 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpenLSClientAddressTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c20:p -> c31:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c22:p -> c33:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress
-	c21:p -> c32:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c23:p -> c34:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress
-	c21:p -> c32:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c23:p -> c34:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress
-	c21:p -> c32:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c23:p -> c34:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress
-	c21:p -> c32:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c23:p -> c34:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress
-	c32 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c34 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientAddress </td></tr>
 		</table></td></tr>
@@ -89,7 +104,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c31 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c33 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClient </td></tr>
 		</table></td></tr>

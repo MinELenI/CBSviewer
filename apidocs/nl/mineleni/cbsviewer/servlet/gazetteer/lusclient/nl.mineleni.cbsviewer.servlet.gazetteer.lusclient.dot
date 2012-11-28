@@ -21,7 +21,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + getGeocodedAddressList(gcr : GeocodeResponse) : List&lt;GeocodedAddress&gt; </td></tr>
-<tr><td align="left" balign="left"> + getOpenLSClientAddressList(gcr : GeocodeResponse) : List&lt;OpenLSClientAddress&gt; </td></tr>
+<tr><td align="left" balign="left"> + getOpenLSClientAddressList(gcr : GeocodeResponse, max : int[]) : List&lt;OpenLSClientAddress&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpenLSClientUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress

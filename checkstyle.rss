@@ -10,8 +10,8 @@
     <item>
       <title>File: 49,
              Errors: 0,
-             Warnings: 196,
-             Infos: 3
+             Warnings: 203,
+             Infos: 5
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -312,10 +312,10 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet.java">nl/mineleni/cbsviewer/servlet/gazetteer/AdresZoekServlet.java</a>
                 </td>
                 <td>
-                  2
+                  4
                 </td>
                 <td>
-                  3
+                  5
                 </td>
                 <td>
                   0
@@ -623,7 +623,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  7
                 </td>
                 <td>
                   0
