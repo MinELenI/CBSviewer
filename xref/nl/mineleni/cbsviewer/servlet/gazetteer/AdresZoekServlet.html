@@ -77,10 +77,10 @@
 <a class="jxr_linenumber" name="67" href="#67">67</a>  			<em class="jxr_comment">// formatting als int</em>
 <a class="jxr_linenumber" name="68" href="#68">68</a>  			<strong class="jxr_keyword">return</strong> <span class="jxr_string">""</span> + (fmt.parse(coord).intValue());
 <a class="jxr_linenumber" name="69" href="#69">69</a>  		} <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> ParseException e) {
-<a class="jxr_linenumber" name="70" href="#70">70</a>  			LOGGER.warn(<span class="jxr_string">"Fout tijden parsen van cooridnaat: "</span> + coord, e);
+<a class="jxr_linenumber" name="70" href="#70">70</a>  			LOGGER.warn(<span class="jxr_string">"Fout tijden parsen van coordinaat: "</span> + coord, e);
 <a class="jxr_linenumber" name="71" href="#71">71</a>  			<strong class="jxr_keyword">return</strong> coord;
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		} <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> NullPointerException e) {
-<a class="jxr_linenumber" name="73" href="#73">73</a>  			LOGGER.warn(<span class="jxr_string">"Fout tijden parsen van cooridnaat: "</span> + coord, e);
+<a class="jxr_linenumber" name="73" href="#73">73</a>  			LOGGER.warn(<span class="jxr_string">"Fout tijden parsen van coordinaat: "</span> + coord, e);
 <a class="jxr_linenumber" name="74" href="#74">74</a>  			<strong class="jxr_keyword">return</strong> coord;
 <a class="jxr_linenumber" name="75" href="#75">75</a>  		}
 <a class="jxr_linenumber" name="76" href="#76">76</a>  	}
@@ -148,7 +148,7 @@
 <a class="jxr_linenumber" name="138" href="#138">138</a> 		LOGGER.debug(<span class="jxr_string">"Zoeken naar: "</span> + zoekTerm);
 <a class="jxr_linenumber" name="139" href="#139">139</a> 		<strong class="jxr_keyword">if</strong> (zoekTerm.length() &lt; 1) {
 <a class="jxr_linenumber" name="140" href="#140">140</a> 			request.setAttribute(REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="141" href="#141">141</a> 					<span class="jxr_string">"Geen adres ingevuld."</span>);
+<a class="jxr_linenumber" name="141" href="#141">141</a> 					_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_NIETS_INGEVULD"</span>));
 <a class="jxr_linenumber" name="142" href="#142">142</a> 			<strong class="jxr_keyword">if</strong> (forwardResponse) {
 <a class="jxr_linenumber" name="143" href="#143">143</a> 				request.getRequestDispatcher(<span class="jxr_string">"/index.jsp"</span>).forward(request,
 <a class="jxr_linenumber" name="144" href="#144">144</a> 						response);
@@ -166,46 +166,49 @@
 <a class="jxr_linenumber" name="156" href="#156">156</a> 			<strong class="jxr_keyword">if</strong> (forwardResponse) {
 <a class="jxr_linenumber" name="157" href="#157">157</a> 				<strong class="jxr_keyword">if</strong> (addrl.isEmpty()) {
 <a class="jxr_linenumber" name="158" href="#158">158</a> 					<em class="jxr_comment">// niets gevonden</em>
-<a class="jxr_linenumber" name="159" href="#159">159</a> 					LOGGER.debug(<span class="jxr_string">"Er is niets gevonden voor: "</span> + zoekTerm);
-<a class="jxr_linenumber" name="160" href="#160">160</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="161" href="#161">161</a> 							<span class="jxr_string">"Er is niets gevonden voor: "</span> + zoekTerm);
-<a class="jxr_linenumber" name="162" href="#162">162</a> 				} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (addrl.size() == 1) {
-<a class="jxr_linenumber" name="163" href="#163">163</a> 					<em class="jxr_comment">// 1 adres gevonden</em>
-<a class="jxr_linenumber" name="164" href="#164">164</a> 					LOGGER.debug(<span class="jxr_string">"Er is 1 match gevonden voor: "</span> + zoekTerm);
-<a class="jxr_linenumber" name="165" href="#165">165</a> 					<strong class="jxr_keyword">final</strong> <a href="../../../../../nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClientAddress.html">OpenLSClientAddress</a> addr = addrl.get(0);
-<a class="jxr_linenumber" name="166" href="#166">166</a> 
-<a class="jxr_linenumber" name="167" href="#167">167</a> 					request.setAttribute(REQ_PARAM_XCOORD.code,
-<a class="jxr_linenumber" name="168" href="#168">168</a> 							<strong class="jxr_keyword">this</strong>.formatCoord(addr.getxCoord()));
-<a class="jxr_linenumber" name="169" href="#169">169</a> 					request.setAttribute(REQ_PARAM_YCOORD.code,
-<a class="jxr_linenumber" name="170" href="#170">170</a> 							<strong class="jxr_keyword">this</strong>.formatCoord(addr.getyCoord()));
-<a class="jxr_linenumber" name="171" href="#171">171</a> 					request.setAttribute(REQ_PARAM_STRAAL.code,
-<a class="jxr_linenumber" name="172" href="#172">172</a> 							addr.getRadius());
-<a class="jxr_linenumber" name="173" href="#173">173</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="174" href="#174">174</a> 							<span class="jxr_string">"Gevonden adres: "</span> + addr.getAddressString());
-<a class="jxr_linenumber" name="175" href="#175">175</a> 				} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="176" href="#176">176</a> 					<em class="jxr_comment">// meer dan 1 adressen gevonden</em>
-<a class="jxr_linenumber" name="177" href="#177">177</a> 					LOGGER.debug(<span class="jxr_string">"Er is meer dan 1 match gevonden voor: "</span>
-<a class="jxr_linenumber" name="178" href="#178">178</a> 							+ zoekTerm);
-<a class="jxr_linenumber" name="179" href="#179">179</a> 					request.setAttribute(<span class="jxr_string">"adreslijst"</span>, addrl);
-<a class="jxr_linenumber" name="180" href="#180">180</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="181" href="#181">181</a> 							<span class="jxr_string">"Er is meer dan 1 adres gevonden"</span>);
-<a class="jxr_linenumber" name="182" href="#182">182</a> 				}
-<a class="jxr_linenumber" name="183" href="#183">183</a> 				request.getRequestDispatcher(<span class="jxr_string">"/index.jsp"</span>).forward(request,
-<a class="jxr_linenumber" name="184" href="#184">184</a> 						response);
-<a class="jxr_linenumber" name="185" href="#185">185</a> 			} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="186" href="#186">186</a> 				<strong class="jxr_keyword">if</strong> (format != <strong class="jxr_keyword">null</strong> &amp;&amp; format.equalsIgnoreCase(<span class="jxr_string">"json"</span>)) {
-<a class="jxr_linenumber" name="187" href="#187">187</a> 					<em class="jxr_comment">// geeft zoekresultaat als json</em>
-<a class="jxr_linenumber" name="188" href="#188">188</a> 					<strong class="jxr_keyword">final</strong> String json = returnJson(addrl);
-<a class="jxr_linenumber" name="189" href="#189">189</a> 					response.setCharacterEncoding(<span class="jxr_string">"UTF-8"</span>);
-<a class="jxr_linenumber" name="190" href="#190">190</a> 					response.setContentType(<span class="jxr_string">"application/json"</span>);
-<a class="jxr_linenumber" name="191" href="#191">191</a> 					response.setContentLength(json.length());
-<a class="jxr_linenumber" name="192" href="#192">192</a> 					response.getWriter().print(json);
-<a class="jxr_linenumber" name="193" href="#193">193</a> 					response.flushBuffer();
-<a class="jxr_linenumber" name="194" href="#194">194</a> 				}
-<a class="jxr_linenumber" name="195" href="#195">195</a> 			}
-<a class="jxr_linenumber" name="196" href="#196">196</a> 		}
-<a class="jxr_linenumber" name="197" href="#197">197</a> 	}
-<a class="jxr_linenumber" name="198" href="#198">198</a> }
+<a class="jxr_linenumber" name="159" href="#159">159</a> 					LOGGER.debug(_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_GEEN_ADRES"</span>)
+<a class="jxr_linenumber" name="160" href="#160">160</a> 							+ zoekTerm);
+<a class="jxr_linenumber" name="161" href="#161">161</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
+<a class="jxr_linenumber" name="162" href="#162">162</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_GEEN_ADRES"</span>));
+<a class="jxr_linenumber" name="163" href="#163">163</a> 				} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (addrl.size() == 1) {
+<a class="jxr_linenumber" name="164" href="#164">164</a> 					<em class="jxr_comment">// 1 adres gevonden</em>
+<a class="jxr_linenumber" name="165" href="#165">165</a> 					LOGGER.debug(<span class="jxr_string">"Er is 1 match gevonden voor: "</span> + zoekTerm);
+<a class="jxr_linenumber" name="166" href="#166">166</a> 					<strong class="jxr_keyword">final</strong> <a href="../../../../../nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClientAddress.html">OpenLSClientAddress</a> addr = addrl.get(0);
+<a class="jxr_linenumber" name="167" href="#167">167</a> 
+<a class="jxr_linenumber" name="168" href="#168">168</a> 					request.setAttribute(REQ_PARAM_XCOORD.code,
+<a class="jxr_linenumber" name="169" href="#169">169</a> 							<strong class="jxr_keyword">this</strong>.formatCoord(addr.getxCoord()));
+<a class="jxr_linenumber" name="170" href="#170">170</a> 					request.setAttribute(REQ_PARAM_YCOORD.code,
+<a class="jxr_linenumber" name="171" href="#171">171</a> 							<strong class="jxr_keyword">this</strong>.formatCoord(addr.getyCoord()));
+<a class="jxr_linenumber" name="172" href="#172">172</a> 					request.setAttribute(REQ_PARAM_STRAAL.code,
+<a class="jxr_linenumber" name="173" href="#173">173</a> 							addr.getRadius());
+<a class="jxr_linenumber" name="174" href="#174">174</a> 					request.setAttribute(
+<a class="jxr_linenumber" name="175" href="#175">175</a> 							REQ_PARAM_GEVONDEN.code,
+<a class="jxr_linenumber" name="176" href="#176">176</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_EEN_ADRES"</span>)
+<a class="jxr_linenumber" name="177" href="#177">177</a> 									+ addr.getAddressString());
+<a class="jxr_linenumber" name="178" href="#178">178</a> 				} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="179" href="#179">179</a> 					<em class="jxr_comment">// meer dan 1 adressen gevonden</em>
+<a class="jxr_linenumber" name="180" href="#180">180</a> 					LOGGER.debug(<span class="jxr_string">"Er is meer dan 1 match gevonden voor: "</span>
+<a class="jxr_linenumber" name="181" href="#181">181</a> 							+ zoekTerm);
+<a class="jxr_linenumber" name="182" href="#182">182</a> 					request.setAttribute(<span class="jxr_string">"adreslijst"</span>, addrl);
+<a class="jxr_linenumber" name="183" href="#183">183</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
+<a class="jxr_linenumber" name="184" href="#184">184</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_MEER_ADRES"</span>));
+<a class="jxr_linenumber" name="185" href="#185">185</a> 				}
+<a class="jxr_linenumber" name="186" href="#186">186</a> 				request.getRequestDispatcher(<span class="jxr_string">"/index.jsp"</span>).forward(request,
+<a class="jxr_linenumber" name="187" href="#187">187</a> 						response);
+<a class="jxr_linenumber" name="188" href="#188">188</a> 			} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="189" href="#189">189</a> 				<strong class="jxr_keyword">if</strong> (format != <strong class="jxr_keyword">null</strong> &amp;&amp; format.equalsIgnoreCase(<span class="jxr_string">"json"</span>)) {
+<a class="jxr_linenumber" name="190" href="#190">190</a> 					<em class="jxr_comment">// geeft zoekresultaat als json</em>
+<a class="jxr_linenumber" name="191" href="#191">191</a> 					<strong class="jxr_keyword">final</strong> String json = returnJson(addrl);
+<a class="jxr_linenumber" name="192" href="#192">192</a> 					response.setCharacterEncoding(<span class="jxr_string">"UTF-8"</span>);
+<a class="jxr_linenumber" name="193" href="#193">193</a> 					response.setContentType(<span class="jxr_string">"application/json"</span>);
+<a class="jxr_linenumber" name="194" href="#194">194</a> 					response.setContentLength(json.length());
+<a class="jxr_linenumber" name="195" href="#195">195</a> 					response.getWriter().print(json);
+<a class="jxr_linenumber" name="196" href="#196">196</a> 					response.flushBuffer();
+<a class="jxr_linenumber" name="197" href="#197">197</a> 				}
+<a class="jxr_linenumber" name="198" href="#198">198</a> 			}
+<a class="jxr_linenumber" name="199" href="#199">199</a> 		}
+<a class="jxr_linenumber" name="200" href="#200">200</a> 	}
+<a class="jxr_linenumber" name="201" href="#201">201</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
