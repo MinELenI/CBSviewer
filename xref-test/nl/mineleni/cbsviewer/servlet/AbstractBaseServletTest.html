@@ -74,9 +74,9 @@
 <a class="jxr_linenumber" name="64" href="#64">64</a>  		<em class="jxr_comment">// set up mock config</em>
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		mockery.checking(<strong class="jxr_keyword">new</strong> Expectations() {
 <a class="jxr_linenumber" name="66" href="#66">66</a>  			{
-<a class="jxr_linenumber" name="67" href="#67">67</a>  				one(servletConfig).getInitParameter(USER_ID);
+<a class="jxr_linenumber" name="67" href="#67">67</a>  				oneOf(servletConfig).getInitParameter(USER_ID);
 <a class="jxr_linenumber" name="68" href="#68">68</a>  				will(returnValue(<span class="jxr_string">"userID"</span>));
-<a class="jxr_linenumber" name="69" href="#69">69</a>  				one(servletConfig).getInitParameter(USER_PASSWORD);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  				oneOf(servletConfig).getInitParameter(USER_PASSWORD);
 <a class="jxr_linenumber" name="70" href="#70">70</a>  				will(returnValue(<span class="jxr_string">"passID"</span>));
 <a class="jxr_linenumber" name="71" href="#71">71</a>  			}
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		});
@@ -108,9 +108,9 @@
 <a class="jxr_linenumber" name="98" href="#98">98</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testInitServletConfigNull() {
 <a class="jxr_linenumber" name="99" href="#99">99</a>  		mockery.checking(<strong class="jxr_keyword">new</strong> Expectations() {
 <a class="jxr_linenumber" name="100" href="#100">100</a> 			{
-<a class="jxr_linenumber" name="101" href="#101">101</a> 				one(servletConfig).getInitParameter(USER_ID);
+<a class="jxr_linenumber" name="101" href="#101">101</a> 				oneOf(servletConfig).getInitParameter(USER_ID);
 <a class="jxr_linenumber" name="102" href="#102">102</a> 				will(returnValue(<strong class="jxr_keyword">null</strong>));
-<a class="jxr_linenumber" name="103" href="#103">103</a> 				one(servletConfig).getInitParameter(USER_PASSWORD);
+<a class="jxr_linenumber" name="103" href="#103">103</a> 				oneOf(servletConfig).getInitParameter(USER_PASSWORD);
 <a class="jxr_linenumber" name="104" href="#104">104</a> 				will(returnValue(<strong class="jxr_keyword">null</strong>));
 <a class="jxr_linenumber" name="105" href="#105">105</a> 			}
 <a class="jxr_linenumber" name="106" href="#106">106</a> 		});
