@@ -273,25 +273,34 @@ var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18
 Lint at line 117 character 104: Line breaking error ')'.
 var aToggle = '<a class="max" href="#" id="toggleSize" title="' + OpenLayers.i18n('KEY_TOGGLE_SIZE')
 
-Lint at line 287 character 87: Line breaking error ')'.
+Lint at line 298 character 87: Line breaking error ')'.
 var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
 
-Lint at line 289 character 86: Line breaking error ')'.
+Lint at line 300 character 86: Line breaking error ')'.
 var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 
-</pre></div><a id="_KeyboardClick.js"> </a><h2>KeyboardClick.js<a name="KeyboardClick.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ClickDrawControl.js"> </a><h2>ClickDrawControl.js<a name="ClickDrawControl.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ZoekFormulier.js"> </a><h2>ZoekFormulier.js<a name="ZoekFormulier.js"></a></h2><div class="source"><pre>Lint at line 80 character 89: Line breaking error ','.
-html += '<li><a class="button" href="#" onclick="Viewer.zoomTo(' + data[i].xCoord + ','
+</pre></div><a id="_KeyboardClick.js"> </a><h2>KeyboardClick.js<a name="KeyboardClick.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ClickDrawControl.js"> </a><h2>ClickDrawControl.js<a name="ClickDrawControl.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ZoekFormulier.js"> </a><h2>ZoekFormulier.js<a name="ZoekFormulier.js"></a></h2><div class="source"><pre>Lint at line 81 character 11: Use '===' to compare with '0'.
+if (i == 0)
 
-Lint at line 81 character 49: Line breaking error ');return false;" title="'.
+Lint at line 81 character 15: Line breaking error ')'.
+if (i == 0)
+
+Lint at line 82 character 6: Expected '{' and instead saw 'selected'.
+selected = " selected";
+
+Lint at line 84 character 165: Line breaking error ','.
+html += '<li><a id="button' + i + '" class="button' + selected + '" href="#" onclick="Viewer.toggleSelectedButton(' + i + ');Viewer.zoomTo(' + data[i].xCoord + ','
+
+Lint at line 85 character 49: Line breaking error ');return false;" title="'.
 + data[i].yCoord + ',' + data[i].radius + ');return false;" title="'
 
-Lint at line 90 character 3: Extra comma.
+Lint at line 95 character 3: Extra comma.
 },
 
-Lint at line 91 character 1: Expected '}' and instead saw '}'.
+Lint at line 96 character 1: Expected '}' and instead saw '}'.
 };
 
-Lint at line 91 character 1: Stopping, unable to continue. (98% scanned).
+Lint at line 96 character 1: Stopping, unable to continue. (98% scanned).
 
 
 </pre></div>
