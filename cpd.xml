@@ -1,149 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
 <duplication lines="41" tokens="403">
-<file line="90" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="91" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
 <file line="122" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
-                ((GeocodeRequest) (this.objStack.peek())).addAddress(obj);
-            }
-        } else if (eName.equalsIgnoreCase("StreetAddress")) {
-            final StreetAddress obj = (StreetAddress) (this.objStack.pop());
-            if (this.objStack.peek().getClass() == new Address().getClass()) {
-                ((Address) (this.objStack.peek())).setStreetAddress(obj);
-            }
-        } else if (eName.equalsIgnoreCase("Building")) {
-            final Building obj = (Building) (this.objStack.pop());
-            if (this.objStack.peek().getClass() == new StreetAddress()
-                    .getClass()) {
-                ((StreetAddress) (this.objStack.peek())).setBuilding(obj);
-            }
-        } else if (eName.equalsIgnoreCase("Street")) {
-            final Street obj = (Street) (this.objStack.pop());
-            obj.setStreet(this.eValBuf.toString());
-            if (this.objStack.peek().getClass() == new StreetAddress()
-                    .getClass()) {
-                ((StreetAddress) (this.objStack.peek())).setStreet(obj);
-            }
-        } else if (eName.equalsIgnoreCase("Place")) {
-            final Place obj = (Place) (this.objStack.pop());
-            obj.setPlace(this.eValBuf.toString());
-            if (this.objStack.peek().getClass() == new Address().getClass()) {
-                ((Address) (this.objStack.peek())).addPlace(obj);
-            }
-        } else if (eName.equalsIgnoreCase("PostalCode")) {
-            final PostalCode obj = (PostalCode) (this.objStack.pop());
-            obj.setPostalCode(this.eValBuf.toString());
-            if (this.objStack.peek().getClass() == new Address().getClass()) {
-                ((Address) (this.objStack.peek())).setPostalCode(obj);
-            }
-        }
-    }
+				((GeocodeRequest) (this.objStack.peek())).addAddress(obj);
+			}
+		} else if (eName.equalsIgnoreCase("StreetAddress")) {
+			final StreetAddress obj = (StreetAddress) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).setStreetAddress(obj);
+			}
+		} else if (eName.equalsIgnoreCase("Building")) {
+			final Building obj = (Building) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setBuilding(obj);
+			}
+		} else if (eName.equalsIgnoreCase("Street")) {
+			final Street obj = (Street) (this.objStack.pop());
+			obj.setStreet(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setStreet(obj);
+			}
+		} else if (eName.equalsIgnoreCase("Place")) {
+			final Place obj = (Place) (this.objStack.pop());
+			obj.setPlace(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).addPlace(obj);
+			}
+		} else if (eName.equalsIgnoreCase("PostalCode")) {
+			final PostalCode obj = (PostalCode) (this.objStack.pop());
+			obj.setPostalCode(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).setPostalCode(obj);
+			}
+		}
+	}
 
-    /**
-     * Gets the geocode request.
-     * 
-     * @return the geocode request
-     */
-    public GeocodeRequest getGeocodeRequest() {
+	/**
+	 * Gets the geocode request.
+	 * 
+	 * @return the geocode request
+	 */
+	public GeocodeRequest getGeocodeRequest() {
 ]]>
 </codefragment>
 </duplication>
 <duplication lines="42" tokens="336">
-<file line="182" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="183" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
 <file line="250" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
-        } else if (eName.equalsIgnoreCase("Address")) {
-            final Address obj = new Address();
-            this.objStack.push(obj);
-            for (int i = 0; i < attributes.getLength(); i++) {
-                final String key = attributes.getQName(i);
-                final String value = attributes.getValue(i);
-                if (key.equalsIgnoreCase("countryCode")) {
-                    obj.setCountryCode(value);
-                }
-            }
-        } else if (eName.equalsIgnoreCase("StreetAddress")) {
-            final StreetAddress obj = new StreetAddress();
-            this.objStack.push(obj);
-        } else if (eName.equalsIgnoreCase("Building")) {
-            final Building obj = new Building();
-            this.objStack.push(obj);
-            for (int i = 0; i < attributes.getLength(); i++) {
-                final String key = attributes.getQName(i);
-                final String value = attributes.getValue(i);
-                if (key.equalsIgnoreCase("number")) {
-                    obj.setNumber(value);
-                }
-            }
-        } else if (eName.equalsIgnoreCase("Street")) {
-            final Street obj = new Street();
-            this.objStack.push(obj);
-        } else if (eName.equalsIgnoreCase("Place")) {
-            final Place obj = new Place();
-            this.objStack.push(obj);
-            for (int i = 0; i < attributes.getLength(); i++) {
-                final String key = attributes.getQName(i);
-                final String value = attributes.getValue(i);
-                if (key.equalsIgnoreCase("type")) {
-                    obj.setType(value);
-                }
-            }
-        } else if (eName.equalsIgnoreCase("PostalCode")) {
-            final PostalCode obj = new PostalCode();
-            this.objStack.push(obj);
-        }
-    }
+		} else if (eName.equalsIgnoreCase("Address")) {
+			final Address obj = new Address();
+			this.objStack.push(obj);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("countryCode")) {
+					obj.setCountryCode(value);
+				}
+			}
+		} else if (eName.equalsIgnoreCase("StreetAddress")) {
+			final StreetAddress obj = new StreetAddress();
+			this.objStack.push(obj);
+		} else if (eName.equalsIgnoreCase("Building")) {
+			final Building obj = new Building();
+			this.objStack.push(obj);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("number")) {
+					obj.setNumber(value);
+				}
+			}
+		} else if (eName.equalsIgnoreCase("Street")) {
+			final Street obj = new Street();
+			this.objStack.push(obj);
+		} else if (eName.equalsIgnoreCase("Place")) {
+			final Place obj = new Place();
+			this.objStack.push(obj);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("type")) {
+					obj.setType(value);
+				}
+			}
+		} else if (eName.equalsIgnoreCase("PostalCode")) {
+			final PostalCode obj = new PostalCode();
+			this.objStack.push(obj);
+		}
+	}
 }
 ]]>
 </codefragment>
 </duplication>
 <duplication lines="40" tokens="167">
-<file line="47" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="48" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
 <file line="52" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
-    public OpenLSRequestParser() {
-        final SAXParserFactory factory = SAXParserFactory.newInstance();
-        factory.setValidating(false);
-        try {
-            this.parser = factory.newSAXParser();
-        } catch (final ParserConfigurationException e) {
-            LOGGER.error("Configureren van de saxparser is mislukt: ", e);
-        } catch (final SAXException e) {
-            LOGGER.error("Maken van de saxparser is mislukt: ", e);
-        }
-    }
+	public OpenLSRequestParser() {
+		final SAXParserFactory factory = SAXParserFactory.newInstance();
+		factory.setValidating(false);
+		try {
+			this.parser = factory.newSAXParser();
+		} catch (final ParserConfigurationException e) {
+			LOGGER.error("Configureren van de saxparser is mislukt: ", e);
+		} catch (final SAXException e) {
+			LOGGER.error("Maken van de saxparser is mislukt: ", e);
+		}
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
-     */
-    @Override
-    public void characters(final char[] ch, final int start, final int length)
-            throws SAXException {
-        this.eValBuf.append(ch, start, length);
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
+	 */
+	@Override
+	public void characters(final char[] ch, final int start, final int length)
+			throws SAXException {
+		this.eValBuf.append(ch, start, length);
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
-     * java.lang.String, java.lang.String)
-     */
-    @Override
-    public void endElement(final String uri, final String localName,
-            final String qName) throws SAXException {
-        final String[] nsName = qName.split(":");
-        String eName = "";
-        if (nsName.length > 1) {
-            eName = nsName[1];
-        } else {
-            eName = nsName[0];
-        }
-        if (eName.equalsIgnoreCase("Address")) {
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
+	 * java.lang.String, java.lang.String)
+	 */
+	@Override
+	public void endElement(final String uri, final String localName,
+			final String qName) throws SAXException {
+		final String[] nsName = qName.split(":");
+		String eName = "";
+		if (nsName.length > 1) {
+			eName = nsName[1];
+		} else {
+			eName = nsName[0];
+		}
+		if (eName.equalsIgnoreCase("Address")) {
 ]]>
 </codefragment>
 </duplication>
