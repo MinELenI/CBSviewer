@@ -75,7 +75,8 @@
     <div id="headerright" class="headerColumn headertop">
 		<div class="utilBlock">	
 			<a class="featureinfo" href="#">Over CBS in uw buurt
-				<span class="custom menuinfo"><img src="img/info.png" alt="Information" height="37" width="32" />
+				<!-- NB. expliciet lege alt voor info.png -->
+				<span class="custom menuinfo"><img src="img/info.png" alt="" height="37" width="32" />
 					<em>Over CBS in uw buurt</em>Het CBS heeft veel gegevens op regionaal niveau. Die zijn al lange tijd beschikbaar via de statistische database StatLine. Cartografische systemen geven de mogelijkheid de regionale gegevens ook op een meer aantrekkelijke manier te presenteren. Daarvoor heeft het CBS deze site opgezet. 
 Drie maal per jaar vernieuwt het CBS de gegevens op deze site. Zo mogelijk wordt de site dan ook uitgebreid met nieuwe onderwerpen. 
 Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien over buurten, maar ook over wijken? Wilt u er zeker van zijn dat u de meest recente cijfers ziet? Ga dan naar  de tabel "Kerncijfers wijken en buurten" in StatLine. U kunt daar selecteren welke gegevens u op uw scherm wilt zien.
@@ -93,8 +94,8 @@ Zoekt u meer gegevens dan deze site u biedt? Wilt u niet alleen gegevens zien ov
 		<c:if test="${not empty kaart}">
 			<!-- StringConstants.MAP_CACHE_DIR -->
 			<img id="coreMapImage" src="${dir}/${kaart.name}"
-				alt="kaart voor thema: ${mapname}" width="440px"
-				height="440px" longdesc="#featureinfo"/>
+				alt="kaart voor thema: ${mapname}" width="512px"
+				height="512px" longdesc="#featureinfo"/>
 			<!-- navigatie knoppen zonder javascript -->
 			<jsp:include page="WEB-INF/jsp/core_nav_buttons_include.jsp" />
 		</c:if>
