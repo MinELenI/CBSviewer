@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c183 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCache.html">
+	c188 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSCache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Caching<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c184 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Caching.html">
+	c189 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Caching.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Caching&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Caching.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c185 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImage.html">
+	c190 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImage </td></tr>
 		</table></td></tr>
@@ -66,7 +66,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CacheImage.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c186 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cache.html">
+	c191 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
 		</table></td></tr>
@@ -88,7 +88,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Cache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CachableString
-	c187 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CachableString.html">
+	c192 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CachableString.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CachableString </td></tr>
 		</table></td></tr>
@@ -103,7 +103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CachableString.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image>
-	c188 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CachableImage.html">
+	c193 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CachableImage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CachableImage&lt;T extends Image&gt; </td></tr>
@@ -116,7 +116,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CachableImage.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c189 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cachable.html">
+	c194 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cachable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cachable&lt;T&gt; </td></tr>
@@ -131,7 +131,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Cachable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c190 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BboxLayerCacheKey.html">
+	c195 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BboxLayerCacheKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BboxLayerCacheKey </td></tr>
 		</table></td></tr>
@@ -147,14 +147,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BboxLayerCacheKey.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache extends nl.mineleni.cbsviewer.servlet.wms.cache.Cache<org.opengis.geometry.BoundingBox, nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage, java.awt.image.BufferedImage>
-	c186:p -> c183:p [dir=back,arrowtail=empty];
+	c191:p -> c188:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage implements nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image>
-	c188:p -> c185:p [dir=back,arrowtail=empty,style=dashed];
+	c193:p -> c190:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T> implements nl.mineleni.cbsviewer.servlet.wms.cache.Caching<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c184:p -> c186:p [dir=back,arrowtail=empty,style=dashed];
+	c189:p -> c191:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.CachableString implements nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c189:p -> c187:p [dir=back,arrowtail=empty,style=dashed];
+	c194:p -> c192:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage<T extends java.awt.Image> implements nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c189:p -> c188:p [dir=back,arrowtail=empty,style=dashed];
+	c194:p -> c193:p [dir=back,arrowtail=empty,style=dashed];
 }
 

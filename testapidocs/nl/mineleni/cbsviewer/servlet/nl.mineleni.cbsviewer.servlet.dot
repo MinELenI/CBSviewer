@@ -44,6 +44,7 @@ digraph G {
 <tr><td align="left" balign="left"> + testParseForwardTrue() </td></tr>
 <tr><td align="left" balign="left"> + testParseLocation() </td></tr>
 <tr><td align="left" balign="left"> + testParseLocationNull() </td></tr>
+<tr><td align="left" balign="left"> + testIsNotNullNotEmptyNotWhiteSpaceOnly() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractWxSServletTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServletTest

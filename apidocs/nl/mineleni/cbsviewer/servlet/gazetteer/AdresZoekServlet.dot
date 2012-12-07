@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c668 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	c685 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
@@ -25,14 +25,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc668 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	n0cc685 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc668 -> c668:p[arrowhead=none];
+	n0cc685 -> c685:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet
-	c670 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdresZoekServlet.html">
+	c687 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdresZoekServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AdresZoekServlet </td></tr>
 		</table></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AdresZoekServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c673 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./lusclient/OpenLSClient.html">
+	c690 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./lusclient/OpenLSClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClient </td></tr>
 		</table></td></tr>
@@ -62,8 +62,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./lusclient/OpenLSClient.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c668:p -> c670:p [dir=back,arrowtail=empty];
+	c685:p -> c687:p [dir=back,arrowtail=empty];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c670:p -> c673:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c687:p -> c690:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

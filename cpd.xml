@@ -147,4 +147,30 @@
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="18" tokens="132">
+<file line="481" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="551" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<codefragment>
+<![CDATA[
+        for (int l = 0; l < layerNames.length; l++) {
+            final String key = layerNames[l] + "::" + styleNames[l];
+            if (this.legendCache.containsKey(key)) {
+                // in de cache kijken of we deze legenda afbeelding nog
+                // hebben
+                final CacheImage cImg = this.legendCache.get(key);
+                if (null != cImg) {
+                    // element zou verlopen kunnen zijn
+                    legends[l] = new File(cImg.getName());
+                    if (!legends[l].exists()) {
+                        // (mogelijk) is het bestand gewist..
+                        ImageIO.write(this.legendCache.get(key).getImage(),
+                                "png", legends[l]);
+                    }
+                    LOGGER.debug("Legenda bestand uit cache: "
+                            + legends[l].getAbsolutePath());
+                }
+            } else {
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>

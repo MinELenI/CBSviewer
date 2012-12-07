@@ -26,8 +26,22 @@ digraph G {
 <tr><td align="left" balign="left"> + init(config : ServletConfig) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ReverseProxyServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.GeotoolsContextListener
+	c1 [label=<<table title="nl.mineleni.cbsviewer.servlet.GeotoolsContextListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GeotoolsContextListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GeotoolsContextListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GeotoolsContextListener() </td></tr>
+<tr><td align="left" balign="left"> + contextInitialized(arg0 : ServletContextEvent) </td></tr>
+<tr><td align="left" balign="left"> + contextDestroyed(arg0 : ServletContextEvent) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./GeotoolsContextListener.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c1 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	c2 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
@@ -42,14 +56,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc1 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	n0cc2 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc1 -> c1:p[arrowhead=none];
+	n0cc2 -> c2:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c2 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
+	c3 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
@@ -68,8 +82,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.ReverseProxyServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c2:p -> c0:p [dir=back,arrowtail=empty];
+	c3:p -> c0:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.AbstractWxSServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c2:p -> c1:p [dir=back,arrowtail=empty];
+	c3:p -> c2:p [dir=back,arrowtail=empty];
 }
 

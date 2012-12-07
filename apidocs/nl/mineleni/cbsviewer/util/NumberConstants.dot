@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.NumberConstants
-	c1591 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NumberConstants.html">
+	c1673 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> NumberConstants </td></tr>
@@ -31,11 +31,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NumberConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc1591 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
+	n0cc1673 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc1591 -> c1591:p[arrowhead=none];
+	n0cc1673 -> c1673:p[arrowhead=none];
 }
 

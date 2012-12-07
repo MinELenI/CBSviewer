@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
-	c1834 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.html">
+	c1922 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClient </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../cbsviewer/servlet/gazetteer/lusclient/OpenLSClient.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.parser.OpenLSResponseParser
-	c1866 [label=<<table title="nl.mineleni.openls.parser.OpenLSResponseParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSResponseParser.html">
+	c1954 [label=<<table title="nl.mineleni.openls.parser.OpenLSResponseParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSResponseParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSResponseParser </td></tr>
 		</table></td></tr>
@@ -42,6 +42,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpenLSResponseParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient NAVASSOC nl.mineleni.openls.parser.OpenLSResponseParser
-	c1834:p -> c1866:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1922:p -> c1954:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 
