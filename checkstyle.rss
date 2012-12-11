@@ -8,10 +8,10 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 50,
+      <title>File: 52,
              Errors: 0,
-             Warnings: 202,
-             Infos: 6
+             Warnings: 725,
+             Infos: 16
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -288,6 +288,20 @@
                 </td>
                 <td>
                   4
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#org.geotools.data.wms.xml.WMSComplexTypes.java">org/geotools/data/wms/xml/WMSComplexTypes.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  520
                 </td>
                 <td>
                   0
@@ -708,6 +722,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#org.geotools.data.wms.xml.package-info.java">org/geotools/data/wms/xml/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
                 </td>
                 <td>
                   0

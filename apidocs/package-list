@@ -9,3 +9,4 @@ nl.mineleni.openls
 nl.mineleni.openls.databinding.gml
 nl.mineleni.openls.databinding.openls
 nl.mineleni.openls.parser
+org.geotools.data.wms.xml

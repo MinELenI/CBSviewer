@@ -99,6 +99,106 @@
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="92" tokens="306">
+<file line="178" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="309" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+		private static final WMSComplexType instance = new _WMT_MS_CapabilitiesType();
+
+		private static Element[] elems = new Element[] {
+				new WMSElement("Service", _ServiceType.getInstance()),
+				new WMSElement("Capability", _CapabilityType.getInstance()) };
+
+		private static Sequence seq = new SequenceGT(elems);
+
+		private static Attribute[] attrs = new Attribute[] {
+				new WMSAttribute(null, "version", WMSSchema.NAMESPACE,
+						XSISimpleTypes.String.getInstance(),
+						Attribute.REQUIRED, null, null, false),
+				new WMSAttribute("updateSequence",
+						XSISimpleTypes.String.getInstance()) };
+
+		public static WMSComplexType getInstance() {
+			return instance;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getAttributes()
+		 */
+		@Override
+		public Attribute[] getAttributes() {
+			return attrs;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChild()
+		 */
+		@Override
+		public ElementGrouping getChild() {
+			return seq;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChildElements()
+		 */
+		@Override
+		public Element[] getChildElements() {
+			return elems;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see
+		 * org.geotools.xml.schema.Type#getValue(org.geotools.xml.schema.Element
+		 * , org.geotools.xml.schema.ElementValue[], org.xml.sax.Attributes,
+		 * java.util.Map)
+		 */
+		@Override
+		public Object getValue(Element element, ElementValue[] value,
+				Attributes attrs, Map hints) throws SAXException,
+				OperationNotSupportedException {
+
+			WMSCapabilities capabilities = null;
+			Service service = null;
+
+			for (int i = 0; i < value.length; i++) {
+				if (sameName(elems[0], value[i])) {
+					service = ((Service) value[i].getValue());
+				}
+
+				if (sameName(elems[1], value[i])) {
+					capabilities = (WMSCapabilities) value[i].getValue();
+				}
+			}
+
+			capabilities.setVersion(attrs.getValue("", "version")); //$NON-NLS-1$//$NON-NLS-2$
+			capabilities
+					.setUpdateSequence(attrs.getValue("", "updateSequence")); //$NON-NLS-1$//$NON-NLS-2$
+
+			capabilities.setService(service);
+
+			return capabilities;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.Type#getName()
+		 */
+		@Override
+		public String getName() {
+			return "WMT_MS_Capabilities";
+]]>
+</codefragment>
+</duplication>
 <duplication lines="40" tokens="167">
 <file line="48" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
 <file line="52" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
@@ -147,6 +247,75 @@
 ]]>
 </codefragment>
 </duplication>
+<duplication lines="61" tokens="160">
+<file line="3816" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="4652" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+		private static final WMSComplexType instance = new _LogoURLType();
+
+		private static Element[] elems = new Element[] {
+				new WMSElement("Format", _FormatType.getInstance()),
+				new WMSElement("OnlineResource",
+						_OnlineResourceType.getInstance()) };
+
+		private static Sequence seq = new SequenceGT(elems);
+
+		private static Attribute[] attrs = new Attribute[] {
+				new WMSAttribute("width",
+						XSISimpleTypes.PositiveInteger.getInstance()),
+				new WMSAttribute("height",
+						XSISimpleTypes.PositiveInteger.getInstance()) };
+
+		public static WMSComplexType getInstance() {
+			return instance;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getAttributes()
+		 */
+		@Override
+		public Attribute[] getAttributes() {
+			return attrs;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChild()
+		 */
+		@Override
+		public ElementGrouping getChild() {
+			return seq;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChildElements()
+		 */
+		@Override
+		public Element[] getChildElements() {
+			return elems;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see
+		 * org.geotools.xml.schema.Type#getValue(org.geotools.xml.schema.Element
+		 * , org.geotools.xml.schema.ElementValue[], org.xml.sax.Attributes,
+		 * java.util.Map)
+		 */
+		@Override
+		public Object getValue(Element element, ElementValue[] value,
+				Attributes attrs, Map hints) throws SAXException,
+				OperationNotSupportedException {
+]]>
+</codefragment>
+</duplication>
 <duplication lines="18" tokens="132">
 <file line="481" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
 <file line="551" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
@@ -170,6 +339,213 @@
                             + legends[l].getAbsolutePath());
                 }
             } else {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="67" tokens="132">
+<file line="4288" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="4402" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="4774" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="4880" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+		private static final WMSComplexType instance = new _DataURLType();
+
+		private static Element[] elems = new Element[] {
+				new WMSElement("Format", _FormatType.getInstance()),
+				new WMSElement("OnlineResource",
+						_OnlineResourceType.getInstance()) };
+
+		private static Sequence seq = new SequenceGT(elems);
+
+		public static WMSComplexType getInstance() {
+			return instance;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getAttributes()
+		 */
+		@Override
+		public Attribute[] getAttributes() {
+			return null;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChild()
+		 */
+		@Override
+		public ElementGrouping getChild() {
+			return seq;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChildElements()
+		 */
+		@Override
+		public Element[] getChildElements() {
+			return elems;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see
+		 * org.geotools.xml.schema.Type#getValue(org.geotools.xml.schema.Element
+		 * , org.geotools.xml.schema.ElementValue[], org.xml.sax.Attributes,
+		 * java.util.Map)
+		 */
+		@Override
+		public Object getValue(Element element, ElementValue[] value,
+				Attributes attrs, Map hints) throws SAXException,
+				OperationNotSupportedException {
+			return null;
+			// throw new OperationNotSupportedException();
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.Type#getName()
+		 */
+		@Override
+		public String getName() {
+			return "DataURL";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="120">
+<file line="3153" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="3278" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+				new WMSAttribute(null, "minx", WMSSchema.NAMESPACE,
+						XSISimpleTypes.Double.getInstance(),
+						Attribute.REQUIRED, null, null, false),
+				new WMSAttribute(null, "miny", WMSSchema.NAMESPACE,
+						XSISimpleTypes.Double.getInstance(),
+						Attribute.REQUIRED, null, null, false),
+				new WMSAttribute(null, "maxx", WMSSchema.NAMESPACE,
+						XSISimpleTypes.Double.getInstance(),
+						Attribute.REQUIRED, null, null, false),
+				new WMSAttribute(null, "maxy", WMSSchema.NAMESPACE,
+						XSISimpleTypes.Double.getInstance(),
+						Attribute.REQUIRED, null, null, false), };
+]]>
+</codefragment>
+</duplication>
+<duplication lines="63" tokens="112">
+<file line="2399" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="2513" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+		public static WMSComplexType getInstance() {
+			return instance;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getAttributes()
+		 */
+		@Override
+		public Attribute[] getAttributes() {
+			return attributes;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChild()
+		 */
+		@Override
+		public ElementGrouping getChild() {
+			return seq;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.ComplexType#getChildElements()
+		 */
+		@Override
+		public Element[] getChildElements() {
+			return elems;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see
+		 * org.geotools.xml.schema.Type#getValue(org.geotools.xml.schema.Element
+		 * , org.geotools.xml.schema.ElementValue[], org.xml.sax.Attributes,
+		 * java.util.Map)
+		 */
+		@Override
+		public Object getValue(Element element, ElementValue[] value,
+				Attributes attrs, Map hints) throws SAXException,
+				OperationNotSupportedException {
+
+			try {
+				return new URL(attrs.getValue("onlineResource"));
+			} catch (MalformedURLException e) {
+			}
+
+			return value[0].getValue();
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see org.geotools.xml.schema.Type#getName()
+		 */
+		@Override
+		public String getName() {
+			return "Get";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="31" tokens="102">
+<file line="7363" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<file line="7419" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\org\geotools\data\wms\xml\WMSComplexTypes.java"/>
+<codefragment>
+<![CDATA[
+				new FacetGT(Facet.MAXINCLUSIVE, "180") };
+
+		public static SimpleType getInstance() {
+			return instance;
+		}
+
+		@Override
+		public int getChildType() {
+			return Schema.RESTRICTION;
+		}
+
+		@Override
+		public SimpleType[] getParents() {
+			return null;
+		}
+
+		@Override
+		public Facet[] getFacets() {
+			return facets;
+		}
+
+		@Override
+		public Object getValue(Element element, ElementValue[] value,
+				Attributes attrs, Map hints) throws SAXException,
+				OperationNotSupportedException {
+			return new Double((String) value[0].getValue());
+		}
+
+		@Override
+		public String getName() {
+			return "longitudeType";
 ]]>
 </codefragment>
 </duplication>
