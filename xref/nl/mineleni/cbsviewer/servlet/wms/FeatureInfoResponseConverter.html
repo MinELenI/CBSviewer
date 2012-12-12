@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="57" href="#57">57</a>  			.getLogger(FeatureInfoResponseConverter.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="58" href="#58">58</a>  
 <a class="jxr_linenumber" name="59" href="#59">59</a>  	<em class="jxr_javadoccomment">/**</em><em class="jxr_javadoccomment"> resource bundle. */</em>
-<a class="jxr_linenumber" name="60" href="#60">60</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../nl/mineleni/cbsviewer/util/LabelsBundle.html">LabelsBundle</a> _RESOURCES = <strong class="jxr_keyword">new</strong> <a href="../../../../../nl/mineleni/cbsviewer/util/LabelsBundle.html">LabelsBundle</a>();
+<a class="jxr_linenumber" name="60" href="#60">60</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../nl/mineleni/cbsviewer/util/LabelsBundle.html">LabelsBundle</a> RESOURCES = <strong class="jxr_keyword">new</strong> <a href="../../../../../nl/mineleni/cbsviewer/util/LabelsBundle.html">LabelsBundle</a>();
 <a class="jxr_linenumber" name="61" href="#61">61</a>  
 <a class="jxr_linenumber" name="62" href="#62">62</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="63" href="#63">63</a>  <em class="jxr_javadoccomment">	 * Cleanup html.</em>
@@ -135,7 +135,7 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a> 				LOGGER.debug(<span class="jxr_string">"Geen attribuut info voor deze locatie/zoomnivo"</span>);
 <a class="jxr_linenumber" name="126" href="#126">126</a> 				<strong class="jxr_keyword">return</strong>
 <a class="jxr_linenumber" name="127" href="#127">127</a> 
-<a class="jxr_linenumber" name="128" href="#128">128</a> 				_RESOURCES.getString(<span class="jxr_string">"KEY_INFO_GEEN_FEATURES"</span>);
+<a class="jxr_linenumber" name="128" href="#128">128</a> 				RESOURCES.getString(<span class="jxr_string">"KEY_INFO_GEEN_FEATURES"</span>);
 <a class="jxr_linenumber" name="129" href="#129">129</a> 			}
 <a class="jxr_linenumber" name="130" href="#130">130</a> 		} <strong class="jxr_keyword">catch</strong> (ParserConfigurationException | SAXException e) {
 <a class="jxr_linenumber" name="131" href="#131">131</a> 			LOGGER.error(<span class="jxr_string">"Fout tijdens parsen van GML. "</span>, e);
@@ -180,7 +180,7 @@
 <a class="jxr_linenumber" name="170" href="#170">170</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="171" href="#171">171</a> <em class="jxr_javadoccomment">	 * @param input</em>
 <a class="jxr_linenumber" name="172" href="#172">172</a> <em class="jxr_javadoccomment">	 *            inputstream met de featureinfo response.</em>
-<a class="jxr_linenumber" name="173" href="#173">173</a> <em class="jxr_javadoccomment">	 * @param Type</em>
+<a class="jxr_linenumber" name="173" href="#173">173</a> <em class="jxr_javadoccomment">	 * @param type</em>
 <a class="jxr_linenumber" name="174" href="#174">174</a> <em class="jxr_javadoccomment">	 *            het Type conversie</em>
 <a class="jxr_linenumber" name="175" href="#175">175</a> <em class="jxr_javadoccomment">	 * @param attributes</em>
 <a class="jxr_linenumber" name="176" href="#176">176</a> <em class="jxr_javadoccomment">	 *            namen van de feature attributen</em>

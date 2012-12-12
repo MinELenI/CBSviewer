@@ -15,8 +15,7 @@ digraph G {
 <tr><td align="center" balign="center"> AdresZoekServlet </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SERVLETCONFIG_OPENLS_SERVER_URL : String </td></tr>
-<tr><td align="left" balign="left"> + SERVLETCONFIG_OPENLS_MAX_RESULTS : String </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AdresZoekServlet() </td></tr>

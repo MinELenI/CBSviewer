@@ -42,7 +42,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Point() </td></tr>
-<tr><td align="left" balign="left"> + addPos(pos : Pos) </td></tr>
+<tr><td align="left" balign="left"> + addPos(p : Pos) </td></tr>
 <tr><td align="left" balign="left"> + getPosAt(i : int) : Pos </td></tr>
 <tr><td align="left" balign="left"> + getPosSize() : int </td></tr>
 <tr><td align="left" balign="left"> + setSrsName(srsName : String) </td></tr>

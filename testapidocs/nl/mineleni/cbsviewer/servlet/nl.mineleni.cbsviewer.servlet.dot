@@ -95,9 +95,9 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractWxSServlet() </td></tr>
-<tr><td align="left" balign="left"> # parseLocation(arg0 : HttpServletRequest) : int[] </td></tr>
 <tr><td align="left" balign="left"> # isNotNullNotEmptyNotWhiteSpaceOnly(arg0 : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> # parseForward(arg0 : HttpServletRequest) : boolean </td></tr>
+<tr><td align="left" balign="left"> # parseLocation(arg0 : HttpServletRequest) : int[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet

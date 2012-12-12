@@ -8,10 +8,10 @@
     <language>en-us</language>
     <copyright>&#169;2012 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 52,
+      <title>File: 51,
              Errors: 0,
-             Warnings: 725,
-             Infos: 16
+             Warnings: 207,
+             Infos: 2
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -35,7 +35,7 @@
                   0
                 </td>
                 <td>
-                  25
+                  24
                 </td>
                 <td>
                   0
@@ -158,7 +158,7 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet.java">nl/mineleni/cbsviewer/servlet/gazetteer/AdresZoekServlet.java</a>
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   5
@@ -175,7 +175,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   0
@@ -245,7 +245,7 @@
                   0
                 </td>
                 <td>
-                  15
+                  36
                 </td>
                 <td>
                   0
@@ -259,7 +259,7 @@
                   1
                 </td>
                 <td>
-                  6
+                  3
                 </td>
                 <td>
                   0
@@ -287,21 +287,7 @@
                   0
                 </td>
                 <td>
-                  4
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#org.geotools.data.wms.xml.WMSComplexTypes.java">org/geotools/data/wms/xml/WMSComplexTypes.java</a>
-                </td>
-                <td>
-                  10
-                </td>
-                <td>
-                  520
+                  3
                 </td>
                 <td>
                   0
@@ -340,7 +326,7 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.GeotoolsContextListener.java">nl/mineleni/cbsviewer/servlet/GeotoolsContextListener.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -413,7 +399,7 @@
                   0
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   0
@@ -553,7 +539,7 @@
                   0
                 </td>
                 <td>
-                  12
+                  11
                 </td>
                 <td>
                   0
@@ -637,7 +623,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   0
@@ -665,7 +651,7 @@
                   0
                 </td>
                 <td>
-                  12
+                  10
                 </td>
                 <td>
                   0
@@ -704,10 +690,10 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtil.java">nl/mineleni/cbsviewer/servlet/gazetteer/lusclient/OpenLSClientUtil.java</a>
                 </td>
                 <td>
-                  0
+                  1
                 </td>
                 <td>
-                  7
+                  6
                 </td>
                 <td>
                   0
@@ -735,7 +721,7 @@
                   0
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   0

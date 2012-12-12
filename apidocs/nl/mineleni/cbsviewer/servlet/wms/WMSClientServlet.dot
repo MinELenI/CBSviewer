@@ -19,9 +19,9 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractWxSServlet() </td></tr>
-<tr><td align="left" balign="left"> # parseLocation(request : HttpServletRequest) : int[] </td></tr>
 <tr><td align="left" balign="left"> # isNotNullNotEmptyNotWhiteSpaceOnly(toTest : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> # parseForward(request : HttpServletRequest) : boolean </td></tr>
+<tr><td align="left" balign="left"> # parseLocation(request : HttpServletRequest) : int[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="../AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
