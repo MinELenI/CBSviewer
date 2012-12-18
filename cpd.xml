@@ -148,8 +148,8 @@
 </codefragment>
 </duplication>
 <duplication lines="18" tokens="132">
-<file line="481" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
-<file line="551" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="482" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="552" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
 <codefragment>
 <![CDATA[
 		for (int l = 0; l < layerNames.length; l++) {

@@ -191,35 +191,34 @@
 <a class="jxr_linenumber" name="181" href="#181">181</a> 							<strong class="jxr_keyword">this</strong>.formatCoord(addr.getyCoord()));
 <a class="jxr_linenumber" name="182" href="#182">182</a> 					request.setAttribute(REQ_PARAM_STRAAL.code,
 <a class="jxr_linenumber" name="183" href="#183">183</a> 							addr.getRadius());
-<a class="jxr_linenumber" name="184" href="#184">184</a> 					request.setAttribute(
-<a class="jxr_linenumber" name="185" href="#185">185</a> 							REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="186" href="#186">186</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_EEN_ADRES"</span>)
-<a class="jxr_linenumber" name="187" href="#187">187</a> 									+ addr.getAddressString());
-<a class="jxr_linenumber" name="188" href="#188">188</a> 				} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="189" href="#189">189</a> 					<em class="jxr_comment">// meer dan 1 adressen gevonden</em>
-<a class="jxr_linenumber" name="190" href="#190">190</a> 					LOGGER.debug(<span class="jxr_string">"Er is meer dan 1 match gevonden voor: "</span>
-<a class="jxr_linenumber" name="191" href="#191">191</a> 							+ zoekTerm);
-<a class="jxr_linenumber" name="192" href="#192">192</a> 					request.setAttribute(<span class="jxr_string">"adreslijst"</span>, addrl);
-<a class="jxr_linenumber" name="193" href="#193">193</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-<a class="jxr_linenumber" name="194" href="#194">194</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_MEER_ADRES"</span>));
-<a class="jxr_linenumber" name="195" href="#195">195</a> 				}
-<a class="jxr_linenumber" name="196" href="#196">196</a> 				request.getRequestDispatcher(<span class="jxr_string">"/index.jsp"</span>).forward(request,
-<a class="jxr_linenumber" name="197" href="#197">197</a> 						response);
-<a class="jxr_linenumber" name="198" href="#198">198</a> 			} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="199" href="#199">199</a> 				<em class="jxr_comment">// in geval van directe aanroep voor bijv. ajax</em>
-<a class="jxr_linenumber" name="200" href="#200">200</a> 				<strong class="jxr_keyword">if</strong> (format != <strong class="jxr_keyword">null</strong> &amp;&amp; format.equalsIgnoreCase(<span class="jxr_string">"json"</span>)) {
-<a class="jxr_linenumber" name="201" href="#201">201</a> 					<em class="jxr_comment">// geeft zoekresultaat als json</em>
-<a class="jxr_linenumber" name="202" href="#202">202</a> 					<strong class="jxr_keyword">final</strong> String json = returnJson(addrl);
-<a class="jxr_linenumber" name="203" href="#203">203</a> 					response.setCharacterEncoding(<span class="jxr_string">"UTF-8"</span>);
-<a class="jxr_linenumber" name="204" href="#204">204</a> 					response.setContentType(<span class="jxr_string">"application/json"</span>);
-<a class="jxr_linenumber" name="205" href="#205">205</a> 					response.setContentLength(json.length());
-<a class="jxr_linenumber" name="206" href="#206">206</a> 					response.getWriter().print(json);
-<a class="jxr_linenumber" name="207" href="#207">207</a> 					response.flushBuffer();
-<a class="jxr_linenumber" name="208" href="#208">208</a> 				}
-<a class="jxr_linenumber" name="209" href="#209">209</a> 			}
-<a class="jxr_linenumber" name="210" href="#210">210</a> 		}
-<a class="jxr_linenumber" name="211" href="#211">211</a> 	}
-<a class="jxr_linenumber" name="212" href="#212">212</a> }
+<a class="jxr_linenumber" name="184" href="#184">184</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
+<a class="jxr_linenumber" name="185" href="#185">185</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_EEN_ADRES"</span>) + <span class="jxr_string">" "</span>
+<a class="jxr_linenumber" name="186" href="#186">186</a> 									+ addr.getAddressString());
+<a class="jxr_linenumber" name="187" href="#187">187</a> 				} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="188" href="#188">188</a> 					<em class="jxr_comment">// meer dan 1 adressen gevonden</em>
+<a class="jxr_linenumber" name="189" href="#189">189</a> 					LOGGER.debug(<span class="jxr_string">"Er is meer dan 1 match gevonden voor: "</span>
+<a class="jxr_linenumber" name="190" href="#190">190</a> 							+ zoekTerm);
+<a class="jxr_linenumber" name="191" href="#191">191</a> 					request.setAttribute(<span class="jxr_string">"adreslijst"</span>, addrl);
+<a class="jxr_linenumber" name="192" href="#192">192</a> 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
+<a class="jxr_linenumber" name="193" href="#193">193</a> 							_RESOURCES.getString(<span class="jxr_string">"KEY_ZOEKEN_MEER_ADRES"</span>));
+<a class="jxr_linenumber" name="194" href="#194">194</a> 				}
+<a class="jxr_linenumber" name="195" href="#195">195</a> 				request.getRequestDispatcher(<span class="jxr_string">"/index.jsp"</span>).forward(request,
+<a class="jxr_linenumber" name="196" href="#196">196</a> 						response);
+<a class="jxr_linenumber" name="197" href="#197">197</a> 			} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="198" href="#198">198</a> 				<em class="jxr_comment">// in geval van directe aanroep voor bijv. ajax</em>
+<a class="jxr_linenumber" name="199" href="#199">199</a> 				<strong class="jxr_keyword">if</strong> (format != <strong class="jxr_keyword">null</strong> &amp;&amp; format.equalsIgnoreCase(<span class="jxr_string">"json"</span>)) {
+<a class="jxr_linenumber" name="200" href="#200">200</a> 					<em class="jxr_comment">// geeft zoekresultaat als json</em>
+<a class="jxr_linenumber" name="201" href="#201">201</a> 					<strong class="jxr_keyword">final</strong> String json = returnJson(addrl);
+<a class="jxr_linenumber" name="202" href="#202">202</a> 					response.setCharacterEncoding(<span class="jxr_string">"UTF-8"</span>);
+<a class="jxr_linenumber" name="203" href="#203">203</a> 					response.setContentType(<span class="jxr_string">"application/json"</span>);
+<a class="jxr_linenumber" name="204" href="#204">204</a> 					response.setContentLength(json.length());
+<a class="jxr_linenumber" name="205" href="#205">205</a> 					response.getWriter().print(json);
+<a class="jxr_linenumber" name="206" href="#206">206</a> 					response.flushBuffer();
+<a class="jxr_linenumber" name="207" href="#207">207</a> 				}
+<a class="jxr_linenumber" name="208" href="#208">208</a> 			}
+<a class="jxr_linenumber" name="209" href="#209">209</a> 		}
+<a class="jxr_linenumber" name="210" href="#210">210</a> 	}
+<a class="jxr_linenumber" name="211" href="#211">211</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

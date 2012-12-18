@@ -38,6 +38,7 @@ digraph G {
 <tr><td align="left" balign="left"> REQ_PARAM_LEGENDAS </td></tr>
 <tr><td align="left" balign="left"> REQ_PARAM_KAART </td></tr>
 <tr><td align="left" balign="left"> REQ_PARAM_CACHEDIR </td></tr>
+<tr><td align="left" balign="left"> REQ_PARAM_DOWNLOADLINK </td></tr>
 <tr><td align="left" balign="left"> OPENLS_REQ_PARAM_REQUEST </td></tr>
 <tr><td align="left" balign="left"> OPENLS_REQ_VALUE_GEOCODE </td></tr>
 <tr><td align="left" balign="left"> OPENLS_REQ_PARAM_SEARCH </td></tr>

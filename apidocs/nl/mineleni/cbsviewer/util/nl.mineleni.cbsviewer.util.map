@@ -1,11 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="69,225,313,666"/>
-<area shape="rect" id="node1" href="./StringConstants.html" title="&lt;TABLE&gt;" alt="" coords="58,219,323,671"/>
+<area shape="rect" id="node1_0" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="69,225,313,682"/>
+<area shape="rect" id="node1" href="./StringConstants.html" title="&lt;TABLE&gt;" alt="" coords="58,219,323,687"/>
 <area shape="rect" id="node2_1" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="15,77,366,99"/>
 <area shape="rect" id="node4_2" href="./SpatialUtil.html" title="nl.mineleni.cbsviewer.util.SpatialUtil" alt="" coords="412,51,905,125"/>
 <area shape="rect" id="node4" href="./SpatialUtil.html" title="&lt;TABLE&gt;" alt="" coords="401,46,916,130"/>
-<area shape="rect" id="node5_3" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="1003,337,1251,554"/>
-<area shape="rect" id="node5" href="./NumberConstants.html" title="&lt;TABLE&gt;" alt="" coords="992,331,1261,559"/>
+<area shape="rect" id="node5_3" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="1003,345,1251,562"/>
+<area shape="rect" id="node5" href="./NumberConstants.html" title="&lt;TABLE&gt;" alt="" coords="992,339,1261,567"/>
 <area shape="rect" id="node6_4" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="951,77,1302,99"/>
 <area shape="rect" id="node8_5" href="./LabelsBundle.html" title="nl.mineleni.cbsviewer.util.LabelsBundle" alt="" coords="1348,27,1601,149"/>
 <area shape="rect" id="node8" href="./LabelsBundle.html" title="&lt;TABLE&gt;" alt="" coords="1337,22,1612,154"/>
