@@ -98,7 +98,7 @@
 <a class="jxr_linenumber" name="88" href="#88">88</a>  		<strong class="jxr_keyword">final</strong> String json = serializer.exclude(<span class="jxr_string">"class"</span>)
 <a class="jxr_linenumber" name="89" href="#89">89</a>  				.prettyPrint(LOGGER.isDebugEnabled()).serialize(<strong class="jxr_keyword">this</strong>.layers);
 <a class="jxr_linenumber" name="90" href="#90">90</a>  		<strong class="jxr_keyword">if</strong> (asVar) {
-<a class="jxr_linenumber" name="91" href="#91">91</a>  			<strong class="jxr_keyword">return</strong> <span class="jxr_string">"//&lt;![CDATA[\nvar _layers="</span> + json + <span class="jxr_string">";\n//]]&gt;"</span>;
+<a class="jxr_linenumber" name="91" href="#91">91</a>  			<strong class="jxr_keyword">return</strong> <span class="jxr_string">"/* &lt;![CDATA[ */var _layers="</span> + json + <span class="jxr_string">";/* ]]&gt; */"</span>;
 <a class="jxr_linenumber" name="92" href="#92">92</a>  		}
 <a class="jxr_linenumber" name="93" href="#93">93</a>  		<strong class="jxr_keyword">return</strong> json;
 <a class="jxr_linenumber" name="94" href="#94">94</a>  	}
