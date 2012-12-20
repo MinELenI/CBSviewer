@@ -79,54 +79,56 @@
 <span class='line'> 72</span> 	 * @private
 <span class='line'> 73</span> 	 */</span><span class="WHIT">
 <span class='line'> 74</span> 	</span><span class="NAME">drawOrMove</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">e</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 75</span> 		</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">lonlat</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.map.getLonLatFromPixel</span><span class="PUNC">(</span><span class="NAME">e.xy</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 76</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">this.point</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 77</span> 			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">geometry</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">OpenLayers.Geometry.Point</span><span class="PUNC">(</span><span class="NAME">lonlat.lon</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">lonlat.lat</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 78</span> 			</span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">OpenLayers.Feature.Vector</span><span class="PUNC">(</span><span class="NAME">geometry</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 79</span> 			</span><span class="NAME">this.point.geometry.clearBounds</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 80</span> 			</span><span class="NAME">this.layer.addFeatures</span><span class="PUNC">(</span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 81</span> 				</span><span class="NAME">silent</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="WHIT">
-<span class='line'> 82</span> 			</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 83</span> 		</span><span class="PUNC">}</span><span class="WHIT"> </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 84</span> 			</span><span class="NAME">this.point.geometry.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">lonlat.lon</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 85</span> 			</span><span class="NAME">this.point.geometry.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">lonlat.lat</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 86</span> 			</span><span class="NAME">this.point.geometry.clearBounds</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 87</span> 		</span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'> 88</span> 		</span><span class="NAME">this.layer.drawFeature</span><span class="PUNC">(</span><span class="NAME">this.point</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'> 89</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'> 90</span> 
-<span class='line'> 91</span> 	</span><span class="COMM">/**
-<span class='line'> 92</span> 	 * activate deze control.
-<span class='line'> 93</span> 	 * 
-<span class='line'> 94</span> 	 * @returns {Boolean}
-<span class='line'> 95</span> 	 * @override
-<span class='line'> 96</span> 	 */</span><span class="WHIT">
-<span class='line'> 97</span> 	</span><span class="NAME">activate</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 98</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">OpenLayers.Control.prototype.activate.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'> 99</span> 			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>100</span> 		</span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>101</span> 		</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>102</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>103</span> 
-<span class='line'>104</span> 	</span><span class="COMM">/**
-<span class='line'>105</span> 	 * deactivate deze control, zorgt oa. voor opruimen van resources.
-<span class='line'>106</span> 	 * 
-<span class='line'>107</span> 	 * @returns {Boolean}
-<span class='line'>108</span> 	 * @override
-<span class='line'>109</span> 	 */</span><span class="WHIT">
-<span class='line'>110</span> 	</span><span class="NAME">deactivate</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>111</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">OpenLayers.Control.prototype.deactivate.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>112</span> 			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>113</span> 		</span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>114</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.layer</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>115</span> 			</span><span class="NAME">this.map.removeLayer</span><span class="PUNC">(</span><span class="NAME">this.layer</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>116</span> 			</span><span class="NAME">this.layer.destroyFeatures</span><span class="PUNC">(</span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>117</span> 			</span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>118</span> 			</span><span class="NAME">this.layer</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>119</span> 		</span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>120</span> 		</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>121</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>122</span> 
-<span class='line'>123</span> 	</span><span class="NAME">CLASS_NAME</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">'ClickDrawControl'</span><span class="WHIT">
+<span class='line'> 75</span> 		</span><span class="COMM">// verplaats naar bovenste</span><span class="WHIT">
+<span class='line'> 76</span> 		</span><span class="NAME">this.map.setLayerIndex</span><span class="PUNC">(</span><span class="NAME">this.layer</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.map.getNumLayers</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">-</span><span class="NUMB">1</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 77</span> 		</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">lonlat</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.map.getLonLatFromPixel</span><span class="PUNC">(</span><span class="NAME">e.xy</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 78</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">this.point</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 79</span> 			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">geometry</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">OpenLayers.Geometry.Point</span><span class="PUNC">(</span><span class="NAME">lonlat.lon</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">lonlat.lat</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 80</span> 			</span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">OpenLayers.Feature.Vector</span><span class="PUNC">(</span><span class="NAME">geometry</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 81</span> 			</span><span class="NAME">this.point.geometry.clearBounds</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 82</span> 			</span><span class="NAME">this.layer.addFeatures</span><span class="PUNC">(</span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 83</span> 				</span><span class="NAME">silent</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="WHIT">
+<span class='line'> 84</span> 			</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 85</span> 		</span><span class="PUNC">}</span><span class="WHIT"> </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 86</span> 			</span><span class="NAME">this.point.geometry.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">lonlat.lon</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 87</span> 			</span><span class="NAME">this.point.geometry.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">lonlat.lat</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 88</span> 			</span><span class="NAME">this.point.geometry.clearBounds</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 89</span> 		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 90</span> 		</span><span class="NAME">this.layer.drawFeature</span><span class="PUNC">(</span><span class="NAME">this.point</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 91</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 92</span> 
+<span class='line'> 93</span> 	</span><span class="COMM">/**
+<span class='line'> 94</span> 	 * activate deze control.
+<span class='line'> 95</span> 	 * 
+<span class='line'> 96</span> 	 * @returns {Boolean}
+<span class='line'> 97</span> 	 * @override
+<span class='line'> 98</span> 	 */</span><span class="WHIT">
+<span class='line'> 99</span> 	</span><span class="NAME">activate</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>100</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">OpenLayers.Control.prototype.activate.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>101</span> 			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>102</span> 		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>103</span> 		</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>104</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>105</span> 
+<span class='line'>106</span> 	</span><span class="COMM">/**
+<span class='line'>107</span> 	 * deactivate deze control, zorgt oa. voor opruimen van resources.
+<span class='line'>108</span> 	 * 
+<span class='line'>109</span> 	 * @returns {Boolean}
+<span class='line'>110</span> 	 * @override
+<span class='line'>111</span> 	 */</span><span class="WHIT">
+<span class='line'>112</span> 	</span><span class="NAME">deactivate</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>113</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">OpenLayers.Control.prototype.deactivate.apply</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>114</span> 			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>115</span> 		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>116</span> 		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.layer</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>117</span> 			</span><span class="NAME">this.map.removeLayer</span><span class="PUNC">(</span><span class="NAME">this.layer</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>118</span> 			</span><span class="NAME">this.layer.destroyFeatures</span><span class="PUNC">(</span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>119</span> 			</span><span class="NAME">this.point</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>120</span> 			</span><span class="NAME">this.layer</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>121</span> 		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>122</span> 		</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>123</span> 	</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>124</span> 
-<span class='line'>125</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span></pre></body></html>
+<span class='line'>125</span> 	</span><span class="NAME">CLASS_NAME</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">'ClickDrawControl'</span><span class="WHIT">
+<span class='line'>126</span> 
+<span class='line'>127</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span></pre></body></html>

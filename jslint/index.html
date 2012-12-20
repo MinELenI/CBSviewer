@@ -250,7 +250,7 @@ Lint at line 99 character 73: Line breaking error '&FORMAT=image%2Fpng'.
 var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
 
 Lint at line 100 character 88: Line breaking error 'STYLES'.
-+ '&WIDTH=25&HEIGHT=25' + '&LAYER=' + lyr.params.LAYERS + '&STYLE=' + lyr.params.STYLES
++ '&WIDTH=36&HEIGHT=36' + '&LAYER=' + lyr.params.LAYERS + '&STYLE=' + lyr.params.STYLES
 
 </pre></div><a id="_WMSGetFeatureInfo.js"> </a><h2>WMSGetFeatureInfo.js<a name="WMSGetFeatureInfo.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_KeyboardPoint.js"> </a><h2>KeyboardPoint.js<a name="KeyboardPoint.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_Viewer.js"> </a><h2>Viewer.js<a name="Viewer.js"></a></h2><div class="source"><pre>Lint at line 59 character 86: Line breaking error ')'.
 var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
@@ -267,10 +267,16 @@ Lint at line 117 character 54: Line breaking error '" onclick="Viewer.toggleBase
 Lint at line 123 character 26: Line breaking error '<a class="max" href="#" id="toggleSize" title="'.
 var aToggleMapSize = '<a class="max" href="#" id="toggleSize" title="'
 
-Lint at line 292 character 87: Line breaking error ')'.
+Lint at line 270 character 18: 'lyr' is already defined.
+for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+
+Lint at line 276 character 18: 'lyr' is already defined.
+for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+
+Lint at line 307 character 87: Line breaking error ')'.
 var borderW = parseInt(jQuery('#' + this.config.mapDiv).css('borderLeftWidth'), 10)
 
-Lint at line 294 character 86: Line breaking error ')'.
+Lint at line 309 character 86: Line breaking error ')'.
 var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 
 </pre></div><a id="_KeyboardClick.js"> </a><h2>KeyboardClick.js<a name="KeyboardClick.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ClickDrawControl.js"> </a><h2>ClickDrawControl.js<a name="ClickDrawControl.js"></a></h2><div class="source"><pre>No problems found</pre></div><a id="_ZoekFormulier.js"> </a><h2>ZoekFormulier.js<a name="ZoekFormulier.js"></a></h2><div class="source"><pre>Lint at line 64 character 71: Line breaking error ')'.
