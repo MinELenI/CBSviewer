@@ -1,4 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./FeatureInfoResponseConverterTest.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" alt="" coords="15,11,257,197"/>
-<area shape="rect" id="node1" href="./FeatureInfoResponseConverterTest.html" title="&lt;TABLE&gt;" alt="" coords="5,6,267,202"/>
+<area shape="rect" id="node1_0" href="./WMSClientServletTest.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" alt="" coords="43,27,381,181"/>
+<area shape="rect" id="node1" href="./WMSClientServletTest.html" title="&lt;TABLE&gt;" alt="" coords="33,22,391,186"/>
+<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="5,251,419,383"/>
+<area shape="rect" id="node2_1" href="./FeatureInfoResponseConverterTest.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" alt="" coords="426,11,667,197"/>
+<area shape="rect" id="node2" href="./FeatureInfoResponseConverterTest.html" title="&lt;TABLE&gt;" alt="" coords="415,6,678,202"/>
 </map>

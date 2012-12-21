@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest
-	c179 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html">
+	c190 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientIntegrationTest </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.AbstractTestUtils
-	c188 [label=<<table title="nl.mineleni.openls.AbstractTestUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractTestUtils.html">
+	c200 [label=<<table title="nl.mineleni.openls.AbstractTestUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractTestUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AbstractTestUtils </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractTestUtils.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.parser.OpenLSResponseParserTest
-	c189 [label=<<table title="nl.mineleni.openls.parser.OpenLSResponseParserTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./parser/OpenLSResponseParserTest.html">
+	c201 [label=<<table title="nl.mineleni.openls.parser.OpenLSResponseParserTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./parser/OpenLSResponseParserTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSResponseParserTest </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./parser/OpenLSResponseParserTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.parser.OpenLSRequestParserTest
-	c190 [label=<<table title="nl.mineleni.openls.parser.OpenLSRequestParserTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./parser/OpenLSRequestParserTest.html">
+	c202 [label=<<table title="nl.mineleni.openls.parser.OpenLSRequestParserTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./parser/OpenLSRequestParserTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSRequestParserTest </td></tr>
 		</table></td></tr>
@@ -68,10 +68,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./parser/OpenLSRequestParserTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest extends nl.mineleni.openls.AbstractTestUtils
-	c188:p -> c179:p [dir=back,arrowtail=empty];
+	c200:p -> c190:p [dir=back,arrowtail=empty];
 	//nl.mineleni.openls.parser.OpenLSResponseParserTest extends nl.mineleni.openls.AbstractTestUtils
-	c188:p -> c189:p [dir=back,arrowtail=empty];
+	c200:p -> c201:p [dir=back,arrowtail=empty];
 	//nl.mineleni.openls.parser.OpenLSRequestParserTest extends nl.mineleni.openls.AbstractTestUtils
-	c188:p -> c190:p [dir=back,arrowtail=empty];
+	c200:p -> c202:p [dir=back,arrowtail=empty];
 }
 

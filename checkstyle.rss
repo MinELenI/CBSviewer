@@ -10,8 +10,8 @@
     <item>
       <title>File: 51,
              Errors: 0,
-             Warnings: 208,
-             Infos: 2
+             Warnings: 204,
+             Infos: 3
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
       <description>
@@ -88,10 +88,10 @@
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.java">nl/mineleni/cbsviewer/servlet/AbstractBaseServlet.java</a>
                 </td>
                 <td>
-                  0
+                  1
                 </td>
                 <td>
-                  7
+                  3
                 </td>
                 <td>
                   0

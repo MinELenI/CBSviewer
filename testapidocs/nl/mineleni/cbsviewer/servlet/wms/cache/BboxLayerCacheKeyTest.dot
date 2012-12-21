@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest
-	c219 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BboxLayerCacheKeyTest.html">
+	c232 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BboxLayerCacheKeyTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BboxLayerCacheKeyTest </td></tr>
 		</table></td></tr>
@@ -27,17 +27,17 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BboxLayerCacheKeyTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c219:p -> c226:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c232:p -> c240:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c219:p -> c226:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c232:p -> c240:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c219:p -> c226:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c232:p -> c240:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c219:p -> c227:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c232:p -> c241:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c219:p -> c227:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c232:p -> c241:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c226 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c240 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BboxLayerCacheKey </td></tr>
 		</table></td></tr>
@@ -53,7 +53,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c227 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c241 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LayerDescriptor </td></tr>
 		</table></td></tr>
