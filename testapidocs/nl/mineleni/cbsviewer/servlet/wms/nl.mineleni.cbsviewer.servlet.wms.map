@@ -1,7 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./WMSClientServletTest.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" alt="" coords="43,27,381,181"/>
-<area shape="rect" id="node1" href="./WMSClientServletTest.html" title="&lt;TABLE&gt;" alt="" coords="33,22,391,186"/>
-<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="5,251,419,383"/>
-<area shape="rect" id="node2_1" href="./FeatureInfoResponseConverterTest.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" alt="" coords="426,11,667,197"/>
-<area shape="rect" id="node2" href="./FeatureInfoResponseConverterTest.html" title="&lt;TABLE&gt;" alt="" coords="415,6,678,202"/>
+<area shape="rect" id="node1_0" href="./WMSClientServletTest.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" alt="" coords="15,35,193,173"/>
+<area shape="rect" id="node1" href="./WMSClientServletTest.html" title="&lt;TABLE&gt;" alt="" coords="5,30,203,178"/>
+<area shape="rect" id="node5" href="null" title="&lt;TABLE&gt;" alt="" coords="47,251,462,383"/>
+<area shape="rect" id="node2_1" href="./WMSClientServletIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletIntegrationTest" alt="" coords="238,43,575,165"/>
+<area shape="rect" id="node2" href="./WMSClientServletIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="227,38,586,170"/>
+<area shape="rect" id="node3_2" href="./FeatureInfoResponseConverterTest.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" alt="" coords="621,11,862,197"/>
+<area shape="rect" id="node3" href="./FeatureInfoResponseConverterTest.html" title="&lt;TABLE&gt;" alt="" coords="610,6,873,202"/>
 </map>

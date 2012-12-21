@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest
-	c472 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServletTest.html">
+	c517 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServletTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServletTest </td></tr>
 		</table></td></tr>
@@ -23,13 +23,12 @@ digraph G {
 <tr><td align="left" balign="left"> + tearDown() </td></tr>
 <tr><td align="left" balign="left"> + testInitServletConfigNull() </td></tr>
 <tr><td align="left" balign="left"> + testInitServletConfig() </td></tr>
-<tr><td align="left" balign="left"> + testServiceHttpServletRequestHttpServletResponse() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WMSClientServletTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c472:p -> c481:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c517:p -> c525:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c481 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c525 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
