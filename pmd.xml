@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-12-21T12:49:53.198">
+<pmd version="4.3" timestamp="2013-01-02T12:36:09.092">
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractWxSServlet.java">
 <violation beginline="4" endline="133" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
