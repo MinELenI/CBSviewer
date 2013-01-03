@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
 <duplication lines="41" tokens="403">
-<file line="91" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-<file line="122" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+<file line="93" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="124" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
 				((GeocodeRequest) (this.objStack.peek())).addAddress(obj);
@@ -50,8 +50,8 @@
 </codefragment>
 </duplication>
 <duplication lines="42" tokens="336">
-<file line="182" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-<file line="248" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+<file line="184" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="250" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
 		} else if (eName.equalsIgnoreCase("Address")) {
@@ -100,8 +100,8 @@
 </codefragment>
 </duplication>
 <duplication lines="40" tokens="167">
-<file line="48" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-<file line="52" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+<file line="50" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+<file line="54" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
 <codefragment>
 <![CDATA[
 	public OpenLSRequestParser() {
@@ -148,8 +148,8 @@
 </codefragment>
 </duplication>
 <duplication lines="18" tokens="132">
-<file line="483" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
-<file line="553" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="484" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="554" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
 <codefragment>
 <![CDATA[
 		for (int l = 0; l < layerNames.length; l++) {

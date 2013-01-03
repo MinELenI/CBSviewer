@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CachableString
-	c2393 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CachableString.html">
+	c2240 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CachableString.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CachableString </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CachableString.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c2395 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cachable.html">
+	c2242 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cachable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cachable&lt;T&gt; </td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Cachable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.CachableString implements nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>
-	c2395:p -> c2393:p [dir=back,arrowtail=empty,style=dashed];
+	c2242:p -> c2240:p [dir=back,arrowtail=empty,style=dashed];
 }
 

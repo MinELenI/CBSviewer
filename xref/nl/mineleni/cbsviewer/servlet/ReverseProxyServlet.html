@@ -74,7 +74,7 @@
 <a class="jxr_linenumber" name="64" href="#64">64</a>  <em class="jxr_javadoccomment"> * &lt;/pre&gt;</em>
 <a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment"> * </em>
 <a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment"> * @author prinsmc</em>
-<a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_javadoccomment"> * @since 1.6</em>
+<a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_javadoccomment"> * @since 1.7</em>
 <a class="jxr_linenumber" name="68" href="#68">68</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="69" href="#69">69</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../nl/mineleni/cbsviewer/servlet/ReverseProxyServlet.html">ReverseProxyServlet</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../nl/mineleni/cbsviewer/servlet/AbstractBaseServlet.html">AbstractBaseServlet</a> {
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	<em class="jxr_comment">// CHECKSTYLE.ON:</em>
@@ -103,7 +103,7 @@
 <a class="jxr_linenumber" name="93" href="#93">93</a>  <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="94" href="#94">94</a>  <em class="jxr_javadoccomment">	 * @see #ALLOWED_HOSTS</em>
 <a class="jxr_linenumber" name="95" href="#95">95</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="96" href="#96">96</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Set&lt;String&gt; allowedHosts = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
+<a class="jxr_linenumber" name="96" href="#96">96</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Set&lt;String&gt; allowedHosts = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
 <a class="jxr_linenumber" name="97" href="#97">97</a>  
 <a class="jxr_linenumber" name="98" href="#98">98</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="99" href="#99">99</a>  <em class="jxr_javadoccomment">	 * optie om text/xml mime type voor response te forceren. default waarde is</em>
@@ -202,7 +202,7 @@
 <a class="jxr_linenumber" name="192" href="#192">192</a> 							responseBody = <a href="../../../../nl/mineleni/cbsviewer/servlet/wms/FeatureInfoResponseConverter.html">FeatureInfoResponseConverter</a>
 <a class="jxr_linenumber" name="193" href="#193">193</a> 									.convertToHTMLTable(
 <a class="jxr_linenumber" name="194" href="#194">194</a> 											get.getEntity().getContent(),
-<a class="jxr_linenumber" name="195" href="#195">195</a> 											FeatureInfoResponseConverter.Type.GMLTYPE,
+<a class="jxr_linenumber" name="195" href="#195">195</a> 											<span class="jxr_string">"GMLTYPE"</span>,
 <a class="jxr_linenumber" name="196" href="#196">196</a> 											<strong class="jxr_keyword">this</strong>.layers.getLayerByLayers(lName)
 <a class="jxr_linenumber" name="197" href="#197">197</a> 													.getAttributes()
 <a class="jxr_linenumber" name="198" href="#198">198</a> 													.split(<span class="jxr_string">",&#92;&#92;s*"</span>));

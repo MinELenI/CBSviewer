@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="252,51,692,173"/>
-<area shape="rect" id="node1" href="../WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="241,46,703,178"/>
-<area shape="rect" id="node2_1" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,566,717,719"/>
-<area shape="rect" id="node2" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,561,728,725"/>
-<area shape="rect" id="node4_2" href="./Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="427,273,728,506"/>
-<area shape="rect" id="node4" href="./Cache.html" title="&lt;TABLE&gt;" alt="" coords="416,267,739,511"/>
-<area shape="rect" id="node3_3" href="./Caching.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" alt="" coords="737,11,1039,213"/>
-<area shape="rect" id="node3" href="./Caching.html" title="&lt;TABLE&gt;" alt="" coords="727,6,1049,218"/>
+<area shape="rect" id="node1_0" href="./WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="337,566,1039,719"/>
+<area shape="rect" id="node1" href="./WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="327,561,1049,725"/>
+<area shape="rect" id="node2_1" href="./Caching.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" alt="" coords="16,11,317,213"/>
+<area shape="rect" id="node2" href="./Caching.html" title="&lt;TABLE&gt;" alt="" coords="5,6,328,218"/>
+<area shape="rect" id="node3_2" href="./Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="327,273,628,506"/>
+<area shape="rect" id="node3" href="./Cache.html" title="&lt;TABLE&gt;" alt="" coords="316,267,639,511"/>
+<area shape="rect" id="node4_3" href="../WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="363,51,803,173"/>
+<area shape="rect" id="node4" href="../WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="352,46,813,178"/>
 </map>

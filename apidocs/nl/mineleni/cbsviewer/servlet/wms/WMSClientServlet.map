@@ -1,13 +1,13 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="374,107,781,229"/>
 <area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="363,102,791,234"/>
-<area shape="rect" id="node4_1" href="./WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="357,289,797,410"/>
-<area shape="rect" id="node4" href="./WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="347,283,808,415"/>
+<area shape="rect" id="node6_1" href="./WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="357,289,797,410"/>
+<area shape="rect" id="node6" href="./WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="347,283,808,415"/>
 <area shape="rect" id="node2_2" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="462,18,693,41"/>
-<area shape="rect" id="node5_3" href="./cache/WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,763,717,917"/>
-<area shape="rect" id="node5" href="./cache/WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,758,728,922"/>
-<area shape="rect" id="node6_4" href="./cache/Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="427,470,728,703"/>
-<area shape="rect" id="node6" href="./cache/Cache.html" title="&lt;TABLE&gt;" alt="" coords="416,465,739,709"/>
+<area shape="rect" id="node4_3" href="./cache/WMSCache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" alt="" coords="16,763,717,917"/>
+<area shape="rect" id="node4" href="./cache/WMSCache.html" title="&lt;TABLE&gt;" alt="" coords="5,758,728,922"/>
+<area shape="rect" id="node5_4" href="./cache/Cache.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" alt="" coords="427,470,728,703"/>
+<area shape="rect" id="node5" href="./cache/Cache.html" title="&lt;TABLE&gt;" alt="" coords="416,465,739,709"/>
 <area shape="rect" id="node7_5" href="../../util/AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="774,510,1117,663"/>
 <area shape="rect" id="node7" href="../../util/AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="763,505,1127,669"/>
 </map>

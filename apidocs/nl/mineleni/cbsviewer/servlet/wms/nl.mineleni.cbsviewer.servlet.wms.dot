@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c323 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServlet.html">
+	c428 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSClientServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter
-	c324 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
+	c429 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverter </td></tr>
 		</table></td></tr>
@@ -33,36 +33,8 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + convertToHTMLTable(input : InputStream, type : FeatureInfoResponseConverter.Type, attributes : String[]) : String </td></tr>
+<tr><td align="left" balign="left"> + convertToHTMLTable(input : InputStream, type : String, attributes : String[]) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type
-	c325 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.Type.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> GMLTYPE </td></tr>
-<tr><td align="left" balign="left"> HTMLTYPE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./FeatureInfoResponseConverter.Type.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.servlet.wms.BasemapType
-	c326 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.BasemapType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BasemapType.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> BasemapType </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> luchtfoto </td></tr>
-<tr><td align="left" balign="left"> topografie </td></tr>
-		</table></td></tr>
-		</table>>, URL="./BasemapType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 
