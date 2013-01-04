@@ -243,38 +243,48 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>CPD Resultaten<a name="CPD_Resultaten"></a></h2><p>Het volgende document bevat de resultaten van PMD's  <a class="externalLink" href="http://pmd.sourceforge.net/cpd.html">CPD</a> 4.3.</p></div><div class="section"><h2>Dubbelingen<a name="Dubbelingen"></a></h2><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#93">93</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#124">124</a></td></tr><tr class="b"><td colspan='2'><div><pre>				((GeocodeRequest) (this.objStack.peek())).addAddress(obj);
+        <div class="section"><h2>CPD Resultaten<a name="CPD_Resultaten"></a></h2><p>Het volgende document bevat de resultaten van PMD's  <a class="externalLink" href="http://pmd.sourceforge.net/cpd.html">CPD</a> 4.3.</p></div><div class="section"><h2>Dubbelingen<a name="Dubbelingen"></a></h2><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#99">99</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#135">135</a></td></tr><tr class="b"><td colspan='2'><div><pre>				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
-		} else if (eName.equalsIgnoreCase(&quot;StreetAddress&quot;)) {
-			final StreetAddress obj = (StreetAddress) (this.objStack.pop());
+			break;
+		case &quot;streetaddress&quot;:
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setStreetAddress(obj);
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
 			}
-		} else if (eName.equalsIgnoreCase(&quot;Building&quot;)) {
-			final Building obj = (Building) (this.objStack.pop());
+			break;
+		case &quot;building&quot;:
+			final Building building = (Building) (this.objStack.pop());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setBuilding(obj);
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
-		} else if (eName.equalsIgnoreCase(&quot;Street&quot;)) {
-			final Street obj = (Street) (this.objStack.pop());
-			obj.setStreet(this.eValBuf.toString());
+			break;
+		case &quot;street&quot;:
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new StreetAddress()
 					.getClass()) {
-				((StreetAddress) (this.objStack.peek())).setStreet(obj);
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
-		} else if (eName.equalsIgnoreCase(&quot;Place&quot;)) {
-			final Place obj = (Place) (this.objStack.pop());
-			obj.setPlace(this.eValBuf.toString());
+			break;
+		case &quot;place&quot;:
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).addPlace(obj);
+				((Address) (this.objStack.peek())).addPlace(place);
 			}
-		} else if (eName.equalsIgnoreCase(&quot;PostalCode&quot;)) {
-			final PostalCode obj = (PostalCode) (this.objStack.pop());
-			obj.setPostalCode(this.eValBuf.toString());
+			break;
+		case &quot;postalcode&quot;:
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
 			if (this.objStack.peek().getClass() == new Address().getClass()) {
-				((Address) (this.objStack.peek())).setPostalCode(obj);
+				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
+			break;
+		default:
+			return;
 		}
 	}
 
@@ -283,56 +293,62 @@
 	 * 
 	 * @return the geocode request
 	 */
-	public GeocodeRequest getGeocodeRequest() {</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#184">184</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#250">250</a></td></tr><tr class="b"><td colspan='2'><div><pre>		} else if (eName.equalsIgnoreCase(&quot;Address&quot;)) {
-			final Address obj = new Address();
-			this.objStack.push(obj);
+	public GeocodeRequest getGeocodeRequest() {</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#196">196</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#270">270</a></td></tr><tr class="b"><td colspan='2'><div><pre>			break;
+		case &quot;address&quot;:
+			final Address address = new Address();
+			this.objStack.push(address);
 			for (int i = 0; i &lt; attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase(&quot;countryCode&quot;)) {
-					obj.setCountryCode(value);
+					address.setCountryCode(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase(&quot;StreetAddress&quot;)) {
-			final StreetAddress obj = new StreetAddress();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase(&quot;Building&quot;)) {
-			final Building obj = new Building();
-			this.objStack.push(obj);
+			break;
+		case &quot;streetaddress&quot;:
+			this.objStack.push(new StreetAddress());
+			break;
+		case &quot;building&quot;:
+			final Building building = new Building();
+			this.objStack.push(building);
 			for (int i = 0; i &lt; attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase(&quot;number&quot;)) {
-					obj.setNumber(value);
+					building.setNumber(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase(&quot;Street&quot;)) {
-			final Street obj = new Street();
-			this.objStack.push(obj);
-		} else if (eName.equalsIgnoreCase(&quot;Place&quot;)) {
-			final Place obj = new Place();
-			this.objStack.push(obj);
+			break;
+		case &quot;street&quot;:
+			this.objStack.push(new Street());
+			break;
+		case &quot;place&quot;:
+			final Place place = new Place();
+			this.objStack.push(place);
 			for (int i = 0; i &lt; attributes.getLength(); i++) {
 				final String key = attributes.getQName(i);
 				final String value = attributes.getValue(i);
 				if (key.equalsIgnoreCase(&quot;type&quot;)) {
-					obj.setType(value);
+					place.setType(value);
 				}
 			}
-		} else if (eName.equalsIgnoreCase(&quot;PostalCode&quot;)) {
-			final PostalCode obj = new PostalCode();
-			this.objStack.push(obj);
+			break;
+		case &quot;postalcode&quot;:
+			this.objStack.push(new PostalCode());
+			break;
+		default:
+			return;
 		}
+
 	}
-}</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#50">50</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#54">54</a></td></tr><tr class="b"><td colspan='2'><div><pre>	public OpenLSRequestParser() {
+}</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\openls\parser\OpenLSRequestParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSRequestParser.html#56">56</a></td></tr><tr class="a"><td>nl\mineleni\openls\parser\OpenLSResponseParser.java</td><td><a href="./xref/nl/mineleni/openls/parser/OpenLSResponseParser.html#60">60</a></td></tr><tr class="b"><td colspan='2'><div><pre>	public OpenLSRequestParser() {
 		final SAXParserFactory factory = SAXParserFactory.newInstance();
 		factory.setValidating(false);
 		try {
 			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException e) {
-			LOGGER.error(&quot;Configureren van de saxparser is mislukt: &quot;, e);
-		} catch (final SAXException e) {
-			LOGGER.error(&quot;Maken van de saxparser is mislukt: &quot;, e);
+		} catch (final ParserConfigurationException | SAXException e) {
+			LOGGER.error(&quot;Configureren of maken van de saxparser is mislukt: &quot;,
+					e);
 		}
 	}
 
@@ -363,7 +379,8 @@
 		} else {
 			eName = nsName[0];
 		}
-		if (eName.equalsIgnoreCase(&quot;Address&quot;)) {</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java</td><td><a href="./xref/nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.html#484">484</a></td></tr><tr class="a"><td>nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java</td><td><a href="./xref/nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.html#554">554</a></td></tr><tr class="b"><td colspan='2'><div><pre>		for (int l = 0; l &lt; layerNames.length; l++) {
+		switch (eName.toLowerCase()) {
+		case &quot;address&quot;:</pre></div></td></tr></table><table border="0" class="bodyTable"><tr class="a"><th>Bestand</th><th>Regel</th></tr><tr class="b"><td>nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java</td><td><a href="./xref/nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.html#484">484</a></td></tr><tr class="a"><td>nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java</td><td><a href="./xref/nl/mineleni/cbsviewer/servlet/wms/WMSClientServlet.html#554">554</a></td></tr><tr class="b"><td colspan='2'><div><pre>		for (int l = 0; l &lt; layerNames.length; l++) {
 			final String key = layerNames[l] + &quot;::&quot; + styleNames[l];
 			if (this.legendCache.containsKey(key)) {
 				// in de cache kijken of we deze legenda afbeelding nog
