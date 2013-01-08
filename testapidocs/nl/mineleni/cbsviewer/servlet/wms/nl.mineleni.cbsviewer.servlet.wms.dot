@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest
-	c73 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServletTest.html">
+	c76 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServletTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServletTest </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSClientServletTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletIntegrationTest
-	c74 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServletIntegrationTest.html">
+	c77 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServletIntegrationTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServletIntegrationTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServletIntegrationTest </td></tr>
 		</table></td></tr>
@@ -41,7 +41,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSClientServletIntegrationTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest
-	c75 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverterTest.html">
+	c78 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverterTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverterTest </td></tr>
 		</table></td></tr>
@@ -60,11 +60,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverterTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c73:p -> c81:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c76:p -> c85:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServletIntegrationTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c74:p -> c81:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c77:p -> c85:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c81 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c85 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
