@@ -11,6 +11,7 @@ import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_BGMAP;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_CACHEDIR;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_DOWNLOADLINK;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FEATUREINFO;
+import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_FGMAP_ALPHA;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_KAART;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_LEGENDAS;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_MAPID;
@@ -605,7 +606,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private File getMap(final BufferedImage imageVoorgrond,
-			final BufferedImage imageAchtergrond) throws IOException {
+			final BufferedImage imageAchtergrond, float alpha)
+			throws IOException {
 
 		final BufferedImage composite = new BufferedImage(MAP_DIMENSION,
 				MAP_DIMENSION, BufferedImage.TYPE_INT_ARGB);
@@ -613,7 +615,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 		g.drawImage(imageAchtergrond, 0, 0, null);
 		if (imageVoorgrond != null) {
-			final float[] scales = { 1f, 1f, 1f, 0.8f };
+			final float[] scales = { 1f, 1f, 1f, alpha };
 			final RescaleOp rop = new RescaleOp(scales, new float[4], null);
 			g.drawImage(imageVoorgrond, rop, 0, 0);
 			// zoeklocatie intekenen met plaatje
@@ -783,6 +785,19 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final int straal = dXcoordYCoordStraal[2];
 		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 
+		float alpha = 0.8f;
+		final String trans = request.getParameter(REQ_PARAM_FGMAP_ALPHA.code);
+		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(trans)) {
+			try {
+				alpha = 1 - (Float.parseFloat(trans) / 100);
+				if ((0 > alpha) && (alpha > 1)) {
+					alpha = 0.8f;
+				}
+			} catch (final NumberFormatException n) {
+			}
+		}
+		LOGGER.debug("Transparantie / alpha ingesteld op:" + alpha);
+
 		String basemaptype = "topografie";
 		final String mType = request.getParameter(REQ_PARAM_BGMAP.code);
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
@@ -822,7 +837,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 			}
 		}
 
-		final File kaart = this.getMap(fg, bg);
+		final File kaart = this.getMap(fg, bg, alpha);
 
 		request.setAttribute(REQ_PARAM_CACHEDIR.code, MAP_CACHE_DIR.code);
 		request.setAttribute(REQ_PARAM_KAART.code, kaart);

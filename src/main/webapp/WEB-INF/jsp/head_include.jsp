@@ -36,6 +36,7 @@
 
 		<link rel="stylesheet" href="css/style.css" type="text/css"	media="all" />
 		<link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/no-theme/jquery-ui-1.9.2.custom.min.css" type="text/css" media="screen" />
 		<![CDATA[
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->

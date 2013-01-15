@@ -11,7 +11,7 @@ body {
 }
 
 html,body {	
-	margin: 0;
+	margin: 0;r
 	padding: 0;
 	height: 100%;
 }
@@ -335,6 +335,46 @@ html.js #cbslogo {
 
 #toggleBaseMap.topo { /*kaart icon*/
 	background-position: right bottom;
+}
+
+#sliderFGMap {
+	position: absolute;
+	z-index: 900;
+	top: -1px;	
+	right: 170px;
+	width: 200px;
+	line-height: 21px;
+	color: #fff;
+	background-color: rgba(0, 60, 136, 0.8);
+	border: 1px solid #aaa;
+	display: block;
+}
+
+#sliderFGMap:hover {
+	background-color: rgba(0, 60, 136, 1.0);
+}
+
+#sliderFGMap .ui-slider-handle {
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6;
+	font-weight: normal;
+	color: #555;
+}
+
+#sliderFGMap a {
+	text-align:center;
+	vertical-align: middle;
+	text-decoration: none
+}
+
+#slidervalue {
+	position: absolute;
+	left: 0;
+	top: -20px;
+	color: #000;
+	background-color: #fff;
+	line-height: 15px;
+	border: 1px solid #aaa;
 }
 
 .kaartnavi {

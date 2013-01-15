@@ -38,7 +38,15 @@
 			<fmt:message key="KEY_TOGGLE_BASEMAP_LUFO" var="wisselachtergrondBtn" />
 		</c:otherwise>
 	</c:choose>
-
+	<c:choose>
+		<c:when test="${empty param.doorzicht}">
+			<!-- 20% doorzichtig (.8 alpha) is de default -->
+			<c:set var="doorzicht" value="20" />
+		</c:when>
+		<c:otherwise>
+			<c:set var="doorzicht" value="${param.doorzicht}" />
+		</c:otherwise>
+	</c:choose>
 	<!--  de te gebruiken HTTP methode voor de formulieren -->
 	<c:set var="formMethod" value="get" />
 
@@ -76,7 +84,8 @@
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
 					type="hidden" name="mapid" value="${mapid}" /> <input
-					type="hidden" name="gevonden" value="${param.gevonden}" />
+					type="hidden" name="gevonden" value="${param.gevonden}" /><input
+					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
 
 		</form>
@@ -118,7 +127,8 @@
 					type="hidden" name="xcoord" value="${xcoord}" /> <input
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
-					type="hidden" name="mapid" value="${mapid}" />
+					type="hidden" name="mapid" value="${mapid}" /> <input
+					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
 		</form>
 
@@ -143,9 +153,47 @@
 					type="hidden" name="ycoord" value="${ycoord}" /> <input
 					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
 					type="hidden" name="mapid" value="${mapid}" /> <input
-					type="hidden" name="gevonden" value="${param.gevonden}" />
+					type="hidden" name="gevonden" value="${param.gevonden}" /><input
+					type="hidden" name="doorzicht" value="${doorzicht}" />
 			</p>
 		</form>
 
+		<form id="voorgrondFormulier" action="index.jsp"
+			method="${formMethod}" title="Aanpassen van de transparantie">
+			<fieldset id="transparantie"
+				title="Pas transparantie van het thema aan">
+				<legend>
+					<fmt:message key="KEY_NAVIGATIE_FGMAP_LEGEND" />
+				</legend>
+
+				<label for="transSlct"><fmt:message
+						key="KEY_NAVIGATIE_FGMAP_TRANSP_LABEL" /></label> <select id="transSlct"
+					name="doorzicht">
+					<c:forEach begin="10" end="90" step="10" var="alpha">
+						<fmt:message key="KEY_TRANSP_SLIDER_LABEL" var="alphaLabel">
+							<fmt:param value="${alpha}"></fmt:param>
+						</fmt:message>
+						<c:choose>
+							<c:when test="${doorzicht eq alpha}">
+								<option value="${alpha}" selected="">${alphaLabel}</option>
+							</c:when>
+							<c:otherwise>
+								<option value="${alpha}">${alphaLabel}</option>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+				</select> <input type="submit"></input>
+			</fieldset>
+			<p>
+				<input type="hidden" name="coreonly" value="true" />
+				<!-- defaults -->
+				<input type="hidden" name="straal" value="${straal}" /> <input
+					type="hidden" name="xcoord" value="${xcoord}" /> <input
+					type="hidden" name="ycoord" value="${ycoord}" /> <input
+					type="hidden" name="achtergrond" value="${param.achtergrond}" /> <input
+					type="hidden" name="mapid" value="${param.mapid}" /> <input
+					type="hidden" name="gevonden" value="${param.gevonden}" />
+			</p>
+		</form>
 	</div>
 </jsp:root>

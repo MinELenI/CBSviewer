@@ -27,17 +27,16 @@ jQuery(document)
 					// Dit stukje zorgt voor een vloeiender menu
 					var settings_head = jQuery('.settingsPanel > li > a');
 					settings_head.first().addClass('active').next().slideDown('normal');
-					
+
 					settings_head.on('click', function(event) {
 						event.preventDefault();
 
 						jQuery(this).next().stop(true, true).slideToggle('normal');
 						if (jQuery(this).attr('class') != 'active') {
 							jQuery(this).addClass('active');
-						}
-						else {
+						} else {
 							jQuery(this).removeClass('active');
-						}						
+						}
 					});
 
 					var menuAccordion_head = jQuery('.menuAccordion > li > .accordionheader'), menuAccordion_body = jQuery('.menuAccordion li > .menuAccordionContent');
@@ -117,35 +116,38 @@ jQuery(document)
 /**
  * Change theme from menu
  */
-jQuery('.megaMenu a').click(function() {
-	// only load new themes
-	if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader') {
-		var _id = jQuery(this).attr('name');
+jQuery('.megaMenu a').click(
+		function() {
+			// only load new themes
+			if (jQuery(this).attr('name') != _defaultId && jQuery(this).attr('class') != 'accordionheader') {
+				var _id = jQuery(this).attr('name');
 
-		var maps = jQuery.grep(_layers, function(n, i) {
-			return n.id == _id;
+				var maps = jQuery.grep(_layers, function(n, i) {
+					return n.id == _id;
+				});
+				Viewer.loadWMS(maps[0]);
+				// bijwerken pagina titel
+				jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+					'0' : '' + maps[0].name
+				}));
+				jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
+					'0' : '' + maps[0].name
+				}));
+
+				// bijwerken download link
+				if (maps[0].link) {
+					jQuery('#downloadLink').html(
+							'<a href="' + maps[0].link + '">Download de dataset voor'
+									+ OpenLayers.i18n('KEY_KAART_TITEL', {
+										'0' : '' + maps[0].name
+									}) + '</a>');
+				} else {
+					jQuery('#downloadLink').html('');
+				}
+
+				_defaultId = _id;
+			}
 		});
-		Viewer.loadWMS(maps[0]);
-		// bijwerken pagina titel
-		jQuery('title').html(OpenLayers.i18n('KEY_KAART_TITEL', {
-			'0' : '' + maps[0].name
-		}));
-		jQuery('#pagSubTitle').html(OpenLayers.i18n('KEY_KAART_TITEL', {
-			'0' : '' + maps[0].name
-		}));
-		
-		// bijwerken download link
-		if (maps[0].link) {
-			jQuery('#downloadLink').html('<a href="' + maps[0].link + '">' + OpenLayers.i18n('KEY_KAART_TITEL', {
-				'0' : '' + maps[0].name
-			}) + '</a>');
-		} else {
-			jQuery('#downloadLink').html('');
-		}
-
-		_defaultId = _id;
-	}
-});
 
 /**
  * dynamische elementen aan de pagina toevoegen.

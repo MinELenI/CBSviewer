@@ -64,6 +64,8 @@ public enum StringConstants {
 	REQ_PARAM_CACHEDIR("dir"),
 	/** download link. */
 	REQ_PARAM_DOWNLOADLINK("downloadLink"),
+	/** transparantie voorgrond kaart. */
+	REQ_PARAM_FGMAP_ALPHA("doorzicht"),
 
 	/** openls request param naam voor request. */
 	OPENLS_REQ_PARAM_REQUEST("Request"),

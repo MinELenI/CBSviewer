@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
@@ -36,6 +36,14 @@ Viewer = function() {
 	var _resizeTimeOut = false;
 
 	/**
+	 * Opacity van de voorgrond (WMS) laag.
+	 * 
+	 * @type {Number}
+	 * @private
+	 */
+	var _opacity = 0.8;
+
+	/**
 	 * update het informatie element met feature info.
 	 * 
 	 * @param {OpenLayers.Event}
@@ -60,12 +68,13 @@ Viewer = function() {
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 			var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 					+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+			// inhoud padding set in css
+			var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10);
 			var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
-			
+
 			var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-			var h = jQuery(window).height() -  headerH - footerH - borderH;
-			
+			var h = jQuery(window).height() - headerH - footerH - borderH;
+
 			jQuery('#' + this.config.mapDiv).width(w).height(h);
 			_map.updateSize();
 			var vectors = _map.getLayersByClass("OpenLayers.Layer.Vector");
@@ -77,6 +86,26 @@ Viewer = function() {
 			}
 		}
 	}
+
+	/**
+	 * Stelt de doorzichtigheid van de voorgrond kaart in.
+	 * 
+	 * @param alpha
+	 *            float waarde tussen 0 1n 1
+	 */
+	function _setOpacity(alpha) {
+		alpha = parseFloat(alpha);
+		if (0.09 < alpha && alpha < .91) {
+			_opacity = alpha;
+			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
+			for ( var lyr = 0; lyr < lyrs.length; lyr++) {
+				if (!lyrs[lyr].isBaseLayer) {
+					lyrs[lyr].setOpacity(_opacity);
+				}
+			}
+		}
+	}
+
 	/**
 	 * Publieke interface van deze klasse.
 	 * 
@@ -100,7 +129,7 @@ Viewer = function() {
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : [],
-					tileManager: new OpenLayers.TileManager()
+					tileManager : new OpenLayers.TileManager()
 				}
 			});
 			jQuery(window).unload(function() {
@@ -137,6 +166,39 @@ Viewer = function() {
 				_resizeTimeOut = setTimeout(_resize, 200); // 200 is time in
 				// miliseconds
 			});
+
+			if (this.config.fgAlphaSlider) {
+				var aSlider = jQuery('<div id="sliderFGMap"><span id="slidervalue"></span></div>').prependTo(
+						jQuery('#' + config.mapDiv)).slider({
+					value : _opacity * 100,
+					min : 10,
+					max : 90,
+					step : 10,
+					animate : "slow",
+					slide : function(event, ui) {
+						_setOpacity(ui.value / 100);
+						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+							'0' : (100 - ui.value)
+						}));
+						jQuery(this).find('a:first').text(ui.value);
+						// tooltip
+						if (ui.value > 50) {
+							jQuery('#slidervalue').css({
+								'left' : '50%'
+							});
+						} else {
+							jQuery('#slidervalue').css({
+								'left' : ui.value + '%'
+							});
+						}
+					}
+				});
+				// instellen initiele waarde
+				jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
+					'0' : 100 - (_opacity * 100)
+				}));
+				jQuery('#sliderFGMap').find('a:first').text((_opacity * 100));
+			}
 		},
 
 		/**
@@ -203,8 +265,8 @@ Viewer = function() {
 			_map.addControl(new OpenLayers.Control.Zoom());
 			_map.addControl(new OpenLayers.Control.Navigation({
 				zoomWheelEnabled : true,
-				dragPanOptions: {
-					enableKinetic: true
+				dragPanOptions : {
+					enableKinetic : true
 				}
 			}));
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
@@ -229,6 +291,17 @@ Viewer = function() {
 				_map.destroy();
 				_map = null;
 			}
+		},
+
+		/**
+		 * Stelt de doorzichtigheid van de voorgrond kaart in.
+		 * 
+		 * @param opacity
+		 *            float waarde tussen 0 1n 1
+		 * @returns
+		 */
+		setOpacity : function(opacity) {
+			_setOpacity(opacity);
 		},
 
 		/**
@@ -257,7 +330,7 @@ Viewer = function() {
 				isBaseLayer : false,
 				visibility : true,
 				singleTile : false,
-				opacity : 0.8
+				opacity : _opacity
 			});
 			_map.addLayer(layer);
 			var fInfoControl = _map.getControlsByClass('WMSGetFeatureInfo');
@@ -333,12 +406,16 @@ Viewer = function() {
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderRightWidth'), 10);
 				var borderH = parseInt(jQuery('#' + this.config.mapDiv).css('borderTopWidth'), 10)
 						+ parseInt(jQuery('#' + this.config.mapDiv).css('borderBottomWidth'), 10);
-				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud padding set in css
+				var headerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-top'), 10); // inhoud
+				// padding
+				// set
+				// in
+				// css
 				var footerH = parseInt(jQuery('#' + this.config.mapDiv).parent().parent().css('padding-bottom'), 10);
-				
+
 				var w = jQuery('#' + this.config.mapDiv).parent().width() - borderW;
-				var h = jQuery(window).height() -  headerH - footerH - borderH;
-				
+				var h = jQuery(window).height() - headerH - footerH - borderH;
+
 				jQuery('#' + this.config.mapDiv).width(w).height(h);
 				jQuery('#toggleSize').toggleClass('restore max');
 				_fullSize = true;

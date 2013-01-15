@@ -50,6 +50,16 @@ config.fullSize = true;
 config.toggleSize = true;
 
 /**
+ * Of de transparantie slider op de kaart moet worden gezet. NB. hiervoor wordt
+ * de jQuery UI slider gebruikt.
+ * 
+ * @see http://api.jqueryui.com/slider/
+ * 
+ * @type {Boolean}
+ */
+config.fgAlphaSlider = true;
+
+/**
  * OpenLayers proxy url override.
  * 
  * @override
