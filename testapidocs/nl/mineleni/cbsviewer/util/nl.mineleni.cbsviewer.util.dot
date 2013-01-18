@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.SpatialUtilTest
-	c99 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtilTest.html">
+	c105 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtilTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpatialUtilTest </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpatialUtilTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.EncodingUtilTest
-	c100 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtilTest.html">
+	c106 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtilTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EncodingUtilTest </td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EncodingUtilTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBeanTest
-	c101 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBeanTest.html">
+	c107 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBeanTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBeanTest </td></tr>
 		</table></td></tr>
@@ -61,9 +61,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBeanTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBeanTest NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c101:p -> c105:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c107:p -> c111:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c105 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c111 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>

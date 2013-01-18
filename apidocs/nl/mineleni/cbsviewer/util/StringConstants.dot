@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.StringConstants
-	c5233 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringConstants.html">
+	c5866 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> StringConstants </td></tr>
@@ -47,11 +47,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StringConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc5233 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
+	n0cc5866 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc5233 -> c5233:p[arrowhead=none];
+	n0cc5866 -> c5866:p[arrowhead=none];
 }
 
