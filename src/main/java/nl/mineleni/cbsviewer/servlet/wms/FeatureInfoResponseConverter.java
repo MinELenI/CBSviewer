@@ -42,6 +42,8 @@ public final class FeatureInfoResponseConverter {
 	/** resource bundle. */
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
+	private static final AttributeValuesFilter filter = new AttributeValuesFilter();
+
 	/**
 	 * Cleanup html.
 	 * 
@@ -93,11 +95,16 @@ public final class FeatureInfoResponseConverter {
 				sb.append("<tbody>");
 				int i = 0;
 				while (iter.hasNext()) {
-					sb.append("<tr class=\"" + (((i++ % 2) == 0) ? "" : "even")
-							+ "\">");
+					sb.append("<tr class=\""
+							+ (((i++ % 2) == 0) ? "odd" : "even") + "\">");
 					final SimpleFeature f = iter.next();
 					for (final String n : attributes) {
-						sb.append("<td>" + f.getAttribute(n) + "</td>");
+						if (filter.hasFilters())
+							sb.append("<td>"
+									+ filter.filterValue(f.getAttribute(n))
+									+ "</td>");
+						else
+							sb.append("<td>" + f.getAttribute(n) + "</td>");
 					}
 					sb.append("</tr>");
 				}

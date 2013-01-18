@@ -116,7 +116,7 @@ public class FeatureInfoResponseConverterTest {
 		assertXpathEvaluatesTo("3", "count(//tbody/tr)", testXML);
 		assertXpathValuesEqual("//tbody/tr[@class='even']", "//tbody/tr[2]",
 				testXML);
-		assertXpathValuesEqual("//tbody/tr[@class=''][2]", "//tbody/tr[3]",
+		assertXpathValuesEqual("//tbody/tr[@class='odd'][2]", "//tbody/tr[3]",
 				testXML);
 	}
 

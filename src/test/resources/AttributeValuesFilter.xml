@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FilterMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xml.wms.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.wms.cbsviewer.mineleni.nl AttributeValuesFilter.xsd ">
+	<Filter>
+		<inputAttributeValue>-99997</inputAttributeValue>
+		<outputAttributeValue>geheim</outputAttributeValue>
+	</Filter>
+	<Filter>
+		<inputAttributeValue>-99998</inputAttributeValue>
+		<outputAttributeValue>nihil</outputAttributeValue>
+	</Filter>
+	<Filter>
+		<inputAttributeValue>-99999</inputAttributeValue>
+		<outputAttributeValue>onbekend</outputAttributeValue>
+	</Filter>
+</FilterMapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.0">
+	<bindings schemaLocation="../xsd/AttributeValuesFilter.xsd">
+		<schemaBindings>
+			<package name="nl.mineleni.cbsviewer.servlet.wms.xml" />
+		</schemaBindings>
+	</bindings>
+	<bindings schemaLocation="../xsd/AvailableLayers.xsd">
+		<schemaBindings>
+			<package name="nl.mineleni.cbsviewer.util.xml" />
+		</schemaBindings>
+	</bindings>
+</bindings>

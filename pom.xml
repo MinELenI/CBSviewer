@@ -506,7 +506,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<packageName>nl.mineleni.cbsviewer.util.xml</packageName>
 					<verbose>${debug}</verbose>
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
 				</configuration>

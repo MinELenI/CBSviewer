@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.wms.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	jxb:version="2.0" attributeFormDefault="qualified" elementFormDefault="qualified"
+	xmlns:l="http://xml.wms.cbsviewer.mineleni.nl">
+
+	<xs:element name="FilterMapping" type="l:filterList">
+		<xs:annotation>
+			<xs:documentation>Een mapping bestaat uit een lijst van filters.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:complexType name="filterList">
+		<xs:annotation>
+			<xs:documentation>De lijst met filters</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Filter" type="l:attributeValueFilter"
+				maxOccurs="unbounded" minOccurs="0">
+				<xs:unique name="uniqueInputAttributeValue">
+					<xs:selector xpath="attributeValueFilter" />
+					<xs:field xpath="inputAttributeValue" />
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="attributeValueFilter">
+		<xs:annotation>
+			<xs:documentation>Een filtermapping bestaande uit een input waarde en
+				een output waarde.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="inputAttributeValue" nillable="false"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>De te vervangen input waarde.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"></xs:minLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="outputAttributeValue" nillable="false"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>De vervangende output waarde.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0"></xs:minLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
