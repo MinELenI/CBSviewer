@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.openls.databinding.openls.StreetAddress
-	c2343 [label=<<table title="nl.mineleni.openls.databinding.openls.StreetAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StreetAddress.html">
+	c1016 [label=<<table title="nl.mineleni.openls.databinding.openls.StreetAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StreetAddress.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StreetAddress </td></tr>
 		</table></td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StreetAddress.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Building
-	c2351 [label=<<table title="nl.mineleni.openls.databinding.openls.Building" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Building.html">
+	c1024 [label=<<table title="nl.mineleni.openls.databinding.openls.Building" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Building.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Building </td></tr>
 		</table></td></tr>
@@ -51,7 +51,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Building.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.XmlNamespaceConstants
-	c2353 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../XmlNamespaceConstants.html">
+	c1026 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../XmlNamespaceConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> XmlNamespaceConstants </td></tr>
@@ -67,10 +67,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../XmlNamespaceConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.openls.databinding.openls.StreetAddress implements nl.mineleni.openls.XmlNamespaceConstants
-	c2353:p -> c2343:p [dir=back,arrowtail=empty,style=dashed];
+	c1026:p -> c1016:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Building implements nl.mineleni.openls.XmlNamespaceConstants
-	c2353:p -> c2351:p [dir=back,arrowtail=empty,style=dashed];
+	c1026:p -> c1024:p [dir=back,arrowtail=empty,style=dashed];
 	// nl.mineleni.openls.databinding.openls.StreetAddress NAVASSOC nl.mineleni.openls.databinding.openls.Building
-	c2343:p -> c2351:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1016:p -> c1024:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

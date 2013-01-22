@@ -8,7 +8,7 @@
     <language>en-us</language>
     <copyright>&#169;2012 - 2013 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 51,
+      <title>File: 50,
              Errors: 0,
              Warnings: 106,
              Infos: 3
@@ -702,20 +702,6 @@
                           <tr>
                 <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.cache.package-info.java">nl/mineleni/cbsviewer/servlet/wms/cache/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#org.geotools.data.wms.xml.package-info.java">org/geotools/data/wms/xml/package-info.java</a>
                 </td>
                 <td>
                   0

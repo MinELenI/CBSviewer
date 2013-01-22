@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Caching<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2970 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Caching.html">
+	c1277 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Caching" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Caching.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Caching&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Caching.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2972 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cache.html">
+	c1279 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
 		</table></td></tr>
@@ -52,6 +52,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Cache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T> implements nl.mineleni.cbsviewer.servlet.wms.cache.Caching<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2970:p -> c2972:p [dir=back,arrowtail=empty,style=dashed];
+	c1277:p -> c1279:p [dir=back,arrowtail=empty,style=dashed];
 }
 

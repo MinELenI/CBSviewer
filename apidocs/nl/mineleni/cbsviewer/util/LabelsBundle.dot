@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c3924 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../servlet/AbstractBaseServlet.html">
+	c1682 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../servlet/AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../servlet/AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.LabelsBundle
-	c3943 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LabelsBundle.html">
+	c1701 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LabelsBundle.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LabelsBundle </td></tr>
 		</table></td></tr>
@@ -44,6 +44,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet NAVASSOC nl.mineleni.cbsviewer.util.LabelsBundle
-	c3924:p -> c3943:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c1682:p -> c1701:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 
