@@ -17,6 +17,7 @@ import java.io.Writer;
 import javax.xml.parsers.ParserConfigurationException;
 
 import nl.mineleni.cbsviewer.util.LabelsBundle;
+import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.geotools.GML;
 import org.geotools.GML.Version;
@@ -42,7 +43,8 @@ public final class FeatureInfoResponseConverter {
 	/** resource bundle. */
 	private static final LabelsBundle RESOURCES = new LabelsBundle();
 
-	private static final AttributeValuesFilter filter = new AttributeValuesFilter();
+	private static final AttributeValuesFilter valuesFilter = new AttributeValuesFilter();
+	private static final AttributesNamesFilter namesFilter = new AttributesNamesFilter();
 
 	/**
 	 * Cleanup html.
@@ -75,8 +77,10 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private static String convertGML(final InputStream gmlStream,
-			final String[] attributes) throws IOException {
+			final LayerDescriptor layer) throws IOException {
 		final StringBuilder sb = new StringBuilder();
+		final String[] fieldNames = layer.getAttributes().split(",\\s*");
+
 		try {
 			final GML gml = new GML(Version.WFS1_0);
 			final SimpleFeatureIterator iter = gml
@@ -88,32 +92,36 @@ public final class FeatureInfoResponseConverter {
 				sb.append("Informatie over de zoeklocatie.");
 				sb.append("</caption>");
 				sb.append("<thead><tr>");
-				for (final String n : attributes) {
-					sb.append("<th scope=\"col\">" + n + "</th>");
+				for (final String n : fieldNames) {
+					sb.append("<th scope=\"col\">"
+							+ namesFilter.filterValue(n, layer.getId())
+							+ "</th>");
 				}
 				sb.append("</tr></thead>");
+
 				sb.append("<tbody>");
 				int i = 0;
 				while (iter.hasNext()) {
 					sb.append("<tr class=\""
 							+ (((i++ % 2) == 0) ? "odd" : "even") + "\">");
 					final SimpleFeature f = iter.next();
-					for (final String n : attributes) {
-						if (filter.hasFilters())
+					for (final String n : fieldNames) {
+						if (valuesFilter.hasFilters()) {
 							sb.append("<td>"
-									+ filter.filterValue(f.getAttribute(n))
-									+ "</td>");
-						else
+									+ valuesFilter.filterValue(f
+											.getAttribute(n)) + "</td>");
+						} else {
 							sb.append("<td>" + f.getAttribute(n) + "</td>");
+						}
 					}
 					sb.append("</tr>");
 				}
 				sb.append("</tbody>");
 				sb.append("</table>");
 				iter.close();
-				LOGGER.debug("Gemaakte HTML tabel:\n" + sb);
+				LOGGER.debug("Gemaakte HTML tabel: " + sb);
 			} else {
-				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo");
+				LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
 				return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 			}
 		} catch (ParserConfigurationException | SAXException e) {
@@ -168,10 +176,10 @@ public final class FeatureInfoResponseConverter {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public static String convertToHTMLTable(final InputStream input,
-			final String type, final String[] attributes) throws IOException {
+			final String type, LayerDescriptor layer) throws IOException {
 		switch (type.toUpperCase()) {
 		case "GMLTYPE":
-			return convertGML(input, attributes);
+			return convertGML(input, layer);
 		case "HTMLTYPE":
 			return cleanupHTML(input);
 		default:

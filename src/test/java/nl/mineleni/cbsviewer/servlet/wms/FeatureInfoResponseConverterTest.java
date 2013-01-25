@@ -15,6 +15,7 @@ import static org.junit.Assert.assertNotNull;
 import java.io.IOException;
 
 import nl.mineleni.cbsviewer.util.LabelsBundle;
+import nl.mineleni.cbsviewer.util.xml.LayerDescriptor;
 
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Before;
@@ -28,6 +29,7 @@ import org.junit.Test;
  * @author prinsmc
  */
 public class FeatureInfoResponseConverterTest {
+	LayerDescriptor layer;
 
 	/**
 	 * set up.
@@ -39,6 +41,22 @@ public class FeatureInfoResponseConverterTest {
 	public void setUp() throws Exception {
 		XMLUnit.setIgnoreWhitespace(true);
 		XMLUnit.setIgnoreComments(true);
+
+		this.layer = new LayerDescriptor();
+
+		this.layer
+				.setId("wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners");
+		this.layer.setName("CBS Gemeenten 2011 - Aantal inwoners");
+		this.layer.setLayers("gemeenten2011");
+		this.layer
+				.setUrl("http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms");
+		this.layer
+				.setStyles("wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners");
+		this.layer.setAttributes("gemeentecode,aantal_inwoners");
+		// this.layer.setAliases("gemeentecode, aantal inwoners");
+		this.layer
+				.setLink("http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wfs?request=GetFeature&amp;typeName=wijkenbuurten2011:gemeenten2011&amp;outputFormat=SHAPE-ZIP");
+
 	}
 
 	/**
@@ -51,11 +69,10 @@ public class FeatureInfoResponseConverterTest {
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML0() throws Exception {
-		final String[] colNames = { "gemeentecode", "aantal_inwoners" };
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse0.gml"),
-				"GMLTYPE", colNames);
+				"GMLTYPE", this.layer);
 		assertNotNull(testXML);
 		assertEquals(new LabelsBundle().getString("KEY_INFO_GEEN_FEATURES"),
 				testXML);
@@ -71,12 +88,11 @@ public class FeatureInfoResponseConverterTest {
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML1() throws Exception {
-		final String[] colNames = { "gemeentecode", "aantal_inwoners" };
-
+		final String[] colNames = this.layer.getAttributes().split(",\\s*");
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse1.gml"),
-				"GMLTYPE", colNames);
+				"GMLTYPE", this.layer);
 		assertNotNull(testXML);
 
 		// Validator v = new Validator(testXML);
@@ -100,12 +116,12 @@ public class FeatureInfoResponseConverterTest {
 	 */
 	@Test
 	public final void testConvertToHTMLTableGML3() throws Exception {
-		final String[] colNames = { "gemeentecode", "aantal_inwoners" };
+		final String[] colNames = this.layer.getAttributes().split(",\\s*");
 
 		final String testXML = FeatureInfoResponseConverter.convertToHTMLTable(
 				this.getClass().getClassLoader()
 						.getResourceAsStream("GetFeatureInfoResponse3.gml"),
-				"GMLTYPE", colNames);
+				"GMLTYPE", this.layer);
 		assertNotNull(testXML);
 		assertXpathExists("//caption", testXML);
 		assertXpathExists("/table/caption", testXML);

@@ -168,7 +168,7 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 					if (serverUrl.contains("GetFeatureInfo")) {
 						serverUrl = serverUrl.replace("text%2Fhtml",
 								"application%2Fvnd.ogc.gml");
-						LOGGER.debug("proxy GetFeatureInfo GET param:"
+						LOGGER.debug("proxy GetFeatureInfo GET param: "
 								+ serverUrl);
 					}
 
@@ -189,13 +189,15 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 									LOGGER.debug("Query layers = " + lName);
 								}
 							}
+							final String wmsUrl = serverUrl.substring(0,
+									serverUrl.indexOf("?"));
+							LOGGER.debug("WMS url = " + wmsUrl);
 							responseBody = FeatureInfoResponseConverter
-									.convertToHTMLTable(
-											get.getEntity().getContent(),
-											"GMLTYPE",
-											this.layers.getLayerByLayers(lName)
-													.getAttributes()
-													.split(",\\s*"));
+									.convertToHTMLTable(get.getEntity()
+											.getContent(), "GMLTYPE",
+											this.layers.getLayerByLayers(lName,
+													wmsUrl));
+
 						} else {
 							// force the response to have XML content type (WMS
 							// servers generally don't)
@@ -206,8 +208,6 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 									.toString(get.getEntity()).trim();
 						}
 						response.setContentLength(responseBody.length());
-
-						LOGGER.debug("responseBody:" + responseBody);
 						final PrintWriter out = response.getWriter();
 						out.print(responseBody);
 						response.flushBuffer();

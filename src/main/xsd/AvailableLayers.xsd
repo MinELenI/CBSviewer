@@ -1,95 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
-	jxb:version="2.0" attributeFormDefault="unqualified"
-	elementFormDefault="qualified" xmlns:l="http://xml.util.cbsviewer.mineleni.nl">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:l="http://xml.util.cbsviewer.mineleni.nl"
+	targetNamespace="http://xml.util.cbsviewer.mineleni.nl" 
+	jaxb:version="2.0" attributeFormDefault="qualified"
+	elementFormDefault="qualified">
 
-	<xs:element name="Layers" type="l:layersList">
-		<xs:annotation>
-			<xs:documentation>Beschrijft een verzameling van kaartlagen voor de
+	<xsd:element name="Layers" type="l:layersList">
+        <xsd:annotation>
+			<xsd:documentation>
+				Beschrijft een verzameling van kaartlagen voor de
 				applicatie.
-			</xs:documentation>
-		</xs:annotation>
-	</xs:element>
+			</xsd:documentation>
+		</xsd:annotation>
+    </xsd:element>
 
-	<xs:complexType name="layersList">
-		<xs:sequence>
-			<xs:element name="Layerdescriptor" type="l:layerDescriptor"
-				maxOccurs="unbounded" minOccurs="1" />
-		</xs:sequence>
-	</xs:complexType>
+	<xsd:complexType name="layersList">
+		<xsd:sequence>
+			<xsd:element name="Layerdescriptor" type="l:layerDescriptor" 
+				maxOccurs="unbounded" minOccurs="1">
+				<xsd:unique name="uniqueLayerDescriptor">
+					<xsd:selector xpath="layerDescriptor" />
+					<xsd:field xpath="id" />
+				</xsd:unique>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 
-	<xs:complexType name="layerDescriptor">
-		<xs:annotation>
-			<xs:documentation>Beschrijft een kaartlaag voor de applicatie. Een
+	<xsd:complexType name="layerDescriptor">
+		<xsd:annotation>
+			<xsd:documentation>
+				Beschrijft een kaartlaag voor de applicatie. Een
 				laag kan bestaan uit 1 of meer lagen van 1 WMS.
-			</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element type="xs:ID" name="id" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element type="xsd:ID" name="id" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						De unieke identifier van deze kaartlaag.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element type="xs:string" name="name" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element type="xsd:string" name="name" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						De beschrijvende naam van deze kaartlaag.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element type="xs:string" name="layers" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element type="xsd:string" name="layers" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						Een kommagescheiden string met een of meer namen
 						van de LAYERS van de WMS.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element type="xs:anyURI" name="url" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element type="xsd:anyURI" name="url" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						De base URL van de WMS waar deze kaartlaag uit
 						opgebouwd wordt.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element type="xs:string" name="styles" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element type="xsd:string" name="styles" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						De lijst met STYLES, een kommagescheiden string
 						met een of meer namen van de styles van de WMS.
-						Het aantal moet
-						gelijk zijn aan het aantal
+						Het aantal moet gelijk zijn aan het aantal
 						lagen.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element type="xs:string" name="attributes" nillable="false"
-				minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element type="xsd:string" name="attributes" nillable="false" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
 						De te tonen feature attributen als resultaat van
-						een FeatureInfo request (kommagescheiden string). 
-						Dit geeft de mogelijkheid om attributen zoals een FeatureId
-						uit de lijst te filteren.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="link" type="xs:anyURI" maxOccurs="1"
-				minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>De (optionele) download link voor de dataset
-						waarvan deze laag is gemaakt.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-</xs:schema>
+						een FeatureInfo request (kommagescheiden string).
+						Dit geeft de mogelijkheid om attributen zoals een
+						FeatureId uit de lijst te filteren, deze match is 
+						case-sensitive.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="aliases" type="xsd:string" maxOccurs="1" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						De (optionele) alias mapping voor attributes
+						(kommagescheiden string). LET OP, het aantal aliases
+						dient hetzelfde te zijn als het aantal attributes.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="link" type="xsd:anyURI" maxOccurs="1" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						De (optionele) download link voor de dataset
+						waarvan deze (WMS) laag is gemaakt.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

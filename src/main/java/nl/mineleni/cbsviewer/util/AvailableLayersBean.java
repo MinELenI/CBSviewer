@@ -54,7 +54,7 @@ public class AvailableLayersBean {
 			final JAXBElement<LayersList> element = (JAXBElement<LayersList>) u
 					.unmarshal(f);
 			final LayersList layerslist = element.getValue();
-			layers = layerslist.getLayerdescriptor();
+			this.layers = layerslist.getLayerdescriptor();
 		} catch (final JAXBException e) {
 			LOGGER.error(
 					"Er is een fout opgetreden bij het inlezen van de layers.",
@@ -103,7 +103,7 @@ public class AvailableLayersBean {
 	 * @see LayerDescriptor#getId()
 	 */
 	public LayerDescriptor getLayerByID(final String name) {
-		for (final LayerDescriptor desc : layers) {
+		for (final LayerDescriptor desc : this.layers) {
 			if (desc.getId().equalsIgnoreCase(name)) {
 				return desc;
 			}
@@ -118,12 +118,39 @@ public class AvailableLayersBean {
 	 *            de naam van de wms laag
 	 * @return the layer by name
 	 * @see LayerDescriptor#getLayers()
+	 * @deprecated gebruik {@link #getLayerByLayers(String, String)} of
+	 *             {@link #getLayerByID(String)}
 	 */
+	@Deprecated
 	public LayerDescriptor getLayerByLayers(final String lyrName) {
-		for (final LayerDescriptor desc : layers) {
+		for (final LayerDescriptor desc : this.layers) {
 			if ((desc.getLayers().replaceAll("\\s", ""))
 					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
 				return desc;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * geeft de eerste layerdescriptor met de gevraagde naam.
+	 * 
+	 * @param lyrName
+	 *            de naam van de wms laag
+	 * @param lyrUrl
+	 *            de url van de wms
+	 * 
+	 * @return the layer by name and url
+	 * @see LayerDescriptor#getLayers()
+	 */
+	public LayerDescriptor getLayerByLayers(final String lyrName,
+			final String lyrUrl) {
+		for (final LayerDescriptor desc : this.layers) {
+			if ((desc.getLayers().replaceAll("\\s", ""))
+					.equalsIgnoreCase(lyrName.replaceAll("\\s", ""))) {
+				if (desc.getUrl().equalsIgnoreCase(lyrUrl)) {
+					return desc;
+				}
 			}
 		}
 		return null;
@@ -138,7 +165,7 @@ public class AvailableLayersBean {
 	 * @see LayerDescriptor#getName()
 	 */
 	public LayerDescriptor getLayerByName(final String name) {
-		for (final LayerDescriptor desc : layers) {
+		for (final LayerDescriptor desc : this.layers) {
 			if (desc.getName().equalsIgnoreCase(name)) {
 				return desc;
 			}

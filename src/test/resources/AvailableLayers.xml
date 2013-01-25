@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
+	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd">
 	<!-- 
 		dit is een document met test configuratie, 
-		oa. voor AvailableLayersBeanTest en WMSClientServletTest
+		oa. voor AvailableLayersXMLTest en WMSClientServletTest
 	-->
 	<Layerdescriptor>
 		<id>vierkanten500m_oad2000</id>
@@ -12,7 +12,7 @@
 		<url>http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms</url>
 		<styles>cbsvierkanten500m.oad2000</styles>
 		<attributes>oad2000</attributes>
-		<!--aliases>OAD (adressen per km2)</aliases-->
+		<aliases>dichtheid</aliases>
 	</Layerdescriptor>
 	<Layerdescriptor>
 		<id>wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners</id>

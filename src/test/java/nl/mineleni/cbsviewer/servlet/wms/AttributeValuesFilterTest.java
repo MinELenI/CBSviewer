@@ -97,7 +97,7 @@ public class AttributeValuesFilterTest {
 	 * XML testcase voor {@link AttributeValuesFilter.xsd}.
 	 */
 	@Test
-	public void testAvailableLayersXSD() {
+	public void testAttributeValuesFilterXSD() {
 		try {
 			// valideer xsd
 			final Source schema = new StreamSource(this.getClass()

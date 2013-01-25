@@ -355,7 +355,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 			final String html = FeatureInfoResponseConverter
 					.convertToHTMLTable(response.getInputStream(), "GMLTYPE",
-							lyrDesc.getAttributes().split(",\\s*"));
+							lyrDesc);
 			this.featInfoCache.put(key,
 					new CachableString(html, System.currentTimeMillis()
 							+ MILLISECONDS_TO_CACHE_ELEMENTS));
