@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest
-	c400 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverterTest.html">
+	c482 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverterTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverterTest </td></tr>
 		</table></td></tr>
@@ -28,5 +28,42 @@ digraph G {
 <tr><td align="left" balign="left"> + testConvertToHTMLTableHTML3() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverterTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
+	c482:p -> c496:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	// nl.mineleni.cbsviewer.util.xml.LayerDescriptor
+	c496 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LayerDescriptor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # id : String </td></tr>
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # layers : String </td></tr>
+<tr><td align="left" balign="left"> # url : String </td></tr>
+<tr><td align="left" balign="left"> # styles : String </td></tr>
+<tr><td align="left" balign="left"> # attributes : String </td></tr>
+<tr><td align="left" balign="left"> # aliases : String </td></tr>
+<tr><td align="left" balign="left"> # link : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LayerDescriptor() </td></tr>
+<tr><td align="left" balign="left"> + getId() : String </td></tr>
+<tr><td align="left" balign="left"> + setId(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getLayers() : String </td></tr>
+<tr><td align="left" balign="left"> + setLayers(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + setUrl(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getStyles() : String </td></tr>
+<tr><td align="left" balign="left"> + setStyles(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getAttributes() : String </td></tr>
+<tr><td align="left" balign="left"> + setAttributes(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getAliases() : String </td></tr>
+<tr><td align="left" balign="left"> + setAliases(arg0 : String) </td></tr>
+<tr><td align="left" balign="left"> + getLink() : String </td></tr>
+<tr><td align="left" balign="left"> + setLink(arg0 : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

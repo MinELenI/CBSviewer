@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest
-	c457 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSClientUtilTest.html">
+	c546 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpenLSClientUtilTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpenLSClientUtilTest </td></tr>
 		</table></td></tr>
@@ -25,11 +25,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpenLSClientUtilTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest NAVASSOC nl.mineleni.openls.databinding.openls.GeocodeResponse
-	c457:p -> c476:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c546:p -> c567:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest NAVASSOC nl.mineleni.openls.databinding.openls.GeocodeResponse
-	c457:p -> c476:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c546:p -> c567:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.openls.databinding.openls.GeocodeResponse
-	c476 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c567 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeocodeResponse </td></tr>
 		</table></td></tr>

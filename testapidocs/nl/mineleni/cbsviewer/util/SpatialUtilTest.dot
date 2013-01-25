@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.SpatialUtilTest
-	c553 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpatialUtilTest.html">
+	c651 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtilTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpatialUtilTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpatialUtilTest </td></tr>
 		</table></td></tr>

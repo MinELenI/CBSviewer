@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.ReverseProxyServlet
-	c2323 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReverseProxyServlet.html">
+	c2420 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReverseProxyServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseProxyServlet </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReverseProxyServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c2326 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
+	c2423 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c2347 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/AvailableLayersBean.html">
+	c2445 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>
@@ -59,12 +59,13 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON(asVar : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(name : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(name : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.ReverseProxyServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c2326:p -> c2323:p [dir=back,arrowtail=empty];
+	c2423:p -> c2420:p [dir=back,arrowtail=empty];
 	// nl.mineleni.cbsviewer.servlet.ReverseProxyServlet NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c2323:p -> c2347:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2420:p -> c2445:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

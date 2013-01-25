@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilterTest
-	c269 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributeValuesFilterTest.html">
+	c294 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributeValuesFilterTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributeValuesFilterTest </td></tr>
 		</table></td></tr>
@@ -23,14 +23,14 @@ digraph G {
 <tr><td align="left" balign="left"> + testHasFilters() </td></tr>
 <tr><td align="left" balign="left"> + testFilterValue() </td></tr>
 <tr><td align="left" balign="left"> + testAttributeValuesFilterXML() </td></tr>
-<tr><td align="left" balign="left"> + testAvailableLayersXSD() </td></tr>
+<tr><td align="left" balign="left"> + testAttributeValuesFilterXSD() </td></tr>
 <tr><td align="left" balign="left"> + testDeploymentAttributeValuesFilterXML() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AttributeValuesFilterTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilterTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter
-	c269:p -> c281:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c294:p -> c308:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter
-	c281 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c308 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributeValuesFilter </td></tr>
 		</table></td></tr>

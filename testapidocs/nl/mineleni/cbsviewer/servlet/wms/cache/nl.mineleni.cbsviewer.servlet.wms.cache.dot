@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest
-	c77 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCacheTest.html">
+	c85 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSCacheTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCacheTest </td></tr>
 		</table></td></tr>
@@ -33,7 +33,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSCacheTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest
-	c78 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheTest.html">
+	c86 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheTest </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CacheTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest
-	c79 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImageTest.html">
+	c87 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CacheImageTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImageTest </td></tr>
 		</table></td></tr>
@@ -70,7 +70,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CacheImageTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest
-	c80 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BboxLayerCacheKeyTest.html">
+	c88 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BboxLayerCacheKeyTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BboxLayerCacheKeyTest </td></tr>
 		</table></td></tr>
@@ -87,23 +87,23 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BboxLayerCacheKeyTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c77:p -> c87:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c85:p -> c96:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c77:p -> c87:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c85:p -> c96:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c78:p -> c88:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c86:p -> c97:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c78:p -> c88:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c86:p -> c97:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImageTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c79:p -> c89:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c87:p -> c98:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c80:p -> c90:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c88:p -> c99:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c80:p -> c90:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c88:p -> c99:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKeyTest NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c80:p -> c90:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c88:p -> c99:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage
-	c89 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c98 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CacheImage </td></tr>
 		</table></td></tr>
@@ -122,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey
-	c90 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c99 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BboxLayerCacheKey </td></tr>
 		</table></td></tr>
@@ -138,7 +138,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c88 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c97 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
 		</table></td></tr>
@@ -160,7 +160,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c87 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c96 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>

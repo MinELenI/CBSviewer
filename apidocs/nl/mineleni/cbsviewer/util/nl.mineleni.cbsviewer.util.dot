@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.StringConstants
-	c249 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
+	c255 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> StringConstants </td></tr>
@@ -47,14 +47,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StringConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc249 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
+	n0cc255 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc249 -> c249:p[arrowhead=none];
+	n0cc255 -> c255:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.util.SpatialUtil
-	c250 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtil.html">
+	c256 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpatialUtil </td></tr>
 		</table></td></tr>
@@ -66,7 +66,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpatialUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.NumberConstants
-	c251 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
+	c257 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> NumberConstants </td></tr>
@@ -87,14 +87,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NumberConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc251 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
+	n0cc257 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc251 -> c251:p[arrowhead=none];
+	n0cc257 -> c257:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.util.LabelsBundle
-	c252 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LabelsBundle.html">
+	c258 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LabelsBundle.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LabelsBundle </td></tr>
 		</table></td></tr>
@@ -109,7 +109,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.EncodingUtil
-	c253 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtil.html">
+	c259 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EncodingUtil </td></tr>
 		</table></td></tr>
@@ -122,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EncodingUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c254 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBean.html">
+	c260 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>
@@ -135,6 +135,7 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON(asVar : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(name : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(name : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];

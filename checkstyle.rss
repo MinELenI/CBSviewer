@@ -8,9 +8,9 @@
     <language>en-us</language>
     <copyright>&#169;2012 - 2013 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 50,
+      <title>File: 51,
              Errors: 0,
-             Warnings: 106,
+             Warnings: 113,
              Infos: 3
       </title>
             <link>http://mineleni.github.com/CBSviewer//checkstyle.html</link>
@@ -259,7 +259,7 @@
                   1
                 </td>
                 <td>
-                  10
+                  15
                 </td>
                 <td>
                   0
@@ -337,20 +337,6 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeResponseList.java">nl/mineleni/openls/databinding/openls/GeocodeResponseList.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.parser.OpenLSResponseParser.java">nl/mineleni/openls/parser/OpenLSResponseParser.java</a>
                 </td>
                 <td>
@@ -358,6 +344,20 @@
                 </td>
                 <td>
                   2
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeResponseList.java">nl/mineleni/openls/databinding/openls/GeocodeResponseList.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
                 <td>
                   0
@@ -680,6 +680,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer//checkstyle.html#nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter.java">nl/mineleni/cbsviewer/servlet/wms/AttributesNamesFilter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
                 </td>
                 <td>
                   0

@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../servlet/wms/cache/BboxLayerCacheKey.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.BboxLayerCacheKey" alt="" coords="15,11,417,149"/>
 <area shape="rect" id="node1" href="../../servlet/wms/cache/BboxLayerCacheKey.html" title="&lt;TABLE&gt;" alt="" coords="5,6,427,154"/>
-<area shape="rect" id="node2_1" href="./LayerDescriptor.html" title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" alt="" coords="121,209,311,602"/>
-<area shape="rect" id="node2" href="./LayerDescriptor.html" title="&lt;TABLE&gt;" alt="" coords="111,203,321,607"/>
+<area shape="rect" id="node2_1" href="./LayerDescriptor.html" title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" alt="" coords="121,209,311,650"/>
+<area shape="rect" id="node2" href="./LayerDescriptor.html" title="&lt;TABLE&gt;" alt="" coords="111,203,321,655"/>
 </map>

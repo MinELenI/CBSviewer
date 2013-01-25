@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c2601 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	c2704 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
@@ -25,14 +25,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc2601 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
+	n0cc2704 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="../AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc2601 -> c2601:p[arrowhead=none];
+	n0cc2704 -> c2704:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c2607 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServlet.html">
+	c2710 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./WMSClientServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSClientServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c2610 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/WMSCache.html">
+	c2714 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/WMSCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSCache </td></tr>
 		</table></td></tr>
@@ -64,7 +64,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./cache/WMSCache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2613 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/Cache.html">
+	c2717 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.cache.Cache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cache/Cache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Cache&lt;K, V extends Cachable&lt;T&gt;, T&gt; </td></tr>
 		</table></td></tr>
@@ -86,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./cache/Cache.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c2623 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/AvailableLayersBean.html">
+	c2727 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>
@@ -99,24 +99,25 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON(asVar : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(name : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(name : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../util/AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c2601:p -> c2607:p [dir=back,arrowtail=empty];
+	c2704:p -> c2710:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache extends nl.mineleni.cbsviewer.servlet.wms.cache.Cache<org.opengis.geometry.BoundingBox, nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage, java.awt.image.BufferedImage>
-	c2613:p -> c2610:p [dir=back,arrowtail=empty];
+	c2717:p -> c2714:p [dir=back,arrowtail=empty];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2607:p -> c2613:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2717:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2607:p -> c2613:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2717:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.Cache<K, V extends nl.mineleni.cbsviewer.servlet.wms.cache.Cachable<T>, T>
-	c2607:p -> c2613:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2717:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c2607:p -> c2623:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2727:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c2607:p -> c2610:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2714:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet NAVASSOC nl.mineleni.cbsviewer.servlet.wms.cache.WMSCache
-	c2607:p -> c2610:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c2710:p -> c2714:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c146 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServlet.html">
+	c149 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WMSClientServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WMSClientServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter
-	c147 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
+	c150 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverter </td></tr>
 		</table></td></tr>
@@ -33,11 +33,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + convertToHTMLTable(input : InputStream, type : String, attributes : String[]) : String </td></tr>
+<tr><td align="left" balign="left"> + convertToHTMLTable(input : InputStream, type : String, layer : LayerDescriptor) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter
-	c148 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AttributeValuesFilter.html">
+	c151 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AttributeValuesFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributeValuesFilter </td></tr>
 		</table></td></tr>
@@ -50,5 +50,18 @@ digraph G {
 <tr><td align="left" balign="left"> + hasFilters() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AttributeValuesFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter
+	c152 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AttributesNamesFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AttributesNamesFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AttributesNamesFilter() </td></tr>
+<tr><td align="left" balign="left"> + filterValue(attribute : String, layerID : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AttributesNamesFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

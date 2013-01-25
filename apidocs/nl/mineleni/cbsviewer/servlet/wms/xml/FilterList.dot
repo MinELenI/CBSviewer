@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.xml.FilterList
-	c1444 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.xml.FilterList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FilterList.html">
+	c1522 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.xml.FilterList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FilterList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FilterList </td></tr>
 		</table></td></tr>
