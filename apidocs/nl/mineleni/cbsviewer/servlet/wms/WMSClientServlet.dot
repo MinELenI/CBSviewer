@@ -98,7 +98,6 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON() : String </td></tr>
 <tr><td align="left" balign="left"> + asJSON(asVar : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(name : String) : LayerDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(name : String) : LayerDescriptor </td></tr>
 		</table></td></tr>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="./ReverseProxyServlet.html" title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" alt="" coords="16,257,451,410"/>
 <area shape="rect" id="node1" href="./ReverseProxyServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,251,461,415"/>
-<area shape="rect" id="node3_1" href="../util/AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="20,470,447,639"/>
-<area shape="rect" id="node3" href="../util/AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="9,465,457,645"/>
+<area shape="rect" id="node3_1" href="../util/AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="20,470,447,623"/>
+<area shape="rect" id="node3" href="../util/AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="9,465,457,629"/>
 <area shape="rect" id="node2_2" href="./AbstractBaseServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" alt="" coords="128,11,339,197"/>
 <area shape="rect" id="node2" href="./AbstractBaseServlet.html" title="&lt;TABLE&gt;" alt="" coords="117,6,349,202"/>
 </map>

@@ -90,7 +90,6 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON() : String </td></tr>
 <tr><td align="left" balign="left"> + asJSON(arg0 : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(arg0 : String) : LayerDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getLayerByLayers(arg0 : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(arg0 : String, arg1 : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(arg0 : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
