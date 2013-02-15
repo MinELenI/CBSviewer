@@ -17,6 +17,27 @@
 	cursor: crosshair;
 }
 
+.olControlScaleLine {
+	display: block;
+	position: absolute;
+	left: 10px;
+	bottom: 15px;
+	font-size: xx-small;
+}
+
+.olControlScaleLineBottom {
+	border: solid 2px black;
+	border-bottom: none;
+	margin-top:-2px;
+	text-align: center;
+}
+
+.olControlScaleLineTop {
+	border: solid 2px black;
+	border-top: none;
+	text-align: center;
+}
+
 .olHandlerBoxZoomBox {
 	border: 2px solid $BlueColour;
 	position: absolute;

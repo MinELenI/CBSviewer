@@ -279,6 +279,10 @@ Viewer = function() {
 				}
 			}));
 			_map.addControl(new ClickDrawControl());
+			_map.addControl(new OpenLayers.Control.ScaleLine({
+				maxWidth: 150,
+				bottomOutUnits: '' // geen mi/ft
+			}));
 		},
 
 		/**
