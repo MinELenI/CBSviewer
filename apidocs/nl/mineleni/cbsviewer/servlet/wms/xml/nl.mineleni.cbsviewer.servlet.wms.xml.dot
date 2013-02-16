@@ -19,8 +19,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ObjectFactory() </td></tr>
-<tr><td align="left" balign="left"> + createAttributeValueFilter() : AttributeValueFilter </td></tr>
 <tr><td align="left" balign="left"> + createFilterList() : FilterList </td></tr>
+<tr><td align="left" balign="left"> + createAttributeValueFilter() : AttributeValueFilter </td></tr>
 <tr><td align="left" balign="left"> + createFilterMapping(value : FilterList) : JAXBElement&lt;FilterList&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ObjectFactory.html", fontname="arial", fontcolor="black", fontsize=10.0];
