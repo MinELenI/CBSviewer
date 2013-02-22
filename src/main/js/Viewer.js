@@ -128,7 +128,8 @@ Viewer = function() {
 			jQuery.extend(true, this.config, {
 				map : {
 					controls : [],
-					tileManager : new OpenLayers.TileManager()
+					tileManager : new OpenLayers.TileManager(),
+					theme : null
 				}
 			});
 			jQuery(window).unload(function() {
@@ -179,7 +180,7 @@ Viewer = function() {
 						jQuery('#slidervalue').html(OpenLayers.i18n('KEY_TRANSP_SLIDER_LABEL', {
 							'0' : (100 - ui.value)
 						}));
-						jQuery(this).find('a:first').text(ui.value);
+						jQuery(this).find('a:first').text(100 - ui.value);
 						// tooltip
 						if (ui.value > 50) {
 							jQuery('#slidervalue').css({
@@ -262,13 +263,7 @@ Viewer = function() {
 				observeElement : this.config.mapDiv
 			}));
 			_map.addControl(new OpenLayers.Control.Zoom());
-			_map.addControl(new OpenLayers.Control.Navigation(
-			/* dit zijn de defaults {
-				zoomWheelEnabled : true,
-				dragPanOptions : {
-					enableKinetic : true
-				}}*/
-			));
+			_map.addControl(new OpenLayers.Control.Navigation());
 			_map.addControl(new OpenLayers.Control.KeyboardClick({
 				/* alleen actief als de kaart focus heeft */
 				observeElement : this.config.mapDiv
@@ -280,8 +275,15 @@ Viewer = function() {
 			}));
 			_map.addControl(new ClickDrawControl());
 			_map.addControl(new OpenLayers.Control.ScaleLine({
-				maxWidth: 200,
-				bottomOutUnits: '' // geen mi/ft
+				maxWidth : 200,
+				bottomOutUnits : '' // geen mi/ft
+			}));
+			_map.addControl(new OverviewMap({
+				mapOptions : {
+					maxExtent : this.config.map.restrictedExtent,
+					resolutions : this.config.map.resolutions,
+					projection : this.config.map.projection
+				}
 			}));
 		},
 
@@ -365,17 +367,17 @@ Viewer = function() {
 			jQuery('#' + config.featureInfoDiv).html(OpenLayers.i18n('KEY_INFO_GEEN_FEATURES'));
 			// verwijder ikoontjes die de controls tekenen
 			var lyrs = _map.getLayersByName('ClickDrawControl'), lyr;
-			for ( lyr = 0; lyr < lyrs.length; lyr++) {
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 			lyrs = _map.getLayersByName('OpenLayers.Handler.KeyboardPoint');
-			for ( lyr = 0; lyr < lyrs.length; lyr++) {
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				lyrs[lyr].removeAllFeatures();
 			}
 
 			// verwijder WMS lagen
 			lyrs = _map.getLayersByClass('OpenLayers.Layer.WMS');
-			for ( lyr = 0; lyr < lyrs.length; lyr++) {
+			for (lyr = 0; lyr < lyrs.length; lyr++) {
 				if (!lyrs[lyr].isBaseLayer) {
 					_map.removeLayer(lyrs[lyr]);
 					lyrs[lyr].destroy();

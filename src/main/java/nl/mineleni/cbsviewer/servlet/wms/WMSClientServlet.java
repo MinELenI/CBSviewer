@@ -182,7 +182,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		// CHECKSTYLE.OFF: MagicNumber - pixel layout
 		// start positie in px
 		final int xOffset = 10;
-		final int yOffset = MAP_DIMENSION - 20;
+		final int fontSize = 12;
+		final int yOffset = MAP_DIMENSION - xOffset;
 		final Graphics2D g = image.createGraphics();
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
@@ -219,20 +220,17 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		g.setStroke(new BasicStroke(2, BasicStroke.CAP_ROUND,
 				BasicStroke.JOIN_ROUND));
 		g.drawLine(xOffset, yOffset, xOffset + barLength, yOffset);
-		g.drawLine(xOffset, yOffset + 3, xOffset, yOffset - 3);
-		g.drawLine(xOffset + barLength, yOffset + 3, xOffset + barLength,
-				yOffset - 3);
+		g.drawLine(xOffset, yOffset, xOffset, yOffset - fontSize);
+		g.drawLine(xOffset + barLength, yOffset, xOffset + barLength,
+				yOffset - fontSize);
 
-		final int fontSize = 12;
 		final Font font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
 		final FontMetrics metrics = g.getFontMetrics(font);
 		g.setFont(font);
 		g.drawString(
 				dist + units,
-				(xOffset + barLength) - (metrics.stringWidth(dist + units) / 2),
-				yOffset + metrics.getAscent() + 2);
-		g.drawString("0", xOffset - (metrics.stringWidth("0") / 2), yOffset
-				+ metrics.getAscent() + 2);
+				(xOffset + barLength / 2) - (metrics.stringWidth(dist + units) / 2),
+				yOffset - metrics.getDescent() - 2);
 		// CHECKSTYLE.ON: MagicNumber
 	}
 

@@ -1,0 +1,56 @@
+.OverviewMapContainer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.OverviewMapElement {
+	padding: 1px;
+	background-color: $ControlBorderColour;
+}
+
+.overviewMapButton {
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	font-size: 18px;
+	line-height: 16px;
+	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+	border: 1px solid $ControlBorderColour;
+	background: $BlueColourTransp;
+	&:focus, &:hover {
+		outline-width: 1px;
+		background: $BlueColour;
+	}
+}
+
+.OverviewMapMaximizeButton {
+	right: 0;
+	bottom: 0;
+}
+
+.OverviewMapMinimizeButton {
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+.OverviewMapExtentRectangle {
+	overflow: hidden;
+	background-image: url("../img/blank.gif");
+	cursor: move;
+	border: 2px dotted $BlueColour;
+}
+
+.OverviewMapRectReplacement {
+	overflow: hidden;
+	cursor: move;
+	background-image: url("../img/overview_replacement.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}

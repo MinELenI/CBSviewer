@@ -48,7 +48,7 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 #sliderFGMap {
 	position: absolute;
 	z-index: 900;
-	top: -1px;
+	top: 4px;
 	right: 170px;
 	width: 200px;
 	line-height: 21px;
@@ -62,22 +62,22 @@ $ViewerControlBorder: 1px solid $ControlBorderColour;
 }
 
 #sliderFGMap .ui-slider-handle {
-	border: 1px solid #d3d3d3;
-	background: #e6e6e6;
+	border: $ViewerControlBorder;
+	background: #fff;
 	font-weight: normal;
-	color: #555;
+	color: $BlueColour;
 }
 
 #sliderFGMap a {
 	text-align: center;
-	vertical-align: middle;
+	line-height: 1.2em;
 	text-decoration: none
 }
 
 #slidervalue {
 	position: absolute;
 	left: 0;
-	top: 17px;
+	top: 15px;
 	color: #000;
 	background-color: #fff;
 	line-height: 15px;

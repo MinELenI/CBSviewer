@@ -634,6 +634,7 @@
 										<include>**/WMSGetFeatureInfo.js</include>
 										<include>**/UpdateLegendControl.js</include>
 										<include>**/ClickDrawControl.js</include>
+										<include>**/OverviewMap.js</include>
 										<include>**/Viewer.js</include>
 										<include>**/ZoekFormulier.js</include>
 									</includes>

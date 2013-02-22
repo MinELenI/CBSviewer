@@ -14,6 +14,7 @@
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<meta http-equiv="Content-Language" content="nl-NL" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 		<meta name="DCTERMS.type" scheme="OVERHEID.Informatietype" content="webpagina" />
@@ -43,7 +44,6 @@
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
 		]]>
-		<link rel="stylesheet" href="css/print.css" type="text/css"
-			media="print" />
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 	</jsp:text>
 </jsp:root>
