@@ -165,8 +165,8 @@
 </codefragment>
 </duplication>
 <duplication lines="18" tokens="132">
-<file line="558" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
-<file line="628" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="556" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+<file line="626" path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
 <codefragment>
 <![CDATA[
 		for (int l = 0; l < layerNames.length; l++) {
