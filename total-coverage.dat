@@ -916,6 +916,6 @@ DA:3,228
 DA:4,0
 DA:5,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-ui-1.10.0.custom.min.js
+SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-ui-1.10.1.custom.min.js
 DA:6,1
 end_of_record
