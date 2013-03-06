@@ -163,10 +163,9 @@ var setupPage = {
 		jQuery('#' + config.mapDiv).prepend(aCore);
 
 		ZoekFormulier.init();
-		ZoekFormulier.addPlaceholders();
 
 		// uitvouwen van de accordion na change event, klap de legenda in voor
-		// meer duideijkheid voor de gebruiker
+		// meer duidelijkheid voor de gebruiker
 		jQuery('#' + config.featureInfoDiv).change(function() {
 			if (jQuery('#keyfeatureinfo a').attr('class') != 'active') {
 				jQuery('#keyfeatureinfo a').next().stop(true, true).slideToggle('normal');

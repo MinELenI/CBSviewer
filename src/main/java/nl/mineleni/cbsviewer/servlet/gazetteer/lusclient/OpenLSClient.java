@@ -1,6 +1,9 @@
 package nl.mineleni.cbsviewer.servlet.gazetteer.lusclient;
 
 import static javax.servlet.http.HttpServletResponse.SC_OK;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_GEMEENTE;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_PLAATS;
+import static nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddress.APPEND_PROVINCIE;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -23,9 +26,13 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.params.ConnRoutePNames;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.PoolingClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -54,7 +61,15 @@ public class OpenLSClient {
 	 * {@code http.proxyHost} en {@code http.proxyPort}.
 	 */
 	public OpenLSClient() {
-		this.client = new DefaultHttpClient();
+		SchemeRegistry schemeRegistry = new SchemeRegistry();
+		schemeRegistry.register(new Scheme("http", 80, PlainSocketFactory
+				.getSocketFactory()));
+		PoolingClientConnectionManager cm = new PoolingClientConnectionManager(
+				schemeRegistry);
+		cm.setMaxTotal(200);
+		cm.setDefaultMaxPerRoute(20);
+
+		this.client = new DefaultHttpClient(cm);
 		final String pHost = System.getProperty("http.proxyHost");
 		int pPort = -1;
 		try {
@@ -90,8 +105,12 @@ public class OpenLSClient {
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				qs.append(URLEncoder.encode(getParam.getKey(), "UTF-8"))
 						.append("=")
-						.append(URLEncoder.encode(getParam.getValue(), "UTF-8"))
-						.append("&");
+						.append(URLEncoder.encode(
+								(getParam.getValue())
+										.replaceAll(APPEND_GEMEENTE, "")
+										.replaceAll(APPEND_PLAATS, "")
+										.replaceAll(APPEND_PROVINCIE, ""),
+								"UTF-8")).append("&");
 			}
 		} catch (final UnsupportedEncodingException e) {
 			LOGGER.error("De gebruikte Java VM ondersteunt geen UTF-8 encoding: "
@@ -181,7 +200,9 @@ public class OpenLSClient {
 			for (final Entry<String, String> getParam : getParams.entrySet()) {
 				nvps.add(new BasicNameValuePair(URLEncoder.encode(
 						getParam.getKey(), "UTF-8"), URLEncoder.encode(
-						getParam.getValue(), "UTF-8")));
+						(getParam.getValue()).replaceAll(APPEND_GEMEENTE, "")
+								.replaceAll(APPEND_PLAATS, "")
+								.replaceAll(APPEND_PROVINCIE, ""), "UTF-8")));
 			}
 			httppost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
 

@@ -121,7 +121,10 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 		if (addrl.size() < 1) {
 			return "[]";
 		} else {
-			String json = new JSONSerializer().exclude("class")
+			final String json = new JSONSerializer()
+					.exclude("class", "validClientAddress", "municipality")
+					.exclude("countrySubdivision", "municipalitySubdivision")
+					.exclude("streetName", "streetNumber", "postalCode")
 					.transform(new NumberTransformer(), "xCoord", "yCoord")
 					.prettyPrint(LOGGER.isDebugEnabled()).serialize(addrl);
 			LOGGER.debug("json: " + json);
@@ -148,7 +151,7 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 		LOGGER.debug("Zoeken naar: " + zoekTerm);
 		if (zoekTerm.length() < 1) {
 			request.setAttribute(REQ_PARAM_GEVONDEN.code,
-					_RESOURCES.getString("KEY_ZOEKEN_NIETS_INGEVULD"));
+					this._RESOURCES.getString("KEY_ZOEKEN_NIETS_INGEVULD"));
 			if (forwardResponse) {
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
@@ -161,15 +164,15 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 			final GeocodeResponse gcr = this.openLSClient.doGetOpenLSRequest(
 					this.openLSServerUrl, openLSParams);
 			final List<OpenLSClientAddress> addrl = OpenLSClientUtil
-					.getOpenLSClientAddressList(gcr, openLSmaxResults);
+					.getOpenLSClientAddressList(gcr, this.openLSmaxResults);
 
 			if (forwardResponse) {
 				if (addrl.isEmpty()) {
 					// niets gevonden
-					LOGGER.debug(_RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES")
-							+ zoekTerm);
+					LOGGER.debug(this._RESOURCES
+							.getString("KEY_ZOEKEN_GEEN_ADRES") + zoekTerm);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							_RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES"));
+							this._RESOURCES.getString("KEY_ZOEKEN_GEEN_ADRES"));
 				} else if (addrl.size() == 1) {
 					// 1 adres gevonden
 					LOGGER.debug("Er is 1 match gevonden voor: " + zoekTerm);
@@ -182,23 +185,23 @@ public class AdresZoekServlet extends AbstractWxSServlet {
 					request.setAttribute(REQ_PARAM_STRAAL.code,
 							addr.getRadius());
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							_RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES") + " "
-									+ addr.getAddressString());
+							this._RESOURCES.getString("KEY_ZOEKEN_EEN_ADRES")
+									+ " " + addr.getAddressString());
 				} else {
 					// meer dan 1 adressen gevonden
 					LOGGER.debug("Er is meer dan 1 match gevonden voor: "
 							+ zoekTerm);
 					request.setAttribute("adreslijst", addrl);
 					request.setAttribute(REQ_PARAM_GEVONDEN.code,
-							_RESOURCES.getString("KEY_ZOEKEN_MEER_ADRES"));
+							this._RESOURCES.getString("KEY_ZOEKEN_MEER_ADRES"));
 				}
 				request.getRequestDispatcher("/index.jsp").forward(request,
 						response);
 			} else {
 				// in geval van directe aanroep voor bijv. ajax
-				if (format != null && format.equalsIgnoreCase("json")) {
+				if ((format != null) && format.equalsIgnoreCase("json")) {
 					// geeft zoekresultaat als json
-					final String json = returnJson(addrl);
+					final String json = this.returnJson(addrl);
 					response.setCharacterEncoding("UTF-8");
 					response.setContentType("application/json");
 					response.setContentLength(json.length());

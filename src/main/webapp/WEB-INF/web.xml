@@ -21,7 +21,7 @@
 		<init-param>
 			<description>Servers die zijn toegestaan om te benaderen via deze proxy, scheiden door een ; [punt-komma]</description>
 			<param-name>allowed_hosts</param-name>
-			<param-value>geodata.nationaalgeoregister.nl; localhost</param-value>
+			<param-value>geodata.nationaalgeoregister.nl</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -52,8 +52,8 @@
 		</init-param> 
 		<!-- Alternatieve basemap van WhereGroup, alleen voor ontwikkeldoeleinden.
 			zie: http://www.wheregroup.com/de/osmwms -->
-		
-		<!--init-param>
+		<!-- 
+		<init-param>
 			<description>WMS capabilities url van achtergrond (topografie) kaart</description>
 			<param-name>bgCapabilitiesURL</param-name>
 			<param-value>http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.1.1</param-value>
@@ -67,8 +67,9 @@
 				Autobahn,Kraftfahrstrasse,Bundesstrasse,Landstrasse,einfache_Strasse,Zufahrtswege,Wohnstrasse,Wege, 
 				Inselpunkte,Kueste,Insel,Wasserbecken,Kanal,Baeche,Fluesse,Wasser,Gebaeude,Fussgaengerzone,Wiese,Wald,
 				Naherholungsgebiet,Park,unkultiviertes_Land,Gruenflaeche,Bauland,Industriegebiet,Landwirtschaft,Grenzen</param-value>
-		</init-param-->
-		
+		</init-param>
+		-->
+
 		<init-param>
 			<description>WMS capabilities url van achtergrond luchtfoto's</description>
 			<param-name>lufoCapabilitiesURL</param-name>
@@ -100,7 +101,7 @@
 		<init-param>
 			<description>max. aantal (op het scherm) weer te geven resultaten config parameter</description>
 			<param-name>openlsmaxresults</param-name>
-			<param-value>5</param-value>
+			<param-value>20</param-value>
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>

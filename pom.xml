@@ -55,12 +55,6 @@
 			<distribution>repo</distribution>
 		</license>
 		<license>
-			<name>MIT license</name>
-			<url>http://malsup.github.com/mit-license.txt</url>
-			<comments>For jQuery Form Plugin</comments>
-			<distribution>manual</distribution>
-		</license>
-		<license>
 			<name>GNU Lesser General Public License (LGPL)</name>
 			<comments>The binary distribution of this project includes part of Geotools.</comments>
 			<distribution>repo</distribution>
@@ -440,7 +434,6 @@
 							<preloadSources>
 								<source>src/main/webapp/lib/jquery-1.9.1.min.js</source>
 								<source>src/main/webapp/lib/jquery-ui-1.10.1.custom.min.js</source>
-								<source>src/main/webapp/lib/jquery.form.js</source>
 								<source>src/test/js/lib/OpenLayers-test.js</source>
 								<source>src/test/js/lib/jasmin_util.js</source>
 								<source>src/main/webapp/js/config.js</source>
