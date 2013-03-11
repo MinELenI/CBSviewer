@@ -1,4 +1,4 @@
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/KeyboardPoint.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/KeyboardPoint.js
 DA:17,1
 DA:28,0
 DA:31,0
@@ -50,7 +50,7 @@ DA:139,0
 DA:140,0
 DA:147,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/OverviewMap.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/OverviewMap.js
 DA:14,1
 DA:43,0
 DA:44,0
@@ -102,7 +102,7 @@ DA:122,0
 DA:123,0
 DA:125,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/UpdateLegendControl.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/UpdateLegendControl.js
 DA:17,1
 DA:37,0
 DA:38,0
@@ -138,7 +138,7 @@ DA:111,0
 DA:124,0
 DA:125,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/ClickDrawControl.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/ClickDrawControl.js
 DA:14,1
 DA:29,0
 DA:30,0
@@ -171,7 +171,7 @@ DA:119,0
 DA:120,0
 DA:122,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/KeyboardClick.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/KeyboardClick.js
 DA:21,1
 DA:24,0
 DA:25,0
@@ -205,7 +205,7 @@ DA:99,0
 DA:100,0
 DA:102,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/Viewer.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/Viewer.js
 DA:14,1
 DA:21,1
 DA:29,1
@@ -350,17 +350,17 @@ DA:471,0
 DA:473,0
 DA:483,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/WMSGetFeatureInfo.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/js/WMSGetFeatureInfo.js
 DA:14,1
 DA:27,0
 DA:28,0
 DA:29,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-1.9.1.min.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-1.9.1.min.js
 DA:3,228
 DA:4,0
 DA:5,0
 end_of_record
-SF:E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-ui-1.10.1.custom.min.js
+SF:/E:/jenkins/jobs/CBS-viewer-site/workspace/src/main/webapp/lib/jquery-ui-1.10.1.custom.min.js
 DA:6,1
 end_of_record

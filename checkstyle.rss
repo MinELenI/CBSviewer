@@ -8,7 +8,7 @@
     <language>en-us</language>
     <copyright>&#169;2012 - 2013 Ministerie EL&amp;I</copyright>
     <item>
-      <title>File: 51,
+      <title>File: 55,
              Errors: 0,
              Warnings: 112,
              Infos: 2
@@ -245,7 +245,7 @@
                   0
                 </td>
                 <td>
-                  39
+                  38
                 </td>
                 <td>
                   0
@@ -365,6 +365,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#MenuLabelsBundle.properties">MenuLabelsBundle.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#nl.mineleni.openls.databinding.openls.StreetAddress.java">nl/mineleni/openls/databinding/openls/StreetAddress.java</a>
                 </td>
                 <td>
@@ -427,7 +441,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   0
@@ -484,6 +498,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#DownloadLabelsBundle.properties">DownloadLabelsBundle.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
                 </td>
                 <td>
                   0
@@ -548,6 +576,20 @@
                           <tr>
                 <td>
                   <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#nl.mineleni.openls.databinding.gml.Pos.java">nl/mineleni/openls/databinding/gml/Pos.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#LabelsBundle.properties">LabelsBundle.properties</a>
                 </td>
                 <td>
                   0
@@ -638,6 +680,20 @@
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#HelpLabelsBundle.properties">HelpLabelsBundle.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
                 </td>
                 <td>
                   0
