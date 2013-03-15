@@ -61,8 +61,8 @@ var ZoekFormulier = {
 				// + ui.item.y + "," + ui.item.r : "Niets gekozen, de input was
 				// " + this.value);
 				if (ui.item) {
-					Viewer.zoomTo(ui.item.x, ui.item.y, ui.item.r);
-					Viewer.featureInfo(ui.item.x, ui.item.y);
+					Viewer.zoomTo(ui.item.x, ui.item.y, ui.item.r, true);
+					//Viewer.featureInfo(ui.item.x, ui.item.y);
 				}
 			},
 			// alleen items uit de lijst mogen ingevuld/gekozen worden

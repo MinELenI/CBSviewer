@@ -106,7 +106,7 @@ describe(
 						 "TypeError: Cannot call method 'scale' of null"
 						it('na aanroepen van zoomTo is de x coordinaat voor het midden van de kaart gelijk aan gevraagd en is zoomnivo anders.',
 								function() {
-									var x = 140000, y = 300000, r = 10000;
+									var x = 140000, y = 300000, r = 10000, withFeatureInfo = false;
 									Viewer.zoomTo(x, y, r);
 									var latlon = Viewer.getMap().getCenter();
 									expect(latlon.lon).toEqual(x);
@@ -135,22 +135,6 @@ describe(
 							expect(config.map.width).toEqual(parseInt(w));
 							expect(config.map.height).toEqual(parseInt(h));
 						});
-
-						/* recente aanpssingen in OpenLayers veroorzaken een null pointer in 
-						 "TypeError: Cannot call method 'containsLonLat' of null"
-						 
-						it('Na uitvoeren van featureInfo vallen de (x,y) binnen de kaart uitsnede.', function() {
-							Viewer.loadWMS(_wms);
-							var x = 145954, y = 457088;
-							//var lonlat = new OpenLayers.LonLat(x, y);
-							Viewer.featureInfo(x, y);
-							//expect(Viewer.getMap().getExtent().containsLonLat(lonlat)).toEqual(true);
-							expect(Viewer.getMap().getLayersByName("ClickDrawControl").length.toBe(1));
-							/* TODO
-							 * console.debug(Viewer.getMap().getLayersByName('ClickDrawControl'));
-							 * console.debug(Viewer.getMap().getLayersByClass('OpenLayers.Layer.Vector'));
-						});
-						*/
 					});
 
 		});
