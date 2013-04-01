@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.AvailableLayersBeanTest
-	c350 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AvailableLayersBeanTest.html">
+	c349 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AvailableLayersBeanTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBeanTest </td></tr>
 		</table></td></tr>
@@ -29,9 +29,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBeanTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBeanTest NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c350:p -> c354:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c349:p -> c353:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c354 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c353 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>

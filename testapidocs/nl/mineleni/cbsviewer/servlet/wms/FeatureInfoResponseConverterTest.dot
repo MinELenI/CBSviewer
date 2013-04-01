@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest
-	c482 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverterTest.html">
+	c481 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FeatureInfoResponseConverterTest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverterTest </td></tr>
 		</table></td></tr>
@@ -29,9 +29,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverterTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverterTest NAVASSOC nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c482:p -> c496:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c481:p -> c495:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c496 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c495 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LayerDescriptor </td></tr>
 		</table></td></tr>

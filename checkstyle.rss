@@ -6,12 +6,12 @@
     <link>http://mineleni.github.com/CBSviewer</link>
     <description>CBSviewer Webapp - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2012 - 2013 Ministerie EL&amp;I</copyright>
+    <copyright>&#169;2012 - 2013 Ministerie EZ</copyright>
     <item>
       <title>File: 56,
              Errors: 0,
-             Warnings: 113,
-             Infos: 2
+             Warnings: 106,
+             Infos: 0
       </title>
             <link>http://mineleni.github.com/CBSviewer/checkstyle.html</link>
       <description>
@@ -88,10 +88,10 @@
                   <a href="http://mineleni.github.com/CBSviewer/checkstyle.html#nl.mineleni.cbsviewer.servlet.AbstractBaseServlet.java">nl/mineleni/cbsviewer/servlet/AbstractBaseServlet.java</a>
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  3
+                  1
                 </td>
                 <td>
                   0
@@ -161,7 +161,7 @@
                   0
                 </td>
                 <td>
-                  8
+                  9
                 </td>
                 <td>
                   0
@@ -245,7 +245,7 @@
                   0
                 </td>
                 <td>
-                  38
+                  34
                 </td>
                 <td>
                   0
@@ -259,7 +259,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0
@@ -273,7 +273,7 @@
                   0
                 </td>
                 <td>
-                  6
+                  7
                 </td>
                 <td>
                   0
@@ -441,7 +441,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0
@@ -539,7 +539,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0

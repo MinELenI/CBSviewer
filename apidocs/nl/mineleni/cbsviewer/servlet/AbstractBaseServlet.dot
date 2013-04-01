@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.ReverseProxyServlet
-	c572 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReverseProxyServlet.html">
+	c571 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReverseProxyServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseProxyServlet </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReverseProxyServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c577 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	c576 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
@@ -42,21 +42,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc577 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	n0cc576 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc577 -> c577:p[arrowhead=none];
+	n0cc576 -> c576:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c578 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBaseServlet.html">
+	c577 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + USER_ID : String </td></tr>
 <tr><td align="left" balign="left"> + USER_PASSWORD : String </td></tr>
-<tr><td align="left" balign="left"> # _RESOURCES : LabelsBundle </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractBaseServlet() </td></tr>
@@ -67,26 +66,9 @@ digraph G {
 <tr><td align="left" balign="left"> + init(config : ServletConfig) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.util.LabelsBundle
-	c630 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/LabelsBundle.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LabelsBundle </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LabelsBundle() </td></tr>
-<tr><td align="left" balign="left"> + getOpenLayersLangBundle() : String </td></tr>
-<tr><td align="left" balign="left"> + getKeys() : Enumeration&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> # handleGetObject(key : String) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="../util/LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.ReverseProxyServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c578:p -> c572:p [dir=back,arrowtail=empty];
+	c577:p -> c571:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.AbstractWxSServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c578:p -> c577:p [dir=back,arrowtail=empty];
-	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet NAVASSOC nl.mineleni.cbsviewer.util.LabelsBundle
-	c578:p -> c630:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c577:p -> c576:p [dir=back,arrowtail=empty];
 }
 

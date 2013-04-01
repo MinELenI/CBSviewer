@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="51" tokens="367">
+      <file line="99"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+      <file line="135"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+      <codefragment><![CDATA[				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
+			}
+			break;
+		case "streetaddress":
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
+			}
+			break;
+		case "building":
+			final Building building = (Building) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
+			}
+			break;
+		case "street":
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
+			}
+			break;
+		case "place":
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).addPlace(place);
+			}
+			break;
+		case "postalcode":
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).setPostalCode(pc);
+			}
+			break;
+		default:
+			return;
+		}
+	}
+
+	/**
+	 * Gets the geocode request.
+	 * 
+	 * @return the geocode request
+	 */
+	public GeocodeRequest getGeocodeRequest() {]]></codefragment>
+   </duplication>
+   <duplication lines="49" tokens="277">
+      <file line="196"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+      <file line="270"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+      <codefragment><![CDATA[			break;
+		case "address":
+			final Address address = new Address();
+			this.objStack.push(address);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("countryCode")) {
+					address.setCountryCode(value);
+				}
+			}
+			break;
+		case "streetaddress":
+			this.objStack.push(new StreetAddress());
+			break;
+		case "building":
+			final Building building = new Building();
+			this.objStack.push(building);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("number")) {
+					building.setNumber(value);
+				}
+			}
+			break;
+		case "street":
+			this.objStack.push(new Street());
+			break;
+		case "place":
+			final Place place = new Place();
+			this.objStack.push(place);
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("type")) {
+					place.setType(value);
+				}
+			}
+			break;
+		case "postalcode":
+			this.objStack.push(new PostalCode());
+			break;
+		default:
+			return;
+		}
+
+	}
+}]]></codefragment>
+   </duplication>
+   <duplication lines="40" tokens="157">
+      <file line="56"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
+      <file line="60"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+      <codefragment><![CDATA[	public OpenLSRequestParser() {
+		final SAXParserFactory factory = SAXParserFactory.newInstance();
+		factory.setValidating(false);
+		try {
+			this.parser = factory.newSAXParser();
+		} catch (final ParserConfigurationException | SAXException e) {
+			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
+					e);
+		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
+	 */
+	@Override
+	public void characters(final char[] ch, final int start, final int length)
+			throws SAXException {
+		this.eValBuf.append(ch, start, length);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
+	 * java.lang.String, java.lang.String)
+	 */
+	@Override
+	public void endElement(final String uri, final String localName,
+			final String qName) throws SAXException {
+		final String[] nsName = qName.split(":");
+		String eName = "";
+		if (nsName.length > 1) {
+			eName = nsName[1];
+		} else {
+			eName = nsName[0];
+		}
+		switch (eName.toLowerCase()) {
+		case "address":]]></codefragment>
+   </duplication>
+   <duplication lines="18" tokens="132">
+      <file line="556"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+      <file line="626"
+            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+      <codefragment><![CDATA[		for (int l = 0; l < layerNames.length; l++) {
+			final String key = layerNames[l] + "::" + styleNames[l];
+			if (this.legendCache.containsKey(key)) {
+				// in de cache kijken of we deze legenda afbeelding nog
+				// hebben
+				final CacheImage cImg = this.legendCache.get(key);
+				if (null != cImg) {
+					// element zou verlopen kunnen zijn
+					legends[l] = new File(cImg.getName());
+					if (!legends[l].exists()) {
+						// (mogelijk) is het bestand gewist..
+						ImageIO.write(this.legendCache.get(key).getImage(),
+								"png", legends[l]);
+					}
+					LOGGER.debug("Legenda bestand uit cache: "
+							+ legends[l].getAbsolutePath());
+				}
+			} else {]]></codefragment>
+   </duplication>
+</pmd-cpd>

@@ -1,11 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ReverseProxyServlet.html" title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" alt="" coords="16,257,451,410"/>
-<area shape="rect" id="node1" href="./ReverseProxyServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,251,461,415"/>
-<area shape="rect" id="node2_1" href="./GeotoolsContextListener.html" title="nl.mineleni.cbsviewer.servlet.GeotoolsContextListener" alt="" coords="861,51,1157,157"/>
-<area shape="rect" id="node2" href="./GeotoolsContextListener.html" title="&lt;TABLE&gt;" alt="" coords="851,46,1168,162"/>
-<area shape="rect" id="node3_2" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="497,273,903,394"/>
-<area shape="rect" id="node3" href="./AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="486,267,914,399"/>
-<area shape="rect" id="node4_3" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="585,93,815,115"/>
-<area shape="rect" id="node6_4" href="./AbstractBaseServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" alt="" coords="228,11,439,197"/>
-<area shape="rect" id="node6" href="./AbstractBaseServlet.html" title="&lt;TABLE&gt;" alt="" coords="217,6,449,202"/>
+<area shape="rect" id="node1_0" href="./ReverseProxyServlet.html" title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" alt="" coords="16,241,451,394"/>
+<area shape="rect" id="node1" href="./ReverseProxyServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,235,461,399"/>
+<area shape="rect" id="node2_1" href="./GeotoolsContextListener.html" title="nl.mineleni.cbsviewer.servlet.GeotoolsContextListener" alt="" coords="861,43,1157,149"/>
+<area shape="rect" id="node2" href="./GeotoolsContextListener.html" title="&lt;TABLE&gt;" alt="" coords="851,38,1168,154"/>
+<area shape="rect" id="node3_2" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="497,257,903,378"/>
+<area shape="rect" id="node3" href="./AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="486,251,914,383"/>
+<area shape="rect" id="node4_3" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="585,85,815,107"/>
+<area shape="rect" id="node6_4" href="./AbstractBaseServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" alt="" coords="237,11,435,181"/>
+<area shape="rect" id="node6" href="./AbstractBaseServlet.html" title="&lt;TABLE&gt;" alt="" coords="226,6,446,186"/>
 </map>

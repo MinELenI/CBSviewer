@@ -40,7 +40,7 @@
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment">	 * @return de gefilterde input zoals in de filtermapping beschreven.</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">public</strong> String filterValue(String attribute, String layerID) {
+<a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">public</strong> String filterValue(<strong class="jxr_keyword">final</strong> String attribute, <strong class="jxr_keyword">final</strong> String layerID) {
 <a class="jxr_linenumber" name="34" href="#34">34</a>  		<strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong>.hasFilters(layerID)) {
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">final</strong> String[] aliases = <strong class="jxr_keyword">this</strong>.layers.getLayerByID(layerID)
 <a class="jxr_linenumber" name="36" href="#36">36</a>  					.getAliases().split(<span class="jxr_string">",&#92;&#92;s*"</span>);
@@ -64,7 +64,7 @@
 <a class="jxr_linenumber" name="54" href="#54">54</a>  <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment">	 * @return {@code true} als het filter inhoud heeft</em>
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> hasFilters(String layerID) {
+<a class="jxr_linenumber" name="57" href="#57">57</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> hasFilters(<strong class="jxr_keyword">final</strong> String layerID) {
 <a class="jxr_linenumber" name="58" href="#58">58</a>  		<strong class="jxr_keyword">return</strong> (<strong class="jxr_keyword">null</strong> != <strong class="jxr_keyword">this</strong>.layers.getLayerByID(layerID).getAliases());
 <a class="jxr_linenumber" name="59" href="#59">59</a>  	}
 <a class="jxr_linenumber" name="60" href="#60">60</a>  }

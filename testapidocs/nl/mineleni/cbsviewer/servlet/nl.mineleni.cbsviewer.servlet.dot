@@ -91,7 +91,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + USER_ID : String </td></tr>
 <tr><td align="left" balign="left"> + USER_PASSWORD : String </td></tr>
-<tr><td align="left" balign="left"> # _RESOURCES : LabelsBundle </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractBaseServlet() </td></tr>
