@@ -60,25 +60,8 @@ digraph G {
 <tr><td align="left" balign="left"> + doPostOpenLSRequest(url : String, getParams : Map&lt;String, String&gt;) : GeocodeResponse </td></tr>
 		</table></td></tr>
 		</table>>, URL="./lusclient/OpenLSClient.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.util.LabelsBundle
-	c798 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/LabelsBundle.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LabelsBundle </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LabelsBundle() </td></tr>
-<tr><td align="left" balign="left"> + getOpenLayersLangBundle() : String </td></tr>
-<tr><td align="left" balign="left"> + getKeys() : Enumeration&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> # handleGetObject(key : String) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../util/LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
 	c777:p -> c779:p [dir=back,arrowtail=empty];
-	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet NAVASSOC nl.mineleni.cbsviewer.util.LabelsBundle
-	c779:p -> c798:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet NAVASSOC nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient
 	c779:p -> c782:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }

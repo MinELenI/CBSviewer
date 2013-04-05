@@ -9,20 +9,6 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet
-	c1766 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../servlet/gazetteer/AdresZoekServlet.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AdresZoekServlet </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AdresZoekServlet() </td></tr>
-<tr><td align="left" balign="left"> + init(config : ServletConfig) </td></tr>
-<tr><td align="left" balign="left"> # service(request : HttpServletRequest, response : HttpServletResponse) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../servlet/gazetteer/AdresZoekServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.LabelsBundle
 	c1785 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LabelsBundle.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -38,7 +24,5 @@ digraph G {
 <tr><td align="left" balign="left"> # handleGetObject(key : String) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet NAVASSOC nl.mineleni.cbsviewer.util.LabelsBundle
-	c1766:p -> c1785:p [taillabel="", label="", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

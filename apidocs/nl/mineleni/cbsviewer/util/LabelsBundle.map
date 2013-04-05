@@ -1,6 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../servlet/gazetteer/AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="16,11,456,117"/>
-<area shape="rect" id="node1" href="../servlet/gazetteer/AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="5,6,467,122"/>
-<area shape="rect" id="node2_1" href="./LabelsBundle.html" title="nl.mineleni.cbsviewer.util.LabelsBundle" alt="" coords="109,177,363,298"/>
-<area shape="rect" id="node2" href="./LabelsBundle.html" title="&lt;TABLE&gt;" alt="" coords="99,171,373,303"/>
+<area shape="rect" id="node1_0" href="./LabelsBundle.html" title="nl.mineleni.cbsviewer.util.LabelsBundle" alt="" coords="16,11,269,133"/>
+<area shape="rect" id="node1" href="./LabelsBundle.html" title="&lt;TABLE&gt;" alt="" coords="5,6,280,138"/>
 </map>
