@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.0.2" timestamp="2013-04-01T11:11:16.958">
+<pmd version="5.0.2" timestamp="2013-04-05T10:58:36.402">
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractBaseServlet.java">
 <violation beginline="37" endline="37" begincolumn="24" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="nl.mineleni.cbsviewer.servlet" class="AbstractBaseServlet" variable="proxyHost" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
@@ -1256,16 +1256,16 @@ A method should have only one exit point, and that should be the last statement 
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java">
-<violation beginline="7" endline="924" begincolumn="1" endcolumn="2" rule="ExcessiveImports" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#ExcessiveImports" priority="3">
+<violation beginline="7" endline="925" begincolumn="1" endcolumn="2" rule="ExcessiveImports" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#ExcessiveImports" priority="3">
 A high number of imports can indicate a high degree of coupling within an object.
 </violation>
-<violation beginline="7" endline="924" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statements" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#TooManyStaticImports" priority="3">
+<violation beginline="7" endline="925" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statements" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
 </violation>
-<violation beginline="75" endline="924" begincolumn="8" endcolumn="1" rule="GodClass" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#GodClass" priority="3">
-Possible God class (WMC=83, ATFD=109, TCC=0.10256410256410256)
+<violation beginline="75" endline="925" begincolumn="8" endcolumn="1" rule="GodClass" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#GodClass" priority="3">
+Possible God class (WMC=83, ATFD=110, TCC=0.10256410256410256)
 </violation>
-<violation beginline="75" endline="924" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+<violation beginline="75" endline="925" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
 The class 'WMSClientServlet' has a Cyclomatic Complexity of 6 (Highest = 13).
 </violation>
 <violation beginline="108" endline="108" begincolumn="40" endcolumn="51" rule="RedundantFieldInitializer" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" variable="bgWMS" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#RedundantFieldInitializer" priority="3">
@@ -1391,8 +1391,11 @@ Found 'UR'-anomaly for variable 'layer' (lines '250'-'272').
 <violation beginline="250" endline="266" begincolumn="41" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" variable="lyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'UR'-anomaly for variable 'lyr' (lines '250'-'266').
 </violation>
-<violation beginline="250" endline="343" begincolumn="17" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+<violation beginline="250" endline="344" begincolumn="17" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
 The method 'getBackGroundMap' has a Cyclomatic Complexity of 13.
+</violation>
+<violation beginline="254" endline="300" begincolumn="17" endcolumn="17" rule="SwitchDensity" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#SwitchDensity" priority="3">
+A high ratio of statements to labels in a switch statement.  Consider refactoring.
 </violation>
 <violation beginline="254" endline="254" begincolumn="25" endcolumn="49" rule="UseLocaleWithCaseConversions" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
 When doing a String.toLowerCase()/toUpperCase() call, use a Locale
@@ -1424,332 +1427,329 @@ Potential violation of Law of Demeter (method chain calls)
 <violation beginline="272" endline="272" begincolumn="41" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="281" endline="281" begincolumn="33" endcolumn="44" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="275" endline="275" begincolumn="25" endcolumn="51" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="282" endline="282" begincolumn="33" endcolumn="44" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="283" endline="283" begincolumn="33" endcolumn="70" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="284" endline="284" begincolumn="33" endcolumn="70" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="286" endline="297" begincolumn="25" endcolumn="25" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
+<violation beginline="287" endline="298" begincolumn="25" endcolumn="25" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
 Avoid if (x != y) ..; else ..;
 </violation>
-<violation beginline="287" endline="287" begincolumn="38" endcolumn="53" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" variable="lyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="288" endline="288" begincolumn="38" endcolumn="53" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" variable="lyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="289" endline="289" begincolumn="41" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="290" endline="290" begincolumn="41" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="293" endline="293" begincolumn="38" endcolumn="54" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="294" endline="294" begincolumn="38" endcolumn="54" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="293" endline="294" begincolumn="58" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="294" endline="295" begincolumn="58" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="293" endline="294" begincolumn="58" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="294" endline="295" begincolumn="58" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="295" endline="295" begincolumn="41" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="296" endline="296" begincolumn="41" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="300" endline="300" begincolumn="17" endcolumn="42" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="299" endline="299" begincolumn="25" endcolumn="50" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="301" endline="301" begincolumn="17" endcolumn="63" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="302" endline="302" begincolumn="17" endcolumn="63" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="302" endline="302" begincolumn="17" endcolumn="40" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="303" endline="303" begincolumn="17" endcolumn="40" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="303" endline="303" begincolumn="17" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="304" endline="304" begincolumn="17" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="304" endline="304" begincolumn="17" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="305" endline="305" begincolumn="17" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="305" endline="305" begincolumn="17" endcolumn="40" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="306" endline="306" begincolumn="17" endcolumn="40" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="306" endline="306" begincolumn="17" endcolumn="33" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="307" endline="307" begincolumn="17" endcolumn="33" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="308" endline="308" begincolumn="59" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="309" endline="309" begincolumn="59" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="308" endline="308" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="309" endline="309" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="312" endline="312" begincolumn="66" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="313" endline="313" begincolumn="66" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="313" endline="313" begincolumn="33" endcolumn="57" rule="UseLocaleWithCaseConversions" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
+<violation beginline="314" endline="314" begincolumn="33" endcolumn="57" rule="UseLocaleWithCaseConversions" ruleset="Design" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
 When doing a String.toLowerCase()/toUpperCase() call, use a Locale
 </violation>
-<violation beginline="328" endline="328" begincolumn="49" endcolumn="54" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
-The String literal &quot;.png&quot; appears 4 times in this file; the first occurrence is on line 328
+<violation beginline="329" endline="329" begincolumn="49" endcolumn="54" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.png&quot; appears 4 times in this file; the first occurrence is on line 329
 </violation>
-<violation beginline="332" endline="332" begincolumn="54" endcolumn="58" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
-The String literal &quot;png&quot; appears 6 times in this file; the first occurrence is on line 332
+<violation beginline="333" endline="333" begincolumn="54" endcolumn="58" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getBackGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;png&quot; appears 6 times in this file; the first occurrence is on line 333
 </violation>
-<violation beginline="360" endline="360" begincolumn="25" endcolumn="74" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getCachedWMS" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="361" endline="361" begincolumn="25" endcolumn="74" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getCachedWMS" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="384" endline="411" begincolumn="53" endcolumn="96" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'layerName' (lines '384'-'411').
+<violation beginline="385" endline="412" begincolumn="53" endcolumn="96" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'layerName' (lines '385'-'412').
 </violation>
-<violation beginline="384" endline="408" begincolumn="37" endcolumn="83" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="wmsLyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'wmsLyr' (lines '384'-'408').
+<violation beginline="385" endline="409" begincolumn="37" endcolumn="83" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="wmsLyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'wmsLyr' (lines '385'-'409').
 </violation>
-<violation beginline="393" endline="393" begincolumn="33" endcolumn="55" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="394" endline="394" begincolumn="33" endcolumn="55" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="393" endline="393" begincolumn="40" endcolumn="54" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="394" endline="394" begincolumn="40" endcolumn="54" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="402" endline="441" begincolumn="40" endcolumn="86" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'layerNames' (lines '402'-'441').
+<violation beginline="403" endline="442" begincolumn="40" endcolumn="86" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'layerNames' (lines '403'-'442').
 </violation>
-<violation beginline="402" endline="402" begincolumn="53" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="403" endline="403" begincolumn="53" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="402" endline="402" begincolumn="79" endcolumn="85" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
-The String literal &quot;,\\s*&quot; appears 7 times in this file; the first occurrence is on line 402
+<violation beginline="403" endline="403" begincolumn="79" endcolumn="85" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;,\\s*&quot; appears 7 times in this file; the first occurrence is on line 403
 </violation>
-<violation beginline="407" endline="407" begincolumn="30" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="wmsLyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="408" endline="408" begincolumn="30" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="wmsLyr" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="407" endline="407" begincolumn="51" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="408" endline="408" begincolumn="51" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="409" endline="409" begincolumn="52" endcolumn="83" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="410" endline="410" begincolumn="52" endcolumn="83" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="409" endline="409" begincolumn="53" endcolumn="77" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="410" endline="410" begincolumn="53" endcolumn="77" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="410" endline="410" begincolumn="46" endcolumn="67" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="411" endline="411" begincolumn="46" endcolumn="67" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" variable="layerName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="411" endline="411" begincolumn="53" endcolumn="96" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="412" endline="412" begincolumn="53" endcolumn="96" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="417" endline="417" begincolumn="25" endcolumn="73" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="418" endline="418" begincolumn="25" endcolumn="73" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="418" endline="418" begincolumn="25" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="419" endline="419" begincolumn="25" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="419" endline="419" begincolumn="25" endcolumn="65" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="420" endline="420" begincolumn="25" endcolumn="65" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="420" endline="421" begincolumn="25" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="421" endline="422" begincolumn="25" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="422" endline="422" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="423" endline="423" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="423" endline="423" begincolumn="43" endcolumn="77" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="424" endline="424" begincolumn="43" endcolumn="77" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="428" endline="428" begincolumn="61" endcolumn="85" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="429" endline="429" begincolumn="61" endcolumn="85" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="433" endline="433" begincolumn="25" endcolumn="36" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="434" endline="434" begincolumn="25" endcolumn="36" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="436" endline="438" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="437" endline="439" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="436" endline="438" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="437" endline="439" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="436" endline="438" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="437" endline="439" begincolumn="25" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getFeatureInfo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="464" endline="464" begincolumn="33" endcolumn="55" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="465" endline="465" begincolumn="33" endcolumn="55" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="464" endline="464" begincolumn="40" endcolumn="54" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="465" endline="465" begincolumn="40" endcolumn="54" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
-</violation>
-<violation beginline="472" endline="472" begincolumn="53" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="473" endline="513" begincolumn="40" endcolumn="86" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" variable="styleNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'styleNames' (lines '473'-'513').
 </violation>
 <violation beginline="473" endline="473" begincolumn="53" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="485" endline="486" begincolumn="25" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="474" endline="514" begincolumn="40" endcolumn="86" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" variable="styleNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'styleNames' (lines '474'-'514').
+</violation>
+<violation beginline="474" endline="474" begincolumn="53" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="485" endline="486" begincolumn="25" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="486" endline="487" begincolumn="25" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="485" endline="485" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="486" endline="487" begincolumn="25" endcolumn="75" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="486" endline="486" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="491" endline="491" begincolumn="66" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="492" endline="492" begincolumn="66" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getForeGroundMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="532" endline="532" begincolumn="25" endcolumn="71" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="533" endline="533" begincolumn="25" endcolumn="71" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="550" endline="576" begincolumn="45" endcolumn="91" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'layer' (lines '550'-'576').
+<violation beginline="551" endline="577" begincolumn="45" endcolumn="91" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'layer' (lines '551'-'577').
 </violation>
-<violation beginline="550" endline="579" begincolumn="61" endcolumn="107" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="style" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'style' (lines '550'-'579').
+<violation beginline="551" endline="580" begincolumn="61" endcolumn="107" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="style" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'style' (lines '551'-'580').
 </violation>
-<violation beginline="550" endline="602" begincolumn="17" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+<violation beginline="551" endline="603" begincolumn="17" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
 The method 'getLegendsFromLayerStyles' has a Cyclomatic Complexity of 11.
-</violation>
-<violation beginline="552" endline="552" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
 </violation>
 <violation beginline="553" endline="553" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="554" endline="564" begincolumn="41" endcolumn="77" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '554'-'564').
+<violation beginline="554" endline="554" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="554" endline="587" begincolumn="81" endcolumn="127" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '554'-'587').
+<violation beginline="555" endline="565" begincolumn="41" endcolumn="77" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '555'-'565').
 </violation>
-<violation beginline="564" endline="564" begincolumn="54" endcolumn="77" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+<violation beginline="555" endline="588" begincolumn="81" endcolumn="127" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '555'-'588').
+</violation>
+<violation beginline="565" endline="565" begincolumn="54" endcolumn="77" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
 Avoid instantiating new objects inside loops
 </violation>
-<violation beginline="565" endline="565" begincolumn="46" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="566" endline="566" begincolumn="46" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="565" endline="565" begincolumn="46" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="566" endline="566" begincolumn="46" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="567" endline="568" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="568" endline="569" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="567" endline="568" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="568" endline="569" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="567" endline="568" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="568" endline="569" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="567" endline="568" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="568" endline="569" begincolumn="49" endcolumn="82" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="570" endline="571" begincolumn="41" endcolumn="87" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="571" endline="572" begincolumn="41" endcolumn="87" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="570" endline="571" begincolumn="41" endcolumn="87" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="571" endline="572" begincolumn="41" endcolumn="87" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="570" endline="570" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="571" endline="571" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="571" endline="571" begincolumn="59" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="572" endline="572" begincolumn="59" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="571" endline="571" begincolumn="59" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="572" endline="572" begincolumn="59" endcolumn="86" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="574" endline="574" begincolumn="38" endcolumn="54" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="575" endline="575" begincolumn="38" endcolumn="54" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="layer" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="576" endline="576" begincolumn="45" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="577" endline="577" begincolumn="45" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="576" endline="576" begincolumn="45" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="577" endline="577" begincolumn="45" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="578" endline="578" begincolumn="54" endcolumn="74" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="style" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="579" endline="579" begincolumn="54" endcolumn="74" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="style" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="579" endline="579" begincolumn="61" endcolumn="107" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="580" endline="580" begincolumn="61" endcolumn="107" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="579" endline="579" begincolumn="61" endcolumn="107" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="580" endline="580" begincolumn="61" endcolumn="107" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="581" endline="582" begincolumn="99" endcolumn="103" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="582" endline="583" begincolumn="99" endcolumn="103" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="583" endline="583" begincolumn="65" endcolumn="76" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="584" endline="584" begincolumn="65" endcolumn="76" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="587" endline="564" begincolumn="41" endcolumn="77" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '587'-'564').
+<violation beginline="588" endline="565" begincolumn="41" endcolumn="77" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '588'-'565').
 </violation>
-<violation beginline="587" endline="587" begincolumn="81" endcolumn="127" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '587'-'587').
+<violation beginline="588" endline="588" begincolumn="81" endcolumn="127" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '588'-'588').
 </violation>
-<violation beginline="588" endline="588" begincolumn="103" endcolumn="120" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+<violation beginline="589" endline="589" begincolumn="103" endcolumn="120" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromLayerStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
 Avoid instantiating new objects inside loops
-</violation>
-<violation beginline="619" endline="619" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="620" endline="666" begincolumn="32" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="styleNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'styleNames' (lines '620'-'666').
 </violation>
 <violation beginline="620" endline="620" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="621" endline="635" begincolumn="49" endcolumn="85" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '621'-'635').
+<violation beginline="621" endline="667" begincolumn="32" endcolumn="78" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="styleNames" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'styleNames' (lines '621'-'667').
 </violation>
-<violation beginline="621" endline="655" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '621'-'655').
+<violation beginline="621" endline="621" begincolumn="45" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="621" endline="666" begincolumn="30" endcolumn="66" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'legends' (lines '621'-'666').
+<violation beginline="622" endline="636" begincolumn="49" endcolumn="85" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '622'-'636').
 </violation>
-<violation beginline="624" endline="666" begincolumn="55" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legend" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'legend' (lines '624'-'666').
+<violation beginline="622" endline="656" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '622'-'656').
 </violation>
-<violation beginline="635" endline="635" begincolumn="62" endcolumn="85" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+<violation beginline="622" endline="667" begincolumn="30" endcolumn="66" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'legends' (lines '622'-'667').
+</violation>
+<violation beginline="625" endline="667" begincolumn="55" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legend" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'legend' (lines '625'-'667').
+</violation>
+<violation beginline="636" endline="636" begincolumn="62" endcolumn="85" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
 Avoid instantiating new objects inside loops
 </violation>
-<violation beginline="635" endline="635" begincolumn="71" endcolumn="84" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="636" endline="636" begincolumn="71" endcolumn="84" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="636" endline="636" begincolumn="54" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="637" endline="637" begincolumn="54" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="636" endline="636" begincolumn="54" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="637" endline="637" begincolumn="54" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="638" endline="639" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="639" endline="640" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="638" endline="639" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="639" endline="640" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="638" endline="639" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="639" endline="640" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="638" endline="639" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="639" endline="640" begincolumn="57" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="641" endline="642" begincolumn="49" endcolumn="95" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="642" endline="643" begincolumn="49" endcolumn="95" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="641" endline="642" begincolumn="49" endcolumn="95" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="642" endline="643" begincolumn="49" endcolumn="95" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="641" endline="641" begincolumn="49" endcolumn="60" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="642" endline="642" begincolumn="49" endcolumn="60" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="642" endline="642" begincolumn="67" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="643" endline="643" begincolumn="67" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="642" endline="642" begincolumn="67" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="643" endline="643" begincolumn="67" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="646" endline="646" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="646" endline="646" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (object not created locally)
 </violation>
 <violation beginline="647" endline="647" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
@@ -1757,121 +1757,127 @@ Potential violation of Law of Demeter (method chain calls)
 <violation beginline="647" endline="647" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="648" endline="648" begincolumn="41" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="648" endline="648" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="648" endline="648" begincolumn="41" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="649" endline="649" begincolumn="41" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="649" endline="649" begincolumn="41" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="651" endline="651" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="650" endline="650" begincolumn="41" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="652" endline="652" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="652" endline="652" begincolumn="59" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="653" endline="653" begincolumn="59" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="655" endline="635" begincolumn="49" endcolumn="85" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '655'-'635').
+<violation beginline="656" endline="636" begincolumn="49" endcolumn="85" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '656'-'636').
 </violation>
-<violation beginline="655" endline="655" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'legends' (lines '655'-'655').
+<violation beginline="656" endline="656" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'legends' (lines '656'-'656').
 </violation>
-<violation beginline="655" endline="666" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'legends' (lines '655'-'666').
+<violation beginline="656" endline="667" begincolumn="41" endcolumn="101" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" variable="legends" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'legends' (lines '656'-'667').
 </violation>
-<violation beginline="656" endline="656" begincolumn="70" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="657" endline="657" begincolumn="70" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="660" endline="662" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="661" endline="663" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="660" endline="662" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="661" endline="663" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="660" endline="662" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="661" endline="663" begincolumn="25" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="663" endline="663" begincolumn="25" endcolumn="36" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="664" endline="664" begincolumn="25" endcolumn="36" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getLegendsFromService" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="682" endline="682" begincolumn="63" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="683" endline="683" begincolumn="63" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'alpha' is not assigned and could be declared final
 </violation>
-<violation beginline="689" endline="689" begincolumn="17" endcolumn="57" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="690" endline="690" begincolumn="17" endcolumn="57" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="693" endline="693" begincolumn="25" endcolumn="62" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="694" endline="694" begincolumn="25" endcolumn="62" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="696" endline="696" begincolumn="52" endcolumn="66" rule="UseProperClassLoader" ruleset="J2EE" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/j2ee.html#UseProperClassLoader" priority="3">
+<violation beginline="697" endline="697" begincolumn="52" endcolumn="66" rule="UseProperClassLoader" ruleset="J2EE" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/j2ee.html#UseProperClassLoader" priority="3">
 In J2EE, getClassLoader() might not work as expected.  Use Thread.currentThread().getContextClassLoader() instead.
 </violation>
-<violation beginline="700" endline="701" begincolumn="25" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="701" endline="702" begincolumn="25" endcolumn="72" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="712" endline="712" begincolumn="17" endcolumn="27" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="713" endline="713" begincolumn="17" endcolumn="27" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="getMap" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="740" endline="740" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="cacheLegend" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="741" endline="741" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="cacheLegend" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="752" endline="842" begincolumn="16" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+<violation beginline="753" endline="843" begincolumn="16" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
 The method 'init' has a Cyclomatic Complexity of 13.
 </violation>
-<violation beginline="752" endline="842" begincolumn="16" endcolumn="9" rule="NPathComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#NPathComplexity" priority="3">
+<violation beginline="753" endline="843" begincolumn="16" endcolumn="9" rule="NPathComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#NPathComplexity" priority="3">
 The method init() has an NPath complexity of 576
 </violation>
-<violation beginline="785" endline="785" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="786" endline="786" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="806" endline="806" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="807" endline="807" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="814" endline="814" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="815" endline="815" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="835" endline="835" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="836" endline="836" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="861" endline="867" begincolumn="33" endcolumn="75" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="alpha" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'alpha' (lines '861'-'867').
+<violation beginline="862" endline="868" begincolumn="33" endcolumn="75" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="alpha" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'alpha' (lines '862'-'868').
 </violation>
-<violation beginline="869" endline="873" begincolumn="33" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="alpha" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'alpha' (lines '869'-'873').
+<violation beginline="870" endline="874" begincolumn="33" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="alpha" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'alpha' (lines '870'-'874').
 </violation>
-<violation beginline="877" endline="877" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="878" endline="878" begincolumn="17" endcolumn="28" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="879" endline="882" begincolumn="25" endcolumn="43" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="basemaptype" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'basemaptype' (lines '879'-'882').
+<violation beginline="880" endline="883" begincolumn="25" endcolumn="43" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="basemaptype" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'basemaptype' (lines '880'-'883').
 </violation>
-<violation beginline="884" endline="884" begincolumn="17" endcolumn="81" rule="PrematureDeclaration" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="bg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#PrematureDeclaration" priority="3">
+<violation beginline="885" endline="885" begincolumn="17" endcolumn="81" rule="PrematureDeclaration" ruleset="Optimization" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="bg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#PrematureDeclaration" priority="3">
 Avoid declaring a variable if it is unreferenced before a possible exit point.
 </violation>
-<violation beginline="884" endline="923" begincolumn="37" endcolumn="81" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="bg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'bg' (lines '884'-'923').
+<violation beginline="885" endline="924" begincolumn="37" endcolumn="81" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="bg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'bg' (lines '885'-'924').
 </violation>
-<violation beginline="886" endline="897" begincolumn="33" endcolumn="71" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="fg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'fg' (lines '886'-'897').
+<violation beginline="887" endline="898" begincolumn="33" endcolumn="71" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="fg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'fg' (lines '887'-'898').
 </violation>
-<violation beginline="890" endline="890" begincolumn="57" endcolumn="71" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="891" endline="891" begincolumn="57" endcolumn="71" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="891" endline="891" begincolumn="69" endcolumn="83" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="892" endline="892" begincolumn="69" endcolumn="83" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="891" endline="891" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="892" endline="892" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="893" endline="893" begincolumn="58" endcolumn="71" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="894" endline="894" begincolumn="58" endcolumn="71" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="894" endline="894" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="895" endline="895" begincolumn="25" endcolumn="36" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="897" endline="923" begincolumn="33" endcolumn="71" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="fg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'fg' (lines '897'-'923').
+<violation beginline="898" endline="924" begincolumn="33" endcolumn="71" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" variable="fg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'fg' (lines '898'-'924').
 </violation>
-<violation beginline="904" endline="904" begincolumn="49" endcolumn="63" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="905" endline="905" begincolumn="49" endcolumn="63" rule="LawOfDemeter" ruleset="Coupling" package="nl.mineleni.cbsviewer.servlet.wms" class="WMSClientServlet" method="service" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
 </file>
@@ -2241,10 +2247,10 @@ Avoid using final local variables, turn them into fields
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\databinding\gml\Point.java">
-<violation beginline="40" endline="40" begincolumn="23" endcolumn="33" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.gml" class="Point" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
+<violation beginline="40" endline="40" begincolumn="23" endcolumn="33" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.gml" class="Point" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
-<violation beginline="40" endline="40" begincolumn="23" endcolumn="33" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.gml" class="Point" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
+<violation beginline="40" endline="40" begincolumn="23" endcolumn="33" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.gml" class="Point" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
 <violation beginline="40" endline="40" begincolumn="23" endcolumn="33" rule="ReplaceVectorWithList" ruleset="Migration" package="nl.mineleni.openls.databinding.gml" class="Point" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/migrating.html#ReplaceVectorWithList" priority="3">
@@ -2353,10 +2359,10 @@ Prefer StringBuffer over += for concatenating strings
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\databinding\openls\Address.java">
-<violation beginline="59" endline="59" begincolumn="23" endcolumn="35" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.openls" class="Address" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
+<violation beginline="59" endline="59" begincolumn="23" endcolumn="35" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.openls" class="Address" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
-<violation beginline="59" endline="59" begincolumn="23" endcolumn="35" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.openls" class="Address" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
+<violation beginline="59" endline="59" begincolumn="23" endcolumn="35" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.openls" class="Address" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
 <violation beginline="59" endline="59" begincolumn="23" endcolumn="35" rule="ReplaceVectorWithList" ruleset="Migration" package="nl.mineleni.openls.databinding.openls" class="Address" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/migrating.html#ReplaceVectorWithList" priority="3">
@@ -2524,10 +2530,10 @@ Avoid using final local variables, turn them into fields
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\databinding\openls\GeocodeResponse.java">
-<violation beginline="39" endline="39" begincolumn="23" endcolumn="49" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.openls" class="GeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
+<violation beginline="39" endline="39" begincolumn="23" endcolumn="49" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.openls" class="GeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
-<violation beginline="39" endline="39" begincolumn="23" endcolumn="49" rule="LooseCoupling" ruleset="Type Resolution" package="nl.mineleni.openls.databinding.openls" class="GeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/typeresolution.html#LooseCoupling" priority="3">
+<violation beginline="39" endline="39" begincolumn="23" endcolumn="49" rule="LooseCoupling" ruleset="Coupling" package="nl.mineleni.openls.databinding.openls" class="GeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/coupling.html#LooseCoupling" priority="3">
 Avoid using implementation types like 'Vector'; use the interface instead
 </violation>
 <violation beginline="39" endline="39" begincolumn="23" endcolumn="49" rule="ReplaceVectorWithList" ruleset="Migration" package="nl.mineleni.openls.databinding.openls" class="GeocodeResponse" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/migrating.html#ReplaceVectorWithList" priority="3">

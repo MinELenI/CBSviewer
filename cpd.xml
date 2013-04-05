@@ -159,9 +159,9 @@
 		case "address":]]></codefragment>
    </duplication>
    <duplication lines="18" tokens="132">
-      <file line="556"
+      <file line="557"
             path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
-      <file line="626"
+      <file line="627"
             path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
       <codefragment><![CDATA[		for (int l = 0; l < layerNames.length; l++) {
 			final String key = layerNames[l] + "::" + styleNames[l];
