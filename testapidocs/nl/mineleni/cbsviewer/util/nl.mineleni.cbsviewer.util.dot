@@ -71,7 +71,8 @@ digraph G {
 <tr><td align="left" balign="left"> + testAsJSON() </td></tr>
 <tr><td align="left" balign="left"> + testAsJSONBoolean() </td></tr>
 <tr><td align="left" balign="left"> + testGetLayerByID() </td></tr>
-<tr><td align="left" balign="left"> + testGetLayerByLayers() </td></tr>
+<tr><td align="left" balign="left"> + testGetLayerByLayersStringString() </td></tr>
+<tr><td align="left" balign="left"> + testGetLayerByLayersStringStringString() </td></tr>
 <tr><td align="left" balign="left"> + testGetLayerByName() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBeanTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
@@ -91,6 +92,7 @@ digraph G {
 <tr><td align="left" balign="left"> + asJSON(arg0 : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(arg0 : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByLayers(arg0 : String, arg1 : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(arg0 : String, arg1 : String, arg2 : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(arg0 : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="arial", fontcolor="black", fontsize=10.0];

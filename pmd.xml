@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.0.2" timestamp="2013-04-06T14:14:29.247">
+<pmd version="5.0.2" timestamp="2013-04-08T18:56:18.827">
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractBaseServlet.java">
 <violation beginline="118" endline="118" begincolumn="44" endcolumn="91" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="AbstractBaseServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
 Avoid if (x != y) ..; else ..;
@@ -49,8 +49,8 @@ Avoid using final local variables, turn them into fields
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\ReverseProxyServlet.java">
-<violation beginline="69" endline="356" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
-The class 'ReverseProxyServlet' has a Cyclomatic Complexity of 7 (Highest = 16).
+<violation beginline="69" endline="364" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+The class 'ReverseProxyServlet' has a Cyclomatic Complexity of 8 (Highest = 18).
 </violation>
 <violation beginline="117" endline="117" begincolumn="48" endcolumn="56" rule="AvoidReassigningParameters" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="checkUrlAllowed" variable="serverUrl" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#AvoidReassigningParameters" priority="2">
 Avoid reassigning parameters such as 'serverUrl'
@@ -61,34 +61,40 @@ Avoid reassigning parameters such as 'serverUrl'
 <violation beginline="118" endline="119" begincolumn="29" endcolumn="60" rule="UseLocaleWithCaseConversions" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="checkUrlAllowed" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
 When doing a String.toLowerCase()/toUpperCase() call, use a Locale
 </violation>
-<violation beginline="154" endline="190" begincolumn="69" endcolumn="95" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="s" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 's' (lines '154'-'190').
+<violation beginline="154" endline="191" begincolumn="69" endcolumn="95" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="s" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 's' (lines '154'-'191').
 </violation>
-<violation beginline="154" endline="241" begincolumn="19" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
-The method 'doGet' has a Cyclomatic Complexity of 16.
+<violation beginline="154" endline="249" begincolumn="19" endcolumn="9" rule="CyclomaticComplexity" ruleset="Code Size" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+The method 'doGet' has a Cyclomatic Complexity of 18.
 </violation>
 <violation beginline="157" endline="158" begincolumn="25" endcolumn="73" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="serverUrl" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'serverUrl' (lines '157'-'158').
 </violation>
-<violation beginline="162" endline="230" begincolumn="33" endcolumn="33" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
+<violation beginline="162" endline="238" begincolumn="33" endcolumn="33" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
 Avoid if (x != y) ..; else ..;
 </violation>
-<violation beginline="186" endline="191" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="lName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'lName' (lines '186'-'191').
+<violation beginline="186" endline="192" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="lName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'lName' (lines '186'-'192').
 </violation>
-<violation beginline="189" endline="189" begincolumn="62" endcolumn="75" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="s" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="187" endline="201" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="styles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'styles' (lines '187'-'201').
+</violation>
+<violation beginline="190" endline="190" begincolumn="62" endcolumn="75" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="s" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="191" endline="191" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="lName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'lName' (lines '191'-'191').
+<violation beginline="192" endline="192" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="lName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'lName' (lines '192'-'192').
 </violation>
-<violation beginline="324" endline="339" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" variable="name" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'name' (lines '324'-'339').
+<violation beginline="201" endline="201" begincolumn="73" endcolumn="116" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="doGet" variable="styles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'styles' (lines '201'-'201').
 </violation>
-<violation beginline="327" endline="328" begincolumn="42" endcolumn="63" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
+<violation beginline="332" endline="347" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" variable="name" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'name' (lines '332'-'347').
+</violation>
+<violation beginline="335" endline="336" begincolumn="42" endcolumn="63" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
 Avoid if (x != y) ..; else ..;
 </violation>
-<violation beginline="338" endline="338" begincolumn="22" endcolumn="38" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" variable="name" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="346" endline="346" begincolumn="22" endcolumn="38" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.servlet" class="ReverseProxyServlet" method="init" variable="name" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
 </file>
@@ -863,7 +869,7 @@ In J2EE, getClassLoader() might not work as expected.  Use Thread.currentThread(
 <violation beginline="93" endline="93" begincolumn="25" endcolumn="83" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="asJSON" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="106" endline="108" begincolumn="29" endcolumn="63" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="106" endline="108" begincolumn="29" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'UR'-anomaly for variable 'desc' (lines '106'-'108').
 </violation>
 <violation beginline="107" endline="107" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
@@ -872,28 +878,61 @@ Avoid using final local variables, turn them into fields
 <violation beginline="109" endline="109" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="126" endline="129" begincolumn="29" endcolumn="88" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="126" endline="129" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'UR'-anomaly for variable 'desc' (lines '126'-'129').
 </violation>
 <violation beginline="128" endline="128" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
+<violation beginline="129" endline="129" begincolumn="58" endcolumn="62" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;\\s&quot; appears 5 times in this file; the first occurrence is on line 129
+</violation>
 <violation beginline="129" endline="129" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
 This statement may have some unnecessary parentheses
 </violation>
-<violation beginline="131" endline="133" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="131" endline="134" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="132" endline="132" begincolumn="41" endcolumn="52" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="132" endline="132" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+</violation>
+<violation beginline="133" endline="133" begincolumn="41" endcolumn="52" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="147" endline="149" begincolumn="29" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'desc' (lines '147'-'149').
+<violation beginline="153" endline="156" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '153'-'156').
 </violation>
-<violation beginline="148" endline="148" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="155" endline="155" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="150" endline="150" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="156" endline="156" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="158" endline="164" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="159" endline="163" begincolumn="41" endcolumn="41" rule="AvoidDeeplyNestedIfStmts" ruleset="Design" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#AvoidDeeplyNestedIfStmts" priority="3">
+Deeply nested if..then statements are hard to read
+</violation>
+<violation beginline="159" endline="163" begincolumn="41" endcolumn="41" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="161" endline="161" begincolumn="49" endcolumn="60" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+</violation>
+<violation beginline="162" endline="162" begincolumn="49" endcolumn="60" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="178" endline="180" begincolumn="29" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '178'-'180').
+</violation>
+<violation beginline="179" endline="179" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+Avoid using final local variables, turn them into fields
+</violation>
+<violation beginline="181" endline="181" begincolumn="33" endcolumn="44" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+</violation>
+<violation beginline="182" endline="182" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
 </file>

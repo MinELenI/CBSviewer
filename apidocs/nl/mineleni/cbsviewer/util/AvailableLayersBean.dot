@@ -66,8 +66,9 @@ digraph G {
 <tr><td align="left" balign="left"> + AvailableLayersBean() </td></tr>
 <tr><td align="left" balign="left"> + asJSON() : String </td></tr>
 <tr><td align="left" balign="left"> + asJSON(asVar : boolean) : String </td></tr>
-<tr><td align="left" balign="left"> + getLayerByID(name : String) : LayerDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getLayerByLayers(lyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByID(id : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(queryLyrName : String, lyrUrl : String) : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getLayerByLayers(queryLyrName : String, lyrUrl : String, styles : String) : LayerDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getLayerByName(name : String) : LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
