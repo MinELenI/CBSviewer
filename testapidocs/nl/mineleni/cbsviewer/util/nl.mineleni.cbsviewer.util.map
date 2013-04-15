@@ -1,11 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./SpatialUtilTest.html" title="nl.mineleni.cbsviewer.util.SpatialUtilTest" alt="" coords="16,67,157,157"/>
-<area shape="rect" id="node1" href="./SpatialUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="5,62,168,162"/>
-<area shape="rect" id="node2_1" href="./EncodingUtilTest.html" title="nl.mineleni.cbsviewer.util.EncodingUtilTest" alt="" coords="203,51,397,173"/>
-<area shape="rect" id="node2" href="./EncodingUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="193,46,407,178"/>
-<area shape="rect" id="node3_2" href="./AvailableLayersXMLTest.html" title="nl.mineleni.cbsviewer.util.AvailableLayersXMLTest" alt="" coords="442,19,689,205"/>
-<area shape="rect" id="node3" href="./AvailableLayersXMLTest.html" title="&lt;TABLE&gt;" alt="" coords="431,14,699,210"/>
-<area shape="rect" id="node4_3" href="./AvailableLayersBeanTest.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" alt="" coords="734,11,1007,213"/>
-<area shape="rect" id="node4" href="./AvailableLayersBeanTest.html" title="&lt;TABLE&gt;" alt="" coords="723,6,1018,218"/>
-<area shape="rect" id="node6" href="null" title="&lt;TABLE&gt;" alt="" coords="621,267,1120,447"/>
+<area shape="rect" id="node1_0" href="./SpatialUtilTest.html" title="nl.mineleni.cbsviewer.util.SpatialUtilTest" alt="" coords="16,83,157,173"/>
+<area shape="rect" id="node1" href="./SpatialUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="5,78,168,178"/>
+<area shape="rect" id="node2_1" href="./EncodingUtilTest.html" title="nl.mineleni.cbsviewer.util.EncodingUtilTest" alt="" coords="203,67,397,189"/>
+<area shape="rect" id="node2" href="./EncodingUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="193,62,407,194"/>
+<area shape="rect" id="node3_2" href="./AvailableLayersXMLTest.html" title="nl.mineleni.cbsviewer.util.AvailableLayersXMLTest" alt="" coords="442,35,689,221"/>
+<area shape="rect" id="node3" href="./AvailableLayersXMLTest.html" title="&lt;TABLE&gt;" alt="" coords="431,30,699,226"/>
+<area shape="rect" id="node4_3" href="./AvailableLayersBeanTest.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBeanTest" alt="" coords="734,11,1007,245"/>
+<area shape="rect" id="node4" href="./AvailableLayersBeanTest.html" title="&lt;TABLE&gt;" alt="" coords="723,6,1018,250"/>
+<area shape="rect" id="node6" href="null" title="&lt;TABLE&gt;" alt="" coords="621,299,1120,495"/>
 </map>

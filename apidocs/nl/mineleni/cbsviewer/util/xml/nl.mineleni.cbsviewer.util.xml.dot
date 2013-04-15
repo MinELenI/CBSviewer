@@ -19,8 +19,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ObjectFactory() </td></tr>
-<tr><td align="left" balign="left"> + createLayersList() : LayersList </td></tr>
 <tr><td align="left" balign="left"> + createLayerDescriptor() : LayerDescriptor </td></tr>
+<tr><td align="left" balign="left"> + createLayersList() : LayersList </td></tr>
 <tr><td align="left" balign="left"> + createLayers(value : LayersList) : JAXBElement&lt;LayersList&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ObjectFactory.html", fontname="arial", fontcolor="black", fontsize=10.0];
@@ -51,6 +51,7 @@ digraph G {
 <tr><td align="left" balign="left"> # attributes : String </td></tr>
 <tr><td align="left" balign="left"> # aliases : String </td></tr>
 <tr><td align="left" balign="left"> # link : String </td></tr>
+<tr><td align="left" balign="left"> # metadata : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LayerDescriptor() </td></tr>
@@ -70,6 +71,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setAliases(value : String) </td></tr>
 <tr><td align="left" balign="left"> + getLink() : String </td></tr>
 <tr><td align="left" balign="left"> + setLink(value : String) </td></tr>
+<tr><td align="left" balign="left"> + getMetadata() : String </td></tr>
+<tr><td align="left" balign="left"> + setMetadata(value : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LayerDescriptor.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

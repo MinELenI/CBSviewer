@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.0.2" timestamp="2013-04-08T18:56:18.827">
+<pmd version="5.0.2" timestamp="2013-04-15T18:55:08.502">
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\AbstractBaseServlet.java">
 <violation beginline="118" endline="118" begincolumn="44" endcolumn="91" rule="ConfusingTernary" ruleset="Design" package="nl.mineleni.cbsviewer.servlet" class="AbstractBaseServlet" method="init" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ConfusingTernary" priority="3">
 Avoid if (x != y) ..; else ..;
@@ -854,85 +854,85 @@ A method should have only one exit point, and that should be the last statement 
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\util\AvailableLayersBean.java">
-<violation beginline="41" endline="41" begincolumn="39" endcolumn="51" rule="RedundantFieldInitializer" ruleset="Optimization" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#RedundantFieldInitializer" priority="3">
+<violation beginline="42" endline="42" begincolumn="39" endcolumn="51" rule="RedundantFieldInitializer" ruleset="Optimization" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#RedundantFieldInitializer" priority="3">
 Avoid using redundant field initializer for 'layers'
 </violation>
-<violation beginline="41" endline="41" begincolumn="39" endcolumn="44" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+<violation beginline="42" endline="42" begincolumn="39" endcolumn="44" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
-<violation beginline="41" endline="41" begincolumn="39" endcolumn="44" rule="ImmutableField" ruleset="Design" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ImmutableField" priority="3">
+<violation beginline="42" endline="42" begincolumn="39" endcolumn="44" rule="ImmutableField" ruleset="Design" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" variable="layers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#ImmutableField" priority="3">
 Private field 'layers' could be made final; it is only initialized in the declaration or constructor.
 </violation>
-<violation beginline="51" endline="51" begincolumn="64" endcolumn="78" rule="UseProperClassLoader" ruleset="J2EE" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/j2ee.html#UseProperClassLoader" priority="3">
+<violation beginline="52" endline="52" begincolumn="64" endcolumn="78" rule="UseProperClassLoader" ruleset="J2EE" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/j2ee.html#UseProperClassLoader" priority="3">
 In J2EE, getClassLoader() might not work as expected.  Use Thread.currentThread().getContextClassLoader() instead.
 </violation>
-<violation beginline="93" endline="93" begincolumn="25" endcolumn="83" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="asJSON" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="102" endline="102" begincolumn="25" endcolumn="83" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="asJSON" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="106" endline="108" begincolumn="29" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'desc' (lines '106'-'108').
+<violation beginline="115" endline="117" begincolumn="29" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '115'-'117').
 </violation>
-<violation beginline="107" endline="107" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="116" endline="116" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="109" endline="109" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="118" endline="118" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="126" endline="129" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'desc' (lines '126'-'129').
+<violation beginline="135" endline="138" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '135'-'138').
 </violation>
-<violation beginline="128" endline="128" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="137" endline="137" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="129" endline="129" begincolumn="58" endcolumn="62" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
-The String literal &quot;\\s&quot; appears 5 times in this file; the first occurrence is on line 129
+<violation beginline="138" endline="138" begincolumn="58" endcolumn="62" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;\\s&quot; appears 5 times in this file; the first occurrence is on line 138
 </violation>
-<violation beginline="129" endline="129" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+<violation beginline="138" endline="138" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
 This statement may have some unnecessary parentheses
 </violation>
-<violation beginline="131" endline="134" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="140" endline="143" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="132" endline="132" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="141" endline="141" begincolumn="41" endcolumn="52" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="133" endline="133" begincolumn="41" endcolumn="52" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="142" endline="142" begincolumn="41" endcolumn="52" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="153" endline="156" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'desc' (lines '153'-'156').
+<violation beginline="162" endline="165" begincolumn="29" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '162'-'165').
 </violation>
-<violation beginline="155" endline="155" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="164" endline="164" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="156" endline="156" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+<violation beginline="165" endline="165" begincolumn="30" endcolumn="43" rule="UnnecessaryParentheses" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
 This statement may have some unnecessary parentheses
 </violation>
-<violation beginline="158" endline="164" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="167" endline="173" begincolumn="33" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="159" endline="163" begincolumn="41" endcolumn="41" rule="AvoidDeeplyNestedIfStmts" ruleset="Design" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#AvoidDeeplyNestedIfStmts" priority="3">
+<violation beginline="168" endline="172" begincolumn="41" endcolumn="41" rule="AvoidDeeplyNestedIfStmts" ruleset="Design" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/design.html#AvoidDeeplyNestedIfStmts" priority="3">
 Deeply nested if..then statements are hard to read
 </violation>
-<violation beginline="159" endline="163" begincolumn="41" endcolumn="41" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+<violation beginline="168" endline="172" begincolumn="41" endcolumn="41" rule="CollapsibleIfStatements" ruleset="Basic" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/basic.html#CollapsibleIfStatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="161" endline="161" begincolumn="49" endcolumn="60" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="170" endline="170" begincolumn="49" endcolumn="60" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="162" endline="162" begincolumn="49" endcolumn="60" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="171" endline="171" begincolumn="49" endcolumn="60" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="178" endline="180" begincolumn="29" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'desc' (lines '178'-'180').
+<violation beginline="187" endline="189" begincolumn="29" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'desc' (lines '187'-'189').
 </violation>
-<violation beginline="179" endline="179" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
+<violation beginline="188" endline="188" begincolumn="22" endcolumn="47" rule="AvoidFinalLocalVariable" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" variable="desc" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#AvoidFinalLocalVariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="181" endline="181" begincolumn="33" endcolumn="44" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
+<violation beginline="190" endline="190" begincolumn="33" endcolumn="44" rule="GuardDebugLogging" ruleset="Jakarta Commons Logging" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/logging-jakarta-commons.html#GuardDebugLogging" priority="3">
 debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
 </violation>
-<violation beginline="182" endline="182" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
+<violation beginline="191" endline="191" begincolumn="33" endcolumn="44" rule="OnlyOneReturn" ruleset="Controversial" package="nl.mineleni.cbsviewer.util" class="AvailableLayersBean" method="getLayerByName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/controversial.html#OnlyOneReturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
 </file>
@@ -1666,28 +1666,31 @@ Parameter 'value' is not assigned and could be declared final
 </violation>
 </file>
 <file name="E:\jenkins\jobs\CBS-viewer-site\workspace\target\generated-sources\jaxb\nl\mineleni\cbsviewer\util\xml\LayerDescriptor.java">
-<violation beginline="105" endline="105" begincolumn="23" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setId" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="109" endline="109" begincolumn="23" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setId" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="129" endline="129" begincolumn="25" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="133" endline="133" begincolumn="25" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setName" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="153" endline="153" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="157" endline="157" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setLayers" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="177" endline="177" begincolumn="24" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setUrl" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="181" endline="181" begincolumn="24" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setUrl" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="201" endline="201" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="205" endline="205" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setStyles" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="225" endline="225" begincolumn="31" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setAttributes" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="229" endline="229" begincolumn="31" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setAttributes" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="249" endline="249" begincolumn="28" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setAliases" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="253" endline="253" begincolumn="28" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setAliases" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
-<violation beginline="273" endline="273" begincolumn="25" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setLink" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="277" endline="277" begincolumn="25" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setLink" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'value' is not assigned and could be declared final
+</violation>
+<violation beginline="301" endline="301" begincolumn="29" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="nl.mineleni.cbsviewer.util.xml" class="LayerDescriptor" method="setMetadata" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'value' is not assigned and could be declared final
 </violation>
 </file>

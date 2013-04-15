@@ -74,6 +74,8 @@ digraph G {
 <tr><td align="left" balign="left"> + testGetLayerByLayersStringString() </td></tr>
 <tr><td align="left" balign="left"> + testGetLayerByLayersStringStringString() </td></tr>
 <tr><td align="left" balign="left"> + testGetLayerByName() </td></tr>
+<tr><td align="left" balign="left"> + testGetLayers() </td></tr>
+<tr><td align="left" balign="left"> + testGetLayersImmutable() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBeanTest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBeanTest NAVASSOC nl.mineleni.cbsviewer.util.AvailableLayersBean
@@ -88,6 +90,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AvailableLayersBean() </td></tr>
+<tr><td align="left" balign="left"> + getLayers() : List&lt;LayerDescriptor&gt; </td></tr>
 <tr><td align="left" balign="left"> + asJSON() : String </td></tr>
 <tr><td align="left" balign="left"> + asJSON(arg0 : boolean) : String </td></tr>
 <tr><td align="left" balign="left"> + getLayerByID(arg0 : String) : LayerDescriptor </td></tr>

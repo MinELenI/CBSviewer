@@ -32,10 +32,10 @@
 <a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">private</strong> AttributesNamesFilter filter;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  
 <a class="jxr_linenumber" name="24" href="#24">24</a>  	<em class="jxr_javadoccomment">/**</em><em class="jxr_javadoccomment"> layer id voor layer met aliases. */</em>
-<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String hasFilterID = <span class="jxr_string">"vierkanten500m_oad2000"</span>;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String hasFilterID = <span class="jxr_string">"wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners"</span>;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	<em class="jxr_javadoccomment">/**</em><em class="jxr_javadoccomment"> layer id voor layer zonder aliases. */</em>
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String hasNoFilterID = <span class="jxr_string">"wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners"</span>;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String hasNoFilterID = <span class="jxr_string">"vierkanten500m_oad2000"</span>;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment">	 * set up.</em>
@@ -57,8 +57,8 @@
 <a class="jxr_linenumber" name="47" href="#47">47</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFilterValue() {
 <a class="jxr_linenumber" name="48" href="#48">48</a>  		assertEquals(<span class="jxr_string">"expected"</span>,
 <a class="jxr_linenumber" name="49" href="#49">49</a>  				<strong class="jxr_keyword">this</strong>.filter.filterValue(<span class="jxr_string">"expected"</span>, <strong class="jxr_keyword">this</strong>.hasFilterID));
-<a class="jxr_linenumber" name="50" href="#50">50</a>  		assertEquals(<span class="jxr_string">"dichtheid"</span>,
-<a class="jxr_linenumber" name="51" href="#51">51</a>  				<strong class="jxr_keyword">this</strong>.filter.filterValue(<span class="jxr_string">"oad2000"</span>, <strong class="jxr_keyword">this</strong>.hasFilterID));
+<a class="jxr_linenumber" name="50" href="#50">50</a>  		assertEquals(<span class="jxr_string">"gemeente"</span>,
+<a class="jxr_linenumber" name="51" href="#51">51</a>  				<strong class="jxr_keyword">this</strong>.filter.filterValue(<span class="jxr_string">"gemnaam"</span>, <strong class="jxr_keyword">this</strong>.hasFilterID));
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		assertEquals(<span class="jxr_string">"expected"</span>,
 <a class="jxr_linenumber" name="53" href="#53">53</a>  				<strong class="jxr_keyword">this</strong>.filter.filterValue(<span class="jxr_string">"expected"</span>, <strong class="jxr_keyword">this</strong>.hasNoFilterID));
 <a class="jxr_linenumber" name="54" href="#54">54</a>  	}
