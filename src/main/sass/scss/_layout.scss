@@ -4,7 +4,8 @@ a.accesskey {
 	text-align: center;
 	display: block;
 	
-	&:focus { 
+	&:focus,
+	&:active { 
 		top : 0;
 		background-color: #fff;
 		width: 100%;
@@ -38,51 +39,4 @@ body:hover .visually-hidden a,
 body:hover .visually-hidden input,
 body:hover .visually-hidden button {
 	display: none !important;
-}
-
-/* decorator voor een tooltip functie van focus-able elementen zoals a en button */
-.hasTooltip {
-	position:relative;
-	z-index: $z-zoekContainer + 100;
-	
-	& span {
-		/* afgeleid van .visually-hidden hierboven */
-		position: absolute;
-		clip: rect(1px 1px 1px 1px); /* < IE8 */
-		clip: rect(1px, 1px, 1px, 1px);
-		padding: 0;
-		border: 0;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-	}
-	
-	&:hover span {
-	/* &:focus span { focus is a not working properly in some browsers */
-		clip: auto;
-		padding: 2px;
-		/* border: $ControlBorder; */
-		height: auto;
-		width: auto;
-		bottom: 3em;
-		right: 0px;
-		z-index: $z-zoekContainer + 100;
-		max-height: 100px;
-		white-space: nowrap;
-		display: inline-block;
-		background-color: #fff;
-		color: #000;
-		/* @include border-radius(3px); */
-		/* @include box-shadow(2px 2px 2px $ControlBorderColour); */
-		font-size: 12px;
-		font-weight: normal;
-	}
-}
-
-.debug {
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	border: 0; 
-	z-index: 10000;
 }

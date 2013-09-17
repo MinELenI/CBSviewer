@@ -64,6 +64,7 @@
 </head>
 
 <body>
+	<jsp:include page="WEB-INF/jsp/skiplinks_include.jsp" />
 	<jsp:include page="WEB-INF/jsp/debug_include.jsp" />
 	
 <c:if test="${param.coreonly!=true}">
@@ -84,10 +85,12 @@
 					<img src="img/new/img_CBSLogo.png" alt="CBS in uw buurt" title="CBS in uw buurt" width="192" height="59"/>
 				</a>
 			</div>
-			<div class="shortMenu">
-				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> <a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a> <a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
+			<div id="shortMenu" class="shortMenu">
+				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/contact/overzicht/default.htm"><fmt:message key="KEY_FOOTER_CONTACT" /></a> 
+				<a href="http://www.cbs.nl/nl-NL/menu/organisatie/website/disclaimer/default.htm"><fmt:message key="KEY_FOOTER_DISCLAIMER" /></a>
+				<a href="http://www.cbs.nl/nl-NL/menu/home/default.htm">cbs.nl</a>
 			</div>
-			<div class="mainMenu">
+			<div id="mainMenu" class="mainMenu" tabindex="-1">
 				<ul>
 					<li>
 						<c:url value="/index.jsp" var="indexLink">
@@ -122,7 +125,7 @@
 			<jsp:include page="WEB-INF/jsp/zoekformulier.jsp"/>
 		</div>
 
-		<div id="inhoud">
+		<div id="inhoud" tabindex="-1">
 			
 			<div class="pagetitle">
 				<h1 id="pagSubTitle"><fmt:message key="KEY_KAART_TITEL"><fmt:param value="${mapname}" /></fmt:message></h1>
