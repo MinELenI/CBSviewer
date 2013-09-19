@@ -87,7 +87,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>9.5</geotools.version>
+		<geotools.version>10.0</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
