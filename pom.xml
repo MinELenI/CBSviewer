@@ -104,6 +104,8 @@
 		<openlayers.checkout.version>release-2.13.1</openlayers.checkout.version>
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
+		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
+		<jetty.version>7.6.13.v20130916</jetty.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -120,7 +122,7 @@
 					<plugin>
 						<groupId>org.mortbay.jetty</groupId>
 						<artifactId>jetty-maven-plugin</artifactId>
-						<version>8.1.11.v20130520</version>
+						<version>${jetty.version}</version>
 						<configuration>
 							<connectors>
 								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
@@ -467,12 +469,60 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<stopPort>8005</stopPort>
+					<stopKey>STOP</stopKey>
+					<contextPath>/</contextPath>
+					<connectors>
+						<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
+							<port>8020</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+					<webAppConfig>
+						<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
+							<resourcesAsCSV>src/main/webapp,target/cbsviewer</resourcesAsCSV>
+						</baseResource>
+						<sessionHandler implementation="org.eclipse.jetty.server.session.SessionHandler">
+							<sessionManager implementation="org.eclipse.jetty.server.session.HashSessionManager">
+								<usingCookies>false</usingCookies>
+							</sessionManager>
+						</sessionHandler>
+					</webAppConfig>
+				</configuration>
+				<executions>
+					<execution>
+						<id>start-jetty</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>deploy-war</goal>
+						</goals>
+						<configuration>
+							<war>${project.build.directory}/${proj.finalname}.war</war>
+							<scanIntervalSeconds>0</scanIntervalSeconds>
+							<daemon>true</daemon>
+						</configuration>
+					</execution>
+					<execution>
+						<id>stop-jetty</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
 					<!-- niet kopieren -->
-					<warSourceExcludes>**/css/*.css,**/js/*.js,**/lib/theme/default/style.css,**/jquery.fancybox.css, **/jquery.layout.js</warSourceExcludes>
+					<warSourceExcludes>**/css/*.css,**/js/*.js,**/lib/theme/default/style.css,**/jquery.fancybox.css,**/jquery.layout.js</warSourceExcludes>
 					<archive>
 						<forced>true</forced>
 						<index>true</index>
@@ -497,7 +547,7 @@
 				<version>1.3.2</version>
 				<!--
 				<version>1.0.0</version>
-				<groupId>org.sonatype.plugins</groupId> 
+				<groupId>org.sonatype.plugins</groupId>
 				-->
 				<executions>
 					<execution>
@@ -545,7 +595,7 @@
 							</aggregations>
 						</configuration>
 					</execution>
-				</executions> 
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.github.searls</groupId>
@@ -623,7 +673,7 @@
 					</doapOptions>
 				</configuration>
 			</plugin>
- 			<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.3</version>
@@ -777,7 +827,7 @@
 								</reportsDirectories>
 							</configuration>
 						</plugin>
-						 -->
+						-->
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-project-info-reports-plugin</artifactId>

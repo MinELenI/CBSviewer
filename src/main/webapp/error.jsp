@@ -1,45 +1,59 @@
-<%@ page isErrorPage="true" language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-	session="false"%>
-<%
-	//log de exception en de timestamp
-	org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger("nl.mineleni.cbsviewer");
-	logger.error(exception.getLocalizedMessage(), exception);
-%>
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.1">
+	<jsp:directive.page contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8" session="false" trimDirectiveWhitespaces="false"
+		language="java" isThreadSafe="true" isErrorPage="true"
+		import="org.slf4j.Logger, org.slf4j.LoggerFactory" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+		omit-xml-declaration="no" />
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<fmt:setBundle basename="ErrorLabelsBundle" />
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+	<jsp:scriptlet>Logger logger = LoggerFactory.getLogger("nl.mineleni.cbsviewer");
+			if (logger.isDebugEnabled()) {
+				logger.debug("LET OP: de applicatie draait in debug modus");
+			}
+			pageContext.setAttribute("isDebugEnabled", logger.isDebugEnabled());
+
+			logger.error(exception.getLocalizedMessage(), exception);</jsp:scriptlet>
+
+	<c:set var="exception"
+		value="${requestScope['javax.servlet.error.exception']}" />
+
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<jsp:include page="WEB-INF/jsp/head_include.jsp" />
+
 <title>Systeemfout</title>
-
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/compiled.css" type="text/css" media="screen" />
-
-<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
-<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
-<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />     <![endif]-->
-
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-
 </head>
 <body>
-	<h1>Systeemfout</h1>
-	<p class="error">
-		<%=exception.getLocalizedMessage()%>
-	</p>
+	<div class="page smallpopup">
+		<h1>Systeemfout</h1>
 
-	<%
-		if (logger.isDebugEnabled()) {
-	%>
-	<p><code>
-		<%
-			exception.printStackTrace(new java.io.PrintWriter(out));
-		%>
-	</code></p>
-	<%
-		}
-	%>
+		<p class="error">
+			<fmt:message key="KEY_ERROR_UITLEG" />
+			<br />
+			<fmt:message key="KEY_ERROR_SYSTEEMMELDING">
+				<fmt:param value="${exception}" />
+			</fmt:message>
+		</p>
+
+		<!-- Stack trace -->
+		<c:if test="${isDebugEnabled}">
+			<p>
+				<code>
+					<c:forEach items="${exception.stackTrace}" var="element">
+						<c:out value="${element}" />
+						<br />
+					</c:forEach>
+				</code>
+			</p>
+		</c:if>
+	</div>
 </body>
-</html>
+	</html>
+</jsp:root>
