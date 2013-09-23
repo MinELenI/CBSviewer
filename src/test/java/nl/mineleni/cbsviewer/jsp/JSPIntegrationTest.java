@@ -10,9 +10,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.custommonkey.xmlunit.Validator;
 import org.custommonkey.xmlunit.XMLUnit;
@@ -29,7 +31,7 @@ public abstract class JSPIntegrationTest {
 	/**
 	 * test client.
 	 */
-	protected static HttpClient client;
+	protected static CloseableHttpClient client;
 	/**
 	 * validation string.
 	 */
@@ -48,7 +50,7 @@ public abstract class JSPIntegrationTest {
 		XMLUnit.setIgnoreAttributeOrder(true);
 		XMLUnit.setIgnoreComments(false);
 		XMLUnit.setIgnoreDiffBetweenTextAndCDATA(true);
-		client = new DefaultHttpClient();
+		client = HttpClientBuilder.create().build();
 	}
 
 	/**
@@ -88,10 +90,12 @@ public abstract class JSPIntegrationTest {
 
 	/**
 	 * http verbindingen sluiten na afloop testcase.
+	 * 
+	 * @throws IOException
 	 */
 	@After
-	public void closeConnection() {
-		client.getConnectionManager().shutdown();
+	public void closeConnection() throws Exception {
+		client.close();
 	}
 
 	/**

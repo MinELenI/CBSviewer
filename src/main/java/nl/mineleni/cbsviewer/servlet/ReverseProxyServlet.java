@@ -29,12 +29,11 @@ import nl.mineleni.cbsviewer.util.EncodingUtil;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.CookieSpecs;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.params.ClientPNames;
-import org.apache.http.client.params.CookiePolicy;
-import org.apache.http.conn.params.ConnRoutePNames;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,39 +68,39 @@ import org.slf4j.LoggerFactory;
  * @since 1.7
  */
 public class ReverseProxyServlet extends AbstractBaseServlet {
-	// CHECKSTYLE.ON:
-	/** Forceer xml output optie sleutel. {@value} */
-	public static final String FORCE_XML_MIME = "force_xml_mime";
-
 	/** Allowed hosts config optie. {@value} */
 	public static final String ALLOWED_HOSTS = "allowed_hosts";
-
-	/** Foutmelding in geval van missende 'allowed_hosts' optie. {@value} */
-	public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
 
 	/** Melding als proxy wordt geweigerd. {@value} */
 	private static final String ERR_MSG_FORBIDDEN = " is niet in de lijst met toegestane servers opgenomen.";
 
-	/** generated serialVersionUID. */
-	private static final long serialVersionUID = 1512103319305509379L;
+	/** Foutmelding in geval van missende 'allowed_hosts' optie. {@value} */
+	public static final String ERR_MSG_MISSING_CONFIG = "De \'allowed_hosts\' parameter ontbreekt in servletconfig.";
+
+	// CHECKSTYLE.ON:
+	/** Forceer xml output optie sleutel. {@value} */
+	public static final String FORCE_XML_MIME = "force_xml_mime";
 
 	/** log4j logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ReverseProxyServlet.class);
+
+	/** generated serialVersionUID. */
+	private static final long serialVersionUID = 1512103319305509379L;
 
 	/**
 	 * type featureinfo response.
 	 */
 	private static CONVERTER_TYPE type = CONVERTER_TYPE.GMLTYPE;
 
-	/** layers bean. */
-	private final transient AvailableLayersBean layers = new AvailableLayersBean();
 	/**
 	 * Set van toegestane hosts voor proxy-ing.
 	 * 
 	 * @see #ALLOWED_HOSTS
 	 */
 	private final transient Set<String> allowedHosts = new HashSet<>();
+	/** onze http client. */
+	private transient CloseableHttpClient client;
 
 	/**
 	 * optie om text/xml mime type voor response te forceren. default waarde is
@@ -112,8 +111,10 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	private transient boolean forceXmlResponse;
 
-	/** onze http client. */
-	private final transient HttpClient client = new DefaultHttpClient();
+	/** layers bean. */
+	private final transient AvailableLayersBean layers = new AvailableLayersBean();
+
+	private transient RequestConfig requestConfig;
 
 	/**
 	 * Parse out the server name and check if the specified server name is in
@@ -142,7 +143,11 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 	 */
 	@Override
 	public void destroy() {
-		this.client.getConnectionManager().shutdown();
+		try {
+			this.client.close();
+		} catch (final IOException e) {
+			// ignore
+		}
 		super.destroy();
 	}
 
@@ -186,9 +191,9 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 									+ serverUrl);
 						}
 					}
-
-					final HttpResponse get = this.client.execute(new HttpGet(
-							serverUrl));
+					final HttpGet httpget = new HttpGet(serverUrl);
+					httpget.setConfig(requestConfig);
+					final HttpResponse get = this.client.execute(httpget);
 					if (get.getStatusLine().getStatusCode() == SC_OK) {
 						String responseBody;
 						if (serverUrl.contains("GetFeatureInfo")) {
@@ -364,11 +369,15 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 			}
 		}
 
+		// http client set up
+		client = HttpClients.createSystem();
+		requestConfig = RequestConfig.custom()
+				.setCookieSpec(CookieSpecs.IGNORE_COOKIES).build();
 		if ((null != this.getProxyHost()) && (this.getProxyPort() > 0)) {
-			this.client.getParams().setParameter(
-					ConnRoutePNames.DEFAULT_PROXY,
-					new HttpHost(this.getProxyHost(), this.getProxyPort(),
-							"http"));
+			final HttpHost proxy = new HttpHost(this.getProxyHost(),
+					this.getProxyPort(), "http");
+			requestConfig = RequestConfig.copy(requestConfig).setProxy(proxy)
+					.build();
 		}
 
 		// voorgond feature info response type
@@ -378,9 +387,5 @@ public class ReverseProxyServlet extends AbstractBaseServlet {
 			type = CONVERTER_TYPE.valueOf(mType);
 		}
 
-		// override referer, ignore cookies
-		this.client.getParams().setParameter("Referer", "/");
-		this.client.getParams().setParameter(ClientPNames.COOKIE_POLICY,
-				CookiePolicy.IGNORE_COOKIES);
 	}
 }
