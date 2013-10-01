@@ -85,6 +85,13 @@ public final class FeatureInfoResponseConverter {
 	private static final AttributeValuesFilter VALUESFILTER = new AttributeValuesFilter();
 
 	/**
+	 * private constructor.
+	 */
+	private FeatureInfoResponseConverter() {
+		// private constructor voor utility klasse
+	}
+
+	/**
 	 * Cleanup html.
 	 * 
 	 * @param htmlStream
@@ -260,12 +267,5 @@ public final class FeatureInfoResponseConverter {
 			LOGGER.debug("Geen attribuut info voor deze locatie/zoomnivo.");
 			return RESOURCES.getString("KEY_INFO_GEEN_FEATURES");
 		}
-	}
-
-	/**
-	 * private constructor.
-	 */
-	private FeatureInfoResponseConverter() {
-		// private constructor voor utility klasse
 	}
 }
