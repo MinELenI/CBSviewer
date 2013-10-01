@@ -36,6 +36,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
+// TODO: Auto-generated Javadoc
 /**
  * Utility klasse FeatureInfoResponseConverter kan gebruikt worden om
  * FeatureInfo responses te parsen en te converteren naar een andere vorm.
@@ -49,11 +50,23 @@ public final class FeatureInfoResponseConverter {
 	 * ondersteunde typen voor conversie.
 	 */
 	public enum CONVERTER_TYPE {
-		GMLTYPE("application/vnd.ogc.gml"), HTMLTYPE("text/html"),
-		/* XMLTYPE("application/vnd.ogc.wms_xml") */;
 
+		/** The gmltype. */
+		GMLTYPE("application/vnd.ogc.gml"),
+		/** The htmltype. */
+		HTMLTYPE("text/html"),
+		/* XMLTYPE("application/vnd.ogc.wms_xml") *//** The type. */
+		;
+
+		/** het conversie type. */
 		private final String type;
 
+		/**
+		 * enum constructor.
+		 * 
+		 * @param type
+		 *            het conversie type
+		 */
 		CONVERTER_TYPE(final String type) {
 			this.type = type;
 		}
@@ -70,6 +83,9 @@ public final class FeatureInfoResponseConverter {
 			return this.type;
 		}
 	}
+
+	/** byte array buffer size, 1KB. */
+	private static final int BUFFERSIZE = 1024;
 
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
@@ -97,7 +113,9 @@ public final class FeatureInfoResponseConverter {
 	 * @param htmlStream
 	 *            input HTML stream, bijvoorbeeld uit een GetFeatureInfo
 	 *            request.
-	 * @return the string
+	 * @param layer
+	 *            De laag waarvoor deze functie wordt uitgevoerd
+	 * @return opgeschoonde html tabel
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -117,9 +135,9 @@ public final class FeatureInfoResponseConverter {
 		// 1e rij zijn headers, andere rijen zijn data, geheekl converteren naar
 		// een SimpleFeatureCollection
 		final Element headers = table.select("tr:first-child").first();
-		final Iterator<Element> THs = headers.select("th").iterator();
-		while (THs.hasNext()) {
-			b.add(THs.next().text(), String.class);
+		final Iterator<Element> iterTHs = headers.select("th").iterator();
+		while (iterTHs.hasNext()) {
+			b.add(iterTHs.next().text(), String.class);
 		}
 		b.setCRS(null);
 		b.add("point", Point.class);
@@ -129,11 +147,11 @@ public final class FeatureInfoResponseConverter {
 		final Iterator<Element> rows = table.select("tr:not(:first-child)")
 				.iterator();
 		while (rows.hasNext()) {
-			final Iterator<Element> TH = headers.select("th").iterator();
-			final Iterator<Element> TDs = rows.next().select("td").iterator();
+			final Iterator<Element> iterTH = headers.select("th").iterator();
+			final Iterator<Element> iterTDs = rows.next().select("td").iterator();
 			final SimpleFeature f = builder.buildFeature(null);
-			while (TDs.hasNext()) {
-				f.setAttribute(TH.next().text(), TDs.next().text());
+			while (iterTDs.hasNext()) {
+				f.setAttribute(iterTH.next().text(), iterTDs.next().text());
 			}
 			featureCollection.add(f);
 		}
@@ -146,7 +164,7 @@ public final class FeatureInfoResponseConverter {
 	 * @param gmlStream
 	 *            input GML stream, bijvoorbeeld uit een GetFeatureInfo request.
 	 * @param layer
-	 *            the layer
+	 *            De laag waarvoor deze functie wordt uitgevoerd
 	 * @return een html tabel
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -182,7 +200,7 @@ public final class FeatureInfoResponseConverter {
 		final Writer writer = new StringWriter();
 		if (is != null) {
 
-			final char[] buffer = new char[1024];
+			final char[] buffer = new char[BUFFERSIZE];
 			try {
 				final Reader reader = new BufferedReader(new InputStreamReader(
 						is, "UTF-8"));
@@ -203,9 +221,10 @@ public final class FeatureInfoResponseConverter {
 	 * @param input
 	 *            inputstream met de featureinfo response.
 	 * @param type
-	 *            het type conversie, ondersteund is {@code "GMLTYPE"}
+	 *            het type conversie, ondersteund zijn {@code "GMLTYPE"} en
+	 *            {@code "HTMLTYPE"}
 	 * @param layer
-	 *            de layerdescriptor
+	 *            De laag waarvoor deze functie wordt uitgevoerd
 	 * @return een html tabel
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
@@ -223,6 +242,15 @@ public final class FeatureInfoResponseConverter {
 		}
 	}
 
+	/**
+	 * Feature collection converter.
+	 * 
+	 * @param iter
+	 *            verzameling features die wordt omgezet
+	 * @param layer
+	 *            De laag waarvoor deze functie wordt uitgevoerd
+	 * @return the string
+	 */
 	private static String featureCollectionConverter(
 			final FeatureIterator<SimpleFeature> iter,
 			final LayerDescriptor layer) {
