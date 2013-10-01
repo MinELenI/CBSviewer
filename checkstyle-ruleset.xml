@@ -155,6 +155,6 @@
 		<property name="severity" value="info" />
 	</module>
 	<module name="SuppressionFilter">
-		<property name="file" value="${basedir}/checkstyle-suppressions.xml" />
+		<property name="file" value="checkstyle-suppressions.xml" />
 	</module>
 </module>
