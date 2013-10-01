@@ -36,7 +36,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
-// TODO: Auto-generated Javadoc
 /**
  * Utility klasse FeatureInfoResponseConverter kan gebruikt worden om
  * FeatureInfo responses te parsen en te converteren naar een andere vorm.
@@ -54,9 +53,8 @@ public final class FeatureInfoResponseConverter {
 		/** The gmltype. */
 		GMLTYPE("application/vnd.ogc.gml"),
 		/** The htmltype. */
-		HTMLTYPE("text/html"),
-		/* XMLTYPE("application/vnd.ogc.wms_xml") *//** The type. */
-		;
+		HTMLTYPE("text/html")
+		/** xml type., XMLTYPE("application/vnd.ogc.wms_xml") */;
 
 		/** het conversie type. */
 		private final String type;
