@@ -194,7 +194,8 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final double scale = bbox.getWidth() / MAP_DIMENSION;
 		// max lengte in px van schaalbalk
 		int barLength = MAP_DIMENSION / 2;
-		int dist = (int) (barLength * scale); // crs units
+		// crs units
+		int dist = (int) (barLength * scale); 
 		// logaritmisch lengte afronden
 		final int digits = (int) (Math.log(dist) / Math.log(10));
 		final double pow10 = Math.pow(10, digits);
