@@ -57,7 +57,7 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	/**
 	 * Parse de forward parameter van een request.
 	 * 
-	 * @see nl.mineleni.cbsviewer.util.StringConstants#REQ_PARAM_FORWARD
+	 * @see nl.mineleni.cbsviewer.util.NumberConstants#REQ_PARAM_FORWARD
 	 * @return {@code true}, als parameter aanwezig is en waarde "true" heeft,
 	 *         anders / default {@code false}
 	 * @param request
@@ -105,14 +105,13 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 			request.setAttribute(REQ_PARAM_XCOORD.code, xcoord);
 			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
 			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
-			if (LOGGER.isDebugEnabled()) {
-				LOGGER.debug("request params:(" + xcoord + ";" + ycoord
-						+ ") straal:" + straal);
-			}
+                        if(LOGGER.isDebugEnabled()) {
+                            LOGGER.debug("request params:(" + xcoord + ";" 
+                                        + ycoord + ") straal:" + straal);
+                        }
 			return new int[] { xcoord, ycoord, straal };
 		} catch (final NumberFormatException | ParseException e) {
-			LOGGER.error(
-					"Een van de vereiste parameters kon niet geparsed worden als Integer.",
+			LOGGER.error("Een van de vereiste parameters kon niet geparsed worden als Integer.",
 					e);
 			throw new ServletException(e);
 		}
