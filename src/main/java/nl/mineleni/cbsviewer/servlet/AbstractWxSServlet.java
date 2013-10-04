@@ -105,7 +105,7 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 			request.setAttribute(REQ_PARAM_XCOORD.code, xcoord);
 			request.setAttribute(REQ_PARAM_YCOORD.code, ycoord);
 			request.setAttribute(REQ_PARAM_STRAAL.code, straal);
-			if(LOGGER.isDebugEnabled()) {
+			if (LOGGER.isDebugEnabled()) {
 				LOGGER.debug("request params:(" + xcoord + ";" 
 						+ ycoord + ") straal:" + straal);
 			}
