@@ -137,13 +137,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/** cache voor achtergrond kaartjes. */
 	private transient WMSCache bgWMSCache;
-
 	/** De achtergrond luchtfoto WMS. */
 	private transient WebMapServer lufoWMS;
 
 	/** cache voor achtergrond kaartjes. */
 	private transient WMSCache bgWMSLuFoCache;
-
 	/** verzameling lagen voor de achtergrondkaart. */
 	private transient String[] lufoWMSlayers;
 
@@ -196,8 +194,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final double scale = bbox.getWidth() / MAP_DIMENSION;
 		// max lengte in px van schaalbalk
 		int barLength = MAP_DIMENSION / 2;
-		// crs units
-		int dist = (int) (barLength * scale); 
+		int dist = (int) (barLength * scale); // crs units
 		// logaritmisch lengte afronden
 		final int digits = (int) (Math.log(dist) / Math.log(10));
 		final double pow10 = Math.pow(10, digits);
