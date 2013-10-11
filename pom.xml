@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
@@ -85,11 +83,11 @@
 		<notifiers />
 	</ciManagement>
 	<prerequisites>
-		<maven>3.0.5</maven>
+		<maven>3.0.4</maven>
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>10.3</geotools.version>
+		<geotools.version>10.0</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -102,20 +100,12 @@
 		<sass.OutputStyle>:compressed</sass.OutputStyle>
 		<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
 		<!-- tag, branch, ... -->
-		<!--
 		<openlayers.checkout.versiontype>tag</openlayers.checkout.versiontype>
 		<openlayers.checkout.version>release-2.13.1</openlayers.checkout.version>
-		-->
-		<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
-		<openlayers.checkout.version>master</openlayers.checkout.version>
-		<!-- this can be any other OL build compressor or 'none' -->
+		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
-		<!-- Jetty 7.x is J5EE, 2.5 servlet api, 1.2 JSP api -->
-		<jetty.version>7.6.14.v20131031</jetty.version>
-		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
-		<jetty.port>8021</jetty.port>
-		<jetty.stopPort>8007</jetty.stopPort>
-		<repo_token />
+		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
+		<jetty.version>7.6.13.v20130916</jetty.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -134,11 +124,9 @@
 						<artifactId>jetty-maven-plugin</artifactId>
 						<version>${jetty.version}</version>
 						<configuration>
-							<stopPort>${jetty.stopPort}</stopPort>
-							<stopKey>STOP</stopKey>
 							<connectors>
 								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-									<port>${jetty.port}</port>
+									<port>8021</port>
 									<maxIdleTime>60000</maxIdleTime>
 								</connector>
 							</connectors>
@@ -222,7 +210,7 @@
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
 										<argument>buildUncompressed.py</argument>
-										<argument>${basedir}/OL-build</argument>
+										<argument>full</argument>
 										<argument>OpenLayers-test.js</argument>
 									</arguments>
 								</configuration>
@@ -242,21 +230,15 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" 
-												  proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get src="https://dl.google.com/closure-compiler/compiler-latest.zip" 
-											 dest="${basedir}/cache/" 
-											 usetimestamp="true" />
-										<unzip src="${basedir}/cache/compiler-latest.zip" 
-											   dest="${basedir}/target">
+										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}/cache/" usetimestamp="true" />
+										<unzip src="${basedir}/cache/compiler-latest.zip" dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
 										</unzip>
-										<copy file="${basedir}/target/compiler.jar" 
-											  tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" 
-											  overwrite="true" />
+										<copy file="${basedir}/target/compiler.jar" tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
@@ -269,8 +251,7 @@
 								<configuration>
 									<!-- copy files into build -->
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" 
-											  tofile="src/main/webapp/lib/OpenLayers.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" tofile="src/main/webapp/lib/OpenLayers.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -282,8 +263,7 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" 
-											  tofile="src/test/js/lib/OpenLayers-test.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -297,30 +277,6 @@
 			<properties>
 				<github.global.server>github</github.global.server>
 			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>cobertura-maven-plugin</artifactId>
-						<version>2.6</version>
-						<configuration>
-							<format>xml</format>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.eluder.coveralls</groupId>
-						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>2.1.0</version>
-						<configuration>
-							<repoToken>${repo_token}</repoToken>
-							<sourceDirectories>
-								<source>src/main/java</source>
-								<source>target/generated-sources/jaxb</source>
-							</sourceDirectories>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 		<profile>
 			<id>jasmineserver</id>
@@ -363,7 +319,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.4.1</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -413,29 +369,6 @@
 							</target>
 						</configuration>
 					</execution>
-					<execution>
-						<id>getYslow</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<target>
-								<setproxy proxyhost="${http.proxyHost}" 
-										  proxyport="${http.proxyPort}" />
-								<mkdir dir="${basedir}/cache" />
-								<get src="http://yslow.org/yslow-phantomjs-3.1.8.zip" 
-									 dest="${basedir}/cache/" 
-									 usetimestamp="true" />
-								<unzip src="${basedir}/cache/yslow-phantomjs-3.1.8.zip" 
-									   dest="${basedir}/target">
-									<patternset>
-										<include name="**/yslow.js" />
-									</patternset>
-								</unzip>
-							</target>
-						</configuration>
-					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -453,7 +386,6 @@
 				<configuration>
 					<verbose>${debug}</verbose>
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
-					<npa>true</npa>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -525,11 +457,7 @@
 						<include>**/*IntegrationTest.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
-					<systemPropertyVariables>
-						<jetty.port>${jetty.port}</jetty.port>
-					</systemPropertyVariables>
 					<argLine>-XX:-UseSplitVerifier</argLine>
-					<trimStackTrace>false</trimStackTrace>
 				</configuration>
 				<executions>
 					<execution>
@@ -546,12 +474,12 @@
 				<version>${jetty.version}</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<stopPort>${jetty.stopPort}</stopPort>
+					<stopPort>8005</stopPort>
 					<stopKey>STOP</stopKey>
 					<contextPath>/</contextPath>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-							<port>${jetty.port}</port>
+							<port>8021</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
@@ -616,7 +544,11 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.3.3</version>
+				<version>1.3.2</version>
+				<!--
+				<version>1.0.0</version>
+				<groupId>org.sonatype.plugins</groupId>
+				-->
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -697,7 +629,7 @@
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.5.2</version>
+				<version>1.5.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -737,7 +669,7 @@
 						<category>webapp</category>
 						<programmingLanguage>JavaScript</programmingLanguage>
 						<programmingLanguage>Java</programmingLanguage>
-						<downloadPage>https://github.com/MinELenI/CBSviewer/releases</downloadPage>
+						<downloadPage />
 						<mailingList />
 					</doapOptions>
 				</configuration>
@@ -750,7 +682,7 @@
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
 						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.5</version>
+						<version>1.4</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -763,12 +695,11 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.0.7</version>
+							<version>1.0.2</version>
 							<configuration>
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
 								<proxyPort>${http.proxyPort}</proxyPort>
-								<name>OWASP Dependency Check</name>
 							</configuration>
 						</plugin>
 						<plugin>
@@ -783,7 +714,7 @@
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>versions-maven-plugin</artifactId>
-							<version>2.1</version>
+							<version>2.0</version>
 							<reportSets>
 								<reportSet>
 									<reports>
@@ -801,16 +732,16 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-javadoc-plugin</artifactId>
-							<version>2.9.1</version>
+							<version>2.9</version>
 							<configuration>
 								<debug>${debug}</debug>
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
+								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -inferdep -useimports</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
-									<version>5.6.6</version>
+									<version>5.6</version>
 								</docletArtifact>
 								<show>protected</show>
 								<useStandardDocletOptions>true</useStandardDocletOptions>
@@ -821,7 +752,7 @@
 									<link>http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs</link>
 									<link>http://docs.geotools.org/latest/javadocs</link>
 									<link>http://flexjson.sourceforge.net/javadoc</link>
-									<link>http://jaxb.java.net/nonav/2.2.11/docs/api</link>
+									<link>http://jaxb.java.net/nonav/2.2.6/docs/api</link>
 								</links>
 								<author>true</author>
 								<defaultAuthor />
@@ -844,26 +775,11 @@
 									</tag>
 									<tag>
 										<name>opt</name>
-										<placement>X</placement>
+										<placement>o</placement>
+										<head>opt:</head>
 									</tag>
 									<tag>
 										<name>composed</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>has</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>depend</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>assoc</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>extends</name>
 										<placement>X</placement>
 									</tag>
 								</tags>
@@ -879,21 +795,8 @@
 								<goal>report-only</goal>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
-								</reportsDirectories>
-							</configuration>
-						</plugin>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.16</version>
-							<configuration>
-								<outputName>failsafe-report</outputName>
-								<linkXRef>true</linkXRef>
-								<goal>failsafe-report-only</goal>
-								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
-									<reportsDirectory>${project.build.directory}/yslow</reportsDirectory>
+									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
 								</reportsDirectories>
 							</configuration>
 						</plugin>
@@ -935,6 +838,7 @@
 								<includeOpenIssues>false</includeOpenIssues>
 								<onlyMilestoneIssues>false</onlyMilestoneIssues>
 								<onlyCurrentVersion>false</onlyCurrentVersion>
+								<!-- <columnNames></columnNames> -->
 								<sortColumnNames>Fix Version DESC,Key DESC</sortColumnNames>
 							</configuration>
 							<reportSets>
@@ -948,7 +852,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-checkstyle-plugin</artifactId>
-							<version>2.11</version>
+							<version>2.10</version>
 							<configuration>
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
@@ -991,12 +895,12 @@
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>cobertura-maven-plugin</artifactId>
-							<version>2.6</version>
+							<version>2.5.2</version>
 						</plugin>
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>findbugs-maven-plugin</artifactId>
-							<version>2.5.3</version>
+							<version>2.5.2</version>
 							<configuration>
 								<effort>Default</effort>
 								<threshold>Normal</threshold>
@@ -1065,14 +969,13 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.9</version>
+				<version>0.8</version>
 				<configuration>
-					<message>site update voor versie ${project.version} (rev. ${buildNumber})</message>
+					<message>site update voor versie ${project.version} ( rev. ${buildNumber} )</message>
 					<password>${github.password}</password>
 					<userName>${github.username}</userName>
 					<host>api.github.com</host>
 					<force>false</force>
-					<noJekyll>true</noJekyll>
 				</configuration>
 				<executions>
 					<execution>
@@ -1148,12 +1051,6 @@
 			<version>4.3.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpmime</artifactId>
-			<version>4.3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.geotools</groupId>
 			<artifactId>gt-xml</artifactId>
 			<version>${geotools.version}</version>
@@ -1203,7 +1100,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.7.3</version>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
