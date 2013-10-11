@@ -752,7 +752,7 @@
 									<link>http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs</link>
 									<link>http://docs.geotools.org/latest/javadocs</link>
 									<link>http://flexjson.sourceforge.net/javadoc</link>
-									<link>http://jaxb.java.net/nonav/2.2.6/docs/api</link>
+									<link>http://jaxb.java.net/nonav/2.2.11/docs/api</link>
 								</links>
 								<author>true</author>
 								<defaultAuthor />
