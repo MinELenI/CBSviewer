@@ -969,13 +969,14 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.8</version>
+				<version>0.9</version>
 				<configuration>
-					<message>site update voor versie ${project.version} ( rev. ${buildNumber} )</message>
+					<message>site update voor versie ${project.version} (rev. ${buildNumber})</message>
 					<password>${github.password}</password>
 					<userName>${github.username}</userName>
 					<host>api.github.com</host>
 					<force>false</force>
+					<noJekyll>true</noJekyll>
 				</configuration>
 				<executions>
 					<execution>
