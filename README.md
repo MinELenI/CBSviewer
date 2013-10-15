@@ -10,3 +10,7 @@ documentation is available at: http://mineleni.github.io/CBSviewer/
 [![Jenkins Build Status](http://gisdemo.agro.nl/jenkins/job/CBS-viewer/badge/icon)](http://gisdemo.agro.nl/jenkins/job/CBS-viewer/)
 
 ![logo](http://staff.washington.edu/tft/a11ylogo/images/a11ylogo150.png)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MinELenI/cbsviewer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
