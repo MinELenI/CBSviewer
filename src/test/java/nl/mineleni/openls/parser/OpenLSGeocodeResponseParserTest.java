@@ -33,14 +33,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Class OpenLSGeocodeResponseParserTest.
+ * The Class OpenLSResponseParserTest.
  * 
  * @since 1.7
  */
-public class OpenLSGeocodeResponseParserTest extends AbstractTestUtils {
+public class OpenLSResponseParserTest extends AbstractTestUtils {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(OpenLSGeocodeResponseParserTest.class);
+			.getLogger(OpenLSResponseParserTest.class);
 
 	/**
 	 * Test open ls request parser. Iterate through the sample openls response
@@ -51,21 +51,20 @@ public class OpenLSGeocodeResponseParserTest extends AbstractTestUtils {
 	 */
 	@Test
 	public void testOpenLSResponseParser() throws IOException {
-		final OpenLSGeocodeResponseParser rp = new OpenLSGeocodeResponseParser();
-		final File folder = new File(
-				"./target/test-classes/sampleresponses/geocode/");
+		final OpenLSResponseParser rp = new OpenLSResponseParser();
+		final File folder = new File("./target/test-classes/sampleresponses/");
 		final List<File> fileList = new ArrayList<>();
 		this.listDirectoryFilenames(folder, fileList);
 		final java.util.Iterator<File> fileIt = fileList.iterator();
 		while (fileIt.hasNext()) {
-			final String fileName = "/sampleresponses/geocode/"
+			final String fileName = "/sampleresponses/"
 					+ fileIt.next().getName();
 			final String responseString = this.readFileAsString(fileName);
 			final GeocodeResponse gcr = rp.parseOpenLSResponse(responseString);
 			if (gcr != null) {
 				LOGGER.info(gcr.toXML());
 			}
-			assertNotNull("Parsing bestand: " + fileName, gcr);
+			assertNotNull(gcr);
 		}
 	}
 
@@ -131,12 +130,12 @@ public class OpenLSGeocodeResponseParserTest extends AbstractTestUtils {
 		// create xml from response object
 		final String gcrXML = gcr.toXML();
 
-		final OpenLSGeocodeResponseParser rp = new OpenLSGeocodeResponseParser();
+		final OpenLSResponseParser rp = new OpenLSResponseParser();
 		final GeocodeResponse newgcr = rp.parseOpenLSResponse(gcrXML);
 		final String newgcrXML = newgcr.toXML();
 
-		LOGGER.debug(gcrXML);
-		LOGGER.debug(newgcrXML);
+		LOGGER.info(gcrXML);
+		LOGGER.info(newgcrXML);
 
 		assertEquals(gcrXML, newgcrXML);
 	}
