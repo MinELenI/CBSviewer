@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.cbs.cbsviewer</groupId>
 	<artifactId>cbsviewer</artifactId>
@@ -87,7 +89,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>10.0</geotools.version>
+		<geotools.version>10.1</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -106,6 +108,9 @@
 		<openlayers.compress.build>closure</openlayers.compress.build>
 		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
 		<jetty.version>7.6.13.v20130916</jetty.version>
+		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
+		<jetty.port>8021</jetty.port>
+		<jetty.stopPort>8007</jetty.stopPort>
 	</properties>
 	<profiles>
 		<profile>
@@ -124,9 +129,11 @@
 						<artifactId>jetty-maven-plugin</artifactId>
 						<version>${jetty.version}</version>
 						<configuration>
+							<stopPort>${jetty.stopPort}</stopPort>
+							<stopKey>STOP</stopKey>
 							<connectors>
 								<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-									<port>8021</port>
+									<port>${jetty.port}</port>
 									<maxIdleTime>60000</maxIdleTime>
 								</connector>
 							</connectors>
@@ -230,15 +237,21 @@
 								</goals>
 								<configuration>
 									<target>
-										<setproxy proxyhost="${http.proxyHost}" proxyport="${http.proxyPort}" />
+										<setproxy proxyhost="${http.proxyHost}" 
+												  proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" dest="${basedir}/cache/" usetimestamp="true" />
-										<unzip src="${basedir}/cache/compiler-latest.zip" dest="${basedir}/target">
+										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" 
+											 dest="${basedir}/cache/" 
+											 usetimestamp="true" />
+										<unzip src="${basedir}/cache/compiler-latest.zip" 
+											   dest="${basedir}/target">
 											<patternset>
 												<include name="**/compiler.jar" />
 											</patternset>
 										</unzip>
-										<copy file="${basedir}/target/compiler.jar" tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" overwrite="true" />
+										<copy file="${basedir}/target/compiler.jar" 
+											  tofile="${project.build.directory}/OLcheckout/tools/closure-compiler.jar" 
+											  overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
@@ -251,7 +264,8 @@
 								<configuration>
 									<!-- copy files into build -->
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" tofile="src/main/webapp/lib/OpenLayers.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers.js" 
+											  tofile="src/main/webapp/lib/OpenLayers.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -263,7 +277,8 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" tofile="src/test/js/lib/OpenLayers-test.js" />
+										<copy file="${project.build.directory}/OLcheckout/build/OpenLayers-test.js" 
+											  tofile="src/test/js/lib/OpenLayers-test.js" />
 									</target>
 								</configuration>
 							</execution>
@@ -366,6 +381,29 @@
 							<target>
 								<!-- YUI compressor heeft deze directory nodig -->
 								<mkdir dir="${project.build.directory}/${project.build.finalName}/js" />
+							</target>
+						</configuration>
+					</execution>
+					<execution>
+						<id>getYslow</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<setproxy proxyhost="${http.proxyHost}" 
+										  proxyport="${http.proxyPort}" />
+								<mkdir dir="${basedir}/cache" />
+								<get src="http://yslow.org/yslow-phantomjs-3.1.8.zip" 
+									 dest="${basedir}/cache/" 
+									 usetimestamp="true" />
+								<unzip src="${basedir}/cache/yslow-phantomjs-3.1.8.zip" 
+									   dest="${basedir}/target">
+									<patternset>
+										<include name="**/yslow.js" />
+									</patternset>
+								</unzip>
 							</target>
 						</configuration>
 					</execution>
@@ -474,12 +512,12 @@
 				<version>${jetty.version}</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<stopPort>8005</stopPort>
+					<stopPort>${jetty.stopPort}</stopPort>
 					<stopKey>STOP</stopKey>
 					<contextPath>/</contextPath>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
-							<port>8021</port>
+							<port>${jetty.port}</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
@@ -545,10 +583,6 @@
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
 				<version>1.3.2</version>
-				<!--
-				<version>1.0.0</version>
-				<groupId>org.sonatype.plugins</groupId>
-				-->
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -797,6 +831,7 @@
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
 									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
+									<reportsDirectory>${project.build.directory}/yslow</reportsDirectory>
 								</reportsDirectories>
 							</configuration>
 						</plugin>
