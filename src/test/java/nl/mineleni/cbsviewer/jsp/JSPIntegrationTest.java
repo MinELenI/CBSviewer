@@ -29,7 +29,7 @@ import org.junit.BeforeClass;
  * 
  * @author mprins
  */
-public abstract class JSPIntegrationTest implements IntegrationTestConstants {
+public abstract class JSPIntegrationTest extends IntegrationTestConstants {
 	/**
 	 * test client.
 	 */

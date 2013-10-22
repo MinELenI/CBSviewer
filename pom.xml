@@ -495,6 +495,9 @@
 						<include>**/*IntegrationTest.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
+					<systemPropertyVariables>
+						<jetty.port>${jetty.port}</jetty.port>
+					</systemPropertyVariables>
 					<argLine>-XX:-UseSplitVerifier</argLine>
 				</configuration>
 				<executions>
@@ -734,6 +737,7 @@
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
 								<proxyPort>${http.proxyPort}</proxyPort>
+								<name>OWASP Dependency Check</name>
 							</configuration>
 						</plugin>
 						<plugin>

@@ -11,9 +11,10 @@ package nl.mineleni.cbsviewer;
  * @author prinsmc
  * 
  */
-public interface IntegrationTestConstants {
+public abstract class IntegrationTestConstants {
 	/**
 	 * Basis url voor de integratie tests, {@value} .
 	 */
-	public static final String BASE_TEST_URL = "http://localhost:8021/";
+	public static final String BASE_TEST_URL = "http://localhost:"
+			+ System.getProperty("jetty.port") + "/";
 }
