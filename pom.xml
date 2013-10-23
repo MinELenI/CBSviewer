@@ -85,7 +85,7 @@
 		<notifiers />
 	</ciManagement>
 	<prerequisites>
-		<maven>3.0.4</maven>
+		<maven>3.0.5</maven>
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
