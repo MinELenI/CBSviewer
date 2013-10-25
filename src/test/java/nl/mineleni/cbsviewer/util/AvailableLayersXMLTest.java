@@ -13,7 +13,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.junit.Assume.assumeNotNull;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -124,8 +123,11 @@ public class AvailableLayersXMLTest {
 				.getClassLoader()
 				.getResourceAsStream("invalidAvailableLayers.xml"));
 
+		// final Source invaliddoc = new StreamSource(new File(
+		// "target/test-classes/invalidAvailableLayers.xml"));
 		try {
 			assertFalse(this.v.isInstanceValid(invaliddoc));
+			// fail("Expected excepion did not occur.");
 		} catch (final XMLUnitRuntimeException x) {
 			assertEquals("Schema is invalid", x.getMessage());
 		}
@@ -141,6 +143,8 @@ public class AvailableLayersXMLTest {
 	/**
 	 * XML testcase voor test {@link AvailableLayers.xml} en
 	 * {@link invalidAvailableLayers.xml}.
+	 * 
+	 * @throws IOException
 	 */
 	@Test
 	public void testAvailableLayersXMLXPath() {
@@ -200,12 +204,11 @@ public class AvailableLayersXMLTest {
 		// final Source schema = new
 		// StreamSource(this.getClass().getClassLoader()
 		// .getResourceAsStream("AvailableLayers.xsd"));
-		//final Source doc = new StreamSource(Thread.currentThread()
-		//		.getContextClassLoader()
-		//		.getResourceAsStream("../classes/AvailableLayers.xml"));
-		final Source doc = new StreamSource(
-				new File("target/classes/AvailableLayers.xml"));
-		assumeNotNull(doc);
+		final Source doc = new StreamSource(Thread.currentThread()
+				.getContextClassLoader()
+				.getResourceAsStream("../classes/AvailableLayers.xml"));
+		// final Source doc = new StreamSource(new
+		// File("target/classes//AvailableLayers.xml"));
 		assertTrue(this.v.isInstanceValid(doc));
 	}
 
