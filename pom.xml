@@ -221,9 +221,7 @@
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
 										<argument>buildUncompressed.py</argument>
-										<!-- argument>full</argument -->
-										<argument>-c</argument>
-										<argument>${openlayers.compress.build}</argument>
+										<argument>${basedir}/OL-build</argument>
 										<argument>OpenLayers-test.js</argument>
 									</arguments>
 								</configuration>
