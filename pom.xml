@@ -839,8 +839,20 @@
 								<goal>report-only</goal>
 								<reportsDirectories>
 									<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
 									<reportsDirectory>${project.build.directory}/jasmine</reportsDirectory>
+								</reportsDirectories>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.16</version>
+							<configuration>
+								<outputName>failsafe-report</outputName>
+								<linkXRef>true</linkXRef>
+								<goal>failsafe-report-only</goal>
+								<reportsDirectories>
+									<reportsDirectory>${project.build.directory}/failsafe-reports</reportsDirectory>
 									<reportsDirectory>${project.build.directory}/yslow</reportsDirectory>
 								</reportsDirectories>
 							</configuration>

@@ -8,9 +8,11 @@ package nl.mineleni.cbsviewer.yslow;
 
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.IsNot.not;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 import java.io.File;
+import java.io.RandomAccessFile;
 
 import nl.mineleni.cbsviewer.IntegrationTestConstants;
 
@@ -18,6 +20,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * YSlow Testcase voor index.jsp.
@@ -25,6 +29,9 @@ import org.junit.Test;
  * @author mprins
  */
 public class YSlowIntegrationTest extends IntegrationTestConstants {
+	/** logger. */
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(YSlowIntegrationTest.class);
 	private Process phantomProcess;
 	private ProcessBuilder pb;
 
@@ -40,29 +47,30 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	}
 
 	/**
-	 * voorbereidingen van phantomjs proces voor de testcases.
+	 * Voorbereiding van phantomjs proces voor de testcases.
 	 * 
+	 * @see http://yslow.org/phantomjs/
 	 * @throws Exception
 	 */
 	@Before
 	public void preparePhantomJS() throws Exception {
-		pb = new ProcessBuilder("phantomjs");
-		pb.command().add("target/yslow.js");
-		pb.command().add("--verbose");
+		this.pb = new ProcessBuilder("phantomjs");
+		this.pb.command().add("target/yslow.js");
+		this.pb.command().add("--verbose");
 
-		pb.command().add("--format");
-		pb.command().add("junit");
+		this.pb.command().add("--format");
+		this.pb.command().add("junit");
 
-		pb.command().add("--info");
-		pb.command().add("grade");
+		this.pb.command().add("--info");
+		this.pb.command().add("all");
 
-		pb.command().add("--threshold");
-		pb.command().add("B");
+		this.pb.command().add("--threshold");
+		this.pb.command().add("{overall:'B', ycdn:0, yexpires:0, ycompress:0}");
 
-		pb.command().add("--viewport");
-		pb.command().add("800x600");
+		this.pb.command().add("--viewport");
+		this.pb.command().add("800x600");
 
-		pb.redirectError(new File("phantomjs_error.log"));
+		this.pb.redirectError(new File("phantomjs_error.log"));
 	}
 
 	/**
@@ -70,6 +78,8 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	 */
 	@After
 	public void stopPhantomJS() {
+		LOGGER.debug("PhantomJS process stopped, exit code: "
+				+ this.phantomProcess.exitValue());
 		this.phantomProcess.destroy();
 	}
 
@@ -80,13 +90,18 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	 */
 	@Test
 	public void phantomYSlowIndexRIATest() throws Exception {
-		pb.command().add(BASE_TEST_URL + "index.jsp");
-		pb.redirectOutput(new File("target/yslow/TEST-YSlowIndexRIA.xml"));
-		this.phantomProcess = pb.start();
+		this.pb.command().add(BASE_TEST_URL + "index.jsp");
+		this.pb.redirectOutput(new File("target/yslow/TEST-YSlowIndexRIA.xml"));
+
+		LOGGER.debug("PhantomJS commandline options: " + this.pb.command());
+		this.phantomProcess = this.pb.start();
 
 		assertThat("Number of YSlow violations returned.",
 				this.phantomProcess.waitFor(), not(greaterThan(0)));
 
+		assertFalse("Running test has failed.", (new RandomAccessFile(
+				"target/yslow/TEST-YSlowIndexRIA.xml", "r")).readLine()
+				.startsWith("FAIL to load undefined"));
 	}
 
 	/**
@@ -96,11 +111,16 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	 */
 	@Test
 	public void phantomYSlowIndexCORETest() throws Exception {
-		pb.command().add(BASE_TEST_URL + "index.jsp?coreonly=true");
-		pb.redirectOutput(new File("target/yslow/TEST-YSlowIndexCORE.xml"));
-		this.phantomProcess = pb.start();
+		this.pb.command().add(BASE_TEST_URL + "index.jsp?coreonly=true");
+		this.pb.redirectOutput(new File("target/yslow/TEST-YSlowIndexCORE.xml"));
+		LOGGER.debug("PhantomJS commandline options: " + this.pb.command());
+		this.phantomProcess = this.pb.start();
 
 		assertThat("Number of YSlow violations returned.",
 				this.phantomProcess.waitFor(), not(greaterThan(0)));
+
+		assertFalse("Running test has failed.", (new RandomAccessFile(
+				"target/yslow/TEST-YSlowIndexRIA.xml", "r")).readLine()
+				.startsWith("FAIL to load undefined"));
 	}
 }

@@ -13,8 +13,10 @@ package nl.mineleni.cbsviewer;
  */
 public abstract class IntegrationTestConstants {
 	/**
-	 * Basis url voor de integratie tests, {@value} .
+	 * Basis url voor de integratie tests, {@value} , poort wordt ingesteld door
+	 * Maven, default 8021.
 	 */
 	public static final String BASE_TEST_URL = "http://localhost:"
-			+ System.getProperty("jetty.port") + "/";
+			+ (System.getProperty("jetty.port") == null ? "8021" : System
+					.getProperty("jetty.port")) + "/";
 }
