@@ -102,8 +102,12 @@
 		<sass.OutputStyle>:compressed</sass.OutputStyle>
 		<openlayers.checkout.url>scm:git:https://github.com/openlayers/openlayers.git</openlayers.checkout.url>
 		<!-- tag, branch, ... -->
+		<!--
 		<openlayers.checkout.versiontype>tag</openlayers.checkout.versiontype>
 		<openlayers.checkout.version>release-2.13.1</openlayers.checkout.version>
+		-->
+		<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
+		<openlayers.checkout.version>master</openlayers.checkout.version>
 		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
 		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
@@ -217,7 +221,9 @@
 									<workingDirectory>${project.build.directory}/OLcheckout/build</workingDirectory>
 									<arguments>
 										<argument>buildUncompressed.py</argument>
-										<argument>full</argument>
+										<!-- argument>full</argument -->
+										<argument>-c</argument>
+										<argument>${openlayers.compress.build}</argument>
 										<argument>OpenLayers-test.js</argument>
 									</arguments>
 								</configuration>
