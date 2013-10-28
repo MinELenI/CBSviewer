@@ -6,6 +6,7 @@
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
+import java.io.File;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -19,6 +20,7 @@ import org.custommonkey.xmlunit.exceptions.XMLUnitRuntimeException;
 import org.custommonkey.xmlunit.jaxp13.Validator;
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assume.assumeNotNull;
 
 /**
  * Test case voor
@@ -122,9 +124,12 @@ public class AttributeValuesFilterTest {
 				.getResourceAsStream("AttributeValuesFilter.xsd"));
 		v.addSchemaSource(schema);
 		// deployment resource
-		final Source doc = new StreamSource(Thread.currentThread()
-				.getContextClassLoader()
-				.getResourceAsStream("../classes/AttributeValuesFilter.xml"));
+		//final Source doc = new StreamSource(Thread.currentThread()
+		//		.getContextClassLoader()
+		//		.getResourceAsStream("../classes/AttributeValuesFilter.xml"));
+		final Source doc = new StreamSource(
+				new File("target/classes/AttributeValuesFilter.xml"));
+		assumeNotNull(doc);
 		assertTrue(v.isInstanceValid(doc));
 
 	}
