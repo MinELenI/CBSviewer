@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.RandomAccessFile;
@@ -34,6 +35,7 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 			.getLogger(YSlowIntegrationTest.class);
 	private Process phantomProcess;
 	private ProcessBuilder pb;
+	private int allowedToFail = 0;
 
 	/**
 	 * aanmaken van de rapportage directory, dat blijkt phantomjs + yslow niet
@@ -55,19 +57,22 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	@Before
 	public void preparePhantomJS() throws Exception {
 		this.pb = new ProcessBuilder("phantomjs");
-		this.pb.command().add("target/yslow.js");
-		this.pb.command().add("--verbose");
 
-		this.pb.command().add("--format");
+		this.pb.command().add("target/yslow.js");
+		this.pb.command().add("-v");
+
+		this.pb.command().add("-f");
 		this.pb.command().add("junit");
 
-		this.pb.command().add("--info");
-		this.pb.command().add("all");
+		this.pb.command().add("-i");
+		this.pb.command().add("grade");
 
-		this.pb.command().add("--threshold");
-		this.pb.command().add("{overall:'B', ycdn:0, yexpires:0, ycompress:0}");
+		this.pb.command().add("-t");
+		this.pb.command().add(
+				"{overall:'B', 'ycdn':'F', 'yexpires':'F', 'ycompress':'F'}");
+		allowedToFail = /* 3x 'F' */3 + /* 1 ignored */1;
 
-		this.pb.command().add("--viewport");
+		this.pb.command().add("-vp");
 		this.pb.command().add("800x600");
 
 		this.pb.redirectError(new File("phantomjs_error.log"));
@@ -97,11 +102,17 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 		this.phantomProcess = this.pb.start();
 
 		assertThat("Number of YSlow violations returned.",
-				this.phantomProcess.waitFor(), not(greaterThan(0)));
+				this.phantomProcess.waitFor(), not(greaterThan(allowedToFail)));
 
-		assertFalse("Running test has failed.", (new RandomAccessFile(
-				"target/yslow/TEST-YSlowIndexRIA.xml", "r")).readLine()
-				.startsWith("FAIL to load undefined"));
+		try (RandomAccessFile report = new RandomAccessFile(
+				"target/yslow/TEST-YSlowIndexRIA.xml", "r")) {
+			assertFalse("Running test has failed.", report.readLine()
+					.startsWith("FAIL to load undefined"));
+
+			report.seek(0);
+			assertTrue("Running test has failed.", report.readLine()
+					.startsWith("<?xml version="));
+		}
 	}
 
 	/**
@@ -117,10 +128,16 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 		this.phantomProcess = this.pb.start();
 
 		assertThat("Number of YSlow violations returned.",
-				this.phantomProcess.waitFor(), not(greaterThan(0)));
+				this.phantomProcess.waitFor(), not(greaterThan(allowedToFail)));
 
-		assertFalse("Running test has failed.", (new RandomAccessFile(
-				"target/yslow/TEST-YSlowIndexRIA.xml", "r")).readLine()
-				.startsWith("FAIL to load undefined"));
+		try (RandomAccessFile report = new RandomAccessFile(
+				"target/yslow/TEST-YSlowIndexRIA.xml", "r")) {
+
+			assertFalse("Running test has failed.", report.readLine()
+					.startsWith("FAIL to load undefined"));
+			report.seek(0);
+			assertTrue("Running test has failed.", report.readLine()
+					.startsWith("<?xml version="));
+		}
 	}
 }
