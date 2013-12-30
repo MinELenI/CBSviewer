@@ -89,7 +89,7 @@
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>10.3</geotools.version>
+		<geotools.version>10.1</geotools.version>
 		<proj.finalname>${project.artifactId}</proj.finalname>
 		<jdk.version>1.7</jdk.version>
 		<github.username />
@@ -108,14 +108,13 @@
 		-->
 		<openlayers.checkout.versiontype>branch</openlayers.checkout.versiontype>
 		<openlayers.checkout.version>master</openlayers.checkout.version>
-		<!-- this can be any other OL build compressor or 'none' -->
+		<!-- this can be any other OL build compressor or none -->
 		<openlayers.compress.build>closure</openlayers.compress.build>
-		<!-- Jetty 7.x is J5EE, 2.5 servlet api, 1.2 JSP api -->
-		<jetty.version>7.6.14.v20131031</jetty.version>
+		<!-- Jetty 7 is J5EE, 2.5 servlet api, 1.2 JSP api -->
+		<jetty.version>7.6.13.v20130916</jetty.version>
 		<!-- let op in een aantal integratie tests is deze poort hardcoded -->
 		<jetty.port>8021</jetty.port>
 		<jetty.stopPort>8007</jetty.stopPort>
-		<repo_token />
 	</properties>
 	<profiles>
 		<profile>
@@ -245,7 +244,7 @@
 										<setproxy proxyhost="${http.proxyHost}" 
 												  proxyport="${http.proxyPort}" />
 										<mkdir dir="${basedir}/cache" />
-										<get src="https://dl.google.com/closure-compiler/compiler-latest.zip" 
+										<get src="https://closure-compiler.googlecode.com/files/compiler-latest.zip" 
 											 dest="${basedir}/cache/" 
 											 usetimestamp="true" />
 										<unzip src="${basedir}/cache/compiler-latest.zip" 
@@ -297,30 +296,6 @@
 			<properties>
 				<github.global.server>github</github.global.server>
 			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>cobertura-maven-plugin</artifactId>
-						<version>2.6</version>
-						<configuration>
-							<format>xml</format>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.eluder.coveralls</groupId>
-						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>2.1.0</version>
-						<configuration>
-							<repoToken>${repo_token}</repoToken>
-							<sourceDirectories>
-								<source>src/main/java</source>
-								<source>target/generated-sources/jaxb</source>
-							</sourceDirectories>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 		<profile>
 			<id>jasmineserver</id>
@@ -363,7 +338,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.4.1</version>
 				<configuration>
 					<pushChanges>false</pushChanges>
 				</configuration>
@@ -453,7 +428,6 @@
 				<configuration>
 					<verbose>${debug}</verbose>
 					<includeSchemasOutputPath>.</includeSchemasOutputPath>
-					<npa>true</npa>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -529,7 +503,6 @@
 						<jetty.port>${jetty.port}</jetty.port>
 					</systemPropertyVariables>
 					<argLine>-XX:-UseSplitVerifier</argLine>
-					<trimStackTrace>false</trimStackTrace>
 				</configuration>
 				<executions>
 					<execution>
@@ -616,7 +589,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.3.3</version>
+				<version>1.3.2</version>
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -656,6 +629,7 @@
 										<include>**/OverviewMap.js</include>
 										<include>**/Viewer.js</include>
 										<include>**/ZoekFormulier.js</include>
+										<include>**/PrintEventHandler.js</include>
 									</includes>
 									<output>${project.build.directory}/${project.build.finalName}/js/cbsviewer.js</output>
 									<removeIncluded>true</removeIncluded>
@@ -696,7 +670,7 @@
 			<plugin>
 				<groupId>com.github.timurstrekalov</groupId>
 				<artifactId>saga-maven-plugin</artifactId>
-				<version>1.5.2</version>
+				<version>1.5.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -736,7 +710,7 @@
 						<category>webapp</category>
 						<programmingLanguage>JavaScript</programmingLanguage>
 						<programmingLanguage>Java</programmingLanguage>
-						<downloadPage>https://github.com/MinELenI/CBSviewer/releases</downloadPage>
+						<downloadPage />
 						<mailingList />
 					</doapOptions>
 				</configuration>
@@ -749,7 +723,7 @@
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
 						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.5</version>
+						<version>1.4</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -762,7 +736,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.0.7</version>
+							<version>1.0.4</version>
 							<configuration>
 								<externalReport>false</externalReport>
 								<proxyUrl>${http.proxyHost}</proxyUrl>
@@ -805,11 +779,11 @@
 								<debug>${debug}</debug>
 								<stylesheet>java</stylesheet>
 								<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -useimports</additionalparam>
+								<additionalparam>-all -hide java.* -hide javax.* -hide org.* -inferrel -inferreltype -inferdep -useimports</additionalparam>
 								<docletArtifact>
 									<groupId>org.umlgraph</groupId>
 									<artifactId>umlgraph</artifactId>
-									<version>5.6.6</version>
+									<version>5.6</version>
 								</docletArtifact>
 								<show>protected</show>
 								<useStandardDocletOptions>true</useStandardDocletOptions>
@@ -843,26 +817,11 @@
 									</tag>
 									<tag>
 										<name>opt</name>
-										<placement>X</placement>
+										<placement>o</placement>
+										<head>opt:</head>
 									</tag>
 									<tag>
 										<name>composed</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>has</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>depend</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>assoc</name>
-										<placement>X</placement>
-									</tag>
-									<tag>
-										<name>extends</name>
 										<placement>X</placement>
 									</tag>
 								</tags>
@@ -934,6 +893,7 @@
 								<includeOpenIssues>false</includeOpenIssues>
 								<onlyMilestoneIssues>false</onlyMilestoneIssues>
 								<onlyCurrentVersion>false</onlyCurrentVersion>
+								<!-- <columnNames></columnNames> -->
 								<sortColumnNames>Fix Version DESC,Key DESC</sortColumnNames>
 							</configuration>
 							<reportSets>
@@ -947,7 +907,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-checkstyle-plugin</artifactId>
-							<version>2.11</version>
+							<version>2.10</version>
 							<configuration>
 								<configLocation>${basedir}/checkstyle-ruleset.xml</configLocation>
 								<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
@@ -995,7 +955,7 @@
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>findbugs-maven-plugin</artifactId>
-							<version>2.5.3</version>
+							<version>2.5.2</version>
 							<configuration>
 								<effort>Default</effort>
 								<threshold>Normal</threshold>
@@ -1147,12 +1107,6 @@
 			<version>4.3.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpmime</artifactId>
-			<version>4.3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.geotools</groupId>
 			<artifactId>gt-xml</artifactId>
 			<version>${geotools.version}</version>
@@ -1202,7 +1156,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.7.3</version>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

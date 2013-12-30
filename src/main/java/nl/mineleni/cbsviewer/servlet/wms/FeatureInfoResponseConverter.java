@@ -42,9 +42,6 @@ import org.xml.sax.SAXException;
  * 
  * @author mprins
  * @since 1.7
- *
- * @has AttributesNamesFilter
- * @has AttributeValuesFilter
  */
 public final class FeatureInfoResponseConverter {
 

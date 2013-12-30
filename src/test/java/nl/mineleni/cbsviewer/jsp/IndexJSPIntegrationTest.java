@@ -5,10 +5,6 @@
  */
 package nl.mineleni.cbsviewer.jsp;
 
-import static javax.servlet.http.HttpServletResponse.SC_OK;
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-
 import org.apache.http.client.methods.HttpGet;
 import org.junit.Test;
 
@@ -28,8 +24,6 @@ public class IndexJSPIntegrationTest extends JSPIntegrationTest {
 	@Test
 	public void testIfValidResponse() throws Exception {
 		response = client.execute(new HttpGet(BASE_TEST_URL + "index.jsp"));
-		assertThat("Response status is OK.", response.getStatusLine()
-				.getStatusCode(), equalTo(SC_OK));
 		boilerplateValidationTests(response);
 	}
 }

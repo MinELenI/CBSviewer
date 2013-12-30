@@ -49,9 +49,9 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 	}
 
 	/**
-	 * Voorbereiding van {@linkplain http://yslow.org/phantomjs/ phantomjs} 
-	 * proces voor de testcases.
+	 * Voorbereiding van phantomjs proces voor de testcases.
 	 * 
+	 * @see http://yslow.org/phantomjs/
 	 * @throws Exception
 	 */
 	@Before
@@ -60,9 +60,6 @@ public class YSlowIntegrationTest extends IntegrationTestConstants {
 
 		this.pb.command().add("target/yslow.js");
 		this.pb.command().add("-v");
-		
-		this.pb.command().add("-r");
-		this.pb.command().add("yblog");
 
 		this.pb.command().add("-f");
 		this.pb.command().add("junit");

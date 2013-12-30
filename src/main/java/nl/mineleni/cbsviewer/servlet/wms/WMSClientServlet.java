@@ -137,13 +137,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/** cache voor achtergrond kaartjes. */
 	private transient WMSCache bgWMSCache;
-
 	/** De achtergrond luchtfoto WMS. */
 	private transient WebMapServer lufoWMS;
 
 	/** cache voor achtergrond kaartjes. */
 	private transient WMSCache bgWMSLuFoCache;
-
 	/** verzameling lagen voor de achtergrondkaart. */
 	private transient String[] lufoWMSlayers;
 
