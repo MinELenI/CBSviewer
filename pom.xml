@@ -68,6 +68,12 @@
 			<distribution>repo</distribution>
 			<url>https://raw.github.com/mprins/geotools/master/licenses/LICENSE</url>
 		</license>
+		<license>
+			<name>BSD license</name>
+			<url>https://urlrewritefilter.googlecode.com/svn/trunk/LICENSE.txt</url>
+			<comments>For UrlRewriteFilter</comments>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
@@ -1278,6 +1284,11 @@
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
 			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tuckey</groupId>
+			<artifactId>urlrewritefilter</artifactId>
+			<version>4.0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
