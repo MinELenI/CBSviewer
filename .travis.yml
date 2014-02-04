@@ -3,14 +3,30 @@ before_install:
   - unset GEM_PATH
 install:
   - mvn -Djavax.xml.accessExternalSchema=file install -DskipTests=true -B -V
-before_script: 
-  - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers
-script: mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
-after_success:
-  - mvn -e -Djavax.xml.accessExternalSchema=file -Pjenkins test saga:coverage cobertura:cobertura coveralls:report
+#before_script: 
+#  - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers
+# script: mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
+# after_success:
+#  - mvn -e -Djavax.xml.accessExternalSchema=file -Pjenkins cobertura:cobertura coveralls:cobertura
 jdk:
-  - openjdk7
+#  - openjdk7
   - oraclejdk8
 cache:
   directories:
   - cache
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "IFlci1B6co7kQhvottFeBAQkAoLYy3f+JF33ZDkzgJ4sCh42LbdZvQT8mVS9oF5XjO9dyalRYnQKluVijQHG5fHRijoLr13LB650T47hBUEwkl+LGrD4vvN8TJk68VRVudtDlnZLYpv2mGB2cpPq3PKbS/YAnsCPd5NUiWr95RI="
+
+addons:
+  coverity_scan:
+    project:
+      name: "MinELenI/CBSviewer"
+      description: "Build submitted via Travis CI"
+    notification_email: mprins@users.sf.net
+    build_command_prepend: "mvn clean"
+    build_command: "mvn -DskipTests=true -Djavax.xml.accessExternalSchema=file -Popenlayers,developer compile"
+    branch_pattern: coverity_scan
