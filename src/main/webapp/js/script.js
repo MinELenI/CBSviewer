@@ -8,18 +8,25 @@ jQuery.noConflict();
 /**
  * document onload event handling.
  */
-jQuery(document)
-	.ready(
+jQuery(document).ready(
 	function() {
 		// create map
 		Viewer.init(config);
 
+		if (getCookie(COOKIE.mapid)){
+			config.defaultMapId = getCookie(COOKIE.mapid);
+		}
+
 		var maps = jQuery.grep(_layers, function(n, i) {
 			return n.id == config.defaultMapId;
 		});
-
 		Viewer.loadWMS(maps[0]);
 
+		if(getCookie(COOKIE.X) && getCookie(COOKIE.Y) && getCookie(COOKIE.S) ) {
+			// cast cookies naar number + zoom in
+			Viewer.zoomTo(getCookie(COOKIE.X)/1, getCookie(COOKIE.Y)/1, getCookie(COOKIE.S)/1, false);
+		}
+		
 		/* popup */
 		jQuery('.fancybox').fancybox();
 		/* slidedown effect */

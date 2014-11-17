@@ -17,12 +17,14 @@ describe(
 					'Na het initialiseren van Viewer',
 					function() {
 						var _wms = {
+							'id': 'autochtonen_2011',
 							'name' : 'autochtonen_2011',
 							'url' : 'http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms',
 							'layers' : 'autochtonen_2011',
 							'styles' : 'cbsvierkanten500m.p_auto2011'
 						};
 						var _wms2 = {
+							'id':'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen',
 							'name' : 'wijkenbuurten2011_thema_buurten2011_percentage_niet_westerse_allochtonen',
 							'url' : 'http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms',
 							'layers' : 'cbs_buurten_2011',
@@ -42,6 +44,7 @@ describe(
 						afterEach(function() {
 							Viewer.destroy();
 							document.body.removeChild(mapDiv);
+							eraseCookies();
 						});
 
 						it('De kaart moet een OpenLayers.Map instance zijn', function() {
@@ -55,12 +58,14 @@ describe(
 						it('De kaart moet 3 lagen hebben na toevoegen van 1 WMS', function() {
 							Viewer.loadWMS(_wms);
 							expect(Viewer.getMap().layers.length).toBe(3);
+							expect(getCookie(COOKIE.mapid)).toEqual(_wms.id);
 						});
 
 						it('De kaart moet 3 lagen hebben na toevoegen van 2 WMS', function() {
 							Viewer.loadWMS(_wms);
 							Viewer.loadWMS(_wms2);
 							expect(Viewer.getMap().layers.length).toBe(3);
+							expect(getCookie(COOKIE.mapid)).toEqual(_wms2.id);
 						});
 
 						it('De kaart moet 2 lagen hebben na toevoegen en verwijderen van 1 WMS', function() {
@@ -78,6 +83,7 @@ describe(
 									var lyrs = Viewer.getMap().layers;
 									expect(lyrs.length).toBe(2);
 									expect(lyrs[0]).toBeInstanceOf(OpenLayers.Layer.WMTS);
+									expect(getCookie(COOKIE.mapid)).toBeNull();
 								});
 
 						it('Na destroy is de kaart null', function() {
@@ -119,15 +125,15 @@ describe(
 								});
 						*/
 						
-						it('na schakelen basemap is de actieve basemap lufo', function() {
+						it('na schakelen basemap is de actieve basemap luchtfoto', function() {
 							Viewer.toggleBaseMap();
-							expect(Viewer.getMap().baseLayer.name).toEqual('lufo');
+							expect(Viewer.getMap().baseLayer.name).toEqual('luchtfoto');
 						});
 
-						it('na twee keer schakelen basemap is de actieve basemap topo', function() {
+						it('na twee keer schakelen basemap is de actieve basemap topografie', function() {
 							Viewer.toggleBaseMap();
 							Viewer.toggleBaseMap();
-							expect(Viewer.getMap().baseLayer.name).toEqual('topo');
+							expect(Viewer.getMap().baseLayer.name).toEqual('topografie');
 						});
 
 						it('printpreview kaart afmeting is gelijk aan config.', function() {

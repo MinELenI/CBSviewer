@@ -148,14 +148,16 @@ public class WMSClientServletTest {
 
 				this.oneOf(WMSClientServletTest.this.servletConfig)
 						.getInitParameter("bgCapabilitiesURL");
-				this.will(returnValue("http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&amp;VERSION=1.1.1"));
+				//this.will(returnValue("http://osm.wheregroup.com/cgi-bin/osm_basic.xml?REQUEST=GetCapabilities&SERVICE=WMS&amp;VERSION=1.1.1"));
+				this.will(returnValue("http://www.openbasiskaart.nl/mapcache/?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetCapabilities"));
 				this.oneOf(WMSClientServletTest.this.servletConfig)
 						.getInitParameter("bgWMSlayers");
-				this.will(returnValue("Grenzen"));
+				//this.will(returnValue("Grenzen"));
+				this.will(returnValue("osm-nb"));
 				this.oneOf(WMSClientServletTest.this.servletConfig)
 						.getInitParameter("lufoCapabilitiesURL");
 				// this.will(returnValue("http://gisdemo2.agro.nl/arcgis/services/Luchtfoto2010/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS"));
-				this.will(returnValue("http://geodata1.nationaalgeoregister.nl/luchtfoto/wms?request=GetCapabilities"));
+				this.will(returnValue("http://geodata1.nationaalgeoregister.nl/luchtfoto/wms?REQUEST=GetCapabilities"));
 				this.oneOf(WMSClientServletTest.this.servletConfig)
 						.getInitParameter("lufoWMSlayers");
 				this.will(returnValue(""));

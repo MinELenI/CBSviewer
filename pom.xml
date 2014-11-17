@@ -675,6 +675,7 @@
 							<aggregations>
 								<aggregation>
 									<includes>
+										<include>**/CookieUtil.js</include>
 										<include>**/KeyboardPoint.js</include>
 										<include>**/KeyboardClick.js</include>
 										<include>**/WMSGetFeatureInfo.js</include>
@@ -795,7 +796,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.2.5</version>
+							<version>1.2.6</version>
 							<configuration>
 								<name>OWASP Dependency Check</name>
 							</configuration>
@@ -1111,7 +1112,7 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>[0.10,0.11-SNAPSHOT)</version>
+				<version>0.11-SNAPSHOT</version>
 				<configuration>
 					<message>site update voor versie ${project.version} (rev. ${buildNumber})</message>
 					<password>${github.password}</password>

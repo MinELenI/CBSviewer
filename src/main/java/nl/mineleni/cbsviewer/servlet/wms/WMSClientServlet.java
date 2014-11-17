@@ -1,11 +1,16 @@
 /*
  * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet.wms;
 
+import static nl.mineleni.cbsviewer.util.CookieNamesConstants.COOKIE_S;
+import static nl.mineleni.cbsviewer.util.CookieNamesConstants.COOKIE_X;
+import static nl.mineleni.cbsviewer.util.CookieNamesConstants.COOKIE_Y;
+import static nl.mineleni.cbsviewer.util.CookieNamesConstants.COOKIE_baselyr;
+import static nl.mineleni.cbsviewer.util.CookieNamesConstants.COOKIE_mapid;
 import static nl.mineleni.cbsviewer.util.StringConstants.MAP_CACHE_DIR;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_BGMAP;
 import static nl.mineleni.cbsviewer.util.StringConstants.REQ_PARAM_CACHEDIR;
@@ -69,7 +74,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * WMS client voor de applicatie.
- * 
+ *
  * @author prinsmc
  * @since 1.7
  */
@@ -89,14 +94,14 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * vaste afmeting van de kaart (hoogte en breedte). {@value}
-	 * 
+	 *
 	 * @see #MAP_DIMENSION_MIDDLE
 	 */
 	private static final int MAP_DIMENSION = 512;
 
 	/**
 	 * helft van de afmeting van de kaart (hoogte en breedte). {@value}
-	 * 
+	 *
 	 * @see #MAP_DIMENSION
 	 */
 	private static final int MAP_DIMENSION_MIDDLE = MAP_DIMENSION / 2;
@@ -127,7 +132,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * voorgrond wms request.
-	 * 
+	 *
 	 * @todo refactor naar lokale variabele
 	 */
 	private transient GetMapRequest getMapRequest;
@@ -172,12 +177,12 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * Teken een schaalbalk in de (kaart) afbeelding. meter based CRS only.
-	 * 
+	 *
 	 * @param bbox
 	 *            the bbox
 	 * @param image
 	 *            afbeelding waarin de schaalbalk wordt getekend
-	 * 
+	 *
 	 * @todo only works for CRS in meters
 	 */
 	private void drawScaleBar(final BufferedImage image, final BoundingBox bbox) {
@@ -197,7 +202,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		// max lengte in px van schaalbalk
 		int barLength = MAP_DIMENSION / 2;
 		// crs units
-		int dist = (int) (barLength * scale); 
+		int dist = (int) (barLength * scale);
 		// logaritmisch lengte afronden
 		final int digits = (int) (Math.log(dist) / Math.log(10));
 		final double pow10 = Math.pow(10, digits);
@@ -230,8 +235,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final Font font = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
 		final FontMetrics metrics = g.getFontMetrics(font);
 		g.setFont(font);
-		g.drawString(dist + units,
-				(xOffset + barLength / 2)
+		g.drawString(
+				dist + units,
+				(xOffset + (barLength / 2))
 						- (metrics.stringWidth(dist + units) / 2), yOffset
 						- metrics.getDescent() - 2);
 		// CHECKSTYLE.ON: MagicNumber
@@ -239,7 +245,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * Achtergrondkaart ophalen en opslaan in de cache.
-	 * 
+	 *
 	 * @param bbox
 	 *            the bbox
 	 * @param baseMapType
@@ -251,11 +257,14 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	 *             de achtergrondgrond WMS service
 	 */
 	private BufferedImage getBackGroundMap(final BoundingBox bbox,
-			final String baseMapType) throws ServletException {
+			final String baseMapType, HttpServletResponse response)
+			throws ServletException {
 
 		GetMapRequest map;
+
 		switch (baseMapType.toLowerCase()) {
 		case "luchtfoto":
+			this.setCookie(response, COOKIE_baselyr, "luchtfoto");
 			if (this.bgWMSLuFoCache.containsKey(bbox)) {
 				// ophalen uit cache
 				LOGGER.debug("Achtergrond " + baseMapType
@@ -280,6 +289,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		case "topografie":
 			// implicit fall thru naar default
 		default:
+			this.setCookie(response, COOKIE_baselyr, "topografie");
 			if (this.bgWMSCache.containsKey(bbox)) {
 				// ophalen uit cache
 				LOGGER.debug("Achtergrond " + baseMapType
@@ -312,8 +322,9 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		LOGGER.debug("Achtergrond WMS url is: " + map.getFinalURL());
 
 		try {
-			final GetMapResponse response = this.bgWMS.issueRequest(map);
-			final BufferedImage image = ImageIO.read(response.getInputStream());
+			final GetMapResponse mapResponse = this.bgWMS.issueRequest(map);
+			final BufferedImage image = ImageIO.read(mapResponse
+					.getInputStream());
 			switch (baseMapType.toLowerCase()) {
 			case "luchtfoto":
 				this.bgWMSLuFoCache.put(bbox, image, SECONDS_TO_CACHE_ELEMENTS);
@@ -348,7 +359,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * zoekt of maakt de gevraagde WebMapServer.
-	 * 
+	 *
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return the cached wms
@@ -373,7 +384,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * Haalt de feature info op.
-	 * 
+	 *
 	 * @param bbox
 	 *            the bbox
 	 * @param lyrDesc
@@ -446,7 +457,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * voorgrondkaart ophalen.
-	 * 
+	 *
 	 * @param bbox
 	 *            the bbox
 	 * @param lyrDesc
@@ -518,7 +529,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * Haalt de legenda op voor de thema laag.
-	 * 
+	 *
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return een array met legenda afbeeldings bestanden
@@ -541,7 +552,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * get legenda afbeeldingen door gebruik te maken legendUrl.
-	 * 
+	 *
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return een array met legenda afbeeldings bestanden
@@ -608,7 +619,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 	/**
 	 * get legenda afbeeldingen door gebruik te maken van
 	 * GetLegendGraphicRequest.
-	 * 
+	 *
 	 * @param lyrDesc
 	 *            de layerdescriptor met de WMS informatie
 	 * @return een array met legenda afbeeldings bestanden
@@ -671,7 +682,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * kaart maken op basis van de opgehaalde afbeeldingen.
-	 * 
+	 *
 	 * @param imageVoorgrond
 	 *            de voorgrondkaart
 	 * @param imageAchtergrond
@@ -719,7 +730,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 
 	/**
 	 * cache een legenda plaatje.
-	 * 
+	 *
 	 * @param image
 	 *            de afbeelding om op te slaan
 	 * @param key
@@ -774,14 +785,11 @@ public class WMSClientServlet extends AbstractWxSServlet {
 					e);
 		}
 
-		this.legendCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.legendCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
-		this.featInfoCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.featInfoCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
-		this.fgWMSCache = new Cache<>(
-				NUMBER_CACHE_ELEMENTS);
+		this.fgWMSCache = new Cache<>(NUMBER_CACHE_ELEMENTS);
 
 		// achtergrond kaart
 		final String bgCapabilitiesURL = config
@@ -868,17 +876,19 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		final int straal = dXcoordYCoordStraal[2];
 		final BoundingBox bbox = SpatialUtil.calcRDBBOX(xcoord, ycoord, straal);
 
+		this.setCookie(response, COOKIE_X, xcoord);
+		this.setCookie(response, COOKIE_Y, ycoord);
+		this.setCookie(response, COOKIE_S, straal);
+
 		float alpha = 0.8f;
 		final String trans = request.getParameter(REQ_PARAM_FGMAP_ALPHA.code);
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(trans)) {
 			// CHECKSTYLE.OFF: MagicNumber - default alpha transparantie is 80%
 			try {
-
 				alpha = 1 - (Float.parseFloat(trans) / 100);
 				if ((0 > alpha) && (alpha > 1)) {
 					alpha = 0.8f;
 				}
-
 			} catch (final NumberFormatException n) {
 				alpha = 0.8f;
 			}
@@ -891,12 +901,14 @@ public class WMSClientServlet extends AbstractWxSServlet {
 		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mType)) {
 			basemaptype = mType;
 		}
-		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype);
+		final BufferedImage bg = this.getBackGroundMap(bbox, basemaptype,
+				response);
 
 		BufferedImage fg = null;
-		final String mapId = request.getParameter(REQ_PARAM_MAPID.code);
-		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mapId)) {
-			final LayerDescriptor layer = this.layers.getLayerByID(mapId);
+		final String mapid = request.getParameter(REQ_PARAM_MAPID.code);
+		if (this.isNotNullNotEmptyNotWhiteSpaceOnly(mapid)) {
+			this.setCookie(response, COOKIE_mapid, mapid);
+			final LayerDescriptor layer = this.layers.getLayerByID(mapid);
 			request.setAttribute("mapname", layer.getName());
 			LOGGER.debug("LayerDescriptor::Name is: " + layer.getName());
 
@@ -907,7 +919,7 @@ public class WMSClientServlet extends AbstractWxSServlet {
 				fg = this.getForeGroundMap(bbox, layer);
 				final File[] legendas = this.getLegends(layer);
 				final String fInfo = this.getFeatureInfo(bbox, layer);
-				request.setAttribute(REQ_PARAM_MAPID.code, mapId);
+				request.setAttribute(REQ_PARAM_MAPID.code, mapid);
 				request.setAttribute(REQ_PARAM_LEGENDAS.code, legendas);
 				request.setAttribute(REQ_PARAM_FEATUREINFO.code, fInfo);
 				request.setAttribute(REQ_PARAM_DOWNLOADLINK.code,

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
  * 
  * Gepubliceerd onder de BSD 2-clause licentie, 
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
@@ -18,7 +18,11 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import nl.mineleni.cbsviewer.util.CookieNamesConstants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +40,9 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractWxSServlet.class);
+	/** leeftijd voor cookies. */
+	private static final int AGE = 90 * 24 * 60 * 60;
+
 	/** serialization id. */
 	private static final long serialVersionUID = -5563479037661945586L;
 
@@ -116,5 +123,41 @@ public abstract class AbstractWxSServlet extends AbstractBaseServlet {
 					e);
 			throw new ServletException(e);
 		}
+	}
+
+	/**
+	 * cookie instellen of updaten.
+	 * 
+	 * @param response
+	 *            waarop de cookie wordt ingesteld
+	 * @param name
+	 *            naam van de cookie
+	 * @param value
+	 *            de waarde voor de cookie
+	 * 
+	 */
+	protected void setCookie(HttpServletResponse response,
+			CookieNamesConstants name, String value) {
+		Cookie cookie = new Cookie(name.value, value);
+		cookie.setMaxAge(AGE);
+		response.addCookie(cookie);
+	}
+
+	/**
+	 * cookie instellen of updaten.
+	 * 
+	 * @param response
+	 *            waarop de cookie wordt ingesteld
+	 * @param name
+	 *            naam van de cookie
+	 * @param value
+	 *            de waarde voor de cookie
+	 * 
+	 */
+	protected void setCookie(HttpServletResponse response,
+			CookieNamesConstants name, Integer value) {
+		Cookie cookie = new Cookie(name.value, Integer.toString(value));
+		cookie.setMaxAge(AGE);
+		response.addCookie(cookie);
 	}
 }

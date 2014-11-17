@@ -13,6 +13,7 @@
 		height: 1px;
 		width: 1px;
 		overflow: hidden;
+		will-change: opacity, clip;
 		opacity: 0;
 	}
 	
@@ -36,6 +37,7 @@
 		font-size: 12px;
 		font-weight: normal;
 		opacity: 1;
+
 		@include single-transition(opacity 0.5s ease-in 0.1s);
 	}
 }

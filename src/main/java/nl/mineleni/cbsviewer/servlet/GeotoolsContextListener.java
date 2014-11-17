@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2012-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
  * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.servlet;
@@ -29,24 +29,24 @@ import org.slf4j.LoggerFactory;
 /**
  * Application Lifecycle Listener implementation class GeotoolsContextListener.
  * Initialize &amp; cleanup van Geotools threads en lookups.
- * 
+ *
  * @author Mark
  */
 public class GeotoolsContextListener implements ServletContextListener {
 	/** logger. */
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(GeotoolsContextListener.class);
+	        .getLogger(GeotoolsContextListener.class);
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see ServletContextListener#contextInitialized(ServletContextEvent)
 	 */
 	@Override
 	public void contextInitialized(final ServletContextEvent arg0) {
 		try {
 			org.geotools.util.logging.Logging.ALL
-					.setLoggerFactory("org.geotools.util.logging.Log4JLoggerFactory");
+			        .setLoggerFactory("org.geotools.util.logging.Log4JLoggerFactory");
 		} catch (ClassNotFoundException | IllegalArgumentException e) {
 			LOGGER.debug("Ignored exception.", e);
 		}
@@ -56,16 +56,16 @@ public class GeotoolsContextListener implements ServletContextListener {
 		// initialize geotools factories so that we don't make a spi lookup
 		// every time a factory is needed
 		Hints.putSystemDefault(Hints.FILTER_FACTORY,
-				CommonFactoryFinder.getFilterFactory2(null));
+		        CommonFactoryFinder.getFilterFactory2(null));
 		Hints.putSystemDefault(Hints.STYLE_FACTORY,
-				CommonFactoryFinder.getStyleFactory(null));
+		        CommonFactoryFinder.getStyleFactory(null));
 		Hints.putSystemDefault(Hints.FEATURE_FACTORY,
-				CommonFactoryFinder.getFeatureFactory(null));
+		        CommonFactoryFinder.getFeatureFactory(null));
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see ServletContextListener#contextDestroyed(ServletContextEvent)
 	 */
 	@Override
@@ -74,28 +74,28 @@ public class GeotoolsContextListener implements ServletContextListener {
 		// timer tasks in them
 		try {
 			this.disposeAuthorityFactories(ReferencingFactoryFinder
-					.getCoordinateOperationAuthorityFactories(null));
+			        .getCoordinateOperationAuthorityFactories(null));
 		} catch (final FactoryException e) {
 			LOGGER.warn(
-					"Fout opgetreden tijden opruimen van authority factories.",
-					e);
+			        "Fout opgetreden tijden opruimen van authority factories.",
+			        e);
 		}
 
 		try {
 			this.disposeAuthorityFactories(ReferencingFactoryFinder
-					.getCRSAuthorityFactories(null));
+			        .getCRSAuthorityFactories(null));
 		} catch (final FactoryException e) {
 			LOGGER.warn(
-					"Fout opgetreden tijden opruimen van authority factories.",
-					e);
+			        "Fout opgetreden tijden opruimen van authority factories.",
+			        e);
 		}
 		try {
 			this.disposeAuthorityFactories(ReferencingFactoryFinder
-					.getCSAuthorityFactories(null));
+			        .getCSAuthorityFactories(null));
 		} catch (final FactoryException e) {
 			LOGGER.warn(
-					"Fout opgetreden tijden opruimen van authority factories.",
-					e);
+			        "Fout opgetreden tijden opruimen van authority factories.",
+			        e);
 		}
 
 		// kill the threads created by referencing
@@ -113,15 +113,15 @@ public class GeotoolsContextListener implements ServletContextListener {
 
 	/**
 	 * Dispose authority factories.
-	 * 
+	 *
 	 * @param factories
 	 *            the factories
 	 * @throws FactoryException
 	 *             the factory exception
 	 */
 	private void disposeAuthorityFactories(
-			final Set<? extends AuthorityFactory> factories)
-			throws FactoryException {
+	        final Set<? extends AuthorityFactory> factories)
+	        throws FactoryException {
 		for (final AuthorityFactory af : factories) {
 			if (af instanceof AbstractAuthorityFactory) {
 				((AbstractAuthorityFactory) af).dispose();
