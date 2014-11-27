@@ -5,7 +5,8 @@ install:
   - mvn -Djavax.xml.accessExternalSchema=file install -DskipTests=true -B -V
 #before_script: 
 #  - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers
-# script: mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
+script: 
+  - if [ ${COVERITY_SCAN_BRANCH} != 1 ]; then mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify ; fi
 # after_success:
 #  - mvn -e -Djavax.xml.accessExternalSchema=file -Pjenkins cobertura:cobertura coveralls:cobertura
 jdk:
