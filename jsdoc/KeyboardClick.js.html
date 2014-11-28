@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: js/KeyboardClick.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: js/KeyboardClick.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/* Copyright (c) 2006-2012 by OpenLayers Contributors (see authors.txt for 
+ * full list of contributors). Published under the 2-clause BSD license.
+ * See license.txt in the OpenLayers distribution or repository for the
+ * full text of the license. 
+ */
+
+/**
+ * A custom control that (a) adds a vector point that can be moved using the
+ * arrow keys of the keyboard, and (b) displays a browser alert window when the
+ * RETURN key is pressed. The control can be activated/deactivated using the "i"
+ * key. When activated the control deactivates any KeyboardDefaults control in
+ * the map so that the map is not moved when the arrow keys are pressed.
+ * 
+ * This control relies on the OpenLayers.Handler.KeyboardPoint custom handler.
+ * 
+ * @class OpenLayers.Control.KeyboardClick
+ * @requires OpenLayers/Control.js
+ * @requires KeyboardPoint.js
+ * @extends OpenLayers.Control
+ */
+OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
+	/** @constructor */
+	initialize : function(options) {
+		OpenLayers.Control.prototype.initialize.apply(this, [ options ]);
+		var observeElement = this.observeElement || document;
+		this.handler = new OpenLayers.Handler.KeyboardPoint(this, {
+			done : this.onClick,
+			cancel : this.deactivate
+		}, {
+			observeElement : observeElement
+		});
+		OpenLayers.Event.observe(observeElement, "keydown", OpenLayers.Function.bindAsEventListener(function(evt) {
+			if (evt.keyCode == 73) { // "i"
+				if (this.active) {
+					this.deactivate();
+				} else {
+					this.activate();
+				}
+			}
+		}, this));
+	},
+
+	/**
+	 * Event handler voor click event. Deze handler stuurt de WMSGetFeatureInfo
+	 * control aan om een GetFeatureInfo request uit te voeren.
+	 * 
+	 * @param {Openlayers.Geometry}
+	 *            geometry met real life coördinaten
+	 * 
+	 */
+	onClick : function(geometry) {
+		var featureInfoCtl = this.map.getControlsByClass('WMSGetFeatureInfo')[0];
+		if (featureInfoCtl) {
+			var lonlat = new OpenLayers.LonLat([ geometry.x, geometry.y ]);
+			var pixel = this.map.getPixelFromLonLat(lonlat);
+			featureInfoCtl.getInfoForClick({
+				'xy' : pixel,
+				'lonlat' : lonlat
+			});
+		}
+	},
+
+	/**
+	 * Activeert deze control en zet de default keyboard handler uit (mits
+	 * aanwezig).
+	 * 
+	 * @returns {Boolean}
+	 */
+	activate : function() {
+		if (!OpenLayers.Control.prototype.activate.apply(this, arguments)) {
+			return false;
+		}
+		var keyboardDefaults = this.map.getControlsByClass('OpenLayers.Control.KeyboardDefaults')[0];
+		if (keyboardDefaults) {
+			keyboardDefaults.deactivate();
+		}
+		var clickDraw = this.map.getControlsByClass('ClickDrawControl')[0];
+		if (clickDraw) {
+			clickDraw.deactivate();
+		}
+		return true;
+	},
+
+	/**
+	 * Deactiveert deze control en zet de default keyboard handler aan (mits
+	 * aanwezig).
+	 * 
+	 * @returns {Boolean}
+	 */
+	deactivate : function() {
+		if (!OpenLayers.Control.prototype.deactivate.apply(this, arguments)) {
+			return false;
+		}
+		var keyboardDefaults = this.map.getControlsByClass('OpenLayers.Control.KeyboardDefaults')[0];
+		if (keyboardDefaults) {
+			keyboardDefaults.activate();
+		}
+		var clickDraw = this.map.getControlsByClass('ClickDrawControl')[0];
+		if (clickDraw) {
+			clickDraw.activate();
+		}
+		return true;
+	},
+	
+	CLASS_NAME: 'OpenLayers.Control.KeyboardClick'
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

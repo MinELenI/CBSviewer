@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>IntegrationTestConstants xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../testapidocs/nl/mineleni/cbsviewer/IntegrationTestConstants.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * </em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * Gepubliceerd onder de BSD 2-clause licentie, zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">package</strong> nl.mineleni.cbsviewer;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> * Marker interface met constanten voor de integratie tests.</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * @author prinsmc</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">class</strong> <a href="../../../nl/mineleni/cbsviewer/IntegrationTestConstants.html">IntegrationTestConstants</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">	 * Basis url voor de integratie tests, {@value} , poort wordt ingesteld door</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">	 * Maven, default 8021.</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String BASE_TEST_URL = <span class="jxr_string">"http://localhost:"</span>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  			+ (System.getProperty(<span class="jxr_string">"jetty.port"</span>) == <strong class="jxr_keyword">null</strong> ? <span class="jxr_string">"8021"</span> : System
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  					.getProperty(<span class="jxr_string">"jetty.port"</span>)) + <span class="jxr_string">"/"</span>;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2012&#x2013;2014 <a href="https://github.com/organizations/MinELenI">Ministerie EZ</a>. All rights reserved.</div>
+</body>
+</html>

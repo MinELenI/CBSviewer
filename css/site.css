@@ -50,3 +50,7 @@ a[href $='.svg'] {
 	line-height: 18px;
 	background: transparent url(../images/vectorgfx.png) center right no-repeat;
 }
+
+img[alt="Component diagram"] { 
+	width: 85%; 
+}

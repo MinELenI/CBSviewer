@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+   <duplication lines="40" tokens="374">
+      <file line="94"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
+      <file line="89"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
+      <codefragment><![CDATA[				((GeocodedAddress) (this.objStack.peek())).setAddress(address);
+			}
+			break;
+		case "streetaddress":
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
+			}
+			break;
+		case "building":
+			final Building building = (Building) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
+			}
+			break;
+		case "street":
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
+			}
+			break;
+		case "place":
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).addPlace(place);
+			}
+			break;
+		case "postalcode":
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).setPostalCode(pc);
+			}
+			break;]]></codefragment>
+   </duplication>
    <duplication lines="51" tokens="367">
-      <file line="99"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-      <file line="135"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+      <file line="58"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
+      <file line="94"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
       <codefragment><![CDATA[				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
 			break;
@@ -57,11 +103,57 @@
 	 */
 	public GeocodeRequest getGeocodeRequest() {]]></codefragment>
    </duplication>
+   <duplication lines="40" tokens="361">
+      <file line="58"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
+      <file line="90"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
+      <codefragment><![CDATA[				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
+			}
+			break;
+		case "streetaddress":
+			final StreetAddress streetaddress = (StreetAddress) (this.objStack
+					.pop());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek()))
+						.setStreetAddress(streetaddress);
+			}
+			break;
+		case "building":
+			final Building building = (Building) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setBuilding(building);
+			}
+			break;
+		case "street":
+			final Street street = (Street) (this.objStack.pop());
+			street.setStreet(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new StreetAddress()
+					.getClass()) {
+				((StreetAddress) (this.objStack.peek())).setStreet(street);
+			}
+			break;
+		case "place":
+			final Place place = (Place) (this.objStack.pop());
+			place.setPlace(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).addPlace(place);
+			}
+			break;
+		case "postalcode":
+			final PostalCode pc = (PostalCode) (this.objStack.pop());
+			pc.setPostalCode(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Address().getClass()) {
+				((Address) (this.objStack.peek())).setPostalCode(pc);
+			}
+			break;]]></codefragment>
+   </duplication>
    <duplication lines="49" tokens="277">
-      <file line="196"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-      <file line="270"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
+      <file line="155"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
+      <file line="229"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
       <codefragment><![CDATA[			break;
 		case "address":
 			final Address address = new Address();
@@ -112,57 +204,42 @@
 	}
 }]]></codefragment>
    </duplication>
-   <duplication lines="40" tokens="157">
-      <file line="56"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSRequestParser.java"/>
-      <file line="60"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\openls\parser\OpenLSResponseParser.java"/>
-      <codefragment><![CDATA[	public OpenLSRequestParser() {
-		final SAXParserFactory factory = SAXParserFactory.newInstance();
-		factory.setValidating(false);
-		try {
-			this.parser = factory.newSAXParser();
-		} catch (final ParserConfigurationException | SAXException e) {
-			LOGGER.error("Configureren of maken van de saxparser is mislukt: ",
-					e);
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#characters(char[], int, int)
-	 */
-	@Override
-	public void characters(final char[] ch, final int start, final int length)
-			throws SAXException {
-		this.eValBuf.append(ch, start, length);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
-	 * java.lang.String, java.lang.String)
-	 */
-	@Override
-	public void endElement(final String uri, final String localName,
-			final String qName) throws SAXException {
-		final String[] nsName = qName.split(":");
-		String eName = "";
-		if (nsName.length > 1) {
-			eName = nsName[1];
-		} else {
-			eName = nsName[0];
-		}
-		switch (eName.toLowerCase()) {
-		case "address":]]></codefragment>
+   <duplication lines="25" tokens="160">
+      <file line="150"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeRequestParser.java"/>
+      <file line="205"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
+      <codefragment><![CDATA[			this.objStack.push(new Position());
+			break;
+		case "point":
+			final Point point = new Point();
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("srsName")) {
+					point.setSrsName(value);
+				}
+			}
+			this.objStack.push(point);
+			break;
+		case "pos":
+			final Pos pos = new Pos();
+			for (int i = 0; i < attributes.getLength(); i++) {
+				final String key = attributes.getQName(i);
+				final String value = attributes.getValue(i);
+				if (key.equalsIgnoreCase("dimension")) {
+					pos.setDimension(Integer.parseInt(value));
+				}
+			}
+			this.objStack.push(pos);
+			break;
+		case "reversegeocodepreference":]]></codefragment>
    </duplication>
    <duplication lines="18" tokens="132">
-      <file line="557"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
-      <file line="627"
-            path="E:\jenkins\jobs\CBS-viewer-site\workspace\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+      <file line="576"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
+      <file line="646"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\cbsviewer\servlet\wms\WMSClientServlet.java"/>
       <codefragment><![CDATA[		for (int l = 0; l < layerNames.length; l++) {
 			final String key = layerNames[l] + "::" + styleNames[l];
 			if (this.legendCache.containsKey(key)) {
@@ -181,5 +258,24 @@
 							+ legends[l].getAbsolutePath());
 				}
 			} else {]]></codefragment>
+   </duplication>
+   <duplication lines="13" tokens="128">
+      <file line="80"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
+      <file line="74"
+            path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
+      <codefragment><![CDATA[				((GeocodedAddress) (this.objStack.peek())).setPoint(point);
+			}
+			break;
+		case "pos":
+			final Pos pos = (Pos) (this.objStack.pop());
+			pos.setXY(this.eValBuf.toString());
+			if (this.objStack.peek().getClass() == new Point().getClass()) {
+				((Point) (this.objStack.peek())).addPos(pos);
+			}
+			break;
+		case "address":
+			final Address address = (Address) (this.objStack.pop());
+			if (this.objStack.peek().getClass() == new GeocodedAddress()]]></codefragment>
    </duplication>
 </pmd-cpd>

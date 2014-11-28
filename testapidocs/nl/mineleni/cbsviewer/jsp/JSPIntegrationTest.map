@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../IntegrationTestConstants.html" title="nl.mineleni.cbsviewer.IntegrationTestConstants" alt="" coords="430,17,597,42"/>
+<area shape="rect" id="node1" href="../IntegrationTestConstants.html" title="&lt;TABLE&gt;" alt="" coords="419,5,607,53"/>
+<area shape="rect" id="node3_1" href="./JSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.JSPIntegrationTest" alt="" coords="465,113,562,138"/>
+<area shape="rect" id="node3" href="./JSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="454,101,573,149"/>
+<area shape="rect" id="node2_2" href="./VersieJSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.VersieJSPIntegrationTest" alt="" coords="15,209,182,234"/>
+<area shape="rect" id="node2" href="./VersieJSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="5,197,193,245"/>
+<area shape="rect" id="node4_3" href="./IndexJSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.IndexJSPIntegrationTest" alt="" coords="227,209,389,234"/>
+<area shape="rect" id="node4" href="./IndexJSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="217,197,399,245"/>
+<area shape="rect" id="node5_4" href="./ErrorJSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.ErrorJSPIntegrationTest" alt="" coords="435,209,592,234"/>
+<area shape="rect" id="node5" href="./ErrorJSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="424,197,603,245"/>
+<area shape="rect" id="node6_5" href="./DownloadJSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.DownloadJSPIntegrationTest" alt="" coords="638,209,823,234"/>
+<area shape="rect" id="node6" href="./DownloadJSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="627,197,834,245"/>
+<area shape="rect" id="node7_6" href="./AboutJSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.AboutJSPIntegrationTest" alt="" coords="869,209,1033,234"/>
+<area shape="rect" id="node7" href="./AboutJSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="858,197,1043,245"/>
+</map>

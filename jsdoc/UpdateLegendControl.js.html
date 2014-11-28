@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: js/UpdateLegendControl.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: js/UpdateLegendControl.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/*
+ * Copyright (c) 2012-2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
+/**
+ * Werkt de legenda bij als de kaart wordt ge-update met een WMS layer.
+ * 
+ * @author mprins
+ * @class
+ * @extends OpenLayers.Control
+ * @requires OpenLayers/Control.js
+ * @requires OpenLayers/Layer/WMS/js
+ * @constructor
+ */
+UpdateLegendControl = OpenLayers.Class(OpenLayers.Control, {
+	/**
+	 * Activate the control when it is added to a map. Default is true.
+	 * 
+	 * @type{Boolean}
+	 */
+	autoActivate : true,
+
+	/**
+	 * Dom element waar de legenda in wordt gevoegd. Moet een container element
+	 * zijn zoals P, DIV, SPAN, MAP, LI, ...
+	 * 
+	 * @type {DOMElement}
+	 */
+	element : null,
+
+	/**
+	 * destroy this control.
+	 */
+	destroy : function() {
+		this.deactivate();
+		OpenLayers.Control.prototype.destroy.apply(this, arguments);
+	},
+
+	/**
+	 * activate this control.
+	 */
+	activate : function() {
+		if (OpenLayers.Control.prototype.activate.apply(this, arguments)) {
+			this.map.events.register('addlayer', this, this.redraw);
+			this.redraw();
+			return true;
+		} else {
+			return false;
+		}
+	},
+
+	/**
+	 * deactivate this control.
+	 */
+	deactivate : function() {
+		if (OpenLayers.Control.prototype.deactivate.apply(this, arguments)) {
+			this.map.events.unregister('addlayer', this, this.redraw);
+			this.element.innerHTML = "";
+			return true;
+		} else {
+			return false;
+		}
+	},
+
+	/**
+	 * draw this control.
+	 * 
+	 * @returns {DOMElement}
+	 */
+	draw : function() {
+		OpenLayers.Control.prototype.draw.apply(this, arguments);
+		if (!this.element) {
+			this.div.left = "";
+			this.div.top = "";
+			this.element = this.div;
+		}
+		return this.div;
+	},
+
+	/**
+	 * redraw this control.
+	 * 
+	 * @param {OpenLayers.Event}
+	 *            evt De addlayer event
+	 */
+	redraw : function(evt) {
+		// addlayer event - triggered after a layer has been added. The event
+		// object will include a *layer* property that references the added
+		// layer.
+		if (evt == null) {
+			this.reset();
+			return;
+		} else {
+			// test if layer is WMS
+			if (evt.layer.CLASS_NAME == "OpenLayers.Layer.WMS") {
+				var lyr = evt.layer;
+				var wmsLyrs = (lyr.params.LAYERS).split(',');
+				var wmsLyrStyles = (lyr.params.STYLES).split(',');
+				var newHtml = "";
+				for (i = 0, l = wmsLyrs.length; i &lt; l; i++) {
+					var legendUrl = lyr.url + '?SERVICE=WMS&REQUEST=GetLegendGraphic' + '&FORMAT=image%2Fpng'
+							+ '&WIDTH=36&HEIGHT=36' + '&LAYER=' + wmsLyrs[i] + '&STYLE=' + wmsLyrStyles[i]
+							+ '&VERSION=1.1.1&EXCEPTIONS=' + lyr.params.EXCEPTIONS;
+					newHtml += '&lt;img src="' + legendUrl + '" alt="Legenda voor kaartlaag ' + lyr.name + ' ('
+							+ wmsLyrs[i] + ')"/>';
+				}
+
+				if (newHtml != this.element.innerHTML) {
+					this.element.innerHTML = newHtml;
+				}
+			}
+		}
+	},
+
+	/**
+	 * reset this control.
+	 * 
+	 * @param {OpenLayers.Event}
+	 *            evt De addlayer event
+	 */
+	reset : function(evt) {
+		if (this.emptyString !== null) {
+			this.element.innerHTML = this.emptyString;
+		}
+	},
+        
+        CLASS_NAME : 'UpdateLegendControl'
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

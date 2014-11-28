@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="42cm" height="31cm" viewBox="30 33 821 608" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="52" y="167" width="200.3" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="52" y="167" width="200.3" height="70"/>
+    <rect style="fill: #ffffff" x="32" y="181" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="32" y="181" width="40" height="14"/>
+    <rect style="fill: #ffffff" x="32" y="209" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="32" y="209" width="40" height="14"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="193.8">
+      <tspan x="80" y="193.8">Web Map Server</tspan>
+      <tspan x="80" y="209.8">(kaart, legenda, feature info)</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="519" y="554" width="203.7" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="519" y="554" width="203.7" height="86"/>
+    <rect style="fill: #ffffff" x="499" y="576" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="499" y="576" width="40" height="14"/>
+    <rect style="fill: #ffffff" x="499" y="604" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="499" y="604" width="40" height="14"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="547" y="580.8">&lt;&lt;cbsviewer&gt;&gt;</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="547" y="596.8">
+      <tspan x="547" y="596.8">Java Enterprise Edition server</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="55" y="523" width="161.8" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="55" y="523" width="161.8" height="70"/>
+    <rect style="fill: #ffffff" x="35" y="537" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="35" y="537" width="40" height="14"/>
+    <rect style="fill: #ffffff" x="35" y="565" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="35" y="565" width="40" height="14"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="83" y="549.8">
+      <tspan x="83" y="549.8">Open Location Service</tspan>
+      <tspan x="83" y="565.8">(gazetteer)</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="607" y="35" width="143.75" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="607" y="35" width="143.75" height="70"/>
+    <rect style="fill: #ffffff" x="587" y="49" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="587" y="49" width="40" height="14"/>
+    <rect style="fill: #ffffff" x="587" y="77" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="587" y="77" width="40" height="14"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="635" y="61.8">
+      <tspan x="635" y="61.8">webbrowser</tspan>
+      <tspan x="635" y="77.8">(XHTML rendering)</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="57" y="46" width="157.45" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="57" y="46" width="157.45" height="70"/>
+    <rect style="fill: #ffffff" x="37" y="60" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="37" y="60" width="40" height="14"/>
+    <rect style="fill: #ffffff" x="37" y="88" width="40" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="37" y="88" width="40" height="14"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="85" y="72.8">
+      <tspan x="85" y="72.8">Web Map Tile Server </tspan>
+      <tspan x="85" y="88.8">(kaart)</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="658.875,106.005 658.875,218.003 695,218.003 695,313 "/>
+    <path style="fill: #ffffff" d="M 695 329 C 691,329 687,325 687,321 C 687,317 691,313 695,313 C 699,313 703,317 703,321 C 703,325 699,329 695,329z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 695 329 C 691,329 687,325 687,321 C 687,317 691,313 695,313 C 699,313 703,317 703,321 C 703,325 699,329 695,329"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="701" y="282">
+      <tspan x="701" y="282">kaart, adres, xhr, legenda, featureinfo</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600.85,552.993 600.85,441.496 695,441.496 695,346 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 687,337.994 A 8,8 0 1 0 703,338.006"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="711" y="85">
+      <tspan x="711" y="85"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="252.3,202 282,202 282,213 402,213 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 410,205 A 8,8 0 1 0 410,221"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="261" y="76">
+      <tspan x="261" y="76"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="132.15,238.004 132.15,269 301,269 301,341 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 309,348.994 A 8,8 0 1 0 293,349.006"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="229" y="94">
+      <tspan x="229" y="94"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="215.456,95 333.728,95 333.728,114 436,114 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 444,106 A 8,8 0 1 0 444,122"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="202" y="195">
+      <tspan x="202" y="195"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="658.875,106.008 658.875,212 425,212 425,220 "/>
+    <path style="fill: #ffffff" d="M 425 204 C 429,204 433,208 433,212 C 433,216 429,220 425,220 C 421,220 417,216 417,212 C 417,208 421,204 425,204z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 425 204 C 429,204 433,208 433,212 C 433,216 429,220 425,220 C 421,220 417,216 417,212 C 417,208 421,204 425,204"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="552" y="203">
+      <tspan x="552" y="203">getMap, getLegendGraphic</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="585.998,84 544,84 544,114 469,114 "/>
+    <path style="fill: #ffffff" d="M 453 114 C 453,110 457,106 461,106 C 465,106 469,110 469,114 C 469,118 465,122 461,122 C 457,122 453,118 453,114z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 453 114 C 453,110 457,106 461,106 C 465,106 469,110 469,114 C 469,118 465,122 461,122 C 457,122 453,118 453,114"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="505" y="93">
+      <tspan x="505" y="93">getTile</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="217.806,572 275.903,572 275.903,611 318,611 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 326,603 A 8,8 0 1 0 326,619"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="178" y="474">
+      <tspan x="178" y="474"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="497.994,611 479.994,611 352,611 351,611 "/>
+    <path style="fill: #ffffff" d="M 335 611 C 335,607 339,603 343,603 C 347,603 351,607 351,611 C 351,615 347,619 343,619 C 339,619 335,615 335,611z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 335 611 C 335,607 339,603 343,603 C 347,603 351,607 351,611 C 351,615 347,619 343,619 C 339,619 335,615 335,611"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="434" y="601">
+      <tspan x="434" y="601">geocode</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600.85,553.013 600.85,454.996 301,454.996 301,374 "/>
+    <path style="fill: #ffffff" d="M 301 358 C 305,358 309,362 309,366 C 309,370 305,374 301,374 C 297,374 293,370 293,366 C 293,362 297,358 301,358z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 301 358 C 305,358 309,362 309,366 C 309,370 305,374 301,374 C 297,374 293,370 293,366 C 293,362 297,358 301,358"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="338" y="444">
+      <tspan x="338" y="444">getCapabilities, getMap, getFeatureInfo, getLegendGraphic</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #f3eb8b" points="620,456 830.8,456 842.8,468 842.8,506 620,506 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="620,456 830.8,456 842.8,468 842.8,506 620,506 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="830.8,456 830.8,468 842.8,468 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="627" y="481.8">
+      <tspan x="627" y="481.8">standaard J5EE servlet container</tspan>
+      <tspan x="627" y="497.8">(Tomcat, Jetty, JBoss, Weblogic, ...)</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="705.288" y1="507.002" x2="659.049" y2="553.046"/>
+</svg>

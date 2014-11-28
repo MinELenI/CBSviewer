@@ -1,16 +1,19 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="69,257,313,730"/>
-<area shape="rect" id="node1" href="./StringConstants.html" title="&lt;TABLE&gt;" alt="" coords="58,251,323,735"/>
-<area shape="rect" id="node2_1" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="15,93,366,115"/>
-<area shape="rect" id="node3_2" href="./SpatialUtil.html" title="nl.mineleni.cbsviewer.util.SpatialUtil" alt="" coords="412,67,905,141"/>
-<area shape="rect" id="node3" href="./SpatialUtil.html" title="&lt;TABLE&gt;" alt="" coords="401,62,916,146"/>
-<area shape="rect" id="node4_3" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="1003,385,1251,602"/>
-<area shape="rect" id="node4" href="./NumberConstants.html" title="&lt;TABLE&gt;" alt="" coords="992,379,1261,607"/>
-<area shape="rect" id="node5_4" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="951,93,1302,115"/>
-<area shape="rect" id="node6_5" href="./LabelsBundle.html" title="nl.mineleni.cbsviewer.util.LabelsBundle" alt="" coords="1348,43,1601,165"/>
-<area shape="rect" id="node6" href="./LabelsBundle.html" title="&lt;TABLE&gt;" alt="" coords="1337,38,1612,170"/>
-<area shape="rect" id="node7_6" href="./EncodingUtil.html" title="nl.mineleni.cbsviewer.util.EncodingUtil" alt="" coords="1647,59,1916,149"/>
-<area shape="rect" id="node7" href="./EncodingUtil.html" title="&lt;TABLE&gt;" alt="" coords="1636,54,1927,154"/>
-<area shape="rect" id="node8_7" href="./AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="1961,11,2513,197"/>
-<area shape="rect" id="node8" href="./AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="1951,6,2524,202"/>
+<area shape="rect" id="node1_0" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="134,107,247,149"/>
+<area shape="rect" id="node1" href="./StringConstants.html" title="&lt;TABLE&gt;" alt="" coords="123,102,258,154"/>
+<area shape="rect" id="node2_1" href="./StringConstants.html" title="nl.mineleni.cbsviewer.util.StringConstants" alt="" coords="15,18,366,41"/>
+<area shape="rect" id="node4_2" href="./SpatialUtil.html" title="nl.mineleni.cbsviewer.util.SpatialUtil" alt="" coords="412,17,492,42"/>
+<area shape="rect" id="node4" href="./SpatialUtil.html" title="&lt;TABLE&gt;" alt="" coords="401,5,503,53"/>
+<area shape="rect" id="node5_3" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="651,107,776,149"/>
+<area shape="rect" id="node5" href="./NumberConstants.html" title="&lt;TABLE&gt;" alt="" coords="640,102,787,154"/>
+<area shape="rect" id="node6_4" href="./NumberConstants.html" title="nl.mineleni.cbsviewer.util.NumberConstants" alt="" coords="538,18,889,41"/>
+<area shape="rect" id="node8_5" href="./LabelsBundle.html" title="nl.mineleni.cbsviewer.util.LabelsBundle" alt="" coords="935,17,1033,42"/>
+<area shape="rect" id="node8" href="./LabelsBundle.html" title="&lt;TABLE&gt;" alt="" coords="924,5,1044,53"/>
+<area shape="rect" id="node9_6" href="./EncodingUtil.html" title="nl.mineleni.cbsviewer.util.EncodingUtil" alt="" coords="1079,17,1172,42"/>
+<area shape="rect" id="node9" href="./EncodingUtil.html" title="&lt;TABLE&gt;" alt="" coords="1068,5,1183,53"/>
+<area shape="rect" id="node10_7" href="./CookieNamesConstants.html" title="nl.mineleni.cbsviewer.util.CookieNamesConstants" alt="" coords="1265,107,1426,149"/>
+<area shape="rect" id="node10" href="./CookieNamesConstants.html" title="&lt;TABLE&gt;" alt="" coords="1254,102,1437,154"/>
+<area shape="rect" id="node11_8" href="./CookieNamesConstants.html" title="nl.mineleni.cbsviewer.util.CookieNamesConstants" alt="" coords="1217,18,1473,41"/>
+<area shape="rect" id="node13_9" href="./AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="1519,17,1660,42"/>
+<area shape="rect" id="node13" href="./AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="1508,5,1671,53"/>
 </map>

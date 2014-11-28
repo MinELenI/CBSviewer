@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: js/ClickDrawControl.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: js/ClickDrawControl.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/*
+ * Copyright (c) 2012, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
+/**
+ * Een control die een ikoontje tekent op de plaats waar geklikt is.
+ * 
+ * @author mprins
+ * @class {ClickDrawControl}
+ * @extends {OpenLayers.Control}
+ */
+ClickDrawControl = OpenLayers.Class(OpenLayers.Control, {
+	/** @override */
+	autoActivate : true,
+
+	/** @override */
+	defaultHandlerOptions : {
+		'single' : true,
+		'double' : false,
+		'pixelTolerance' : 0,
+		'stopSingle' : false,
+		'stopDouble' : false
+	},
+
+	/** @constructor */
+	initialize : function(options) {
+		this.handlerOptions = OpenLayers.Util.extend({}, this.defaultHandlerOptions);
+		OpenLayers.Control.prototype.initialize.apply(this, arguments);
+		this.handler = new OpenLayers.Handler.Click(this, {
+			'click' : this.trigger
+		}, this.handlerOptions);
+	},
+
+	/**
+	 * Klik event handler.
+	 * 
+	 * @param e
+	 *            {OpenLayers.Event} een muisklik event
+	 */
+	trigger : function(e) {
+		if (!this.layer) {
+			this.makeLayer();
+		}
+		this.drawOrMove(e);
+	},
+
+	/**
+	 * zorgt voor een vector layer om een marker in te tekenen.
+	 * 
+	 * @private
+	 */
+	makeLayer : function() {
+		this.layer = new OpenLayers.Layer.Vector(this.CLASS_NAME, {
+			styleMap : new OpenLayers.StyleMap({
+				externalGraphic : 'img/info.png',
+				graphicHeight : 40,
+				graphicWidth : 32,
+				graphicXOffset : -16,
+				graphicYOffset : -36
+			})
+		});
+		this.map.addLayer(this.layer);
+	},
+
+	/**
+	 * teken een ikoontje.
+	 * 
+	 * @param e
+	 *            {OpenLayers.Event}
+	 * @private
+	 */
+	drawOrMove : function(e) {
+		// verplaats naar bovenste
+		this.map.setLayerIndex(this.layer, this.map.getNumLayers()-1);
+		var lonlat = this.map.getLonLatFromPixel(e.xy);
+		if (!this.point) {
+			var geometry = new OpenLayers.Geometry.Point(lonlat.lon, lonlat.lat);
+			this.point = new OpenLayers.Feature.Vector(geometry);
+			this.point.geometry.clearBounds();
+			this.layer.addFeatures([ this.point ], {
+				silent : true
+			});
+		} else {
+			this.point.geometry.x = lonlat.lon;
+			this.point.geometry.y = lonlat.lat;
+			this.point.geometry.clearBounds();
+		}
+		this.layer.drawFeature(this.point);
+	},
+
+	/**
+	 * activate deze control.
+	 * 
+	 * @returns {Boolean}
+	 * @override
+	 */
+	activate : function() {
+		if (!OpenLayers.Control.prototype.activate.apply(this, arguments)) {
+			return false;
+		}
+		return true;
+	},
+
+	/**
+	 * deactivate deze control, zorgt oa. voor opruimen van resources.
+	 * 
+	 * @returns {Boolean}
+	 * @override
+	 */
+	deactivate : function() {
+		if (!OpenLayers.Control.prototype.deactivate.apply(this, arguments)) {
+			return false;
+		}
+		if (this.layer) {
+			this.map.removeLayer(this.layer);
+			this.layer.destroyFeatures([ this.point ]);
+			this.point = null;
+			this.layer = null;
+		}
+		return true;
+	},
+        
+	CLASS_NAME : 'ClickDrawControl'
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

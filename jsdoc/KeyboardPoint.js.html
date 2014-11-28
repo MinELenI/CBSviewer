@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: js/KeyboardPoint.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: js/KeyboardPoint.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/* Copyright (c) 2006-2012 by OpenLayers Contributors (see authors.txt for 
+ * full list of contributors). Published under the 2-clause BSD license.
+ * See license.txt in the OpenLayers distribution or repository for the
+ * full text of the license. 
+ */
+
+/**
+ * A custom handler that displays a vector point that can be moved using the
+ * arrow keys of the keyboard. *
+ * 
+ * @class OpenLayers.Handler.KeyboardPoint
+ * @requires OpenLayers/Handler.js
+ * @requires OpenLayers/Layer/Vector.js
+ * @requires OpenLayers/StyleMap.js
+ * @extends OpenLayers.Handler
+ */
+OpenLayers.Handler.KeyboardPoint = OpenLayers.Class(OpenLayers.Handler, {
+
+	KEY_EVENTS : [ "keydown" ],
+
+	/**
+	 * @constructor
+	 * @param control
+	 * @param callbacks
+	 * @param options
+	 */
+	initialize : function(control, callbacks, options) {
+		OpenLayers.Handler.prototype.initialize.apply(this, arguments);
+		// cache the bound event listener method so it can be unobserved
+		// later
+		this.eventListener = OpenLayers.Function.bindAsEventListener(this.handleKeyEvent, this);
+	},
+	/**
+	 * called on activate.
+	 */
+	activate : function() {
+		if (!OpenLayers.Handler.prototype.activate.apply(this, arguments)) {
+			return false;
+		}
+		this.layer = new OpenLayers.Layer.Vector(this.CLASS_NAME, {
+			styleMap : new OpenLayers.StyleMap({
+				externalGraphic : 'img/info.png',
+				graphicHeight : 40,
+				graphicWidth : 32,
+				graphicXOffset : -16,
+				graphicYOffset : -36
+			})
+		});
+		this.map.addLayer(this.layer);
+		this.observeElement = this.observeElement || document;
+		for ( var i = 0, len = this.KEY_EVENTS.length; i &lt; len; i++) {
+			OpenLayers.Event.observe(this.observeElement, this.KEY_EVENTS[i], this.eventListener);
+		}
+		if (!this.point) {
+			this.createFeature();
+		}
+		return true;
+	},
+
+	/**
+	 * called on deactivate.
+	 */
+	deactivate : function() {
+		if (!OpenLayers.Handler.prototype.deactivate.apply(this, arguments)) {
+			return false;
+		}
+		for ( var i = 0, len = this.KEY_EVENTS.length; i &lt; len; i++) {
+			OpenLayers.Event.stopObserving(this.observeElement, this.KEY_EVENTS[i], this.eventListener);
+		}
+		this.map.removeLayer(this.layer);
+		this.destroyFeature();
+		return true;
+	},
+
+	/**
+	 * handles the key events. Moving the selection feature around on the map.
+	 * 
+	 * @param evt
+	 *            {OpenLayers.Event} key event
+	 */
+	handleKeyEvent : function(evt) {
+		switch (evt.keyCode) {
+		case OpenLayers.Event.KEY_LEFT:
+			this.modifyFeature(-3, 0);
+			break;
+		case OpenLayers.Event.KEY_RIGHT:
+			this.modifyFeature(3, 0);
+			break;
+		case OpenLayers.Event.KEY_UP:
+			this.modifyFeature(0, 3);
+			break;
+		case OpenLayers.Event.KEY_DOWN:
+			this.modifyFeature(0, -3);
+			break;
+		case OpenLayers.Event.KEY_RETURN:
+			this.callback('done', [ this.point.geometry.clone() ]);
+			break;
+		case OpenLayers.Event.KEY_ESC:
+			this.callback('cancel');
+			break;
+		}
+	},
+
+	/**
+	 * 
+	 * @param lon
+	 * @param lat
+	 */
+	modifyFeature : function(lon, lat) {
+		if (!this.point) {
+			this.createFeature();
+		}
+		var resolution = this.map.getResolution();
+		this.point.geometry.x = this.point.geometry.x + lon * resolution;
+		this.point.geometry.y = this.point.geometry.y + lat * resolution;
+		this.callback("modify", [ this.point.geometry, this.point, false ]);
+		this.point.geometry.clearBounds();
+		this.drawFeature();
+	},
+
+	/**
+	 * create the point.
+	 */
+	createFeature : function() {
+		var center = this.map.getCenter();
+		var geometry = new OpenLayers.Geometry.Point(center.lon, center.lat);
+		this.point = new OpenLayers.Feature.Vector(geometry);
+		this.callback("create", [ this.point.geometry, this.point ]);
+		this.point.geometry.clearBounds();
+		this.layer.addFeatures([ this.point ], {
+			silent : true
+		});
+	},
+
+	/**
+	 * destroy the point.
+	 */
+	destroyFeature : function() {
+		this.layer.destroyFeatures([ this.point ]);
+		this.point = null;
+	},
+
+	/**
+	 * draw the point.
+	 */
+	drawFeature : function() {
+		this.layer.drawFeature(this.point);
+	},
+
+	CLASS_NAME : 'OpenLayers.Handler.KeyboardPoint'
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

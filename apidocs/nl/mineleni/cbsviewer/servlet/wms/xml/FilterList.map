@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./FilterList.html" title="nl.mineleni.cbsviewer.servlet.wms.xml.FilterList" alt="" coords="16,11,264,101"/>
-<area shape="rect" id="node1" href="./FilterList.html" title="&lt;TABLE&gt;" alt="" coords="5,6,275,106"/>
+<area shape="rect" id="node1_0" href="../AttributeValuesFilter.html" title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" alt="" coords="16,17,155,42"/>
+<area shape="rect" id="node1" href="../AttributeValuesFilter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,165,53"/>
+<area shape="rect" id="node2_1" href="./FilterList.html" title="nl.mineleni.cbsviewer.servlet.wms.xml.FilterList" alt="" coords="50,129,121,154"/>
+<area shape="rect" id="node2" href="./FilterList.html" title="&lt;TABLE&gt;" alt="" coords="39,117,131,165"/>
 </map>

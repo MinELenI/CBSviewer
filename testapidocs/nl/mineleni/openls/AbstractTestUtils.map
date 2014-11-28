@@ -1,10 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" alt="" coords="15,177,273,314"/>
-<area shape="rect" id="node1" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="5,171,283,319"/>
-<area shape="rect" id="node2_1" href="./AbstractTestUtils.html" title="nl.mineleni.openls.AbstractTestUtils" alt="" coords="265,11,593,117"/>
-<area shape="rect" id="node2" href="./AbstractTestUtils.html" title="&lt;TABLE&gt;" alt="" coords="255,6,604,122"/>
-<area shape="rect" id="node3_2" href="./parser/OpenLSResponseParserTest.html" title="nl.mineleni.openls.parser.OpenLSResponseParserTest" alt="" coords="318,193,541,298"/>
-<area shape="rect" id="node3" href="./parser/OpenLSResponseParserTest.html" title="&lt;TABLE&gt;" alt="" coords="307,187,551,303"/>
-<area shape="rect" id="node4_3" href="./parser/OpenLSRequestParserTest.html" title="nl.mineleni.openls.parser.OpenLSRequestParserTest" alt="" coords="587,193,800,298"/>
-<area shape="rect" id="node4" href="./parser/OpenLSRequestParserTest.html" title="&lt;TABLE&gt;" alt="" coords="576,187,811,303"/>
+<area shape="rect" id="node1_0" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" alt="" coords="15,113,201,138"/>
+<area shape="rect" id="node1" href="../cbsviewer/servlet/gazetteer/lusclient/OpenLSClientIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="5,101,211,149"/>
+<area shape="rect" id="node2_1" href="./AbstractTestUtils.html" title="nl.mineleni.openls.AbstractTestUtils" alt="" coords="814,17,935,42"/>
+<area shape="rect" id="node2" href="./AbstractTestUtils.html" title="&lt;TABLE&gt;" alt="" coords="803,5,946,53"/>
+<area shape="rect" id="node3_2" href="./databinding/openls/ReverseGeocodeResponseTest.html" title="nl.mineleni.openls.databinding.openls.ReverseGeocodeResponseTest" alt="" coords="246,113,447,138"/>
+<area shape="rect" id="node3" href="./databinding/openls/ReverseGeocodeResponseTest.html" title="&lt;TABLE&gt;" alt="" coords="235,101,458,149"/>
+<area shape="rect" id="node4_3" href="./databinding/openls/ReverseGeocodeRequestTest.html" title="nl.mineleni.openls.databinding.openls.ReverseGeocodeRequestTest" alt="" coords="493,113,685,138"/>
+<area shape="rect" id="node4" href="./databinding/openls/ReverseGeocodeRequestTest.html" title="&lt;TABLE&gt;" alt="" coords="483,101,696,149"/>
+<area shape="rect" id="node5_4" href="./parser/OpenLSReverseGeocodeResponseParserTest.html" title="nl.mineleni.openls.parser.OpenLSReverseGeocodeResponseParserTest" alt="" coords="731,113,1018,138"/>
+<area shape="rect" id="node5" href="./parser/OpenLSReverseGeocodeResponseParserTest.html" title="&lt;TABLE&gt;" alt="" coords="721,101,1029,149"/>
+<area shape="rect" id="node6_5" href="./parser/OpenLSReverseGeocodeRequestParserTest.html" title="nl.mineleni.openls.parser.OpenLSReverseGeocodeRequestParserTest" alt="" coords="1064,113,1341,138"/>
+<area shape="rect" id="node6" href="./parser/OpenLSReverseGeocodeRequestParserTest.html" title="&lt;TABLE&gt;" alt="" coords="1053,101,1352,149"/>
+<area shape="rect" id="node7_6" href="./parser/OpenLSGeocodeResponseParserTest.html" title="nl.mineleni.openls.parser.OpenLSGeocodeResponseParserTest" alt="" coords="1387,113,1629,138"/>
+<area shape="rect" id="node7" href="./parser/OpenLSGeocodeResponseParserTest.html" title="&lt;TABLE&gt;" alt="" coords="1377,101,1639,149"/>
+<area shape="rect" id="node8_7" href="./parser/OpenLSGeocodeRequestParserTest.html" title="nl.mineleni.openls.parser.OpenLSGeocodeRequestParserTest" alt="" coords="1674,113,1905,138"/>
+<area shape="rect" id="node8" href="./parser/OpenLSGeocodeRequestParserTest.html" title="&lt;TABLE&gt;" alt="" coords="1663,101,1915,149"/>
 </map>

@@ -1,8 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="75,11,515,117"/>
-<area shape="rect" id="node1" href="../AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="64,6,525,122"/>
-<area shape="rect" id="node2_1" href="./OpenLSClient.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" alt="" coords="15,177,574,298"/>
-<area shape="rect" id="node2" href="./OpenLSClient.html" title="&lt;TABLE&gt;" alt="" coords="5,171,585,303"/>
-<area shape="rect" id="node3_2" href="../../../../openls/parser/OpenLSResponseParser.html" title="nl.mineleni.openls.parser.OpenLSResponseParser" alt="" coords="37,358,552,511"/>
-<area shape="rect" id="node3" href="../../../../openls/parser/OpenLSResponseParser.html" title="&lt;TABLE&gt;" alt="" coords="27,353,563,517"/>
+<area shape="rect" id="node1_0" href="./OpenLSClient.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" alt="" coords="16,17,117,42"/>
+<area shape="rect" id="node1" href="./OpenLSClient.html" title="&lt;TABLE&gt;" alt="" coords="5,5,128,53"/>
 </map>

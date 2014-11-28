@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./CacheImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" alt="" coords="15,342,454,527"/>
-<area shape="rect" id="node1" href="./CacheImage.html" title="&lt;TABLE&gt;" alt="" coords="5,337,465,533"/>
-<area shape="rect" id="node2_1" href="./CachableImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" alt="" coords="124,193,345,282"/>
-<area shape="rect" id="node2" href="./CachableImage.html" title="&lt;TABLE&gt;" alt="" coords="113,187,356,287"/>
-<area shape="rect" id="node3_2" href="./Cachable.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" alt="" coords="161,11,309,133"/>
-<area shape="rect" id="node3" href="./Cachable.html" title="&lt;TABLE&gt;" alt="" coords="150,6,319,138"/>
+<area shape="rect" id="node1_0" href="./CacheImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CacheImage" alt="" coords="80,219,173,245"/>
+<area shape="rect" id="node1" href="./CacheImage.html" title="&lt;TABLE&gt;" alt="" coords="69,208,184,256"/>
+<area shape="rect" id="node2_1" href="./CachableImage.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.CachableImage" alt="" coords="16,113,237,154"/>
+<area shape="rect" id="node2" href="./CachableImage.html" title="&lt;TABLE&gt;" alt="" coords="5,107,248,159"/>
+<area shape="rect" id="node3_2" href="./Cachable.html" title="nl.mineleni.cbsviewer.servlet.wms.cache.Cachable" alt="" coords="78,11,175,53"/>
+<area shape="rect" id="node3" href="./Cachable.html" title="&lt;TABLE&gt;" alt="" coords="67,6,186,58"/>
 </map>

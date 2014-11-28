@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: webapp/js/config.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: webapp/js/config.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/**
+ * @fileoverview Dit is het globale javascript configuratie object voor de applicatie.
+ */
+/**
+ * configuratie object voor het javascript deel van de applicatie.
+ * 
+ * @type {object}
+ */
+var config = {};
+/** OpenLayers css/image pad. */
+config.imgPath = "img/";
+
+/** id van de div met de kaart. */
+config.mapDiv = "cbsKaart";
+
+/** id van de buttons voor het selecteren bij meerdere resultaten */
+config.buttonDiv = "button";
+
+/** id van de div voor de legenda. */
+config.legendDiv = "legenda";
+
+/** id van de div voor de featureinfo. */
+config.featureInfoDiv = "featureinfo";
+
+/** default map id, als in AvailableLayers.xml. */
+config.defaultMapId = "gemeenten2012_bevolkingsdichtheid_inwoners_per_km2";
+
+/** instellingen voor de kaart. Voorlopig alleen RD projectie. */
+config.map = {
+	projection : "EPSG:28992",
+	restrictedExtent : new OpenLayers.Bounds(0, 300000, 280000, 625000),
+	resolutions : [ 3440.640, 1720.320, 860.160, 430.080, 215.040, 107.520, 53.760, 26.880, 13.440, 6.720, 3.360,
+			1.680, 0.840, 0.420 ],
+	initialZoom : 3,
+	// initiele afmeting van de kaart
+	height : 500,
+	width : 610,
+
+	topoWMTS : {
+		url : 'http://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/',
+		layer : "brtachtergrondkaart",
+		matrixSet : 'EPSG:28992',
+		matrixIds : [ 'EPSG:28992:0', 'EPSG:28992:1', 'EPSG:28992:2', 'EPSG:28992:3', 'EPSG:28992:4', 'EPSG:28992:5',
+				'EPSG:28992:6', 'EPSG:28992:7', 'EPSG:28992:8', 'EPSG:28992:9', 'EPSG:28992:10', 'EPSG:28992:11',
+				'EPSG:28992:12', 'EPSG:28992:13' ],
+		format : 'image/png8',
+		style : '_null'
+	},
+
+	aerialWMTS : {
+		url : 'http://geodata1.nationaalgeoregister.nl/luchtfoto/wms/',
+		layer : 'luchtfoto',
+		matrixSet : 'nltilingschema',
+		matrixIds : [ '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13' ],
+		format : 'image/jpeg',
+		style : 'default'
+	}
+};
+
+/**
+ * schakel de kaart naar pagina vullend tijdens opstarten.
+ * 
+ * @type {Boolean}
+ */
+config.fullSize = true;
+
+/**
+ * Of de resize knop op de kaart moet worden gezet.
+ * 
+ * @type {Boolean}
+ */
+config.toggleSize = true;
+
+/**
+ * Of de transparantie slider op de kaart moet worden gezet. NB. hiervoor wordt
+ * de jQuery UI slider gebruikt.
+ * 
+ * @see http://api.jqueryui.com/slider/
+ * 
+ * @type {Boolean}
+ */
+config.fgAlphaSlider = true;
+
+/**
+ * OpenLayers proxy url override.
+ * 
+ * @override
+ */
+OpenLayers.ProxyHost = 'xhr?';
+
+/**
+ * Rijksdriehoek (RD) bekend maken aan OpenLayers.
+ */
+jQuery.extend(true, OpenLayers.Projection.defaults, {
+	"EPSG:28992" : {
+		units : "m",
+		maxExtent : [ -285401.92, 22598.08, 595401.9199999999, 903401.9199999999 ]
+	}
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

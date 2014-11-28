@@ -1,10 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OpenLSClientUtilTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest" alt="" coords="15,35,249,157"/>
-<area shape="rect" id="node1" href="./OpenLSClientUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="5,30,259,162"/>
-<area shape="rect" id="node2_1" href="./OpenLSClientIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" alt="" coords="294,27,551,165"/>
-<area shape="rect" id="node2" href="./OpenLSClientIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="283,22,562,170"/>
-<area shape="rect" id="node4" href="null" title="&lt;TABLE&gt;" alt="" coords="146,395,699,527"/>
-<area shape="rect" id="node3_2" href="./OpenLSClientAddressTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest" alt="" coords="899,11,1362,181"/>
-<area shape="rect" id="node3" href="./OpenLSClientAddressTest.html" title="&lt;TABLE&gt;" alt="" coords="889,6,1373,186"/>
-<area shape="rect" id="node5" href="null" title="&lt;TABLE&gt;" alt="" coords="723,235,1538,687"/>
+<area shape="rect" id="node1_0" href="./OpenLSClientUtilTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientUtilTest" alt="" coords="15,17,161,42"/>
+<area shape="rect" id="node1" href="./OpenLSClientUtilTest.html" title="&lt;TABLE&gt;" alt="" coords="5,5,171,53"/>
+<area shape="rect" id="node2_1" href="./OpenLSClientIntegrationTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientIntegrationTest" alt="" coords="206,17,391,42"/>
+<area shape="rect" id="node2" href="./OpenLSClientIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="195,5,402,53"/>
+<area shape="rect" id="node3_2" href="./OpenLSClientAddressTest.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClientAddressTest" alt="" coords="437,17,611,42"/>
+<area shape="rect" id="node3" href="./OpenLSClientAddressTest.html" title="&lt;TABLE&gt;" alt="" coords="427,5,621,53"/>
 </map>

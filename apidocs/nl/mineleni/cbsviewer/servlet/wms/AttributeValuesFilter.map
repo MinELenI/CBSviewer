@@ -1,4 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AttributeValuesFilter.html" title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" alt="" coords="16,11,237,117"/>
-<area shape="rect" id="node1" href="./AttributeValuesFilter.html" title="&lt;TABLE&gt;" alt="" coords="5,6,248,122"/>
+<area shape="rect" id="node1_0" href="./FeatureInfoResponseConverter.html" title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" alt="" coords="25,17,223,42"/>
+<area shape="rect" id="node1" href="./FeatureInfoResponseConverter.html" title="&lt;TABLE&gt;" alt="" coords="15,5,233,53"/>
+<area shape="rect" id="node2_1" href="./AttributeValuesFilter.html" title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" alt="" coords="55,115,193,141"/>
+<area shape="rect" id="node2" href="./AttributeValuesFilter.html" title="&lt;TABLE&gt;" alt="" coords="44,104,204,152"/>
+<area shape="rect" id="node3_2" href="./xml/FilterList.html" title="nl.mineleni.cbsviewer.servlet.wms.xml.FilterList" alt="" coords="15,227,86,253"/>
+<area shape="rect" id="node3" href="./xml/FilterList.html" title="&lt;TABLE&gt;" alt="" coords="5,216,97,264"/>
+<area shape="rect" id="node4_3" href="./xml/AttributeValueFilter.html" title="nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter" alt="" coords="131,227,263,253"/>
+<area shape="rect" id="node4" href="./xml/AttributeValueFilter.html" title="&lt;TABLE&gt;" alt="" coords="121,216,274,264"/>
 </map>

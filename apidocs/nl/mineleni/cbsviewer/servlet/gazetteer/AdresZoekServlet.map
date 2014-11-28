@@ -1,9 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="91,107,498,229"/>
-<area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="81,102,509,234"/>
-<area shape="rect" id="node3_1" href="./AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="75,289,515,394"/>
-<area shape="rect" id="node3" href="./AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="64,283,525,399"/>
-<area shape="rect" id="node2_2" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="179,18,410,41"/>
-<area shape="rect" id="node4_3" href="./lusclient/OpenLSClient.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.lusclient.OpenLSClient" alt="" coords="15,454,574,575"/>
-<area shape="rect" id="node4" href="./lusclient/OpenLSClient.html" title="&lt;TABLE&gt;" alt="" coords="5,449,585,581"/>
+<area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="80,113,181,138"/>
+<area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="69,101,192,149"/>
+<area shape="rect" id="node4_1" href="./AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="70,209,191,234"/>
+<area shape="rect" id="node4" href="./AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="59,197,202,245"/>
+<area shape="rect" id="node2_2" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="15,18,246,41"/>
 </map>

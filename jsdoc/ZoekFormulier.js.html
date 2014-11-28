@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: js/ZoekFormulier.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: js/ZoekFormulier.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/*
+ * Copyright (c) 2013, Dienst Landelijk Gebied - Ministerie van Economische Zaken
+ * 
+ * Gepubliceerd onder de BSD 2-clause licentie, 
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ */
+/**
+ * Functies voor het zoekformulier zoals gedefinieerd in zoekformulier.jsp.
+ * 
+ * @fileoverview zorgt voor afhandeling van het adreszoek formulier.
+ * @author mprins
+ * @requires jQuery
+ * @requires jQueryUI
+ * @requires zoekformulier.jsp
+ * @requires Viewer.js
+ * @class {ZoekFormulier}
+ */
+var ZoekFormulier = {
+	/**
+	 * Aanhaken van autocomplete handler aan input veld van zoek formulier.
+	 * 
+	 * @constructor
+	 */
+	init : function(viewer) {
+		// de zoekknop, method en action van formulier verwijderen, die hebben geen functie meer in de RIA
+		jQuery('input:image').attr("disabled", true);
+		jQuery('#zoekFormulier').removeAttr('action');
+		jQuery('#zoekFormulier').removeAttr('method');
+		jQuery('#adres').keypress(function (e){
+			if (e.which == 13){
+				jQuery('#searchbutton').focus().click();
+				return false;
+			}
+		});
+		// verborgen velden instellen voor RIA functies
+		jQuery('#zoekFormulier').find('input[name="coreonly"]').val('false');
+		jQuery('#zoekFormulier').find('input[name="forward"]').val('false');
+
+		// aanhaken auto complete
+		jQuery('#adres').autocomplete({
+			source : function(request, response) {
+				jQuery.ajax({
+					url : 'adres',
+					data : {
+						adres : request.term,
+						forward : false,
+						format : 'json',
+						coreonly : false
+					},
+					dataType : 'json'
+				}).success(function(data) {
+					var results = jQuery.map(data, function(val, i) {
+						return {
+							label : val.addressString,
+							x : val.xCoord,
+							y : val.yCoord,
+							r : val.radius
+						};
+					});
+					response(results);
+				});
+			},
+			select : function(event, ui) {
+				// console.debug(ui.item ? "Gekozen: " + ui.item.value + "
+				// (x,y,r) :" + ui.item.x + ","
+				// + ui.item.y + "," + ui.item.r : "Niets gekozen, de input was
+				// " + this.value);
+				if (ui.item) {
+					Viewer.zoomTo(ui.item.x, ui.item.y, ui.item.r, true);
+					//Viewer.featureInfo(ui.item.x, ui.item.y);
+				}
+			},
+			// alleen items uit de lijst mogen ingevuld/gekozen worden
+			change : function(event, ui) {
+				if (!ui.item) {
+					jQuery(this).val('');
+				}
+			},
+			minLength : 4 /* characters */,
+			delay : 400 /* milliseconds */,
+			autoFocus : false
+		});
+	}
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="init.html">init</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="OpenLayers.Control.KeyboardClick.html">KeyboardClick</a></li><li><a href="OpenLayers.Handler.KeyboardPoint.html">KeyboardPoint</a></li><li><a href="UpdateLegendControl.html">UpdateLegendControl</a></li><li><a href="Viewer.html">Viewer</a></li><li><a href="ZoekFormulier.init.html">init</a></li><li><a href="ZoomControl.html">ZoomControl</a></li><li>{ClickDrawControl}</li><li>{OverviewMap}</li><li>{WMSGetFeatureInfo}</li><li>{ZoekFormulier}</li></ul><h3>Global</h3><ul><li><a href="global.html#activate">activate</a></li><li><a href="global.html#addBaseMap">addBaseMap</a></li><li><a href="global.html#addControls">addControls</a></li><li><a href="global.html#autoActivate">autoActivate</a></li><li><a href="global.html#autoPan">autoPan</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#deactivate">deactivate</a></li><li><a href="global.html#defaultHandlerOptions">defaultHandlerOptions</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#destroyFeature">destroyFeature</a></li><li><a href="global.html#draw">draw</a></li><li><a href="global.html#drawFeature">drawFeature</a></li><li><a href="global.html#drawOrMove">drawOrMove</a></li><li><a href="global.html#element">element</a></li><li><a href="global.html#eraseCookie">eraseCookie</a></li><li><a href="global.html#eraseCookies">eraseCookies</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getMap">getMap</a></li><li><a href="global.html#getOrCreateLinks">getOrCreateLinks</a></li><li><a href="global.html#handleKeyEvent">handleKeyEvent</a></li><li><a href="global.html#infoFormat">infoFormat</a></li><li><a href="global.html#loadWMS">loadWMS</a></li><li><a href="global.html#makeLayer">makeLayer</a></li><li><a href="global.html#mapOptions">mapOptions</a></li><li><a href="global.html#maxFeatures">maxFeatures</a></li><li><a href="global.html#maximized">maximized</a></li><li><a href="global.html#modifyFeature">modifyFeature</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#printPrepare">printPrepare</a></li><li><a href="global.html#queryVisible">queryVisible</a></li><li><a href="global.html#redraw">redraw</a></li><li><a href="global.html#removeOverlays">removeOverlays</a></li><li><a href="global.html#removeWMS">removeWMS</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setOpacity">setOpacity</a></li><li><a href="global.html#size">size</a></li><li><a href="global.html#toggleBaseMap">toggleBaseMap</a></li><li><a href="global.html#toggleFullSize">toggleFullSize</a></li><li><a href="global.html#trigger">trigger</a></li><li><a href="global.html#zoomTo">zoomTo</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.3-dev</a> on Fri Nov 28 2014 09:49:30 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

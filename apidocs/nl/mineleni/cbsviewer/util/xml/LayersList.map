@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./LayersList.html" title="nl.mineleni.cbsviewer.util.xml.LayersList" alt="" coords="16,11,304,101"/>
-<area shape="rect" id="node1" href="./LayersList.html" title="&lt;TABLE&gt;" alt="" coords="5,6,315,106"/>
+<area shape="rect" id="node1_0" href="../AvailableLayersBean.html" title="nl.mineleni.cbsviewer.util.AvailableLayersBean" alt="" coords="16,17,157,42"/>
+<area shape="rect" id="node1" href="../AvailableLayersBean.html" title="&lt;TABLE&gt;" alt="" coords="5,5,168,53"/>
+<area shape="rect" id="node2_1" href="./LayersList.html" title="nl.mineleni.cbsviewer.util.xml.LayersList" alt="" coords="46,129,127,154"/>
+<area shape="rect" id="node2" href="./LayersList.html" title="&lt;TABLE&gt;" alt="" coords="35,117,138,165"/>
 </map>

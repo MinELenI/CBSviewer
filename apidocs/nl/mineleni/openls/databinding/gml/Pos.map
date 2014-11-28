@@ -1,6 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Pos.html" title="nl.mineleni.openls.databinding.gml.Pos" alt="" coords="56,209,261,458"/>
-<area shape="rect" id="node1" href="./Pos.html" title="&lt;TABLE&gt;" alt="" coords="45,203,272,463"/>
-<area shape="rect" id="node2_1" href="../../XmlNamespaceConstants.html" title="nl.mineleni.openls.XmlNamespaceConstants" alt="" coords="16,11,301,149"/>
-<area shape="rect" id="node2" href="../../XmlNamespaceConstants.html" title="&lt;TABLE&gt;" alt="" coords="5,6,312,154"/>
+<area shape="rect" id="node1_0" href="./Pos.html" title="nl.mineleni.openls.databinding.gml.Pos" alt="" coords="78,214,122,239"/>
+<area shape="rect" id="node1" href="./Pos.html" title="&lt;TABLE&gt;" alt="" coords="64,203,136,251"/>
+<area shape="rect" id="node2_1" href="./Point.html" title="nl.mineleni.openls.databinding.gml.Point" alt="" coords="112,118,163,143"/>
+<area shape="rect" id="node2" href="./Point.html" title="&lt;TABLE&gt;" alt="" coords="101,107,173,155"/>
+<area shape="rect" id="node3_2" href="../../XmlNamespaceConstants.html" title="nl.mineleni.openls.XmlNamespaceConstants" alt="" coords="15,11,185,53"/>
+<area shape="rect" id="node3" href="../../XmlNamespaceConstants.html" title="&lt;TABLE&gt;" alt="" coords="5,6,195,58"/>
 </map>
