@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./IntegrationTestConstants.html" title="nl.mineleni.cbsviewer.IntegrationTestConstants" alt="" coords="91,17,258,42"/>
-<area shape="rect" id="node1" href="./IntegrationTestConstants.html" title="&lt;TABLE&gt;" alt="" coords="81,5,269,53"/>
+<area shape="rect" id="node1_0" href="./IntegrationTestConstants.html" title="nl.mineleni.cbsviewer.IntegrationTestConstants" alt="" coords="113,17,236,42"/>
+<area shape="rect" id="node1" href="./IntegrationTestConstants.html" title="&lt;TABLE&gt;" alt="" coords="103,5,247,53"/>
 <area shape="rect" id="node2_1" href="./jsp/JSPIntegrationTest.html" title="nl.mineleni.cbsviewer.jsp.JSPIntegrationTest" alt="" coords="16,113,149,138"/>
 <area shape="rect" id="node2" href="./jsp/JSPIntegrationTest.html" title="&lt;TABLE&gt;" alt="" coords="5,101,160,149"/>
 <area shape="rect" id="node3_2" href="./yslow/YSlowIntegrationTest.html" title="nl.mineleni.cbsviewer.yslow.YSlowIntegrationTest" alt="" coords="195,113,338,138"/>

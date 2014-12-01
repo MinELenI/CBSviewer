@@ -1,11 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="187,113,306,138"/>
-<area shape="rect" id="node1" href="./AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="177,101,317,149"/>
-<area shape="rect" id="node5_1" href="./gazetteer/AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="102,209,223,234"/>
-<area shape="rect" id="node5" href="./gazetteer/AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="91,197,234,245"/>
-<area shape="rect" id="node6_2" href="./wms/WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="269,209,395,234"/>
-<area shape="rect" id="node6" href="./wms/WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="259,197,405,245"/>
+<area shape="rect" id="node1_0" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="168,113,307,138"/>
+<area shape="rect" id="node1" href="./AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="157,101,317,149"/>
+<area shape="rect" id="node5_1" href="./gazetteer/AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="93,209,214,234"/>
+<area shape="rect" id="node5" href="./gazetteer/AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="82,197,225,245"/>
+<area shape="rect" id="node6_2" href="./wms/WMSClientServlet.html" title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" alt="" coords="260,209,385,234"/>
+<area shape="rect" id="node6" href="./wms/WMSClientServlet.html" title="&lt;TABLE&gt;" alt="" coords="249,197,396,245"/>
 <area shape="rect" id="node2_3" href="./AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="15,18,246,41"/>
-<area shape="rect" id="node4_4" href="./AbstractBaseServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" alt="" coords="292,17,433,42"/>
-<area shape="rect" id="node4" href="./AbstractBaseServlet.html" title="&lt;TABLE&gt;" alt="" coords="281,5,444,53"/>
+<area shape="rect" id="node4_4" href="./AbstractBaseServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" alt="" coords="292,17,396,42"/>
+<area shape="rect" id="node4" href="./AbstractBaseServlet.html" title="&lt;TABLE&gt;" alt="" coords="281,5,407,53"/>
 </map>
