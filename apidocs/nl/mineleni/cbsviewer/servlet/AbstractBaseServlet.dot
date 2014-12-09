@@ -10,38 +10,38 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.ReverseProxyServlet
-	c723 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReverseProxyServlet.html">
+	c762 [label=<<table title="nl.mineleni.cbsviewer.servlet.ReverseProxyServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReverseProxyServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseProxyServlet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ReverseProxyServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c731 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	c775 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc731 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	n0cc775 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc731 -> c731:p[arrowhead=none];
+	n0cc775 -> c775:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c732 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBaseServlet.html">
+	c776 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.ReverseProxyServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c732:p -> c723:p [dir=back,arrowtail=empty];
+	c776:p -> c762:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.AbstractWxSServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c732:p -> c731:p [dir=back,arrowtail=empty];
+	c776:p -> c775:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.AbstractBaseServlet extends javax.servlet.http.HttpServlet
-	c847:p -> c732:p [dir=back,arrowtail=empty];
+	c891:p -> c776:p [dir=back,arrowtail=empty];
 	// javax.servlet.http.HttpServlet
-	c847 [label=<<table title="javax.servlet.http.HttpServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://download.oracle.com/javaee/5/api/javax/servlet/http/HttpServlet.html">
+	c891 [label=<<table title="javax.servlet.http.HttpServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://download.oracle.com/javaee/5/api/javax/servlet/http/HttpServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> HttpServlet </font></td></tr>
 		</table></td></tr>

@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2012 - 2014 Ministerie EZ</copyright>
     <item>
-      <title>File: 70,
+      <title>File: 73,
              Errors: 0,
-             Warnings: 117,
+             Warnings: 129,
              Infos: 0
       </title>
             <link>http://mineleni.github.io/CBSviewer/checkstyle.html</link>
@@ -326,6 +326,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.io/CBSviewer/checkstyle.html#nl.mineleni.cbsviewer.servlet.ServletResponseGZIPOutputStream.java">nl/mineleni/cbsviewer/servlet/ServletResponseGZIPOutputStream.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.io/CBSviewer/checkstyle.html#nl.mineleni.openls.databinding.openls.GeocodeRequest.java">nl/mineleni/openls/databinding/openls/GeocodeRequest.java</a>
                 </td>
                 <td>
@@ -500,7 +514,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  37
+                  35
                 </td>
                 <td>
                   0
@@ -634,6 +648,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://mineleni.github.io/CBSviewer/checkstyle.html#nl.mineleni.cbsviewer.servlet.GZipFilter.java">nl/mineleni/cbsviewer/servlet/GZipFilter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://mineleni.github.io/CBSviewer/checkstyle.html#nl.mineleni.openls.XmlNamespaceConstants.java">nl/mineleni/openls/XmlNamespaceConstants.java</a>
                 </td>
                 <td>
@@ -724,7 +752,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   0
@@ -766,7 +794,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  3
                 </td>
                 <td>
                   0
@@ -851,6 +879,20 @@ under the License.
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://mineleni.github.io/CBSviewer/checkstyle.html#nl.mineleni.cbsviewer.servlet.GZIPHttpServletResponseWrapper.java">nl/mineleni/cbsviewer/servlet/GZIPHttpServletResponseWrapper.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
                 </td>
                 <td>
                   0

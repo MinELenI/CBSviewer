@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter
-	c1223 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
+	c1288 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeatureInfoResponseConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FeatureInfoResponseConverter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FeatureInfoResponseConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter
-	c1226 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributesNamesFilter.html">
+	c1291 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributesNamesFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributesNamesFilter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AttributesNamesFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.FeatureInfoResponseConverter HAS nl.mineleni.cbsviewer.servlet.wms.AttributesNamesFilter
-	c1223:p -> c1226:p [taillabel="1", label="", headlabel="1", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=ediamond, dir=both];
+	c1288:p -> c1291:p [taillabel="1", label="", headlabel="1", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=ediamond, dir=both];
 }
 

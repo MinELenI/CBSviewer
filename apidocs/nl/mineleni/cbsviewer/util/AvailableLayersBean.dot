@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c1304 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AvailableLayersBean.html">
+	c1372 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AvailableLayersBean.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.xml.LayersList
-	c1306 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayersList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./xml/LayersList.html">
+	c1374 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayersList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./xml/LayersList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LayersList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./xml/LayersList.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c1307 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./xml/LayerDescriptor.html">
+	c1375 [label=<<table title="nl.mineleni.cbsviewer.util.xml.LayerDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./xml/LayerDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LayerDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./xml/LayerDescriptor.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean COMPOSED nl.mineleni.cbsviewer.util.xml.LayerDescriptor
-	c1304:p -> c1307:p [taillabel="1", label="", headlabel="1..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
+	c1372:p -> c1375:p [taillabel="1", label="", headlabel="1..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean DEPEND nl.mineleni.cbsviewer.util.xml.LayersList
-	c1304:p -> c1306:p [taillabel="", label="layersList", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c1372:p -> c1374:p [taillabel="", label="layersList", headlabel="", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

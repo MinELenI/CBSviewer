@@ -10,162 +10,162 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.openls.databinding.gml.Pos
-	c4312 [label=<<table title="nl.mineleni.openls.databinding.gml.Pos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/gml/Pos.html">
+	c4725 [label=<<table title="nl.mineleni.openls.databinding.gml.Pos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/gml/Pos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Pos </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/gml/Pos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.gml.Point
-	c4313 [label=<<table title="nl.mineleni.openls.databinding.gml.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/gml/Point.html">
+	c4726 [label=<<table title="nl.mineleni.openls.databinding.gml.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/gml/Point.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Point </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/gml/Point.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.StreetAddress
-	c4314 [label=<<table title="nl.mineleni.openls.databinding.openls.StreetAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/StreetAddress.html">
+	c4727 [label=<<table title="nl.mineleni.openls.databinding.openls.StreetAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/StreetAddress.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StreetAddress </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/StreetAddress.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Street
-	c4315 [label=<<table title="nl.mineleni.openls.databinding.openls.Street" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Street.html">
+	c4728 [label=<<table title="nl.mineleni.openls.databinding.openls.Street" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Street.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Street </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/Street.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.SearchCentreDistance
-	c4316 [label=<<table title="nl.mineleni.openls.databinding.openls.SearchCentreDistance" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/SearchCentreDistance.html">
+	c4729 [label=<<table title="nl.mineleni.openls.databinding.openls.SearchCentreDistance" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/SearchCentreDistance.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SearchCentreDistance </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/SearchCentreDistance.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse
-	c4317 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodeResponse.html">
+	c4730 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodeResponse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseGeocodeResponse </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/ReverseGeocodeResponse.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.ReverseGeocodeRequest
-	c4318 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodeRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodeRequest.html">
+	c4731 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodeRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodeRequest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseGeocodeRequest </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/ReverseGeocodeRequest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.ReverseGeocodePreference
-	c4319 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodePreference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodePreference.html">
+	c4732 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodePreference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodePreference.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseGeocodePreference </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/ReverseGeocodePreference.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.ReverseGeocodedLocation
-	c4321 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodedLocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodedLocation.html">
+	c4734 [label=<<table title="nl.mineleni.openls.databinding.openls.ReverseGeocodedLocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/ReverseGeocodedLocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReverseGeocodedLocation </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/ReverseGeocodedLocation.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.PostalCode
-	c4322 [label=<<table title="nl.mineleni.openls.databinding.openls.PostalCode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/PostalCode.html">
+	c4735 [label=<<table title="nl.mineleni.openls.databinding.openls.PostalCode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/PostalCode.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostalCode </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/PostalCode.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Position
-	c4323 [label=<<table title="nl.mineleni.openls.databinding.openls.Position" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Position.html">
+	c4736 [label=<<table title="nl.mineleni.openls.databinding.openls.Position" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Position.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Position </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/Position.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Place
-	c4324 [label=<<table title="nl.mineleni.openls.databinding.openls.Place" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Place.html">
+	c4737 [label=<<table title="nl.mineleni.openls.databinding.openls.Place" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Place.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Place </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/Place.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.GeocodeResponseList
-	c4325 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponseList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeResponseList.html">
+	c4738 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponseList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeResponseList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeocodeResponseList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/GeocodeResponseList.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.GeocodeResponse
-	c4326 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeResponse.html">
+	c4739 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeResponse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeocodeResponse </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/GeocodeResponse.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.GeocodeRequest
-	c4327 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeRequest.html">
+	c4740 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodeRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodeRequest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeocodeRequest </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/GeocodeRequest.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.GeocodedAddress
-	c4328 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodedAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodedAddress.html">
+	c4741 [label=<<table title="nl.mineleni.openls.databinding.openls.GeocodedAddress" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/GeocodedAddress.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeocodedAddress </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/GeocodedAddress.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Building
-	c4329 [label=<<table title="nl.mineleni.openls.databinding.openls.Building" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Building.html">
+	c4742 [label=<<table title="nl.mineleni.openls.databinding.openls.Building" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Building.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Building </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/Building.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.openls.Address
-	c4330 [label=<<table title="nl.mineleni.openls.databinding.openls.Address" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Address.html">
+	c4743 [label=<<table title="nl.mineleni.openls.databinding.openls.Address" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./databinding/openls/Address.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Address </td></tr>
 		</table></td></tr>
 		</table>>, URL="./databinding/openls/Address.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.XmlNamespaceConstants
-	c4331 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./XmlNamespaceConstants.html">
+	c4744 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./XmlNamespaceConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> XmlNamespaceConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="./XmlNamespaceConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.openls.databinding.gml.Pos implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4312:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4725:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.gml.Point implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4313:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4726:p [dir=back,arrowtail=empty,style=dashed];
 	// nl.mineleni.openls.databinding.gml.Point COMPOSED nl.mineleni.openls.databinding.gml.Pos
-	c4313:p -> c4312:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
+	c4726:p -> c4725:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
 	//nl.mineleni.openls.databinding.openls.StreetAddress implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4314:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4727:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Street implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4315:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4728:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.SearchCentreDistance implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4316:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4729:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.ReverseGeocodeResponse implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4317:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4730:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.ReverseGeocodeRequest implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4318:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4731:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.ReverseGeocodePreference implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4319:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4732:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.ReverseGeocodedLocation implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4321:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4734:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.PostalCode implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4322:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4735:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Position implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4323:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4736:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Place implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4324:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4737:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.GeocodeResponseList implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4325:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4738:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.GeocodeResponse implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4326:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4739:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.GeocodeRequest implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4327:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4740:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.GeocodedAddress implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4328:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4741:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Building implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4329:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4742:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.openls.Address implements nl.mineleni.openls.XmlNamespaceConstants
-	c4331:p -> c4330:p [dir=back,arrowtail=empty,style=dashed];
+	c4744:p -> c4743:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.XmlNamespaceConstants implements java.io.Serializable
-	c4337:p -> c4331:p [dir=back,arrowtail=empty,style=dashed];
+	c4750:p -> c4744:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c4337 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c4750 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
-   <duplication lines="40" tokens="374">
-      <file line="94"
+   <duplication lines="38" tokens="349">
+      <file line="90"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
-      <file line="89"
+      <file line="86"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
       <codefragment><![CDATA[				((GeocodedAddress) (this.objStack.peek())).setAddress(address);
 			}
@@ -11,83 +11,79 @@
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
 					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				.setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;]]></codefragment>
    </duplication>
-   <duplication lines="51" tokens="367">
-      <file line="58"
+   <duplication lines="49" tokens="342">
+      <file line="57"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
-      <file line="94"
+      <file line="90"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
       <codefragment><![CDATA[				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
 			break;
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
-					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			        .pop());
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				        .setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;
@@ -98,61 +94,59 @@
 
 	/**
 	 * Gets the geocode request.
-	 * 
+	 *
 	 * @return the geocode request
 	 */
 	public GeocodeRequest getGeocodeRequest() {]]></codefragment>
    </duplication>
-   <duplication lines="40" tokens="361">
-      <file line="58"
+   <duplication lines="38" tokens="336">
+      <file line="57"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
-      <file line="90"
+      <file line="87"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
       <codefragment><![CDATA[				((GeocodeRequest) (this.objStack.peek())).addAddress(address);
 			}
 			break;
 		case "streetaddress":
 			final StreetAddress streetaddress = (StreetAddress) (this.objStack
-					.pop());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			        .pop());
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek()))
-						.setStreetAddress(streetaddress);
+				        .setStreetAddress(streetaddress);
 			}
 			break;
 		case "building":
 			final Building building = (Building) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setBuilding(building);
 			}
 			break;
 		case "street":
 			final Street street = (Street) (this.objStack.pop());
 			street.setStreet(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new StreetAddress()
-					.getClass()) {
+			if (this.objStack.peek().getClass() == StreetAddress.class) {
 				((StreetAddress) (this.objStack.peek())).setStreet(street);
 			}
 			break;
 		case "place":
 			final Place place = (Place) (this.objStack.pop());
 			place.setPlace(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).addPlace(place);
 			}
 			break;
 		case "postalcode":
 			final PostalCode pc = (PostalCode) (this.objStack.pop());
 			pc.setPostalCode(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Address().getClass()) {
+			if (this.objStack.peek().getClass() == Address.class) {
 				((Address) (this.objStack.peek())).setPostalCode(pc);
 			}
 			break;]]></codefragment>
    </duplication>
    <duplication lines="49" tokens="277">
-      <file line="155"
+      <file line="151"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeRequestParser.java"/>
-      <file line="229"
+      <file line="222"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
       <codefragment><![CDATA[			break;
 		case "address":
@@ -205,9 +199,9 @@
 }]]></codefragment>
    </duplication>
    <duplication lines="25" tokens="160">
-      <file line="150"
+      <file line="147"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeRequestParser.java"/>
-      <file line="205"
+      <file line="198"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
       <codefragment><![CDATA[			this.objStack.push(new Position());
 			break;
@@ -252,17 +246,17 @@
 					if (!legends[l].exists()) {
 						// (mogelijk) is het bestand gewist..
 						ImageIO.write(this.legendCache.get(key).getImage(),
-								"png", legends[l]);
+						        "png", legends[l]);
 					}
 					LOGGER.debug("Legenda bestand uit cache: "
-							+ legends[l].getAbsolutePath());
+					        + legends[l].getAbsolutePath());
 				}
 			} else {]]></codefragment>
    </duplication>
-   <duplication lines="13" tokens="128">
-      <file line="80"
+   <duplication lines="13" tokens="122">
+      <file line="77"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSGeocodeResponseParser.java"/>
-      <file line="74"
+      <file line="72"
             path="E:\workspace\CBSviewer\src\main\java\nl\mineleni\openls\parser\OpenLSReverseGeocodeResponseParser.java"/>
       <codefragment><![CDATA[				((GeocodedAddress) (this.objStack.peek())).setPoint(point);
 			}
@@ -270,12 +264,12 @@
 		case "pos":
 			final Pos pos = (Pos) (this.objStack.pop());
 			pos.setXY(this.eValBuf.toString());
-			if (this.objStack.peek().getClass() == new Point().getClass()) {
+			if (this.objStack.peek().getClass() == Point.class) {
 				((Point) (this.objStack.peek())).addPos(pos);
 			}
 			break;
 		case "address":
 			final Address address = (Address) (this.objStack.pop());
-			if (this.objStack.peek().getClass() == new GeocodedAddress()]]></codefragment>
+			if (this.objStack.peek().getClass() == GeocodedAddress.class) {]]></codefragment>
    </duplication>
 </pmd-cpd>

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter
-	c1105 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AttributeValuesFilter.html">
+	c1164 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AttributeValuesFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributeValuesFilter </td></tr>
 		</table></td></tr>
 		</table>>, URL="../AttributeValuesFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter
-	c1117 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributeValueFilter.html">
+	c1176 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributeValueFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributeValueFilter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AttributeValueFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.AttributeValuesFilter COMPOSED nl.mineleni.cbsviewer.servlet.wms.xml.AttributeValueFilter
-	c1105:p -> c1117:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
+	c1164:p -> c1176:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
 }
 

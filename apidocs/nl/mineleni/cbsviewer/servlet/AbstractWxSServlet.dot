@@ -10,41 +10,41 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c916 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractWxSServlet.html">
+	c966 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWxSServlet </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractWxSServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc916 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
+	n0cc966 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./AbstractWxSServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> gedeelde basis voor de WxS servlets </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc916 -> c916:p[arrowhead=none];
+	n0cc966 -> c966:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c917 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
+	c967 [label=<<table title="nl.mineleni.cbsviewer.servlet.AbstractBaseServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBaseServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractBaseServlet </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractBaseServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet
-	c918 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./gazetteer/AdresZoekServlet.html">
+	c968 [label=<<table title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./gazetteer/AdresZoekServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AdresZoekServlet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./gazetteer/AdresZoekServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet
-	c922 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./wms/WMSClientServlet.html">
+	c972 [label=<<table title="nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./wms/WMSClientServlet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WMSClientServlet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./wms/WMSClientServlet.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.cbsviewer.servlet.AbstractWxSServlet extends nl.mineleni.cbsviewer.servlet.AbstractBaseServlet
-	c917:p -> c916:p [dir=back,arrowtail=empty];
+	c967:p -> c966:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c916:p -> c918:p [dir=back,arrowtail=empty];
+	c966:p -> c968:p [dir=back,arrowtail=empty];
 	//nl.mineleni.cbsviewer.servlet.wms.WMSClientServlet extends nl.mineleni.cbsviewer.servlet.AbstractWxSServlet
-	c916:p -> c922:p [dir=back,arrowtail=empty];
+	c966:p -> c972:p [dir=back,arrowtail=empty];
 }
 

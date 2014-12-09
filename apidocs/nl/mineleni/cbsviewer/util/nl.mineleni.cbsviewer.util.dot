@@ -10,67 +10,67 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.StringConstants
-	c385 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
+	c406 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> StringConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StringConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc385 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
+	n0cc406 [label=<<table title="nl.mineleni.cbsviewer.util.StringConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./StringConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc385 -> c385:p[arrowhead=none];
+	n0cc406 -> c406:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.util.SpatialUtil
-	c386 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtil.html">
+	c407 [label=<<table title="nl.mineleni.cbsviewer.util.SpatialUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpatialUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpatialUtil </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpatialUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.NumberConstants
-	c387 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
+	c408 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> NumberConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NumberConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc387 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
+	n0cc408 [label=<<table title="nl.mineleni.cbsviewer.util.NumberConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./NumberConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de constanten en default waarden voor de applicatie </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc387 -> c387:p[arrowhead=none];
+	n0cc408 -> c408:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.util.LabelsBundle
-	c388 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LabelsBundle.html">
+	c409 [label=<<table title="nl.mineleni.cbsviewer.util.LabelsBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LabelsBundle.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LabelsBundle </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LabelsBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.EncodingUtil
-	c389 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtil.html">
+	c410 [label=<<table title="nl.mineleni.cbsviewer.util.EncodingUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EncodingUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EncodingUtil </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EncodingUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.cbsviewer.util.CookieNamesConstants
-	c390 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
+	c411 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> CookieNamesConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CookieNamesConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc390 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
+	n0cc411 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de namen van de gebruikte cookies </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc390 -> c390:p[arrowhead=none];
+	n0cc411 -> c411:p[arrowhead=none];
 	// nl.mineleni.cbsviewer.util.AvailableLayersBean
-	c391 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBean.html">
+	c412 [label=<<table title="nl.mineleni.cbsviewer.util.AvailableLayersBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AvailableLayersBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AvailableLayersBean </td></tr>
 		</table></td></tr>

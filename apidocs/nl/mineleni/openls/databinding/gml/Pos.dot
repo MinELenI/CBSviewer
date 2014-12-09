@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.openls.databinding.gml.Pos
-	c3291 [label=<<table title="nl.mineleni.openls.databinding.gml.Pos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Pos.html">
+	c3588 [label=<<table title="nl.mineleni.openls.databinding.gml.Pos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Pos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Pos </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Pos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.databinding.gml.Point
-	c3292 [label=<<table title="nl.mineleni.openls.databinding.gml.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Point.html">
+	c3589 [label=<<table title="nl.mineleni.openls.databinding.gml.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Point.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Point </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Point.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// nl.mineleni.openls.XmlNamespaceConstants
-	c3310 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../XmlNamespaceConstants.html">
+	c3607 [label=<<table title="nl.mineleni.openls.XmlNamespaceConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../XmlNamespaceConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> XmlNamespaceConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../XmlNamespaceConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//nl.mineleni.openls.databinding.gml.Pos implements nl.mineleni.openls.XmlNamespaceConstants
-	c3310:p -> c3291:p [dir=back,arrowtail=empty,style=dashed];
+	c3607:p -> c3588:p [dir=back,arrowtail=empty,style=dashed];
 	//nl.mineleni.openls.databinding.gml.Point implements nl.mineleni.openls.XmlNamespaceConstants
-	c3310:p -> c3292:p [dir=back,arrowtail=empty,style=dashed];
+	c3607:p -> c3589:p [dir=back,arrowtail=empty,style=dashed];
 	// nl.mineleni.openls.databinding.gml.Point COMPOSED nl.mineleni.openls.databinding.gml.Pos
-	c3292:p -> c3291:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
+	c3589:p -> c3588:p [taillabel="1", label="", headlabel="0..*", fontname="arial", fontcolor="black", fontsize=10.0, color="black", arrowhead=none, arrowtail=diamond, dir=both];
 }
 

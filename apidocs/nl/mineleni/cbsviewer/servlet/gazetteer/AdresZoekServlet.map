@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="71,113,190,138"/>
-<area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="61,101,201,149"/>
+<area shape="rect" id="node1_0" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="61,113,200,138"/>
+<area shape="rect" id="node1" href="../AbstractWxSServlet.html" title="&lt;TABLE&gt;" alt="" coords="51,101,211,149"/>
 <area shape="rect" id="node4_1" href="./AdresZoekServlet.html" title="nl.mineleni.cbsviewer.servlet.gazetteer.AdresZoekServlet" alt="" coords="70,209,191,234"/>
 <area shape="rect" id="node4" href="./AdresZoekServlet.html" title="&lt;TABLE&gt;" alt="" coords="59,197,202,245"/>
 <area shape="rect" id="node2_2" href="../AbstractWxSServlet.html" title="nl.mineleni.cbsviewer.servlet.AbstractWxSServlet" alt="" coords="15,18,246,41"/>

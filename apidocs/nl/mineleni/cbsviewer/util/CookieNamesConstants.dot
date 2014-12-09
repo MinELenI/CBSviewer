@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// nl.mineleni.cbsviewer.util.CookieNamesConstants
-	c1843 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CookieNamesConstants.html">
+	c1938 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CookieNamesConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> CookieNamesConstants </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CookieNamesConstants.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// Note annotation
-	n0cc1843 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
+	n0cc1938 [label=<<table title="nl.mineleni.cbsviewer.util.CookieNamesConstants" border="0" cellborder="0" cellspacing="0" cellpadding="2" port="p" href="./CookieNamesConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> bevat de namen van de gebruikte cookies </td></tr>
 		</table></td></tr>
 		</table>>, fontname="arial", fontcolor="black", fontsize=10.0, shape=note];
-	n0cc1843 -> c1843:p[arrowhead=none];
+	n0cc1938 -> c1938:p[arrowhead=none];
 }
 
