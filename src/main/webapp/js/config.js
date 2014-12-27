@@ -23,7 +23,7 @@ config.legendDiv = "legenda";
 config.featureInfoDiv = "featureinfo";
 
 /** default map id, als in AvailableLayers.xml. */
-config.defaultMapId = "gemeenten2012_bevolkingsdichtheid_inwoners_per_km2";
+config.defaultMapId = "gemeenten2013_bevolkingsdichtheid_inwoners_per_km2";
 
 /** instellingen voor de kaart. Voorlopig alleen RD projectie. */
 config.map = {

@@ -80,8 +80,8 @@
 		<tag>master</tag>
 	</scm>
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://gisdemo.agro.nl/jenkins/job/CBS-viewer/</url>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/MinELenI/CBSviewer/</url>
 		<notifiers />
 	</ciManagement>
 	<prerequisites>
@@ -246,7 +246,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-antrun-plugin</artifactId>
-						<version>1.7</version>
+						<version>1.8</version>
 						<executions>
 							<execution>
 								<id>prepareOpenLayers</id>
@@ -360,7 +360,7 @@
 							<jsTestSrcDir>src/test/js/jasmine</jsTestSrcDir>
 							<debug>${debug}</debug>
 							<preloadSources>
-								<source>/src/main/webapp/lib/jquery-1.11.1.min.js</source>
+								<source>/src/main/webapp/lib/jquery-1.11.2.min.js</source>
 								<source>/src/main/webapp/lib/jquery-ui-1.10.4.custom.min.js</source>
 								<source>/src/test/js/lib/OpenLayers-test.js</source>
 								<source>/src/test/js/lib/jasmin_util.js</source>
@@ -431,7 +431,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
+				<version>1.8</version>
 				<executions>
 					<execution>
 						<id>createDirecories</id>
@@ -513,9 +513,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.jasig.maven</groupId>
+				<groupId>nl.geodienstencentrum.maven</groupId>
 				<artifactId>sass-maven-plugin</artifactId>
-				<version>1.1.1</version>
+				<version>2.0</version>
 				<executions>
 					<execution>
 						<phase>process-sources</phase>
@@ -658,7 +658,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.5.0</version>
+				<version>1.5.1</version>
 				<executions>
 					<execution>
 						<phase>process-classes</phase>
@@ -725,7 +725,7 @@
 					<keepServerAlive>true</keepServerAlive>
 					<debug>${debug}</debug>
 					<preloadSources>
-						<source>/src/main/webapp/lib/jquery-1.11.1.min.js</source>
+						<source>/src/main/webapp/lib/jquery-1.11.2.min.js</source>
 						<source>/src/main/webapp/lib/jquery-ui-1.10.4.custom.min.js</source>
 						<source>/src/test/js/lib/OpenLayers-test.js</source>
 						<source>/src/test/js/lib/jasmin_util.js</source>
@@ -810,7 +810,7 @@
 						<plugin>
 							<groupId>org.owasp</groupId>
 							<artifactId>dependency-check-maven</artifactId>
-							<version>1.2.6</version>
+							<version>1.2.7</version>
 							<configuration>
 								<name>OWASP Dependency Check</name>
 							</configuration>
@@ -1019,7 +1019,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-pmd-plugin</artifactId>
-							<version>3.2</version>
+							<version>3.3</version>
 							<configuration>
 								<rulesets>
 									<ruleset>${basedir}/pmd-ruleset.xml</ruleset>
@@ -1184,11 +1184,11 @@
 								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>org.jasig.maven</groupId>
-										<artifactId>sass-maven-plugin</artifactId>
-										<versionRange>[1.0.3,)</versionRange>
+										<groupId>com.github.klieber</groupId>
+										<artifactId>phantomjs-maven-plugin</artifactId>
+										<versionRange>[0.4,)</versionRange>
 										<goals>
-											<goal>update-stylesheets</goal>
+											<goal>install</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -1197,11 +1197,11 @@
 								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>com.github.klieber</groupId>
-										<artifactId>phantomjs-maven-plugin</artifactId>
-										<versionRange>[0.4,)</versionRange>
+										<groupId>nl.geodienstencentrum.maven</groupId>
+										<artifactId>sass-maven-plugin</artifactId>
+										<versionRange>[2.0-RC1,)</versionRange>
 										<goals>
-											<goal>install</goal>
+											<goal>update-stylesheets</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -1245,7 +1245,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.7</version>
+			<version>1.7.9</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -1282,7 +1282,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

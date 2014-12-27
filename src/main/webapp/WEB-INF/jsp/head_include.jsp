@@ -8,6 +8,7 @@
 	let op dat dit bestand vanuit de root van de webapplicatie wordt ingevoegd  
 	 -->
 	<jsp:text>
+		<![CDATA[
 		<meta charset='utf-8' />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="dns-prefetch" href="http://geodata.nationaalgeoregister.nl/" />
@@ -38,12 +39,11 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
 
-		<![CDATA[
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie-lte7.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 8]>    <link rel="stylesheet" href="css/ie-8.css" type="text/css" media="screen" />   <![endif]-->
 		<!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>          <![endif]-->
-		]]>
 
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+		]]>
 	</jsp:text>
 </jsp:root>

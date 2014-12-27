@@ -22,7 +22,7 @@ public class AttributesNamesFilterTest {
 	private AttributesNamesFilter filter;
 
 	/** layer id voor layer met aliases. */
-	private final String hasFilterID = "wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners";
+	private final String hasFilterID = "gemeenten2011_aantal_inwoners";
 
 	/** layer id voor layer zonder aliases. */
 	private final String hasNoFilterID = "vierkanten500m_oad2000";
@@ -47,8 +47,8 @@ public class AttributesNamesFilterTest {
 	public void testFilterValue() {
 		assertEquals("expected",
 				this.filter.filterValue("expected", this.hasFilterID));
-		assertEquals("gemeente",
-				this.filter.filterValue("gemnaam", this.hasFilterID));
+		assertEquals("Gemeente",
+				this.filter.filterValue("gemeentenaam", this.hasFilterID));
 		assertEquals("expected",
 				this.filter.filterValue("expected", this.hasNoFilterID));
 	}

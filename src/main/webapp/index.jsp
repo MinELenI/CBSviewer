@@ -57,7 +57,7 @@ for (CookieNamesConstants e : CookieNamesConstants.values()) {
 
 <c:if test="${empty param.mapid}">
 	<!-- default thema kaartlaag -->
-	<c:set value="gemeenten2012_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
+	<c:set value="gemeenten2013_bevolkingsdichtheid_inwoners_per_km2" var="mapid" />
 	<c:if test="${not empty cookie[COOKIE_mapid].value }">
 		<c:set value='${cookie[COOKIE_mapid].value}' var="mapid" />
 	</c:if>

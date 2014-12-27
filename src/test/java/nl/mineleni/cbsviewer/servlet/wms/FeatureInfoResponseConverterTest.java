@@ -48,15 +48,15 @@ public class FeatureInfoResponseConverterTest {
 		this.layer = new LayerDescriptor();
 
 		this.layer
-				.setId("wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners");
-		this.layer.setName("CBS Gemeenten 2011 - Aantal inwoners");
+				.setId("gemeenten2011_aantal_inwoners");
+		this.layer.setName("Aantal inwoners - Gemeenten 2011");
 		this.layer.setLayers("gemeenten2011");
 		this.layer
 				.setUrl("http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wms");
 		this.layer
-				.setStyles("wijkenbuurten2011_thema_gemeenten2011_aantal_inwoners");
+				.setStyles("wijkenbuurten_thema_gemeenten_gemeente_aantal_inwoners");
 		this.layer.setAttributes("gemeentecode,aantal_inwoners");
-		// this.layer.setAliases("gemeentecode, aantal inwoners");
+		// this.layer.setAliases("Gemeente, aantal inwoners");
 		this.layer
 				.setLink("http://geodata.nationaalgeoregister.nl/wijkenbuurten2011/wfs?request=GetFeature&amp;typeName=wijkenbuurten2011:gemeenten2011&amp;outputFormat=SHAPE-ZIP");
 

@@ -138,6 +138,14 @@
 		<servlet-name>AdresZoekServlet</servlet-name>
 		<url-pattern>/adres</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>toegankelijkheid</servlet-name>
+		<jsp-file>/toegankelijkheid.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>toegankelijkheid</servlet-name>
+		<url-pattern>/toegankelijkheid</url-pattern>
+	</servlet-mapping>
 	<listener>
 		<listener-class>nl.mineleni.cbsviewer.servlet.GeotoolsContextListener</listener-class>
 	</listener>
@@ -150,5 +158,33 @@
 	<filter-mapping>
 		<filter-name>ResponseHeadersFilter</filter-name>
 		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>GZipFilter</filter-name>
+		<filter-class>nl.mineleni.cbsviewer.servlet.GZipFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>/adres/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GZipFilter</filter-name>
+		<url-pattern>/xhr/*</url-pattern>
 	</filter-mapping>
 </web-app>

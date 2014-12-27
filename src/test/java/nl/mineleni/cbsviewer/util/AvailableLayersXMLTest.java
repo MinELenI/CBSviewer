@@ -1,8 +1,8 @@
 /*
  * Copyright (c) 2013-2014, Dienst Landelijk Gebied - Ministerie van Economische Zaken
- * 
- * Gepubliceerd onder de BSD 2-clause licentie, 
- * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie. 
+ *
+ * Gepubliceerd onder de BSD 2-clause licentie,
+ * zie https://github.com/MinELenI/CBSviewer/blob/master/LICENSE.md voor de volledige licentie.
  */
 package nl.mineleni.cbsviewer.util;
 
@@ -11,9 +11,9 @@ import static org.custommonkey.xmlunit.XMLAssert.assertXpathExists;
 import static org.custommonkey.xmlunit.XMLAssert.assertXpathNotExists;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.junit.Assume.assumeNotNull;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -41,7 +41,7 @@ import org.xml.sax.SAXException;
 /**
  * Test cases voor {@code AvailableLayers.xml} en schema
  * {@code AvailableLayers.xsd}.
- * 
+ *
  * @author mprins
  */
 public class AvailableLayersXMLTest {
@@ -51,7 +51,7 @@ public class AvailableLayersXMLTest {
 
 	/**
 	 * Converteert een stream naar een string.
-	 * 
+	 *
 	 * @param is
 	 *            de InputStream met data
 	 * @return de data als string
@@ -59,13 +59,13 @@ public class AvailableLayersXMLTest {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private static String convertStreamToString(final InputStream is)
-			throws IOException {
+	        throws IOException {
 		if (is != null) {
 			final Writer writer = new StringWriter();
 			final char[] buffer = new char[1024];
 			try {
 				final Reader reader = new BufferedReader(new InputStreamReader(
-						is, "UTF-8"));
+				        is, "UTF-8"));
 				int n;
 				while ((n = reader.read(buffer)) != -1) {
 					writer.write(buffer, 0, n);
@@ -92,7 +92,7 @@ public class AvailableLayersXMLTest {
 
 	/**
 	 * after each test.
-	 * 
+	 *
 	 */
 	@After
 	public void afterTest() {
@@ -101,7 +101,7 @@ public class AvailableLayersXMLTest {
 
 	/**
 	 * set up before each test.
-	 * 
+	 *
 	 * @throws Exception
 	 *             the exception
 	 */
@@ -109,21 +109,21 @@ public class AvailableLayersXMLTest {
 	public void beforeTest() throws Exception {
 		this.v = new Validator();
 		final Source schema = new StreamSource(new File(
-				"target/classes/AvailableLayers.xsd"));
+		        "target/classes/AvailableLayers.xsd"));
 		this.v.addSchemaSource(schema);
 	}
 
 	/**
 	 * XML testcase voor test {@code AvailableLayers.xml} en
 	 * {@code invalidAvailableLayers.xml}, valideer documenten.
-	 * 
+	 *
 	 * @throws IOException
 	 */
 	@Test
 	public void testAvailableLayersXML() throws IOException {
 		final Source invaliddoc = new StreamSource(this.getClass()
-				.getClassLoader()
-				.getResourceAsStream("invalidAvailableLayers.xml"));
+		        .getClassLoader()
+		        .getResourceAsStream("invalidAvailableLayers.xml"));
 
 		try {
 			assertFalse(this.v.isInstanceValid(invaliddoc));
@@ -132,7 +132,7 @@ public class AvailableLayersXMLTest {
 		}
 
 		final Source doc = new StreamSource(this.getClass().getClassLoader()
-				.getResourceAsStream("AvailableLayers.xml"));
+		        .getResourceAsStream("AvailableLayers.xml"));
 		// final Source doc = new StreamSource(new File(
 		// "target/test-classes/AvailableLayers.xml"));
 		assertTrue(this.v.isInstanceValid(doc));
@@ -148,32 +148,32 @@ public class AvailableLayersXMLTest {
 		// test inhoud van het geldige test document
 		try {
 			final String TESTXML = convertStreamToString(this.getClass()
-					.getClassLoader()
-					.getResourceAsStream("AvailableLayers.xml"));
+			        .getClassLoader()
+			        .getResourceAsStream("AvailableLayers.xml"));
 			// vanwege gekkigheid in XPath werken selecties in de default
 			// namespace niet, bijv.
 			// /Layers/Layerdescriptor[1]/id faalt.
 			// Daarom local-name functie gebruiken
 			assertXpathExists(
-					"/*[local-name()='Layers']/*[local-name()='Layerdescriptor']/*[local-name()='id']",
-					TESTXML);
+			        "/*[local-name()='Layers']/*[local-name()='Layerdescriptor']/*[local-name()='id']",
+			        TESTXML);
 
 			assertXpathEvaluatesTo("" + 2,
-					"count(//*[local-name()='Layerdescriptor'])", TESTXML);
+			        "count(//*[local-name()='Layerdescriptor'])", TESTXML);
 
 			assertXpathEvaluatesTo(
-					ID1,
-					"//*[local-name()='Layerdescriptor'][1]/*[local-name()='id']",
-					TESTXML);
+			        ID1,
+			        "//*[local-name()='Layerdescriptor'][1]/*[local-name()='id']",
+			        TESTXML);
 
 			assertXpathExists(
-					"//*[local-name()='Layerdescriptor'][2]/*[local-name()='link']",
-					TESTXML);
+			        "//*[local-name()='Layerdescriptor'][2]/*[local-name()='link']",
+			        TESTXML);
 			assertXpathNotExists(
-					"//*[local-name()='Layerdescriptor'][1]/*[local-name()='link']",
-					TESTXML);
+			        "//*[local-name()='Layerdescriptor'][1]/*[local-name()='link']",
+			        TESTXML);
 		} catch (ConfigurationException | XpathException | IOException
-				| SAXException e) {
+		        | SAXException e) {
 			fail(e.getMessage());
 		}
 	}
@@ -184,7 +184,7 @@ public class AvailableLayersXMLTest {
 	@Test
 	public void testAvailableLayersXSD() {
 		try {
-			assertTrue(this.v.isSchemaValid());
+			assertTrue("Het schema bestand is geldig.", this.v.isSchemaValid());
 		} catch (final ConfigurationException e) {
 			fail(e.getMessage());
 		} catch (final Exception e) {
@@ -205,9 +205,12 @@ public class AvailableLayersXMLTest {
 		// .getContextClassLoader()
 		// .getResourceAsStream("../classes/AvailableLayers.xml"));
 		final Source doc = new StreamSource(new File(
-				"target/classes/AvailableLayers.xml"));
-		assumeNotNull(doc);
-		assertTrue(this.v.isInstanceValid(doc));
+		        "target/classes/AvailableLayers.xml"));
+
+		assertNotNull("Het bestand 'AvailableLayers.xml' moet bestaan.", doc);
+		assertTrue(
+				"Het bestand 'AvailableLayers.xml' moet geldig zijn volgens het gebruikte schema 'AvailableLayers.xsd'",
+				this.v.isInstanceValid(doc));
 	}
 
 }

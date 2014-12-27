@@ -29,7 +29,7 @@ public class AvailableLayersBeanTest {
 	private static final String ID1 = "vierkanten500m_oad2000";
 	private static final String LAYERS1 = "omgevings_adres_dichtheid_2000";
 	private static final String STYLES1 = "cbsvierkanten500m.oad2000";
-	private static final String NAME1 = "Vierkant 500m - Omgevingsadressendichtheid 2000";
+	private static final String NAME1 = "Omgevingsadressendichtheid 2000 - Vierkant 500m";
 	private static final String URL1 = "http://geodata.nationaalgeoregister.nl/cbsvierkanten500m/wms";
 
 	/** test subject. */
