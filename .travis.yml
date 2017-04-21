@@ -1,17 +1,32 @@
 sudo: false
 language: java
+
 before_install:
   - unset GEM_PATH
+
 install:
   - mvn -Djavax.xml.accessExternalSchema=file install -DskipTests=true -B -V
+
 before_script: 
   - mvn -e -Djavax.xml.accessExternalSchema=file -Popenlayers
-script: mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
+
+script: 
+  - mvn -e -Pjenkins -Djavax.xml.accessExternalSchema=file verify
+
 after_success:
   - mvn -e -Djavax.xml.accessExternalSchema=file -Pjenkins test saga:coverage cobertura:cobertura coveralls:report
 jdk:
   - openjdk7
   - oraclejdk8
+
 cache:
   directories:
   - cache
+
+os:
+  - linux
+  - osx
+  
+matrix:
+  allow_failures:
+    - os: osx
